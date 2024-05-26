@@ -36,8 +36,6 @@ public class YUZUIronBox extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer,this.block));
-        if(abstractPlayer.hasPower(YUZUCriticalHitRatePower.POWER_ID)){
-            addToBot(new ReducePowerAction(abstractPlayer,abstractPlayer, YUZUCriticalHitRatePower.POWER_ID,abstractPlayer.getPower(YUZUCriticalHitRatePower.POWER_ID).amount));
-        }
+//        addToBot(new );
     }
 }

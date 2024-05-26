@@ -1,6 +1,7 @@
 package baModDeveloper.power;
 
 import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.cards.YUZUCustomCard;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -41,7 +42,7 @@ public class YUZUAimingPreparationMasterPower extends AbstractPower {
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
-            addToBot(new ApplyPowerAction(this.owner,this.owner,new YUZUCriticalHitRatePower(this.owner,this.amount)));
+            addToBot(new YUZUApplyCriticalRateAction(this.amount));
         }
     }
 }

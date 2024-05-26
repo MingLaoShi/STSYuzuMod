@@ -1,5 +1,6 @@
 package baModDeveloper.cards;
 
+import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.power.YUZUAnalysisPower;
 import baModDeveloper.power.YUZUCriticalHitPower;
 import baModDeveloper.power.YUZUCriticalHitRatePower;
@@ -88,7 +89,7 @@ public abstract class YUZUCustomCard extends CustomCard {
             this.masterUse(abstractPlayer,abstractMonster,this.masterNum);
         }
 //        YUZUCustomCard.masterCard(this);
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitRatePower(abstractPlayer,1)));
+        addToBot(new YUZUApplyCriticalRateAction(1));
     }
 
     public abstract void commonUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);

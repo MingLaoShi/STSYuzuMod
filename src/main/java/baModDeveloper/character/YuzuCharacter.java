@@ -4,15 +4,18 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.YuzuMod;
 import baModDeveloper.cards.YUZUDefend;
 import baModDeveloper.cards.YUZUStrike;
+import baModDeveloper.panel.YUZUCriticalRatePanel;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -45,9 +48,17 @@ public class YuzuCharacter extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack
             .getCharacterString(ModHelper.makePath("YUZU"));
     private static final String CHAR_IMG=ModHelper.makeImgPath("character","default");
+
+    public YUZUCriticalRatePanel getCriticalRatePanel() {
+        return criticalRatePanel;
+    }
+
+    private YUZUCriticalRatePanel criticalRatePanel;
     public YuzuCharacter(String name) {
         super(name, PlayerClass.YUZU, ORB_TEXTURES, ORB_VFX, LAYER_SPEED,null,null);
         this.initializeClass(CHAR_IMG,YUZU_CHARACTER_SHOULDER_2,YUZU_CHARACTER_SHOULDER_1,YUZU_CHARACTER_CORPSE,getLoadout(),0.0F,0.0F,200.0F,200.0F,new EnergyManager(3));
+        this.criticalRatePanel=new YUZUCriticalRatePanel(this.hb.x,this.hb.y+100.0F* Settings.scale,-480 * Settings.scale, 200 * Settings.scale,null,true);
+        this.criticalRatePanel.show();
     }
 
     @Override
@@ -164,5 +175,23 @@ public class YuzuCharacter extends CustomPlayer {
         @SpireEnum(name = "YUZUCARD")
         public static CardLibrary.LibraryType YUZU_LIBRARY;
 
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        this.criticalRatePanel.update();
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        this.criticalRatePanel.render(sb);
+    }
+
+    @Override
+    public void preBattlePrep() {
+        super.preBattlePrep();
+        this.criticalRatePanel.reset();
     }
 }

@@ -1,6 +1,7 @@
 package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.power.YUZUCriticalHitRatePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -41,14 +42,14 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitRatePower(abstractPlayer,this.magicNumber)));
+        addToBot(new YUZUApplyCriticalRateAction(this.magicNumber));
     }
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
         int monsterNum= (int) AbstractDungeon.getCurrRoom().monsters.monsters.stream().filter(m->!m.isDeadOrEscaped()).count();
         addToBot(new DamageAllEnemiesAction(abstractPlayer,this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitRatePower(abstractPlayer,this.magicNumber*monsterNum)));
+        addToBot(new YUZUApplyCriticalRateAction(this.magicNumber*monsterNum));
     }
 
     @Override
