@@ -115,4 +115,13 @@ public abstract class YUZUCustomCard extends CustomCard {
     public void applyPowers() {
         super.applyPowers();
     }
+
+    @Override
+    public AbstractCard makeCopy() {
+        AbstractCard card=super.makeCopy();
+        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+            ((YUZUCustomCard) card).triggerOnMaster();
+        }
+        return card;
+    }
 }

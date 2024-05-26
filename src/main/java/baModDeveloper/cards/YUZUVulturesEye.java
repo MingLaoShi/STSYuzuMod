@@ -20,7 +20,7 @@ public class YUZUVulturesEye extends YUZUCustomCard{
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.SELF;
-    private static final CardRarity RARITY=CardRarity.BASIC;
+    private static final CardRarity RARITY=CardRarity.UNCOMMON;
 
     public YUZUVulturesEye() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

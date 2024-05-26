@@ -60,6 +60,7 @@ public class YUZUGiveBestShot extends YUZUCustomCard{
                         addToTop(new ExhaustSpecificCardAction(c,AbstractDungeon.player.hand,true));
                     }
                 }
+                this.isDone=true;
             }
         });
     }
