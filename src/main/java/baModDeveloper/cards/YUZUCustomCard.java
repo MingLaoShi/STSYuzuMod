@@ -7,6 +7,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -105,8 +106,8 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     public void triggerOnMaster(){}
 
-    public void triggerOnCriticalHit(){
-        this.damage*=2;
+    public void triggerOnCriticalHit(AbstractCreature target){
+//        this.damage*=2;
     }
 
     @Override

@@ -2,10 +2,19 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class YUZUAonengShooting extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("AonengShooting");
@@ -21,20 +30,35 @@ public class YUZUAonengShooting extends YUZUCustomCard{
 
     public YUZUAonengShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.baseDamage=this.damage=10;
+        this.baseMagicNumber=this.magicNumber=1;
     }
 
     @Override
     protected void upgradeMethod() {
-
+        this.upgradeDamage(3);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
+        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
+        if(AbstractDungeon.cardRandomRng.randomBoolean()){
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new StrengthPower(abstractPlayer,this.magicNumber)));
+        }else{
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new DexterityPower(abstractPlayer,this.magicNumber)));
+        }
     }
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+
+    }
+
+    @Override
+    public void triggerOnCriticalHit(AbstractCreature target) {
+        super.triggerOnCriticalHit(target);
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new StrengthPower(AbstractDungeon.player,this.magicNumber)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new DexterityPower(AbstractDungeon.player,this.magicNumber)));
 
     }
 }

@@ -70,7 +70,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if(card.type== AbstractCard.CardType.ATTACK){
             if(card instanceof YUZUCustomCard){
-                ((YUZUCustomCard) card).triggerOnCriticalHit();
+                ((YUZUCustomCard) card).triggerOnCriticalHit(action.target);
             }
             addToBot(new ReducePowerAction(this.owner,this.owner,this,1));
         }

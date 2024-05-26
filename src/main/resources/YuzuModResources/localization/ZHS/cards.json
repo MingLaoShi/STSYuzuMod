@@ -199,5 +199,34 @@
 	"YUZU:AonengShooting": {
 		"NAME": "奥能射击",
 		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。暴击：再获得 1点力量和敏捷。"
+	},
+	"YUZU:Gifts": {
+		"NAME": "恒心赠礼",
+		"DESCRIPTION": "随机将 !M! 张带有 保留 的牌加入手牌。"
+	},
+	"YUZU:PressureArmor": {
+		"NAME": "压感装甲",
+		"DESCRIPTION": "当受到伤害时，立即获得 !B! 点格挡和 !M! 层残影。"
+	},
+	"YUZU:StandShield": {
+		"NAME": "立场护盾",
+		"DESCRIPTION": "保留 NL 获得 !B! 点格挡。精通：获得的格挡减少 25%。"
+	},
+	"YUZU:VulturesEye": {
+		"NAME": "苍鹰之眼",
+		"DESCRIPTION": "本回合，暴击条的需求改为 !M! 格。精通：改为获得 !M! 次暴击次数。"
+	},
+	"YUZU:CoverTheSmokeScreen": {
+		"NAME": "掩护烟幕",
+		"DESCRIPTION": "给予所有单位 !M! 层虚弱，获得 !B! 点格挡。"
+	},
+	"YUZU:ColdTouch": {
+		"NAME": "冰冷触摸",
+		"DESCRIPTION": "给予 !M! 层虚弱，造成 !D! 点伤害。精通：更换给予虚弱和造成伤害的数值。暴击：再使目标失去1点力量。",
+		"UPGRADE_DESCRIPTION": "给予 !M! 层虚弱，造成 !D! 点伤害。精通：更换给予虚弱和造成伤害的数值。暴击：再使目标失去2点力量。"
+	},
+	"YUZU:GiveBestShot": {
+		"NAME": "尽力一击",
+		"DESCRIPTION": "造成 !D! 点伤害，消耗手牌中的其他牌。精通：改为消耗手牌中的其他攻击牌。"
 	}
 }
