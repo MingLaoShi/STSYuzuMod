@@ -1,0 +1,20 @@
+{
+	"YUZU:CriticalHitRate":{
+		"NAME":"暴击率",
+		"DESCRIPTIONS":[
+			"暴击率%d层"
+		]
+	},
+	"YUZU:CriticalHit":{
+		"NAME":"必爆",
+		"DESCRIPTIONS":[
+			"暴击%d次"
+		]
+	},
+	"YUZU:JobResponsibilitiesPower":{
+		"NAME":"本职工作",
+		"DESCRIPTIONS":[
+			"%d"
+		]
+	}
+}

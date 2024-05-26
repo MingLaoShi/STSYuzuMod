@@ -1,0 +1,203 @@
+{
+	"YUZU:Strike":{
+		"NAME":"打击",
+		"DESCRIPTION":"造成 !D! 点伤害"
+	},
+	"YUZU:Defend":{
+		"NAME":"防御",
+		"DESCRIPTION":"获得 !B! 点格挡"
+	},
+	"YUZU:JobResponsibilities":{
+		"NAME":"本职工作",
+		"DESCRIPTION":"所有攻击和防御牌获得精通：再打出一次。",
+		"UPGRADE_DESCRIPTION":" 固有 NL 所有攻击和防御牌获得精通：再打出一次。"
+	},
+	"YUZU:Analysis":{
+		"NAME":"完备解析",
+		"DESCRIPTION":"本场战斗，精通的条件改为同类型牌，所有以精通的牌在打出后消耗。"
+	},
+	"YUZU:TemporarySupply":{
+		"NAME":"临时补给",
+		"DESCRIPTION":"获得 !M! 点临时生命。 NL 精通：改为回复生命值。"
+	},
+	"YUZU:Grenade":{
+		"NAME":"小型榴弹",
+		"DESCRIPTION":"造成 !D! 点伤害，给予 !M! 层灼伤。"
+	},
+	"YUZU:ScorchingExplosive":{
+		"NAME":"灼热爆弹",
+		"DESCRIPTION":"对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层灼伤。精通：数值增加 !B! 。这张牌可以无限精通。"
+	},
+	"YUZU:BeMercifulToOthers":{
+		"NAME":"手下留情",
+		"DESCRIPTION":"造成 !D! 点伤害，最多把敌人的生命将为1"
+	},
+	"YUZU:Refraction":{
+		"NAME":"偏光折射",
+		"DESCRIPTION":"选择1张手牌，获取X张保留的复制品。精通：X为2",
+		"UPGRADE_DESCRIPTION":"选择1张手牌，获取X+1张保留的复制品。精通：X为2"
+	},
+	"YUZU:Camouflage":{
+		"NAME":"纸盒伪装",
+		"DESCRIPTION":"获得 !B! 点格挡。精通：抽到时打出"
+	},
+	"YUZU:OpenTheDoor":{
+		"NAME":"开门见山",
+		"DESCRIPTION":"固有。造成 !D! 点伤害。"
+	},
+	"YUZU:HighPrecisionOperation":{
+		"NAME":"高精操作",
+		"DESCRIPTION":"消耗 !M! 张手牌。精通：如果消耗的是技能牌，则在消耗后打出复制品。"
+	},
+	"YUZU:Polarization":{
+		"NAME":"偏分分光",
+		"DESCRIPTION":"选择1张手牌，获取1张复制，复制失去升级和精通效果。精通：不再失去"
+	},
+	"YUZU:DesignShooting":{
+		"NAME":"指定射击",
+		"DESCRIPTION":"对正前方的第一名敌人造成 !D! 点伤害。"
+	},
+	"YUZU:ColdStorage":{
+		"NAME":"冰冷储藏",
+		"DESCRIPTION":"从抽牌堆中选择 !M! 张牌加入手牌，获得保留与不能被打出。"
+	},
+	"YUZU:SpreadShooting":{
+		"NAME":"扩散射击",
+		"DESCRIPTION":"造成 !D! 点伤害，每击中一名敌人，获得 !M! 暴击率。"
+	},
+	"YUZU:CoverShooting":{
+		"NAME":"掩护射击",
+		"DESCRIPTION":"造成 !D! 点伤害，获得 !B! 点格挡。精通：获得消耗"
+	},
+	"YUZU:ConcentratedShooting":{
+		"NAME":"凝神射击",
+		"DESCRIPTION":"保留，造成 !D! 点伤害，这张牌拥有额外 !M! %的暴击伤害。暴击/精通：本场战斗，增加25%的暴击伤害。"
+	},
+	"YUZU:StrategyAnalysis":{
+		"NAME":"攻略分析",
+		"DESCRIPTION":"清除敌人的格挡，清除自身的负面状态，消耗。精通：再清除敌人的力量，消耗所有的 [E] "
+	},
+	"YUZU:Silence":{
+		"NAME":"频段静默",
+		"DESCRIPTION":""
+	},
+	"YUZU:Cabinet":{
+		"NAME":"铁柜保护",
+		"DESCRIPTION":"获得 !B! 点格挡，还原手牌中其他牌的精通效果。"
+	},
+	"YUZU:Preheat":{
+		"NAME":"预热瞄准",
+		"DESCRIPTION":"立即填满暴击率，增加 !M! %的暴击伤害，这个暴击伤害再受伤后清除。精通：减少2格暴击率需求。"
+	},
+	"YUZU:EnergyCycle":{
+		"NAME":"能量循环",
+		"DESCRIPTION":"造成 !D! 点伤害，获得 [E] 暴击/精通：获得 [E] "
+	},
+	"YUZU:MicroBlasting":{
+		"NAME":"微型爆破",
+		"DESCRIPTION":"造成 !D! 点伤害，给予伤害层数的易伤。"
+	},
+	"YUZU:NovicePickUp":{
+		"NAME":"信手拈来",
+		"DESCRIPTION":"随机获得 !M! 张0费牌。精通：改为获取随机牌，再本回合耗能为0."
+	},
+	"YUZU:ShootingPreparation":{
+		"NAME":"射击准备",
+		"DESCRIPTION":"抽 !M! 张牌，获得2层暴击。",
+		"UPGRADE_DESCRIPTION":"抽 !M! 张攻击牌，获得2层暴击"
+	},
+	"YUZU:Naturalization":{
+		"NAME":"出神入化",
+		"DESCRIPTION":"将 !M! 张随机已精通牌放入抽牌堆，耗能为0，且消耗。消耗。精通：附加抽1张牌。"
+	},
+	"YUZU:SelfRepair":{
+		"NAME":"自我休整",
+		"DESCRIPTION":"暴击率需要减少X层。精通：回复2X生命",
+		"UPGRADE_DESCRIPTION":"暴击率需要减少X+1层。精通：回复2(X+1)生命"
+	},
+	"YUZU:Skilled":{
+		"NAME":"熟能生巧",
+		"DESCRIPTION":"从抽牌堆尽可能抽取已精通牌"
+	},
+	"YUZU:CurlUp":{
+		"NAME":"蜷缩构造",
+		"DESCRIPTION":"每回合开始时，获得1张铁箱子",
+		"UPGRADE_DESCRIPTION":"每回合开始时，获得1张铁箱子（保留）"
+	},
+	"YUZU:IronBox":{
+		"NAME":"铁箱子",
+		"DESCRIPTION":"获得 !B! 点格挡，清空暴击率"
+	},
+	"YUZU:Inversion":{
+		"NAME":"本末倒置",
+		"DESCRIPTION":"抽 !M! 张牌，使其他手牌获得精通：消耗"
+	},
+	"YUZU:Solidifying":{
+		"NAME":"固化衣装",
+		"DESCRIPTION":"保留，获得 !B! 点格挡。这张牌左边和右边的 !M! 张牌也获得保留。"
+	},
+	"YUZU:Claustrophobia":{
+		"NAME":"幽闭苦痛",
+		"DESCRIPTION":"造成 !D! 点伤害，有格挡时无法打出，对有格挡的敌人无效"
+	},
+	"YUZU:Condensation":{
+		"NAME":"聚精会神",
+		"DESCRIPTION":"选择1张手牌，耗能增加1，获得再打出一次。精通：使选择的牌获得精通：再打出1次。"
+	},
+	"YUZU:ClumsyRolling":{
+		"NAME":"笨拙翻滚",
+		"DESCRIPTION":"抽 !M! 张牌，弃置 !M! 张牌。精通：改为先弃牌。"
+	},
+	"YUZU:MemoryRetention":{
+		"NAME":"记忆留存",
+		"DESCRIPTION":"将消耗堆的牌返回抽牌堆。消耗。精通：改为交换你的手牌和消耗牌堆。"
+	},
+	"YUZU:CollaborativeShooting":{
+		"NAME":"协力射击",
+		"DESCRIPTION":"造成 !D! 点伤害，每有1种精通的牌，这个伤害增加 !M! 。"
+	},
+	"YUZU:GameStart":{
+		"NAME":"游戏开始",
+		"DESCRIPTION":"对所有敌人造成 !D! 点伤害。精通：必定暴击。暴击：伤害翻倍。"
+	},
+	"YUZU:Paintings":{
+		"NAME":"青空彩绘",
+		"DESCRIPTION":"每回合抽牌结束后，获得等同于手牌类型数的 [E] 。"
+	},
+	"YUZU:Shadow":{
+		"NAME":"幽寂之影",
+		"DESCRIPTION":"给予所有单位 !M! 层易伤，虚弱。精通：改为清除自身的所有状态。"
+	},
+	"YUZU:ProperPlanning":{
+		"NAME":"计划妥当",
+		"DESCRIPTION":"回合结束时选 !M! 张手牌，给予保留。"
+	},
+	"YUZU:AimingPreparation":{
+		"NAME":"瞄准准备",
+		"DESCRIPTION":"打出牌后，获得 !M! 暴击率。精通：打出精通的牌后，获得1暴击率。"
+	},
+	"YUZU:Loopback":{
+		"NAME":"回环连击",
+		"DESCRIPTION":"造成 !D! 点伤害。精通：从抽牌堆中将1张同名牌加入手牌。"
+	},
+	"YUZU:HighSpeedCycle":{
+		"NAME":"高速循环",
+		"DESCRIPTION":"从弃牌堆将 !M! 张牌加入手牌，并失去精通。精通：改为选择 "
+	},
+	"YUZU:FragmentedBomb":{
+		"NAME":"破片爆弹",
+		"DESCRIPTION":"将 !D! 点伤害随机分配给所有敌人。暴击：再打出一次。"
+	},
+	"YUZU:PotentialExplosion":{
+		"NAME":"潜能爆发",
+		"DESCRIPTION":"暴击也会应用到技能牌上，表现为多打出1次。精通："
+	},
+	"YUZU:Accumulation": {
+		"NAME": "有效积累",
+		"DESCRIPTION": " 保留 NL 造成牌组卡牌数量的伤害。"
+	},
+	"YUZU:AonengShooting": {
+		"NAME": "奥能射击",
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。暴击：再获得 1点力量和敏捷。"
+	}
+}
