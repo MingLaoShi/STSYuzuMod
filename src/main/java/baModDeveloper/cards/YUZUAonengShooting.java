@@ -25,7 +25,7 @@ public class YUZUAonengShooting extends YUZUCustomCard{
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.SELF;
+    private static final CardTarget TARGET=CardTarget.ENEMY;
     private static final CardRarity RARITY=CardRarity.COMMON;
 
     public YUZUAonengShooting() {

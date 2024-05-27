@@ -4,12 +4,14 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class YUZUStrategyAnalysis extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("StrategyAnalysis");
@@ -47,5 +49,6 @@ public class YUZUStrategyAnalysis extends YUZUCustomCard{
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
         commonUse(abstractPlayer,abstractMonster);
         addToBot(new RemoveSpecificPowerAction(abstractMonster,abstractPlayer, StrengthPower.POWER_ID));
+        addToBot(new LoseEnergyAction(EnergyPanel.getCurrentEnergy()));
     }
 }

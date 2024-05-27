@@ -22,7 +22,7 @@ public class YUZUShadow extends YUZUCustomCard{
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.SELF_AND_ENEMY;
+    private static final CardTarget TARGET=CardTarget.ALL;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
 
     public YUZUShadow() {
@@ -41,8 +41,8 @@ public class YUZUShadow extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new WeakPower(abstractPlayer,this.magicNumber,false)));
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new VulnerablePower(abstractMonster,this.magicNumber,false)));
-                addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new WeakPower(abstractMonster,this.magicNumber,false)));
+                addToBot(new ApplyPowerAction(m,abstractPlayer,new VulnerablePower(m,this.magicNumber,false)));
+                addToBot(new ApplyPowerAction(m,abstractPlayer,new WeakPower(m,this.magicNumber,false)));
             }
         }
     }

@@ -15,6 +15,11 @@ import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 
 public class YUZUCriticalRatePanel extends AbstractPanel {
     private int MAX;
+
+    public int getAmount() {
+        return amount;
+    }
+
     private int amount;
     private int modifiedMax;
     private static final float FontSize = 34.0F;
@@ -68,11 +73,22 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
 
     public void setMAX(int max){
         this.modifiedMax=max;
+        this.modifiedMax=Math.min(1,this.modifiedMax);
         generatePower();
     }
     public void changeMAX(int amount){
         this.MAX+=amount;
+        this.MAX=Math.min(1,this.MAX);
         generatePower();
+    }
+
+    public void resetModifierMax(){
+        this.modifiedMax=-1;
+        generatePower();
+    }
+
+    public int getMAX(){
+        return modifiedMax>0?modifiedMax:MAX;
     }
 
 }

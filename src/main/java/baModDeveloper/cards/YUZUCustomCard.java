@@ -5,6 +5,7 @@ import baModDeveloper.power.YUZUAnalysisPower;
 import baModDeveloper.power.YUZUCriticalHitPower;
 import baModDeveloper.power.YUZUCriticalHitRatePower;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -56,8 +57,14 @@ public abstract class YUZUCustomCard extends CustomCard {
             ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).masterCard(card);
         }
         card.masterOnce();
-        MasterCards.add(card.cardID);
-        card.triggerOnMaster();
+        if(!MasterCards.contains(card.cardID)){
+            MasterCards.add(card.cardID);
+            card.triggerOnMaster();
+            AbstractDungeon.player.drawPile.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
+            AbstractDungeon.player.hand.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
+            AbstractDungeon.player.discardPile.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
+
+        }
     }
     public int getMasterNum() {
         return masterNum;
@@ -123,5 +130,12 @@ public abstract class YUZUCustomCard extends CustomCard {
             ((YUZUCustomCard) card).triggerOnMaster();
         }
         return card;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if(YUZUCustomCard.isMasteredWithChangeNum(this)){
+            this.glowColor= Color.RED.cpy();
+        }
     }
 }

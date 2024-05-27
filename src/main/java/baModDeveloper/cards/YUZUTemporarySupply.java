@@ -34,7 +34,7 @@ public class YUZUTemporarySupply extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new AddTemporaryHPAction(abstractPlayer,abstractPlayer,this.masterNum));
+        addToBot(new AddTemporaryHPAction(abstractPlayer,abstractPlayer,this.magicNumber));
     }
 
     @Override

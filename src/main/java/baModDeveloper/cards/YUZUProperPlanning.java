@@ -2,6 +2,8 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.power.YUZUProperPlanningPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -31,7 +33,7 @@ public class YUZUProperPlanning extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        //Todo:缺效果
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUProperPlanningPower(abstractPlayer,this.magicNumber)));
     }
 
     @Override

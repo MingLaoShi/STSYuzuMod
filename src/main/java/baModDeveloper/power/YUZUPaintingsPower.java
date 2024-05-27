@@ -2,13 +2,18 @@ package baModDeveloper.power;
 
 import baModDeveloper.Helper.ModHelper;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class YUZUPaintingsPower extends AbstractPower {
     public static final String POWER_ID= ModHelper.makePath("PaintingsPower");
@@ -38,8 +43,16 @@ public class YUZUPaintingsPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        int count= (int) AbstractDungeon.player.hand.group.stream().map(card->card.type).count();
-        addToBot(new GainEnergyAction(count));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                Set<AbstractCard.CardType> temp=new HashSet<>();
+                AbstractDungeon.player.hand.group.forEach(card -> temp.add(card.type));
+                addToTop(new GainEnergyAction(temp.size()));
+                this.isDone=true;
+            }
+        });
+
         //Todo
     }
 

@@ -1,6 +1,7 @@
 package baModDeveloper.cards.colorless;
 
 import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.action.YUZUClearCriticalRateAction;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.power.YUZUCriticalHitRatePower;
 import basemod.abstracts.CustomCard;
@@ -36,6 +37,6 @@ public class YUZUIronBox extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer,this.block));
-//        addToBot(new );
+        addToBot(new YUZUClearCriticalRateAction());
     }
 }

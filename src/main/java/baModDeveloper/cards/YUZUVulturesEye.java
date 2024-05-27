@@ -1,9 +1,9 @@
 package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.action.YUZUSetCriticalRateMaxAction;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.power.YUZUCriticalHitPower;
-import baModDeveloper.power.YUZUVulturesEyePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +17,7 @@ public class YUZUVulturesEye extends YUZUCustomCard{
     private static final String IMG_PATH=ModHelper.makeImgPath("card","default");
     private static final int COST=1;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE=CardType.ATTACK;
+    private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.SELF;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
@@ -36,9 +36,9 @@ public class YUZUVulturesEye extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if(this.upgraded){
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUVulturesEyePower(abstractPlayer,1)));
+            addToBot(new YUZUSetCriticalRateMaxAction(1));
         }else{
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUVulturesEyePower(abstractPlayer,2)));
+            addToBot(new YUZUSetCriticalRateMaxAction(2));
         }
     }
 

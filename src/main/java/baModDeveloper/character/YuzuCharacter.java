@@ -194,4 +194,10 @@ public class YuzuCharacter extends CustomPlayer {
         super.preBattlePrep();
         this.criticalRatePanel.reset();
     }
+
+    @Override
+    public void applyEndOfTurnTriggers() {
+        super.applyEndOfTurnTriggers();
+        this.getCriticalRatePanel().resetModifierMax();
+    }
 }

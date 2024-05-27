@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.BlurPower;
 
 public class YUZUBlurOnDamagePower extends AbstractPower {
     public static final String POWER_ID= ModHelper.makePath("BlurOnDamage");
-    private static final AbstractPower.PowerType TYPE= AbstractPower.PowerType.DEBUFF;
+    private static final AbstractPower.PowerType TYPE= PowerType.BUFF;
     private static final PowerStrings powerStrings= CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME=powerStrings.NAME;
     private static final String[] DESCRIPTIONS=powerStrings.DESCRIPTIONS;

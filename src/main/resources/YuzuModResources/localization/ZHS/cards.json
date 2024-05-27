@@ -95,7 +95,7 @@
 	},
 	"YUZU:MicroBlasting":{
 		"NAME":"微型爆破",
-		"DESCRIPTION":"造成 !D! 点伤害，给予伤害层数的易伤。"
+		"DESCRIPTION":"造成 !D! 点伤害，给予伤害层数的易伤。精通：给予伤害层数虚弱。"
 	},
 	"YUZU:NovicePickUp":{
 		"NAME":"信手拈来",

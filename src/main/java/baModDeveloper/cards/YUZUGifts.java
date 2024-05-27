@@ -4,14 +4,18 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.stream.Collectors;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
@@ -23,9 +27,9 @@ public class YUZUGifts extends YUZUCustomCard{
     private static final String IMG_PATH=ModHelper.makeImgPath("card","default");
     private static final int COST=1;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE=CardType.ATTACK;
+    private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.SELF;
+    private static final CardTarget TARGET=CardTarget.NONE;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
 
     public YUZUGifts() {
@@ -40,54 +44,18 @@ public class YUZUGifts extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for(int i=0;i<this.magicNumber;i++){
-            AbstractCard card=returnRandomRetainCardInCombat();
-            if(card!=null){
-                addToBot(new MakeTempCardInHandAction(card.makeCopy()));
+        ArrayList<AbstractCard> cardGroup= CardLibrary.getAllCards();
+        ArrayList<AbstractCard> temp= (ArrayList<AbstractCard>) cardGroup.stream().filter(card -> card.selfRetain).collect(Collectors.toList());
+        if(!temp.isEmpty()){
+            for(int i=0;i<this.magicNumber;i++){
+                addToBot(new MakeTempCardInHandAction(temp.get(cardRandomRng.random(0,temp.size()-1)).makeCopy()));
             }
         }
     }
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
-
+        commonUse(abstractPlayer,abstractMonster);
     }
 
-    public static AbstractCard returnRandomRetainCardInCombat(){
-        ArrayList<AbstractCard> list = new ArrayList();
-        Iterator var1 = srcCommonCardPool.group.iterator();
-
-        AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)&&c.selfRetain) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-
-        var1 = srcUncommonCardPool.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)&&c.selfRetain) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-
-        var1 = srcRareCardPool.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)&&c.selfRetain) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-        if(list.isEmpty()){
-            return null;
-        }
-        return (AbstractCard)list.get(cardRandomRng.random(list.size() - 1));
-    }
 }
