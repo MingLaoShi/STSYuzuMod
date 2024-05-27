@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 
 public class YUZUCriticalRatePanel extends AbstractPanel {
+    public static int OriginMax=10;
     private int MAX;
 
     public int getAmount() {
@@ -30,7 +31,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
 
     public YUZUCriticalRatePanel(float show_x, float show_y, float hide_x, float hide_y, Texture img, boolean startHidden) {
         super(show_x, show_y, hide_x, hide_y, img, startHidden);
-        this.MAX=5;
+        this.MAX=OriginMax;
         this.amount=0;
         this.modifiedMax=-1;
     }
@@ -66,19 +67,19 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     }
 
     public void reset(){
-        this.MAX=5;
+        this.MAX=OriginMax;
         this.amount=0;
         this.modifiedMax=-1;
     }
 
     public void setMAX(int max){
         this.modifiedMax=max;
-        this.modifiedMax=Math.min(1,this.modifiedMax);
+        this.modifiedMax=Math.max(1,this.modifiedMax);
         generatePower();
     }
     public void changeMAX(int amount){
         this.MAX+=amount;
-        this.MAX=Math.min(1,this.MAX);
+        this.MAX=Math.max(1,this.MAX);
         generatePower();
     }
 

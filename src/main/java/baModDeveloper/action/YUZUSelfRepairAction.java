@@ -37,7 +37,7 @@ public class YUZUSelfRepairAction extends AbstractGameAction {
             addToTop(new HealAction(this.p,this.p,2*effect));
         }
         addToTop(new YUZUChangeCriticalHitRateMaxAction(effect));
-
+        EnergyPanel.useEnergy(EnergyPanel.totalCount);
         this.isDone=true;
     }
 }

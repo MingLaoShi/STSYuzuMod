@@ -40,13 +40,11 @@ public class YUZUNaturalization extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Object[] masteredList=YUZUCustomCard.MasterCards.toArray();
-        if(masteredList.length==0){
-            return;
-        }
         for(int i=0;i<this.magicNumber;i++){
-            AbstractCard card= CardLibrary.getCard(masteredList[AbstractDungeon.cardRandomRng.random(0,masteredList.length-1)].toString()).makeCopy();
-            card.setCostForTurn(0);
+            AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
+            card.freeToPlayOnce=true;
+            if(card instanceof YUZUCustomCard)
+                YUZUCustomCard.masterCard((YUZUCustomCard) card);
             CardModifierManager.addModifier(card,new YUZUExhaustModifier());
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }
@@ -55,13 +53,11 @@ public class YUZUNaturalization extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
-        Object[] masteredList=YUZUCustomCard.MasterCards.toArray();
-        if(masteredList.length==0){
-            return;
-        }
         for(int i=0;i<this.magicNumber;i++){
-            AbstractCard card= CardLibrary.getCard(masteredList[AbstractDungeon.cardRandomRng.random(0,masteredList.length-1)].toString()).makeCopy();
-            card.setCostForTurn(0);
+            AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
+            card.freeToPlayOnce=true;
+            if(card instanceof YUZUCustomCard)
+                YUZUCustomCard.masterCard((YUZUCustomCard) card);
             CardModifierManager.addModifier(card,new YUZUExhaustModifier());
             CardModifierManager.addModifier(card,new YUZUDrawCardModifier(1));
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));

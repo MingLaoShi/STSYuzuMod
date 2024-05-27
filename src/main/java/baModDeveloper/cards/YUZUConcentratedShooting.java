@@ -28,6 +28,7 @@ public class YUZUConcentratedShooting extends YUZUCustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=10;
         this.baseMagicNumber=this.magicNumber=50;
+        this.selfRetain=true;
     }
 
     @Override

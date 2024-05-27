@@ -51,7 +51,7 @@ public class YUZUAonengShooting extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
-
+        commonUse(abstractPlayer,abstractMonster);
     }
 
     @Override

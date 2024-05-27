@@ -25,6 +25,7 @@ public class YUZUCollaborativeShooting extends YUZUCustomCard{
     public YUZUCollaborativeShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=6;
+        this.baseMagicNumber=this.magicNumber=1;
     }
 
     @Override
