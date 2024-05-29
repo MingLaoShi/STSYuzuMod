@@ -3,6 +3,7 @@ package baModDeveloper;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.cards.*;
+import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
 import basemod.AutoAdd;
 import basemod.BaseMod;
@@ -59,7 +60,7 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
 //        BaseMod.addCard(new YUZUColdStorage());
 //        BaseMod.addCard(new YUZUDesignShooting());
 //        BaseMod.addCard(new YUZUSpreadShooting());
-        new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class).setDefaultSeen(true).cards();
+        new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class).notPackageFilter(YUZUForkedIntersectionOption.class).setDefaultSeen(true).cards();
     }
 
     public static void initialize(){

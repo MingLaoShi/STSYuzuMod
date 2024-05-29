@@ -33,14 +33,14 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     protected abstract void upgradeMethod();
 
-    public static boolean isMastered(YUZUCustomCard card){
+    public static boolean isMastered(AbstractCard card){
         if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
             return ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).isMastered(card);
         }
         return MasterCards.containsKey(card.cardID);
     }
 
-    public static void masterCard(YUZUCustomCard card){
+    public static void masterCard(AbstractCard card){
         if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
             ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).masterCard(card);
 //            MasterAllCards(card);
@@ -49,15 +49,6 @@ public abstract class YUZUCustomCard extends CustomCard {
         }
     }
 
-    private static void MasterAllCards(AbstractCard card) {
-        AbstractDungeon.player.drawPile.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-        AbstractDungeon.player.hand.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-        AbstractDungeon.player.discardPile.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-    }
-
-    public void setMasterNum(int masterNum) {
-        masterNum = masterNum;
-    }
     public static void removeMaster(YUZUCustomCard card){
         MasterCards.remove(card.cardID);
     }

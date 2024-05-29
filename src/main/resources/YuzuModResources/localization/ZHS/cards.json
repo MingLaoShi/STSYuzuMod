@@ -117,7 +117,8 @@
 	},
 	"YUZU:Skilled":{
 		"NAME":"熟能生巧",
-		"DESCRIPTION":"从抽牌堆尽可能抽取已精通牌"
+		"DESCRIPTION":"从抽牌堆尽可能抽取已精通牌。精通：获得 [E] 。",
+		"UPGRADE_DESCRIPTION": "从抽牌堆尽可能抽取已精通牌。精通：获得 [E] 。"
 	},
 	"YUZU:CurlUp":{
 		"NAME":"蜷缩构造",
@@ -228,5 +229,27 @@
 	"YUZU:GiveBestShot": {
 		"NAME": "尽力一击",
 		"DESCRIPTION": "造成 !D! 点伤害，消耗手牌中的其他牌。精通：改为消耗手牌中的其他攻击牌。"
+	},
+	"YUZU:ForkedIntersection": {
+		"NAME": "分叉路口",
+		"DESCRIPTION": "选择 !M! 次：获得1点力量，获得1点敏捷，获得7点格挡，抽1张牌。"
+	},
+	"YUZU:ForkedIntersectionOption": {
+		"NAME": "分叉路口",
+		"DESCRIPTION": "",
+		"EXTENDED_DESCRIPTION": [
+			"获得1点力量",
+			"获得1点敏捷",
+			"获得 !B! 点格挡。",
+			"抽1张牌"
+		]
+	},
+	"YUZU:BriefSilence": {
+		"NAME": "频段静默",
+		"DESCRIPTION": "若敌人本回合为非攻击行动，眩晕敌人，清空暴击槽。消耗。精通：清空已有的暴击次数"
+	},
+	"YUZU:FlameModule": {
+		"NAME": "火焰模块",
+		"DESCRIPTION": "回合开始时，获得1层灼伤，给予所有敌人 !M! 层灼伤。"
 	}
 }
