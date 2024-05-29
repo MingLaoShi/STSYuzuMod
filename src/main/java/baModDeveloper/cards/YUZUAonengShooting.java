@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class YUZUAonengShooting extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("AonengShooting");
@@ -50,7 +49,7 @@ public class YUZUAonengShooting extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 

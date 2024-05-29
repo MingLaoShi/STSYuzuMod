@@ -46,7 +46,7 @@ public class YUZUStrategyAnalysis extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
         addToBot(new RemoveSpecificPowerAction(abstractMonster,abstractPlayer, StrengthPower.POWER_ID));
         addToBot(new LoseEnergyAction(EnergyPanel.getCurrentEnergy()));

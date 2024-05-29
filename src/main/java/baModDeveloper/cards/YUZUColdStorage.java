@@ -5,7 +5,6 @@ import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.modifier.BATwinsRetainModifier;
 import baModDeveloper.modifier.YUZUCanNotPlayModifier;
 import basemod.helpers.CardModifierManager;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -45,7 +44,7 @@ public class YUZUColdStorage extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         CardGroup cardGroup=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         cardGroup.group.addAll(AbstractDungeon.player.drawPile.group);
         cardGroup.group.addAll(AbstractDungeon.player.exhaustPile.group);

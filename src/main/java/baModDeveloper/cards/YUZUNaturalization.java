@@ -10,11 +10,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.List;
 
 public class YUZUNaturalization extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("Naturalization");
@@ -52,7 +49,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i=0;i<this.magicNumber;i++){
             AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
             card.freeToPlayOnce=true;

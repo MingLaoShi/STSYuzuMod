@@ -48,7 +48,7 @@ public class YUZUShadow extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(AbstractPower p:abstractPlayer.powers){
             addToBot(new RemoveSpecificPowerAction(abstractPlayer,abstractPlayer,p));
         }

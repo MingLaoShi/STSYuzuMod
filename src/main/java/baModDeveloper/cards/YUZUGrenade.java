@@ -42,14 +42,14 @@ public class YUZUGrenade extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if(YUZUCustomCard.isMasteredWithChangeNum(this)){
+        if(YUZUCustomCard.isMastered(this)){
             this.damage*=2;
         }
     }
@@ -57,7 +57,7 @@ public class YUZUGrenade extends YUZUCustomCard{
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        if(YUZUCustomCard.isMasteredWithChangeNum(this)){
+        if(YUZUCustomCard.isMastered(this)){
             this.damage*=2;
         }
     }

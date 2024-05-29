@@ -36,7 +36,7 @@ public class YUZUSelfRepair extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new YUZUSelfRepairAction(this.energyOnUse,this.freeToPlayOnce,true,this.upgraded));
     }
 }

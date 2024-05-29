@@ -36,7 +36,7 @@ public class YUZURefraction extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new YUZURefractionAction(this.energyOnUse,this.freeToPlayOnce,true));
     }
 }

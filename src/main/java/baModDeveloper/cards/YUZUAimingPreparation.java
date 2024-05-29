@@ -39,7 +39,7 @@ public class YUZUAimingPreparation extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUAimingPreparationMasterPower(abstractPlayer,this.magicNumber)));
     }

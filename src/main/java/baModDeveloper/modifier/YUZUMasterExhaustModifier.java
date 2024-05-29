@@ -16,7 +16,7 @@ public class YUZUMasterExhaustModifier extends AbstractCardModifier {
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
         if(card instanceof YUZUCustomCard){
-            if(YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+            if(YUZUCustomCard.isMastered((YUZUCustomCard) card)){
                 action.exhaustCard=true;
             }
         }

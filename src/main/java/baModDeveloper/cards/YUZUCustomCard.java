@@ -2,24 +2,22 @@ package baModDeveloper.cards;
 
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.power.YUZUAnalysisPower;
-import baModDeveloper.power.YUZUCriticalHitPower;
-import baModDeveloper.power.YUZUCriticalHitRatePower;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public abstract class YUZUCustomCard extends CustomCard {
-    protected int masterNum=0;
-    protected static Set<String> MasterCards=new HashSet<>();
-    public boolean autoCritical=false;
+    protected static Map<String,Integer> MasterCards=new HashMap<>();
+    private int extraCirHitMulter;
 
     public YUZUCustomCard(String ID, String NAME, String IMG_PATH, int COST, String DESCRIPTION, CardType TYPE, CardColor COLOR, CardRarity RARITY, CardTarget TARGET) {
         super(ID,NAME,IMG_PATH,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);
@@ -36,45 +34,29 @@ public abstract class YUZUCustomCard extends CustomCard {
     protected abstract void upgradeMethod();
 
     public static boolean isMastered(YUZUCustomCard card){
-        if(card.masterNum>0){
-            return true;
-        }
         if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
             return ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).isMastered(card);
         }
-        return MasterCards.contains(card.cardID);
+        return MasterCards.containsKey(card.cardID);
     }
 
-    public static boolean isMasteredWithChangeNum(YUZUCustomCard card){
-        boolean master=isMastered(card);
-        if(master&&card.masterNum==0){
-            card.masterNum++;
-        }
-        return master;
-    }
     public static void masterCard(YUZUCustomCard card){
         if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
             ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).masterCard(card);
-        }
-        card.masterOnce();
-        if(!MasterCards.contains(card.cardID)){
-            MasterCards.add(card.cardID);
-            card.triggerOnMaster();
-            AbstractDungeon.player.drawPile.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-            AbstractDungeon.player.hand.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-            AbstractDungeon.player.discardPile.group.stream().filter(c->c instanceof YUZUCustomCard).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
-
+//            MasterAllCards(card);
+        } else{
+            MasterCards.merge(card.cardID, 1, Integer::sum);
         }
     }
-    public int getMasterNum() {
-        return masterNum;
+
+    private static void MasterAllCards(AbstractCard card) {
+        AbstractDungeon.player.drawPile.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
+        AbstractDungeon.player.hand.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
+        AbstractDungeon.player.discardPile.group.stream().filter(c->c instanceof YUZUCustomCard&&c.cardID.equals(card.cardID)).forEach(c->((YUZUCustomCard) c).triggerOnMaster());
     }
 
     public void setMasterNum(int masterNum) {
         masterNum = masterNum;
-    }
-    public void masterOnce(){
-        this.masterNum++;
     }
     public static void removeMaster(YUZUCustomCard card){
         MasterCards.remove(card.cardID);
@@ -86,31 +68,19 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        YUZUCustomCard.isMasteredWithChangeNum(this);
-        if(this.autoCritical){
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitPower(abstractPlayer,1)));
-        }
-        if(this.masterNum==0){
+        if(!YUZUCustomCard.isMastered(this)){
             this.commonUse(abstractPlayer,abstractMonster);
         }else{
-            this.masterUse(abstractPlayer,abstractMonster,this.masterNum);
+            this.masterUse(abstractPlayer,abstractMonster);
         }
-//        YUZUCustomCard.masterCard(this);
         addToBot(new YUZUApplyCriticalRateAction(1));
+        YUZUCustomCard.masterCard(this);
     }
 
     public abstract void commonUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);
-    public abstract void masterUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster,int masterNum);
+    public abstract void masterUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);
 
 
-    @Override
-    public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard card=super.makeStatEquivalentCopy();
-        if(card instanceof YUZUCustomCard){
-            ((YUZUCustomCard) card).masterNum=this.masterNum;
-        }
-        return card;
-    }
 
     public void triggerOnMaster(){}
 
@@ -126,7 +96,7 @@ public abstract class YUZUCustomCard extends CustomCard {
     @Override
     public AbstractCard makeCopy() {
         AbstractCard card=super.makeCopy();
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
             ((YUZUCustomCard) card).triggerOnMaster();
         }
         return card;
@@ -134,7 +104,7 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        if(YUZUCustomCard.isMasteredWithChangeNum(this)){
+        if(YUZUCustomCard.isMastered(this)){
             this.glowColor= Color.RED.cpy();
         }
     }

@@ -46,7 +46,7 @@ public class YUZUAnalysisPower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
             action.exhaustCard=true;
         }
     }

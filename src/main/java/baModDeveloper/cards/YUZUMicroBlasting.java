@@ -37,7 +37,7 @@ public class YUZUMicroBlasting extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new YUZUMicroBlastingAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage),true));
     }
 }

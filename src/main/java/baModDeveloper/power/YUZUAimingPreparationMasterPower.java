@@ -41,7 +41,7 @@ public class YUZUAimingPreparationMasterPower extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
             addToBot(new YUZUApplyCriticalRateAction(this.amount));
         }
     }

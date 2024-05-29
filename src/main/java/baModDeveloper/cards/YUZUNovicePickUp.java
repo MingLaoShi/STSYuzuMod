@@ -49,7 +49,7 @@ public class YUZUNovicePickUp extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i=0;i<this.magicNumber;i++){
             ArrayList<AbstractCard> cardlist= (ArrayList<AbstractCard>) CardLibrary.getAllCards();
             AbstractCard card=cardlist.get(AbstractDungeon.cardRandomRng.random(0,cardlist.size()-1)).makeCopy();

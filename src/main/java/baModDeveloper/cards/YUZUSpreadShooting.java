@@ -3,9 +3,7 @@ package baModDeveloper.cards;
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.YUZUCriticalHitRatePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -47,7 +45,7 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         int monsterNum= (int) AbstractDungeon.getCurrRoom().monsters.monsters.stream().filter(m->!m.isDeadOrEscaped()).count();
         addToBot(new DamageAllEnemiesAction(abstractPlayer,this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         addToBot(new YUZUApplyCriticalRateAction(this.magicNumber*monsterNum));
@@ -64,7 +62,7 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard card=super.makeStatEquivalentCopy();
-        if(YUZUCustomCard.isMasteredWithChangeNum((YUZUCustomCard) card)){
+        if(YUZUCustomCard.isMastered((YUZUCustomCard) card)){
             ((YUZUCustomCard) card).triggerOnMaster();
         }
         return card;

@@ -42,7 +42,7 @@ public class YUZULoopback extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new AbstractGameAction() {
             final String cardId=YUZULoopback.ID;
             @Override

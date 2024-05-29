@@ -38,7 +38,7 @@ public class YUZUTemporarySupply extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new HealAction(abstractPlayer,abstractPlayer,this.magicNumber));
     }
 }

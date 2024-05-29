@@ -24,6 +24,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ALL_ENEMY;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
+    private int extraDamage;
 
     public YUZUScorchingExplosive() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -31,6 +32,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
         this.baseMagicNumber=this.magicNumber=3;
         this.baseBlock=this.block=1;
         this.isMultiDamage=true;
+        this.extraDamage=0;
     }
 
     @Override
@@ -49,7 +51,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 
@@ -59,26 +61,32 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
     }
 
     @Override
+    public void triggerOnMaster() {
+        super.triggerOnMaster();
+        this.extraDamage+=this.baseBlock;
+    }
+
+    @Override
     public void applyPowers() {
         int baseBaseDamage=this.baseDamage;
-        this.baseDamage+=this.masterNum;
+        this.baseDamage+=this.extraDamage;
         super.applyPowers();
 
         this.isDamageModified=this.damage!=baseBaseDamage;
         this.baseDamage=baseBaseDamage;
-        this.magicNumber=this.baseMagicNumber+this.masterNum;
+        this.magicNumber=this.baseMagicNumber+this.extraDamage;
         this.isMagicNumberModified=this.magicNumber!=this.baseMagicNumber;
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         int baseBaseDamage=this.baseDamage;
-        this.baseDamage+=this.masterNum;
+        this.baseDamage+=this.extraDamage;
         super.calculateCardDamage(mo);
 
         this.isDamageModified=this.damage!=baseBaseDamage;
         this.baseDamage=baseBaseDamage;
-        this.magicNumber=this.baseMagicNumber+this.masterNum;
+        this.magicNumber=this.baseMagicNumber+this.extraDamage;
         this.isMagicNumberModified=this.magicNumber!=this.baseMagicNumber;
     }
 }

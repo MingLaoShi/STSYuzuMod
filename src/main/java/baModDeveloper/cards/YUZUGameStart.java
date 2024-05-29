@@ -2,13 +2,11 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.YUZUCriticalHitPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -41,14 +39,14 @@ public class YUZUGameStart extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 
     @Override
     public void triggerOnMaster() {
         super.triggerOnMaster();
-        this.autoCritical=true;
+//        this.autoCritical=true;
     }
 
 

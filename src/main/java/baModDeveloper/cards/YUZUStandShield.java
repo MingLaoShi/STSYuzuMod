@@ -37,14 +37,14 @@ public class YUZUStandShield extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 
     @Override
     protected void applyPowersToBlock() {
         super.applyPowersToBlock();
-        if(YUZUCustomCard.isMasteredWithChangeNum(this)){
+        if(YUZUCustomCard.isMastered(this)){
             this.block= (int) (this.block*0.75F);
         }
 

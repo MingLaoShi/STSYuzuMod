@@ -4,20 +4,15 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.stream.Collectors;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class YUZUGifts extends YUZUCustomCard{
@@ -54,7 +49,7 @@ public class YUZUGifts extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
     }
 

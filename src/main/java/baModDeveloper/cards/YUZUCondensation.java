@@ -42,7 +42,7 @@ public class YUZUCondensation extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new SelectCardsInHandAction(1,"//",card->true,this::callbackMaster));
     }
 

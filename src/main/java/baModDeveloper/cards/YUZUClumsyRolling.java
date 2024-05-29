@@ -38,7 +38,7 @@ public class YUZUClumsyRolling extends YUZUCustomCard{
     }
 
     @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster, int masterNum) {
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DiscardAction(abstractPlayer,abstractPlayer,this.magicNumber,false));
         addToBot(new DrawCardAction(this.magicNumber));
     }
