@@ -41,13 +41,20 @@ public class YUZUGameStart extends YUZUCustomCard{
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
+        this.triggerOnCriticalHit(abstractMonster);
     }
 
     @Override
-    public void triggerOnMaster() {
-        super.triggerOnMaster();
-//        this.autoCritical=true;
+    public void applyPowers() {
+        this.tags.remove(YUZUCardTag.NoNeedCriticalHit);
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.tags.add(YUZUCardTag.NoNeedCriticalHit);
+        }
+        super.applyPowers();
+
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.damage*=4;
+            this.isDamageModified=this.damage!=this.baseDamage;
+        }
     }
-
-
 }

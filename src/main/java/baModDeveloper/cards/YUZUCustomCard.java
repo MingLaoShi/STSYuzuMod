@@ -4,6 +4,7 @@ import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.power.YUZUAnalysisPower;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -95,5 +96,11 @@ public abstract class YUZUCustomCard extends CustomCard {
         }else {
             this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR;
         }
+    }
+
+    public static class YUZUCardTag{
+        @SpireEnum
+        public static CardTags NoNeedCriticalHit;
+
     }
 }
