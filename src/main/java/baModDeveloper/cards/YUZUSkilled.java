@@ -46,6 +46,6 @@ public class YUZUSkilled extends YUZUCustomCard{
     }
 
     private boolean filter(AbstractCard card){
-        return YUZUCustomCard.isMastered(card);
+        return YUZUCustomCard.isMastered(card)>0;
     }
 }

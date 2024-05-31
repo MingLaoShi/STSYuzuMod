@@ -25,8 +25,8 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import java.util.ArrayList;
 
 public class YuzuCharacter extends CustomPlayer {
-    private static final String YUZU_CHARACTER_SHOULDER_1= ModHelper.makeImgPath("character","default");
-    private static final String YUZU_CHARACTER_SHOULDER_2=ModHelper.makeImgPath("character","default");
+    private static final String YUZU_CHARACTER_SHOULDER_1= ModHelper.makeImgPath("character","shoulder2");
+    private static final String YUZU_CHARACTER_SHOULDER_2=ModHelper.makeImgPath("character","shoulder2");
     private static final String YUZU_CHARACTER_CORPSE=ModHelper.makeImgPath("character","default");
     private static final String[] ORB_TEXTURES = new String[]{
             ModHelper.makeImgPath("UI/orb", "layer1"),

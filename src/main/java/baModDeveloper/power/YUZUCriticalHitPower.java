@@ -3,6 +3,7 @@ package baModDeveloper.power;
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.cards.YUZUPreheat;
+import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -59,12 +60,11 @@ public class YUZUCriticalHitPower extends AbstractPower{
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         if(type== DamageInfo.DamageType.NORMAL){
-            if(AbstractDungeon.player.hasPower(YUZUPreheatPower.POWER_ID)){
-                return damage*=(Multiplier+AbstractDungeon.player.getPower(YUZUPreheatPower.POWER_ID).amount/100.0F);
-            }
-            return damage*=Multiplier;
+
+            return damage*=getMulti(card);
         }
-        return damage;    }
+        return damage;
+    }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -76,10 +76,17 @@ public class YUZUCriticalHitPower extends AbstractPower{
         }
     }
 
-    public float getMultiplier(){
-        if(AbstractDungeon.player.hasPower(YUZUPreheatPower.POWER_ID)){
-            return Multiplier+AbstractDungeon.player.getPower(YUZUPreheatPower.POWER_ID).amount/100.0F;
+
+    private float getMulti(AbstractCard card) {
+        float multi=this.Multiplier;
+        for(AbstractPower p: AbstractDungeon.player.powers){
+            if(p instanceof YUZUChangeCriticalMultiInterface){
+                multi=((YUZUChangeCriticalMultiInterface) p).getMulti(multi);
+            }
+            if(card instanceof YUZUChangeCriticalMultiInterface){
+                multi=((YUZUChangeCriticalMultiInterface) card).getMulti(multi);
+            }
         }
-        return Multiplier;
+        return multi;
     }
 }

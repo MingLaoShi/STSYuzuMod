@@ -2,6 +2,7 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,11 +35,14 @@ public class YUZUCabinet extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new GainBlockAction(abstractPlayer,this.block));
-        for(AbstractCard c:abstractPlayer.hand.group){
-            if(c instanceof YUZUCustomCard){
-                YUZUCustomCard.removeMaster((YUZUCustomCard) c);
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                abstractPlayer.hand.group.forEach(YUZUCustomCard::removeMaster);
+                this.isDone=true;
             }
-        }
+        });
+
     }
 
     @Override

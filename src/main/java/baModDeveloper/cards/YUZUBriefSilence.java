@@ -35,7 +35,9 @@ public class YUZUBriefSilence extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new StunMonsterAction(abstractMonster,abstractPlayer));
+        if (abstractMonster != null && abstractMonster.getIntentBaseDmg() >= 0) {
+            addToBot(new StunMonsterAction(abstractMonster,abstractPlayer));
+        }
         addToBot(new YUZUClearCriticalRateAction());
     }
 

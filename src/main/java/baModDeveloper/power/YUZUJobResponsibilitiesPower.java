@@ -44,7 +44,7 @@ public class YUZUJobResponsibilitiesPower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card instanceof YUZUCustomCard &&YUZUCustomCard.isMastered((YUZUCustomCard) card)&&!card.purgeOnUse&&(card.isStarterStrike()||card.isStarterDefend())){
+        if(card instanceof YUZUCustomCard &&YUZUCustomCard.isMastered((YUZUCustomCard) card)>0&&!card.purgeOnUse&&(card.isStarterStrike()||card.isStarterDefend())){
             this.flash();
             AbstractMonster target=null;
             if(action.target!=null){

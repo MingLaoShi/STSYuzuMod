@@ -48,11 +48,14 @@ public class YUZUCondensation extends YUZUCustomCard{
 
     private void callback(List<AbstractCard> cards){
         for(AbstractCard card:cards){
+            card.modifyCostForCombat(1);
             CardModifierManager.addModifier(card,new YUZUPlayOnceMoreModifier());
         }
     }
     private void callbackMaster(List<AbstractCard> cards){
         for(AbstractCard card:cards){
+            card.modifyCostForCombat(1);
+            CardModifierManager.addModifier(card,new YUZUPlayOnceMoreModifier());
             CardModifierManager.addModifier(card,new YUZUMasterPlayOnceMoreModifier());
         }
     }

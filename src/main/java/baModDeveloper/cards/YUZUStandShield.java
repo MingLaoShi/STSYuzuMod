@@ -44,8 +44,9 @@ public class YUZUStandShield extends YUZUCustomCard{
     @Override
     protected void applyPowersToBlock() {
         super.applyPowersToBlock();
-        if(YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)>0){
             this.block= (int) (this.block*0.75F);
+            this.isBlockModified=this.block!=this.baseBlock;
         }
 
     }

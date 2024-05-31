@@ -44,7 +44,7 @@ public class YUZUCamouflage extends YUZUCustomCard{
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
-        if(YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)>0){
             addToBot(new BATwinsPlayHandCardAction(this,null));
         }
     }

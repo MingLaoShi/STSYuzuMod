@@ -11,9 +11,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class YUZUAnalysisPower extends AbstractPower {
     public static final String POWER_ID= ModHelper.makePath("AnalysisPower");
@@ -24,7 +22,7 @@ public class YUZUAnalysisPower extends AbstractPower {
     private static final String IMG_84=ModHelper.makeImgPath("power","default84");
     private static final String IMG_32=ModHelper.makeImgPath("power","default32");
 
-    private Set<AbstractCard.CardType> masteredType;
+    private Map<AbstractCard.CardType,Integer> masteredType;
 
     public YUZUAnalysisPower(AbstractCreature owner){
         this.name=NAME;
@@ -35,7 +33,7 @@ public class YUZUAnalysisPower extends AbstractPower {
         this.region48=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_32),0,0,32,32);
         this.amount=-1;
 
-        this.masteredType=new HashSet<>();
+        this.masteredType=new HashMap<>();
         updateDescription();
     }
 
@@ -46,16 +44,16 @@ public class YUZUAnalysisPower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
+        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered(card)>0){
             action.exhaustCard=true;
         }
     }
 
-    public boolean isMastered(AbstractCard card){
-        return this.masteredType.contains(card.type);
+    public int isMastered(AbstractCard card){
+        return this.masteredType.getOrDefault(card.type, 0);
     }
 
     public void masterCard(AbstractCard card){
-        this.masteredType.add(card.type);
+        this.masteredType.merge(card.type, 1, Integer::sum);
     }
 }

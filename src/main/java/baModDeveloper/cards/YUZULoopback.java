@@ -2,6 +2,7 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,14 +44,13 @@ public class YUZULoopback extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new AbstractGameAction() {
-            final String cardId=YUZULoopback.ID;
-            @Override
-            public void update() {
-                Optional<AbstractCard> card= AbstractDungeon.player.drawPile.group.stream().filter(c->c.cardID.equals(this.cardId)).findFirst();
-                card.ifPresent(abstractCard -> AbstractDungeon.player.drawPile.addToHand(abstractCard));
-                this.isDone=true;
-            }
-        });
+        commonUse(abstractPlayer,abstractMonster);
+        addToBot(new FetchAction(AbstractDungeon.player.drawPile,this::filter,1));
     }
+
+    private boolean filter(AbstractCard card) {
+        return card.cardID.equals(YUZULoopback.ID);
+    }
+
+
 }

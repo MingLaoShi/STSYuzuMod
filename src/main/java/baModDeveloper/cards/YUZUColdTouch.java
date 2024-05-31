@@ -2,6 +2,7 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -54,5 +55,37 @@ public class YUZUColdTouch extends YUZUCustomCard{
         int temp=this.baseDamage;
         this.baseDamage=this.baseMagicNumber;
         this.baseMagicNumber=temp;
+    }
+
+    @Override
+    public void applyPowers() {
+        int BaseBaseDamage=this.baseDamage;
+        int BaseBaseMagic=this.baseMagicNumber;
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.baseDamage=BaseBaseMagic;
+            this.baseMagicNumber=BaseBaseDamage;
+        }
+        this.magicNumber=this.baseMagicNumber;
+        super.applyPowers();
+
+        this.baseDamage=BaseBaseDamage;
+        this.baseMagicNumber=BaseBaseMagic;
+        this.isDamageModified=this.damage!=BaseBaseDamage;
+        this.isMagicNumberModified=this.magicNumber!=BaseBaseMagic;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int BaseBaseDamage=this.baseDamage;
+        int BaseBaseMagic=this.baseMagicNumber;
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.baseDamage=BaseBaseMagic;
+            this.baseMagicNumber=BaseBaseDamage;
+        }
+        this.magicNumber=this.baseMagicNumber;
+        super.calculateCardDamage(mo);
+        this.baseDamage=BaseBaseDamage;
+        this.baseMagicNumber=BaseBaseMagic;
+
     }
 }

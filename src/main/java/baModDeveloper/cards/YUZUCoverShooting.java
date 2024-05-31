@@ -45,11 +45,6 @@ public class YUZUCoverShooting extends YUZUCustomCard{
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
-    }
-
-    @Override
-    public void triggerOnMaster() {
-        super.triggerOnMaster();
         this.exhaust=true;
     }
 }

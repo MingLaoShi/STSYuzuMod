@@ -1,10 +1,13 @@
 package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.action.YUZUChangeCriticalHitRateMaxAction;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.panel.YUZUCriticalRatePanel;
+import baModDeveloper.power.YUZUPreheatPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -39,12 +42,12 @@ public class YUZUPreheat extends YUZUCustomCard{
             @Override
             public void update() {
                 if(AbstractDungeon.player instanceof YuzuCharacter){
-                    YUZUCriticalRatePanel p=((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel();
-                    p.increase(p.getMAX()-p.getAmount());
+                    addToTop(new YUZUApplyCriticalRateAction(((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel().getMAX()-((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel().getAmount()));
+                    this.isDone=true;
                 }
-                this.isDone=true;
             }
         });
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUPreheatPower(abstractPlayer,60)));
     }
 
     @Override

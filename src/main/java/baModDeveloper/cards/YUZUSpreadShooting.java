@@ -52,19 +52,12 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     }
 
     @Override
-    public void triggerOnMaster() {
-        super.triggerOnMaster();
-        this.isMultiDamage=true;
-        this.target=CardTarget.ALL_ENEMY;
-        this.applyPowers();
-    }
-
-    @Override
-    public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard card=super.makeStatEquivalentCopy();
-        if(YUZUCustomCard.isMastered((YUZUCustomCard) card)){
-            ((YUZUCustomCard) card).triggerOnMaster();
+    public void applyPowers() {
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.target=CardTarget.ALL_ENEMY;
+        }else{
+            this.target=CardTarget.ENEMY;
         }
-        return card;
+        super.applyPowers();
     }
 }

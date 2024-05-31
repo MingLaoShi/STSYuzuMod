@@ -41,14 +41,10 @@ public class YUZUFragmentedBomb extends YUZUCustomCard{
         int totalDamage = this.damage;
         int numEnemies = (int) AbstractDungeon.getCurrRoom().monsters.monsters.stream().filter(m->!m.isDeadOrEscaped()).count();
         int[] damageArray = new int[numEnemies];
-        // 初始化数组为0
-        for (int i = 0; i < numEnemies; i++) {
-            damageArray[i] = 0;
-        }
         // 随机分配伤害
         while (totalDamage > 0) {
             int randomIndex = AbstractDungeon.cardRandomRng.random(numEnemies - 1);
-            int damageToAdd = Math.min(totalDamage, 1); // 每次分配1点伤害
+            int damageToAdd = 1; // 每次分配1点伤害
             damageArray[randomIndex] += damageToAdd;
             totalDamage -= damageToAdd;
         }

@@ -33,11 +33,13 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     protected abstract void upgradeMethod();
 
-    public static boolean isMastered(AbstractCard card){
+    public static int isMastered(AbstractCard card){
+        int masterNum=0;
         if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
-            return ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).isMastered(card);
+            masterNum+= ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).isMastered(card);
         }
-        return MasterCards.containsKey(card.cardID);
+        masterNum+=MasterCards.getOrDefault(card.cardID,0);
+        return masterNum;
     }
 
     public static void masterCard(AbstractCard card){
@@ -49,7 +51,7 @@ public abstract class YUZUCustomCard extends CustomCard {
         }
     }
 
-    public static void removeMaster(YUZUCustomCard card){
+    public static void removeMaster(AbstractCard card){
         MasterCards.remove(card.cardID);
     }
 
@@ -59,7 +61,7 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if(!YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)<=0){
             this.commonUse(abstractPlayer,abstractMonster);
         }else{
             this.masterUse(abstractPlayer,abstractMonster);
@@ -84,19 +86,14 @@ public abstract class YUZUCustomCard extends CustomCard {
         super.applyPowers();
     }
 
-    @Override
-    public AbstractCard makeCopy() {
-        AbstractCard card=super.makeCopy();
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
-            ((YUZUCustomCard) card).triggerOnMaster();
-        }
-        return card;
-    }
+
 
     @Override
     public void triggerOnGlowCheck() {
-        if(YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)>0){
             this.glowColor= Color.RED.cpy();
+        }else {
+            this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR;
         }
     }
 }

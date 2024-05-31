@@ -19,7 +19,7 @@ public class YUZUMasterPlayOnceMoreModifier extends AbstractCardModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-        if(card instanceof YUZUCustomCard&&YUZUCustomCard.isMastered((YUZUCustomCard) card)){
+        if(YUZUCustomCard.isMastered(card)>0){
             AbstractCard c=card.makeSameInstanceOf();
             CardModifierManager.removeModifiersById(c,ID,false);
             addToBot(new YUZUPlayTempCardAction(c,target));

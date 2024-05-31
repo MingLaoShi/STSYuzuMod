@@ -49,7 +49,7 @@ public class YUZUGrenade extends YUZUCustomCard{
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if(YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)>0){
             this.damage*=2;
         }
     }
@@ -57,7 +57,7 @@ public class YUZUGrenade extends YUZUCustomCard{
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        if(YUZUCustomCard.isMastered(this)){
+        if(YUZUCustomCard.isMastered(this)>0){
             this.damage*=2;
         }
     }
