@@ -59,7 +59,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if(type== DamageInfo.DamageType.NORMAL){
+        if(type== DamageInfo.DamageType.NORMAL&&!card.hasTag(YUZUCustomCard.YUZUCardTag.NoNeedCriticalHit)){
 
             return damage*=getMulti(card);
         }
@@ -68,7 +68,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card.type== AbstractCard.CardType.ATTACK){
+        if(card.type== AbstractCard.CardType.ATTACK&&!card.hasTag(YUZUCustomCard.YUZUCardTag.NoNeedCriticalHit)){
             if(card instanceof YUZUCustomCard){
                 ((YUZUCustomCard) card).triggerOnCriticalHit(action.target);
             }

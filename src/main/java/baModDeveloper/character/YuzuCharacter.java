@@ -5,6 +5,7 @@ import baModDeveloper.YuzuMod;
 import baModDeveloper.cards.YUZUDefend;
 import baModDeveloper.cards.YUZUStrike;
 import baModDeveloper.panel.YUZUCriticalRatePanel;
+import baModDeveloper.relic.YUZUSight;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -80,7 +81,7 @@ public class YuzuCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> relics=new ArrayList<>();
-        relics.add(RedCirclet.ID);
+        relics.add(YUZUSight.ID);
         return relics;
     }
 

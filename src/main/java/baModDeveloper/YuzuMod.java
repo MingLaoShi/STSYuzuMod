@@ -5,10 +5,12 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.cards.*;
 import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.relic.YUZUSight;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -19,7 +21,7 @@ import com.megacrit.cardcrawl.localization.*;
 import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
-public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber {
+public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber {
     public static final Color YUZUColor = new Color(252.0F / 255.0F, 168.0F / 255.0F, 198.0F / 255.0F, 1.0F);
 
     private static final String YUZU_CHARACTER_BUTTON = ModHelper.makeImgPath("character", "Character_Button");
@@ -88,5 +90,10 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
         BaseMod.loadCustomStringsFile(PotionStrings.class, "YuzuModResources/localization/" + lang + "/potion.json");
         BaseMod.loadCustomStringsFile(MonsterStrings.class, "YuzuModResources/localization/" + lang + "/monster.json");
 
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new YUZUSight(),YuzuCharacter.PlayerClass.YUZU_CARD);
     }
 }
