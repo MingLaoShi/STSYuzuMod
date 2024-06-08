@@ -8,20 +8,21 @@ import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.relic.YUZUSight;
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
 
+import java.nio.charset.StandardCharsets;
+
 import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
-public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber {
+public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber {
     public static final Color YUZUColor = new Color(252.0F / 255.0F, 168.0F / 255.0F, 198.0F / 255.0F, 1.0F);
 
     private static final String YUZU_CHARACTER_BUTTON = ModHelper.makeImgPath("character", "Character_Button");
@@ -95,5 +96,25 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new YUZUSight(),YuzuCharacter.PlayerClass.YUZU_CARD);
+    }
+
+    @Override
+    public void receiveEditKeywords() {
+        Gson gson = new Gson();
+        String lang = "ENG";
+        if (language == Settings.GameLanguage.ZHS) {
+            lang = "ZHS";
+        }else if(language== Settings.GameLanguage.ZHT){
+            lang="ZHS";
+        }else if(language== Settings.GameLanguage.JPN){
+            lang="JPN";
+        }
+        String json = Gdx.files.internal("YuzuModResources/localization/" + lang + "/keyword.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                BaseMod.addKeyword("yuzu", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
     }
 }
