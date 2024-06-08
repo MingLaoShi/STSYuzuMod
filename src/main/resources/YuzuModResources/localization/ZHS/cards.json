@@ -251,5 +251,25 @@
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
 		"DESCRIPTION": "回合开始时，获得1层灼伤，给予所有敌人 !M! 层灼伤。"
+	},
+	"YUZU:Image": {
+		"NAME": "稻草人偶",
+		"DESCRIPTION": "获得 !M! 点临时生命，当临时生命被击破后，从非boss战中逃跑。保留"
+	},
+	"YUZU:Estimate": {
+		"NAME": "状况预估",
+		"DESCRIPTION": "查看抽牌堆顶5张牌，选择抽取其中的 !M! 类。"
+	},
+	"YUZU:ExtremeMeasures": {
+		"NAME": "极端手段",
+		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌消耗。消耗。精通：改为精通"
+	},
+	"YUZU:GlowBlessing": {
+		"NAME": "辉光保佑",
+		"DESCRIPTION": "获得1灵体。消耗"
+	},
+	"YUZU:MaliciousDesign": {
+		"NAME": "恶意设计",
+		"DESCRIPTION": "清空所有人的格挡，给予对应数量的灼伤。精通：立刻触发一次灼伤。"
 	}
 }

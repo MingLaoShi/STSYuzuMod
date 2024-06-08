@@ -1,7 +1,7 @@
 package baModDeveloper.Helper;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
@@ -74,5 +74,15 @@ public class ModHelper {
             return null;
         }
         return (AbstractCard)list.get(cardRandomRng.random(list.size() - 1));
+    }
+
+    public static String makeCardImagePath(String ID){
+        String filename=ID.replace("YUZU:","");
+        String filePath=ModHelper.makeImgPath("card",filename);
+        if(Gdx.files.internal(filePath).exists()){
+            return filePath;
+        }else{
+            return ModHelper.makeImgPath("card","default");
+        }
     }
 }
