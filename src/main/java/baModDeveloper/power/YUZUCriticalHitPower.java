@@ -2,7 +2,6 @@ package baModDeveloper.power;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;
-import baModDeveloper.cards.YUZUPreheat;
 import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -41,7 +40,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
 
     @Override
     public void updateDescription() {
-        this.description=String.format(DESCRIPTIONS[0],this.amount);
+        this.description=String.format(DESCRIPTIONS[0],this.amount,(int)getMulti(null)*100);
     }
 
 

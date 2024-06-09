@@ -3,7 +3,7 @@ package baModDeveloper.cards;
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.modifier.YUZUDrawCardModifier;
-import baModDeveloper.modifier.YUZUExhaustModifier;
+import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -42,7 +42,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
             card.freeToPlayOnce=true;
             if(card instanceof YUZUCustomCard)
                 YUZUCustomCard.masterCard((YUZUCustomCard) card);
-            CardModifierManager.addModifier(card,new YUZUExhaustModifier());
+            CardModifierManager.addModifier(card,new ExhaustMod());
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }
 
@@ -55,7 +55,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
             card.freeToPlayOnce=true;
             if(card instanceof YUZUCustomCard)
                 YUZUCustomCard.masterCard((YUZUCustomCard) card);
-            CardModifierManager.addModifier(card,new YUZUExhaustModifier());
+            CardModifierManager.addModifier(card,new ExhaustMod());
             CardModifierManager.addModifier(card,new YUZUDrawCardModifier(1));
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }

@@ -2,8 +2,8 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.modifier.BATwinsRetainModifier;
 import baModDeveloper.modifier.YUZUCanNotPlayModifier;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -54,7 +54,7 @@ public class YUZUColdStorage extends YUZUCustomCard{
     private void callback(List<AbstractCard> cards){
         for(AbstractCard card:cards){
             CardModifierManager.addModifier(card,new YUZUCanNotPlayModifier());
-            CardModifierManager.addModifier(card,new BATwinsRetainModifier());
+            CardModifierManager.addModifier(card,new RetainMod());
             AbstractDungeon.player.hand.moveToHand(card);
             AbstractDungeon.player.drawPile.removeCard(card);
             AbstractDungeon.player.exhaustPile.removeCard(card);

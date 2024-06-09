@@ -6,7 +6,14 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class YUZUMasterExhaustModifier extends AbstractCardModifier {
+    private static ArrayList<String> des=new ArrayList<>();
+    static {
+        des.add("精通：消耗");
+    }
     @Override
     public AbstractCardModifier makeCopy() {
         return new YUZUMasterExhaustModifier();
@@ -20,5 +27,10 @@ public class YUZUMasterExhaustModifier extends AbstractCardModifier {
                 action.exhaustCard=true;
             }
         }
+    }
+
+    @Override
+    public List<String> extraDescriptors(AbstractCard card) {
+        return des;
     }
 }

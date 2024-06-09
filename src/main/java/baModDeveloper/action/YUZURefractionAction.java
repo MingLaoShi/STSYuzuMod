@@ -1,6 +1,6 @@
 package baModDeveloper.action;
 
-import baModDeveloper.modifier.BATwinsRetainModifier;
+import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -50,7 +50,7 @@ public class YUZURefractionAction extends AbstractGameAction {
 
     private void callback(List<AbstractCard> cards){
         AbstractCard card=cards.get(0).makeStatEquivalentCopy();
-        CardModifierManager.addModifier(card,new BATwinsRetainModifier());
+        CardModifierManager.addModifier(card,new RetainMod());
         addToTop(new MakeTempCardInHandAction(card,this.amount));
     }
 }
