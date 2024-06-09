@@ -4,7 +4,6 @@ import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.cards.YUZUCustomCard;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -36,7 +35,7 @@ public class YUZUAimingPreparationMasterPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description=DESCRIPTIONS[0];
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
     }
 
     @Override

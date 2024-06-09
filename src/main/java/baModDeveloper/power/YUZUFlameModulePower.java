@@ -1,10 +1,7 @@
 package baModDeveloper.power;
 
 import baModDeveloper.Helper.ModHelper;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -50,5 +47,10 @@ public class YUZUFlameModulePower extends AbstractPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         this.selfAmount++;
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.selfAmount,this.amount);
     }
 }

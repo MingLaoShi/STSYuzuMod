@@ -39,4 +39,10 @@ public class YUZUCurlUpPower extends AbstractPower {
 
         addToBot(new MakeTempCardInHandAction(card));
     }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
+
+    }
 }

@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class YUZUVulturesEyePower extends AbstractPower {
-    public static final String POWER_ID= ModHelper.makePath("CriticalHit");
-    private static final AbstractPower.PowerType TYPE= AbstractPower.PowerType.DEBUFF;
+    public static final String POWER_ID= ModHelper.makePath("VulturesEye");
+    private static final AbstractPower.PowerType TYPE= PowerType.BUFF;
     private static final PowerStrings powerStrings= CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME=powerStrings.NAME;
     private static final String[] DESCRIPTIONS=powerStrings.DESCRIPTIONS;
@@ -43,5 +43,11 @@ public class YUZUVulturesEyePower extends AbstractPower {
            YUZUCriticalHitRatePower p= (YUZUCriticalHitRatePower) this.owner.getPower(YUZUCriticalHitRatePower.POWER_ID);
 //           p.changeMax();
         }
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
+
     }
 }

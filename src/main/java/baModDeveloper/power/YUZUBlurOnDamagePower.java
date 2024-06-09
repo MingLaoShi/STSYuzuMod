@@ -37,4 +37,9 @@ public class YUZUBlurOnDamagePower extends AbstractPower {
         addToTop(new ApplyPowerAction(this.owner,this.owner,new BlurPower(this.owner,this.amount)));
         return super.onAttacked(info, damageAmount);
     }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
+    }
 }

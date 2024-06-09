@@ -38,4 +38,9 @@ public class YUZUBlockOnDamagePower extends AbstractPower {
         addToTop(new RemoveSpecificPowerAction(this.owner,this.owner,this));
         return super.onAttacked(info, damageAmount);
     }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
+    }
 }

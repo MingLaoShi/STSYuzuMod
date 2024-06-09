@@ -38,7 +38,7 @@ public class YUZUPaintingsPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description=DESCRIPTIONS[0];
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
     }
 
     @Override
@@ -52,8 +52,6 @@ public class YUZUPaintingsPower extends AbstractPower {
                 this.isDone=true;
             }
         });
-
-        //Todo
     }
 
 }

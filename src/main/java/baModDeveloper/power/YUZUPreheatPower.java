@@ -3,7 +3,6 @@ package baModDeveloper.power;
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -35,5 +34,11 @@ public class YUZUPreheatPower extends AbstractPower implements YUZUChangeCritica
     @Override
     public float getMulti(float multi) {
         return multi+multi*(this.amount)/100;
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
+
     }
 }

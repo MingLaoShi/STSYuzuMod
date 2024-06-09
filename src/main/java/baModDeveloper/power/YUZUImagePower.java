@@ -49,4 +49,10 @@ public class YUZUImagePower extends AbstractPower implements OnLoseTempHpPower {
         }
         return i;
     }
+
+    @Override
+    public void updateDescription() {
+        this.description=DESCRIPTIONS[0];
+
+    }
 }

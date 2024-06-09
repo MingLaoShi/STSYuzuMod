@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class YUZUProperPlanningPower extends AbstractPower {
@@ -51,5 +50,9 @@ public class YUZUProperPlanningPower extends AbstractPower {
     }
 
 
+    @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
 
+    }
 }
