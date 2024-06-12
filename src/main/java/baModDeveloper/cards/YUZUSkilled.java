@@ -28,7 +28,8 @@ public class YUZUSkilled extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeBaseCost(1);
+        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override

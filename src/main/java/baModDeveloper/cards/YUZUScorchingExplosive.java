@@ -32,7 +32,6 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
         this.baseMagicNumber=this.magicNumber=3;
         this.baseBlock=this.block=1;
         this.isMultiDamage=true;
-        this.extraDamage=0;
     }
 
     @Override
@@ -45,7 +44,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
         addToBot(new DamageAllEnemiesAction(abstractPlayer,this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new BATwinsBurnPower(abstractMonster,abstractPlayer,this.magicNumber)));
+                addToBot(new ApplyPowerAction(m,abstractPlayer,new BATwinsBurnPower(m,abstractPlayer,this.magicNumber)));
             }
         }
     }
@@ -61,32 +60,32 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
     }
 
     @Override
-    public void triggerOnMaster() {
-        super.triggerOnMaster();
-        this.extraDamage+=this.baseBlock;
-    }
-
-    @Override
     public void applyPowers() {
+        int masterNum=YUZUCustomCard.isMastered(this);
         int baseBaseDamage=this.baseDamage;
-        this.baseDamage+=this.extraDamage;
+        this.baseDamage+=masterNum*this.baseBlock;
+        int baseBaseMagic=this.baseMagicNumber;
+        this.baseMagicNumber+=masterNum*this.baseBlock;
         super.applyPowers();
-
+        this.magicNumber=this.baseMagicNumber;
         this.isDamageModified=this.damage!=baseBaseDamage;
         this.baseDamage=baseBaseDamage;
-        this.magicNumber=this.baseMagicNumber+this.extraDamage;
-        this.isMagicNumberModified=this.magicNumber!=this.baseMagicNumber;
+        this.isMagicNumberModified=this.magicNumber!=baseBaseMagic;
+        this.baseMagicNumber=baseBaseMagic;
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        int masterNum=YUZUCustomCard.isMastered(this);
         int baseBaseDamage=this.baseDamage;
-        this.baseDamage+=this.extraDamage;
+        this.baseDamage+=masterNum;
+        int baseBaseMagic=this.baseMagicNumber;
+        this.baseMagicNumber+=masterNum;
         super.calculateCardDamage(mo);
 
         this.isDamageModified=this.damage!=baseBaseDamage;
         this.baseDamage=baseBaseDamage;
-        this.magicNumber=this.baseMagicNumber+this.extraDamage;
-        this.isMagicNumberModified=this.magicNumber!=this.baseMagicNumber;
+        this.isMagicNumberModified=this.magicNumber!=baseBaseMagic;
+        this.baseMagicNumber=baseBaseMagic;
     }
 }

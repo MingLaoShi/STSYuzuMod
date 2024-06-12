@@ -3,9 +3,13 @@ package baModDeveloper.cards;
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -35,7 +39,24 @@ public class YUZUHighSpeedCycle extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new FetchAction(abstractPlayer.discardPile,(card)->true,this.magicNumber,this::callback));
+//        addToBot(new FetchAction(abstractPlayer.discardPile,(card)->true,this.magicNumber,this::callback));
+        addToBot(new AbstractGameAction() {
+            {
+                this.amount=YUZUHighSpeedCycle.this.magicNumber;
+            }
+            @Override
+            public void update() {
+                CardGroup group=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+                group.group.addAll(AbstractDungeon.player.discardPile.group);
+                for(int i=0;i<this.amount;i++){
+                    AbstractCard c=group.getRandomCard(true);
+                    addToTop(new DiscardToHandAction(c));
+                    YUZUCustomCard.removeMaster(c);
+                    group.removeCard(c);
+                }
+                this.isDone=true;
+            }
+        });
     }
 
     private void callback(List<AbstractCard> cards) {
@@ -44,6 +65,6 @@ public class YUZUHighSpeedCycle extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
+        addToBot(new FetchAction(abstractPlayer.discardPile,(card)->true,this.magicNumber,this::callback));
     }
 }

@@ -68,7 +68,7 @@ public abstract class YUZUCustomCard extends CustomCard {
             this.masterUse(abstractPlayer,abstractMonster);
         }
         addToBot(new YUZUApplyCriticalRateAction(1));
-        YUZUCustomCard.masterCard(this);
+//        YUZUCustomCard.masterCard(this);
     }
 
     public abstract void commonUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);

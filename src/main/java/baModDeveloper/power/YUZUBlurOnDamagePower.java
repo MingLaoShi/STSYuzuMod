@@ -3,6 +3,7 @@ package baModDeveloper.power;
 import baModDeveloper.Helper.ModHelper;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -35,6 +36,7 @@ public class YUZUBlurOnDamagePower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         addToTop(new ApplyPowerAction(this.owner,this.owner,new BlurPower(this.owner,this.amount)));
+        addToTop(new RemoveSpecificPowerAction(this.owner,this.owner,this));
         return super.onAttacked(info, damageAmount);
     }
 

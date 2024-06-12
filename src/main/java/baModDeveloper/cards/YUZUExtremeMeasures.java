@@ -2,6 +2,7 @@ package baModDeveloper.cards;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.action.ExhaustTopCardAction;
+import baModDeveloper.action.MasterTopCardAction;
 import baModDeveloper.character.YuzuCharacter;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -48,7 +49,7 @@ public class YUZUExtremeMeasures extends YUZUCustomCard{
                 if(this.amount>handAmount){
                     addToTop(new ExhaustTopCardAction(this.amount,false));
                 }
-                addToTop(new DrawCardAction(BaseMod.MAX_HAND_SIZE-handAmount));
+                addToTop(new DrawCardAction(drawAmount));
                 this.isDone=true;
             }
         });
@@ -56,6 +57,20 @@ public class YUZUExtremeMeasures extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
+        addToBot(new AbstractGameAction() {
+            {
+                this.amount=YUZUExtremeMeasures.this.magicNumber;
+            }
+            @Override
+            public void update() {
+                int handAmount= AbstractDungeon.player.hand.size();
+                int drawAmount=BaseMod.MAX_HAND_SIZE-handAmount;
+                if(this.amount>handAmount){
+                    addToTop(new MasterTopCardAction(this.amount,false));
+                }
+                addToTop(new DrawCardAction(drawAmount));
+                this.isDone=true;
+            }
+        });
     }
 }

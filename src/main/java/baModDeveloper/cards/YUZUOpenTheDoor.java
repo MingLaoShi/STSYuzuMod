@@ -25,6 +25,7 @@ public class YUZUOpenTheDoor extends YUZUCustomCard{
     public YUZUOpenTheDoor() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=24;
+        this.isInnate=true;
     }
 
     @Override

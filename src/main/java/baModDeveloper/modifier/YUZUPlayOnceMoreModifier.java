@@ -7,9 +7,15 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class YUZUPlayOnceMoreModifier extends AbstractCardModifier {
     public static final String ID = "YUZUPlayOnceMoreModifier";
-
+    private static List<String> strings=new ArrayList<>();
+    static {
+        strings.add("再打出1次。");
+    }
     @Override
     public AbstractCardModifier makeCopy() {
         return new YUZUPlayOnceMoreModifier();
@@ -26,5 +32,10 @@ public class YUZUPlayOnceMoreModifier extends AbstractCardModifier {
         AbstractCard c=card.makeSameInstanceOf();
         CardModifierManager.removeModifiersById(c,ID,false);
         addToBot(new YUZUPlayTempCardAction(c,target));
+    }
+
+    @Override
+    public List<String> extraDescriptors(AbstractCard card) {
+        return strings;
     }
 }

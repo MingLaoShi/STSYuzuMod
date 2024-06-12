@@ -170,7 +170,7 @@
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
-		"DESCRIPTION": "将消耗堆的牌返回抽牌堆。 NL 消耗 。 NL yuzu:精通 ：改为交换你的手牌和消耗牌堆。"
+		"DESCRIPTION": "将消耗堆的牌返回抽牌堆。 NL 消耗 。 NL yuzu:精通 ：改为交换你的手牌和消耗牌堆。（有bug别用，问就是麻烦懒得改，之后再弄）"
 	},
 	"YUZU:MicroBlasting": {
 		"NAME": "微型爆破",
@@ -242,7 +242,7 @@
 	"YUZU:Skilled": {
 		"NAME": "熟能生巧",
 		"DESCRIPTION": "从抽牌堆尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
-		"UPGRADE_DESCRIPTION": "从抽牌堆尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。"
+		"UPGRADE_DESCRIPTION": "从弃牌堆尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。"
 	},
 	"YUZU:Solidifying": {
 		"NAME": "固化衣装",
