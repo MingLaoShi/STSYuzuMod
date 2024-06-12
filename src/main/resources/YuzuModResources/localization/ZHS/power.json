@@ -19,54 +19,56 @@
 	},
 	"BATwinsMod:BurnPower": {
 		"NAME": "灼伤",
-		"DESCRIPTION": ""
+		"DESCRIPTIONS": [
+			"回合结束时，造成","点伤害，然后层数减1。死亡时对其他敌人造成等同于层数2倍的伤害。"
+		]
 	},
 	"YUZU:AimingPreparationMasterPower": {
 		"NAME": "瞄准准备精通",
-		"DESCRIPTION": "打出精通牌后，获得%d暴击槽。"
+		"DESCRIPTIONS": ["打出精通牌后，获得%d暴击槽。"]
 	},
 	"YUZU:PreparationPower": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "打出牌后，获得%d暴击槽。"
+		"DESCRIPTIONS": ["打出牌后，获得%d暴击槽。"]
 	},
 	"YUZU:AnalysisPower": {
 		"NAME": "完备解析",
-		"DESCRIPTION": "精通的条件改为同类型牌，精通牌打出后消耗。"
+		"DESCRIPTIONS": ["精通的条件改为同类型牌，精通牌打出后消耗。"]
 	},
 	"YUZU:BlockOnDamage": {
 		"NAME": "伤害格挡",
-		"DESCRIPTION": "受到伤害时，获得%d点格挡。"
+		"DESCRIPTIONS": ["受到伤害时，获得%d点格挡。"]
 	},
 	"YUZU:BlurOnDamage": {
 		"NAME": "伤害残影",
-		"DESCRIPTION": "受到伤害时，获得%d残影。"
+		"DESCRIPTIONS": ["受到伤害时，获得%d残影。"]
 	},
 	"YUZU:CurlUpPower": {
 		"NAME": "蜷缩构造",
-		"DESCRIPTION": "每回合开始时，获得%d铁箱子。"
+		"DESCRIPTIONS": ["每回合开始时，获得%d铁箱子。"]
 	},
 	"YUZU:FlameModulePower": {
 		"NAME": "火焰模块",
-		"DESCRIPTION": "回合开始时，获得%d灼伤，给予所有敌人%d灼伤。"
+		"DESCRIPTIONS": ["回合开始时，获得%d灼伤，给予所有敌人%d灼伤。"]
 	},
 	"YUZU:ImagePower": {
 		"NAME": "稻草人偶",
-		"DESCRIPTION": "当临时生命击破时，从非boss站中逃跑。"
+		"DESCRIPTIONS": ["当临时生命击破时，从非boss站中逃跑。"]
 	},
 	"YUZU:PaintingsPower": {
 		"NAME": "青空彩绘",
-		"DESCRIPTION": "每回合抽牌结束后，获得等同于手牌类型数%d倍的 [E] 。"
+		"DESCRIPTIONS": ["每回合抽牌结束后，获得等同于手牌类型数%d倍的 [E] 。"]
 	},
 	"YUZU:PreheatPower": {
 		"NAME": "预热瞄准",
-		"DESCRIPTION": "增加%d暴击伤害，再受伤后移除。"
+		"DESCRIPTIONS": ["增加%d暴击伤害，再受伤后移除。"]
 	},
 	"YUZU:ProperPlanningPower": {
 		"NAME": "计划妥当",
-		"DESCRIPTION": "回合结束时选%d张手牌，给予保留。"
+		"DESCRIPTIONS": ["回合结束时选%d张手牌，给予保留。"]
 	},
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
-		"DESCRIPTION": "暴击槽的需求改为%d格。"
+		"DESCRIPTIONS": ["暴击槽的需求改为%d格。"]
 	}
 }

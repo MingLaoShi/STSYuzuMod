@@ -29,13 +29,13 @@ public class YUZUShootingPreparation extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-
+        this.upgradeMagicNumber(1);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DrawCardAction(this.magicNumber));
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitPower(abstractPlayer,2)));
+        addToBot(new DrawCardAction(1));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitPower(abstractPlayer,this.magicNumber)));
     }
 
     @Override

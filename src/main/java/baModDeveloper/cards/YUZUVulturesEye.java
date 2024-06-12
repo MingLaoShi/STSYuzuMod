@@ -31,6 +31,8 @@ public class YUZUVulturesEye extends YUZUCustomCard{
     @Override
     protected void upgradeMethod() {
         upgradeMagicNumber(1);
+        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override

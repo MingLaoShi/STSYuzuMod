@@ -40,7 +40,7 @@ public class YUZUCoverTheSmokeScreen extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new WeakPower(abstractPlayer,this.magicNumber,false)));
         for(AbstractMonster m: AbstractDungeon.getMonsters().monsters){
             if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(abstractPlayer,m,new WeakPower(m,this.magicNumber,false)));
+                addToBot(new ApplyPowerAction(m,abstractPlayer,new WeakPower(m,this.magicNumber,false)));
             }
         }
         addToBot(new GainBlockAction(abstractPlayer,this.block));
@@ -48,6 +48,6 @@ public class YUZUCoverTheSmokeScreen extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
+        commonUse(abstractPlayer,abstractMonster);
     }
 }

@@ -48,7 +48,16 @@ public class YUZUFragmentedBomb extends YUZUCustomCard{
             damageArray[randomIndex] += damageToAdd;
             totalDamage -= damageToAdd;
         }
-        addToBot(new DamageAllEnemiesAction(abstractPlayer,damageArray, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
+        int[] truedamageArray=new int[AbstractDungeon.getCurrRoom().monsters.monsters.size()];
+        for(int i=0,j=0;i<AbstractDungeon.getCurrRoom().monsters.monsters.size();i++){
+            if(!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDeadOrEscaped()){
+                truedamageArray[i]=damageArray[j];
+                j++;
+            }else{
+                truedamageArray[i]=0;
+            }
+        }
+        addToBot(new DamageAllEnemiesAction(abstractPlayer,truedamageArray, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
     @Override

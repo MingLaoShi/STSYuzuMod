@@ -2,11 +2,8 @@ package baModDeveloper.cards.colorless;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.action.YUZUClearCriticalRateAction;
-import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.YUZUCriticalHitRatePower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -27,6 +24,7 @@ public class YUZUIronBox extends CustomCard {
     public YUZUIronBox() {
         super(ID,NAME,IMG_PATH,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);
         this.baseBlock=this.block=16;
+        this.exhaust=true;
     }
 
     @Override

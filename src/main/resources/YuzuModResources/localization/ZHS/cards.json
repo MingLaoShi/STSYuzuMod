@@ -153,7 +153,7 @@
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": "获得 !B! 点格挡，清空 yuzu:暴击槽 "
+		"DESCRIPTION": "获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
@@ -232,8 +232,8 @@
 	},
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
-		"DESCRIPTION": "抽 !M! 张牌，获得2层 yuzu:暴击 。",
-		"UPGRADE_DESCRIPTION": "抽 !M! 张攻击牌，获得2层 yuzu:暴击 "
+		"DESCRIPTION": "抽1张牌，获得 !M! 层 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "抽1张攻击牌，获得2层 yuzu:暴击 "
 	},
 	"YUZU:Silence": {
 		"NAME": "频段静默",
@@ -270,6 +270,7 @@
 	},
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
-		"DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为 !M! 格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。"
+		"DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为2格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为1格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。"
 	}
 }

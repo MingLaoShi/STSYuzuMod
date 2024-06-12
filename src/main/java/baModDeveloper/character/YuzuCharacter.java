@@ -2,7 +2,9 @@ package baModDeveloper.character;
 
 import baModDeveloper.Helper.ModHelper;
 import baModDeveloper.YuzuMod;
+import baModDeveloper.cards.YUZUCamouflage;
 import baModDeveloper.cards.YUZUDefend;
+import baModDeveloper.cards.YUZUGrenade;
 import baModDeveloper.cards.YUZUStrike;
 import baModDeveloper.panel.YUZUCriticalRatePanel;
 import baModDeveloper.relic.YUZUSight;
@@ -20,7 +22,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.RedCirclet;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -73,6 +74,8 @@ public class YuzuCharacter extends CustomPlayer {
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
+        deck.add(YUZUGrenade.ID);
+        deck.add(YUZUCamouflage.ID);
 
 
         return deck;
@@ -103,7 +106,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public Color getCardRenderColor() {
-        return YuzuMod.YUZUColor;
+        return YuzuMod.YUZUColor.cpy();
     }
 
     @Override

@@ -5,13 +5,16 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.potions.SmokeBomb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
 public class YUZUImagePower extends AbstractPower implements OnLoseTempHpPower {
     public static final String POWER_ID= ModHelper.makePath("ImagePower");
@@ -41,11 +44,15 @@ public class YUZUImagePower extends AbstractPower implements OnLoseTempHpPower {
             addToBot(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    SmokeBomb bomb=new SmokeBomb();
-                    bomb.use(null);
-                    this.isDone=true;
+                    if(!(AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss)){
+                        SmokeBomb bomb=new SmokeBomb();
+                        bomb.use(null);
+                        this.isDone=true;
+                    }
+
                 }
             });
+            addToBot(new RemoveSpecificPowerAction(this.owner,this.owner,this));
         }
         return i;
     }
@@ -53,6 +60,5 @@ public class YUZUImagePower extends AbstractPower implements OnLoseTempHpPower {
     @Override
     public void updateDescription() {
         this.description=DESCRIPTIONS[0];
-
     }
 }
