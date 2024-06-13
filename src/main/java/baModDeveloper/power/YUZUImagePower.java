@@ -47,8 +47,8 @@ public class YUZUImagePower extends AbstractPower implements OnLoseTempHpPower {
                     if(!(AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss)){
                         SmokeBomb bomb=new SmokeBomb();
                         bomb.use(null);
-                        this.isDone=true;
                     }
+                    this.isDone=true;
 
                 }
             });

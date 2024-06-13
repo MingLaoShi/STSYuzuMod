@@ -48,7 +48,7 @@ public class YUZUHighSpeedCycle extends YUZUCustomCard{
             public void update() {
                 CardGroup group=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 group.group.addAll(AbstractDungeon.player.discardPile.group);
-                for(int i=0;i<this.amount;i++){
+                for(int i=0;i<Math.min(this.amount,group.size());i++){
                     AbstractCard c=group.getRandomCard(true);
                     addToTop(new DiscardToHandAction(c));
                     YUZUCustomCard.removeMaster(c);
