@@ -37,8 +37,4 @@ public class YUZUInversion extends YUZUCustomCard{
         addToBot(new YUZUInversionAction());
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
 }

@@ -38,8 +38,5 @@ public class YUZUShootingPreparation extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitPower(abstractPlayer,this.magicNumber)));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

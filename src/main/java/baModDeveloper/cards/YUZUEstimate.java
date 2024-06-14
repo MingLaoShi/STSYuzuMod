@@ -35,8 +35,5 @@ public class YUZUEstimate extends YUZUCustomCard{
         addToBot(new YUZUEstimateAction(5,this.magicNumber));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

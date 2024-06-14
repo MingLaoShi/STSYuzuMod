@@ -36,8 +36,5 @@ public class YUZUBeMercifulToOthers extends YUZUCustomCard{
         addToBot(new YUZUBeMercifulToOthersAction(abstractMonster,this));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

@@ -45,8 +45,5 @@ public class YUZUDesignShooting extends YUZUCustomCard{
         addToBot(new DamageAction(target,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

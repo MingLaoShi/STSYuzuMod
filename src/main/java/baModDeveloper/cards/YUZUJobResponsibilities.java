@@ -38,8 +38,5 @@ public class YUZUJobResponsibilities extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUJobResponsibilitiesPower(abstractPlayer,this.magicNumber)));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
-    }
 }

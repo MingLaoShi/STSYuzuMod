@@ -55,10 +55,6 @@ public class YUZUForkedIntersectionOption extends YUZUCustomCard {
 
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
-    }
 
     @Override
     public void onChoseThisOption() {

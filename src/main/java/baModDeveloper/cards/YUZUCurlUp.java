@@ -37,8 +37,4 @@ public class YUZUCurlUp extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCurlUpPower(abstractPlayer,this.magicNumber)));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
 }

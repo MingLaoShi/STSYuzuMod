@@ -60,10 +60,7 @@ public class YUZUFragmentedBomb extends YUZUCustomCard{
         addToBot(new DamageAllEnemiesAction(abstractPlayer,truedamageArray, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.LIGHTNING));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {

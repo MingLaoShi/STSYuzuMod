@@ -48,9 +48,6 @@ public class YUZUGifts extends YUZUCustomCard{
         }
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 
 }

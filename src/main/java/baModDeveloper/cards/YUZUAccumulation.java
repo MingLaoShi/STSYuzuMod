@@ -38,10 +38,7 @@ public class YUZUAccumulation extends YUZUCustomCard{
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,abstractPlayer.masterDeck.size()), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
-    }
 
     @Override
     public void applyPowers() {

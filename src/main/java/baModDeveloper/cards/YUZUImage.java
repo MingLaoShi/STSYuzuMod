@@ -38,8 +38,5 @@ public class YUZUImage extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUImagePower(abstractPlayer)));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

@@ -36,8 +36,4 @@ public class YUZUAnalysis extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUAnalysisPower(abstractPlayer)));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
 }

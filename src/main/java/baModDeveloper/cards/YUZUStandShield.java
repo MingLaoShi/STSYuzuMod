@@ -36,10 +36,7 @@ public class YUZUStandShield extends YUZUCustomCard{
         addToBot(new GainBlockAction(abstractPlayer,this.block));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 
     @Override
     protected void applyPowersToBlock() {

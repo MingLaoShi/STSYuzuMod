@@ -44,8 +44,5 @@ public class YUZUCabinet extends YUZUCustomCard{
 
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        commonUse(abstractPlayer,abstractMonster);
-    }
+
 }

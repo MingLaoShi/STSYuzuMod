@@ -35,9 +35,4 @@ public class YUZUProperPlanning extends YUZUCustomCard{
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUProperPlanningPower(abstractPlayer,this.magicNumber)));
     }
-
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
-    }
 }

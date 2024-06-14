@@ -40,10 +40,7 @@ public class YUZUPolarization extends YUZUCustomCard{
         addToBot(new SelectCardsInHandAction(1,"//",card -> true,this::callback));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
-    }
 
     private void callback(List<AbstractCard> cards){
         for(AbstractCard card:cards){

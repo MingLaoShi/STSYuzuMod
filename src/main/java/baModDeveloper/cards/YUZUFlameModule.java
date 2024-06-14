@@ -37,8 +37,4 @@ public class YUZUFlameModule extends YUZUCustomCard{
 //        addToBot(new ApplyPowerAction(a));
     }
 
-    @Override
-    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
-    }
 }
