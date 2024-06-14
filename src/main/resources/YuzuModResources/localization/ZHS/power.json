@@ -70,5 +70,11 @@
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
 		"DESCRIPTIONS": ["暴击槽的需求改为%d格。"]
+	},
+	"YUZU:Burning": {
+		"NAME": "燃烧",
+		"DESCRIPTION": [
+			"在回合结束时受到%d点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
+		]
 	}
 }

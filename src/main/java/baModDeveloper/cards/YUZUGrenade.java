@@ -41,21 +41,4 @@ public class YUZUGrenade extends YUZUCustomCard{
         addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new BATwinsBurnPower(abstractMonster,abstractPlayer,this.magicNumber)));
     }
 
-
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if(YUZUCustomCard.isMastered(this)>0){
-            this.damage*=2;
-        }
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        if(YUZUCustomCard.isMastered(this)>0){
-            this.damage*=2;
-        }
-    }
 }
