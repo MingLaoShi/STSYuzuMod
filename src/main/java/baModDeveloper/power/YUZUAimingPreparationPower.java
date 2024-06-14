@@ -1,6 +1,6 @@
 package baModDeveloper.power;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;

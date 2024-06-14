@@ -1,6 +1,6 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.power.YUZUCurlUpPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

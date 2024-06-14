@@ -1,6 +1,6 @@
 package baModDeveloper.relic;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;

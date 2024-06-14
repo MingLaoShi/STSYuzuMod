@@ -1,6 +1,6 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

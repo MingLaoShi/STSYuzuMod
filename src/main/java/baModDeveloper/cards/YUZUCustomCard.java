@@ -12,9 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public abstract class YUZUCustomCard extends CustomCard {
     protected static Map<String,Integer> MasterCards=new HashMap<>();
@@ -72,7 +70,9 @@ public abstract class YUZUCustomCard extends CustomCard {
     }
 
     public abstract void commonUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);
-    public abstract void masterUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster);
+    public void masterUse(AbstractPlayer abstractPlayer,AbstractMonster abstractMonster){
+        commonUse(abstractPlayer,abstractMonster);
+    }
 
 
 

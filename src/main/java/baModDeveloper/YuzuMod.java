@@ -1,7 +1,7 @@
 package baModDeveloper;
 
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.cards.*;
 import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;

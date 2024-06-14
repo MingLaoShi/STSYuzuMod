@@ -1,6 +1,6 @@
 package baModDeveloper.character;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.YuzuMod;
 import baModDeveloper.cards.YUZUCamouflage;
 import baModDeveloper.cards.YUZUDefend;

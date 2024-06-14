@@ -1,4 +1,4 @@
-package baModDeveloper.Helper;
+package baModDeveloper.helper;
 
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;

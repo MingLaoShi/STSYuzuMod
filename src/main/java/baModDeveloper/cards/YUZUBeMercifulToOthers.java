@@ -1,6 +1,6 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.action.YUZUBeMercifulToOthersAction;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

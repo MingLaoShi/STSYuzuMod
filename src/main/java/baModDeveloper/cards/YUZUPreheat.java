@@ -1,10 +1,9 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.action.YUZUApplyCriticalRateAction;
 import baModDeveloper.action.YUZUChangeCriticalHitRateMaxAction;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.panel.YUZUCriticalRatePanel;
 import baModDeveloper.power.YUZUPreheatPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

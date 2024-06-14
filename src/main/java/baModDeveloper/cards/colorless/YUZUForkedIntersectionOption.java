@@ -1,8 +1,7 @@
 package baModDeveloper.cards.colorless;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;
-import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;

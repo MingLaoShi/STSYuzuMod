@@ -1,6 +1,6 @@
 package baModDeveloper.power;
 
-import baModDeveloper.Helper.ModHelper;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
