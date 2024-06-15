@@ -19,8 +19,7 @@ public class YUZUFlameModulePower extends AbstractPower {
     private static final String[] DESCRIPTIONS=powerStrings.DESCRIPTIONS;
     private static final String IMG_84=ModHelper.makeImgPath("power","default84");
     private static final String IMG_32=ModHelper.makeImgPath("power","default32");
-    private int selfAmount;
-    public YUZUFlameModulePower(AbstractCreature owner,int amount,int selfAmount){
+    public YUZUFlameModulePower(AbstractCreature owner,int amount){
         this.name=NAME;
         this.ID=POWER_ID;
         this.type=TYPE;
@@ -28,14 +27,12 @@ public class YUZUFlameModulePower extends AbstractPower {
         this.region128=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_84),0,0,84,84);
         this.region48=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_32),0,0,32,32);
         this.amount=amount;
-        this.selfAmount=selfAmount;
 
         updateDescription();
     }
 
     @Override
     public void atStartOfTurn() {
-        addToBot(new ApplyPowerAction(this.owner,this.owner,new BATwinsBurnPower(this.owner,this.owner,this.selfAmount)));
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!m.isDeadOrEscaped()){
                 addToBot(new ApplyPowerAction(m,this.owner,new BATwinsBurnPower(m,this.owner,this.amount)));
@@ -43,14 +40,9 @@ public class YUZUFlameModulePower extends AbstractPower {
         }
     }
 
-    @Override
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        this.selfAmount++;
-    }
 
     @Override
     public void updateDescription() {
-        this.description=String.format(DESCRIPTIONS[0],this.selfAmount,this.amount);
+        this.description=String.format(DESCRIPTIONS[0],this.amount);
     }
 }

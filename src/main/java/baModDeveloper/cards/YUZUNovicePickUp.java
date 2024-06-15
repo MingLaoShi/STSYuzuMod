@@ -1,7 +1,7 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,7 +39,7 @@ public class YUZUNovicePickUp extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i=0;i<this.magicNumber;i++){
-            ArrayList<AbstractCard> cardlist= (ArrayList<AbstractCard>) CardLibrary.getAllCards().stream().filter(card->card.cost==0).collect(Collectors.toList());
+            ArrayList<AbstractCard> cardlist= (ArrayList<AbstractCard>) CardLibrary.getAllCards().stream().filter(card->card.cost==0&&card.color!=CardColor.COLORLESS&&card.color!=CardColor.CURSE).collect(Collectors.toList());
             AbstractCard card=cardlist.get(AbstractDungeon.cardRandomRng.random(0,cardlist.size()-1)).makeCopy();
             if(card!=null){
                 addToBot(new MakeTempCardInHandAction(card,true));
@@ -51,7 +51,7 @@ public class YUZUNovicePickUp extends YUZUCustomCard{
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for(int i=0;i<this.magicNumber;i++){
-            ArrayList<AbstractCard> cardlist= (ArrayList<AbstractCard>) CardLibrary.getAllCards();
+            ArrayList<AbstractCard> cardlist= (ArrayList<AbstractCard>) CardLibrary.getAllCards().stream().filter(card -> card.color!=CardColor.COLORLESS&&card.color!=CardColor.CURSE).collect(Collectors.toList());
             AbstractCard card=cardlist.get(AbstractDungeon.cardRandomRng.random(0,cardlist.size()-1)).makeCopy();
             if(card!=null){
                 card.setCostForTurn(0);

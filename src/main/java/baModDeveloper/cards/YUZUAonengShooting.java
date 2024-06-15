@@ -29,7 +29,7 @@ public class YUZUAonengShooting extends YUZUCustomCard{
 
     public YUZUAonengShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=10;
+        this.baseDamage=this.damage=9;
         this.baseMagicNumber=this.magicNumber=1;
     }
 

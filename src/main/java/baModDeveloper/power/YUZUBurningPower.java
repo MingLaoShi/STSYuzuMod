@@ -4,6 +4,7 @@ import baModDeveloper.action.YUZUBurningDamageAction;
 import baModDeveloper.helper.ModHelper;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,12 +22,14 @@ public class YUZUBurningPower extends AbstractPower {
     private static final String IMG_84=ModHelper.makeImgPath("power","default84");
     private static final String IMG_32=ModHelper.makeImgPath("power","default32");
     private int damage;
-
-    public YUZUBurningPower(AbstractCreature owner,int amount) {
+    private AbstractCreature source;
+    public static int BASEDAMAGE=4;
+    public YUZUBurningPower(AbstractCreature owner, AbstractPlayer abstractPlayer, int amount) {
         this.name=NAME;
         this.ID=POWER_ID;
         this.type=TYPE;
         this.owner=owner;
+        this.source=abstractPlayer;
         this.region128=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_84),0,0,84,84);
         this.region48=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_32),0,0,32,32);
         this.amount=amount;
@@ -36,14 +39,14 @@ public class YUZUBurningPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.damage= (int) Math.pow(this.damage, (double) this.amount /10);
+        this.damage= (int) (BASEDAMAGE*Math.pow(2, (this.amount / 10) ));
         this.description=String.format(DESCRIPTIONS[0],this.damage);
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            addToBot(new YUZUBurningDamageAction(this.owner,this.owner,this.damage, AbstractGameAction.AttackEffect.FIRE));
+            addToBot(new YUZUBurningDamageAction(this.owner, this.owner, this.damage, AbstractGameAction.AttackEffect.FIRE));
         }
     }
 }

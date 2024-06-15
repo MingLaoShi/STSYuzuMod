@@ -1,11 +1,10 @@
 package baModDeveloper.character;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.YuzuMod;
 import baModDeveloper.cards.YUZUCamouflage;
 import baModDeveloper.cards.YUZUDefend;
-import baModDeveloper.cards.YUZUGrenade;
 import baModDeveloper.cards.YUZUStrike;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.panel.YUZUCriticalRatePanel;
 import baModDeveloper.relic.YUZUSight;
 import basemod.abstracts.CustomPlayer;
@@ -74,7 +73,6 @@ public class YuzuCharacter extends CustomPlayer {
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
-        deck.add(YUZUGrenade.ID);
         deck.add(YUZUCamouflage.ID);
 
 

@@ -1,8 +1,8 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.BATwinsBurnPower;
+import baModDeveloper.helper.ModHelper;
+import baModDeveloper.power.YUZUBurningPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -44,7 +44,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
         addToBot(new DamageAllEnemiesAction(abstractPlayer,this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(m,abstractPlayer,new BATwinsBurnPower(m,abstractPlayer,this.magicNumber)));
+                addToBot(new ApplyPowerAction(m,abstractPlayer,new YUZUBurningPower(m,abstractPlayer,this.magicNumber)));
             }
         }
     }

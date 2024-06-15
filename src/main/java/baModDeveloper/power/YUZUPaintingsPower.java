@@ -48,7 +48,7 @@ public class YUZUPaintingsPower extends AbstractPower {
             public void update() {
                 Set<AbstractCard.CardType> temp=new HashSet<>();
                 AbstractDungeon.player.hand.group.forEach(card -> temp.add(card.type));
-                addToTop(new GainEnergyAction(temp.size()));
+                addToTop(new GainEnergyAction(temp.size()*YUZUPaintingsPower.this.amount));
                 this.isDone=true;
             }
         });

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -35,13 +36,17 @@ public class YUZUAccumulation extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,abstractPlayer.masterDeck.size()), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
 
 
     @Override
     public void applyPowers() {
+        this.baseDamage= AbstractDungeon.player.masterDeck.size();
         super.applyPowers();
+        if(this.upgraded){
+            this.damage*=1.5F;
+        }
     }
 }

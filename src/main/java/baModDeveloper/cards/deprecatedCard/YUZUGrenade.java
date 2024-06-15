@@ -1,7 +1,8 @@
-package baModDeveloper.cards;
+package baModDeveloper.cards.deprecatedCard;
 
-import baModDeveloper.helper.ModHelper;
+import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.power.BATwinsBurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class YUZUGrenade extends YUZUCustomCard{
+public class YUZUGrenade extends YUZUCustomCard {
     public static final String ID= ModHelper.makePath("Grenade");
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;

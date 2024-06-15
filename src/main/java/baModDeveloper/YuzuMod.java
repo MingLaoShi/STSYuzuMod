@@ -63,7 +63,7 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
 //        BaseMod.addCard(new YUZUColdStorage());
 //        BaseMod.addCard(new YUZUDesignShooting());
 //        BaseMod.addCard(new YUZUSpreadShooting());
-        new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class).notPackageFilter(YUZUForkedIntersectionOption.class).setDefaultSeen(true).cards();
+        new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class).notPackageFilter(YUZUForkedIntersectionOption.class).notPackageFilter("baModDeveloper.cards.deprecatedCard").setDefaultSeen(true).cards();
     }
 
     public static void initialize(){

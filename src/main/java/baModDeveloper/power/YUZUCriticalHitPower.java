@@ -1,5 +1,6 @@
 package baModDeveloper.power;
 
+import baModDeveloper.cards.YUZUEmergencyEnergy;
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
@@ -24,7 +25,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
     private static final String IMG_84=ModHelper.makeImgPath("power","default84");
     private static final String IMG_32=ModHelper.makeImgPath("power","default32");
 
-    public float Multiplier=2.0F;
+    public static float Multiplier=2.0F;
 
     public YUZUCriticalHitPower(AbstractCreature owner,int amount){
         this.name=NAME;
@@ -71,13 +72,19 @@ public class YUZUCriticalHitPower extends AbstractPower{
             if(card instanceof YUZUCustomCard){
                 ((YUZUCustomCard) card).triggerOnCriticalHit(action.target);
             }
+
+            for(AbstractCard c:AbstractDungeon.player.drawPile.group){
+                if(c instanceof YUZUEmergencyEnergy){
+                    ((YUZUEmergencyEnergy) c).trigger();
+                }
+            }
             addToBot(new ReducePowerAction(this.owner,this.owner,this,1));
         }
     }
 
 
-    private float getMulti(AbstractCard card) {
-        float multi=this.Multiplier;
+    public static float getMulti(AbstractCard card) {
+        float multi=YUZUCriticalHitPower.Multiplier;
         for(AbstractPower p: AbstractDungeon.player.powers){
             if(p instanceof YUZUChangeCriticalMultiInterface){
                 multi=((YUZUChangeCriticalMultiInterface) p).getMulti(multi);
