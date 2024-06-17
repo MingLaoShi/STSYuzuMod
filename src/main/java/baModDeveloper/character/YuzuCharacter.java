@@ -74,7 +74,7 @@ public class YuzuCharacter extends CustomPlayer {
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
         deck.add(YUZUCamouflage.ID);
-
+        deck.add(ModHelper.makePath(ModHelper.getRandomShootingCardId()));
 
         return deck;
     }

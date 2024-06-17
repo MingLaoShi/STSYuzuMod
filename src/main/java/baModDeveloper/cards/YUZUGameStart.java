@@ -1,8 +1,8 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
+import baModDeveloper.helper.ModHelper;
+import baModDeveloper.inter.YUZUMultiCriticalMultiInterface;
 import baModDeveloper.power.YUZUCriticalHitPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class YUZUGameStart extends YUZUCustomCard implements YUZUChangeCriticalMultiInterface {
+public class YUZUGameStart extends YUZUCustomCard implements YUZUMultiCriticalMultiInterface {
     public static final String ID= ModHelper.makePath("GameStart");
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
@@ -79,8 +79,9 @@ public class YUZUGameStart extends YUZUCustomCard implements YUZUChangeCriticalM
         }
     }
 
+
     @Override
-    public float getMulti(float multi) {
+    public float multiMulti(float multi) {
         return multi*1.5F;
     }
 }

@@ -1,9 +1,10 @@
 package baModDeveloper.power;
 
+import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.cards.YUZUEmergencyEnergy;
 import baModDeveloper.helper.ModHelper;
-import baModDeveloper.cards.YUZUCustomCard;
-import baModDeveloper.inter.YUZUChangeCriticalMultiInterface;
+import baModDeveloper.inter.YUZUAddCriticalMultiInterface;
+import baModDeveloper.inter.YUZUMultiCriticalMultiInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -86,12 +87,20 @@ public class YUZUCriticalHitPower extends AbstractPower{
     public static float getMulti(AbstractCard card) {
         float multi=YUZUCriticalHitPower.Multiplier;
         for(AbstractPower p: AbstractDungeon.player.powers){
-            if(p instanceof YUZUChangeCriticalMultiInterface){
-                multi=((YUZUChangeCriticalMultiInterface) p).getMulti(multi);
+            if(p instanceof YUZUAddCriticalMultiInterface){
+                multi=((YUZUAddCriticalMultiInterface) p).addMulti(multi);
             }
         }
-        if(card instanceof YUZUChangeCriticalMultiInterface){
-            multi=((YUZUChangeCriticalMultiInterface) card).getMulti(multi);
+        if(card instanceof YUZUAddCriticalMultiInterface){
+            multi=((YUZUAddCriticalMultiInterface) card).addMulti(multi);
+        }
+        for(AbstractPower p: AbstractDungeon.player.powers){
+            if(p instanceof YUZUMultiCriticalMultiInterface){
+                multi=((YUZUMultiCriticalMultiInterface) p).multiMulti(multi);
+            }
+        }
+        if(card instanceof YUZUMultiCriticalMultiInterface){
+            multi=((YUZUMultiCriticalMultiInterface) card).multiMulti(multi);
         }
         return multi;
     }

@@ -1,6 +1,7 @@
 package baModDeveloper.helper;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -84,5 +85,12 @@ public class ModHelper {
         }else{
             return ModHelper.makeImgPath("card","default");
         }
+    }
+
+    private static String[] SHOOTINGCARDS={
+        "ConcentratedShooting","AonengShooting","DesignShooting","CoverShooting"
+    };
+    public static String getRandomShootingCardId(){
+        return SHOOTINGCARDS[MathUtils.random(0,SHOOTINGCARDS.length-1)];
     }
 }

@@ -61,7 +61,7 @@
 	},
 	"YUZU:PreheatPower": {
 		"NAME": "预热瞄准",
-		"DESCRIPTIONS": ["增加%d暴击伤害，再受伤后移除。"]
+		"DESCRIPTIONS": ["增加%d%%暴击伤害，再受伤后移除。"]
 	},
 	"YUZU:ProperPlanningPower": {
 		"NAME": "计划妥当",

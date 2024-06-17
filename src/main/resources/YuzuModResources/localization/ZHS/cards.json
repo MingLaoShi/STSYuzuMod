@@ -96,7 +96,7 @@
 	},
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
-		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 yuzu:燃烧 。"
+		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 yuzu: yuzu:燃烧  。"
 	},
 	"YUZU:ForkedIntersection": {
 		"NAME": "分叉路口",
@@ -276,27 +276,27 @@
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予 !M! 层燃烧，造成相当于目标拥有燃烧触发1次的效果。",
-		"UPGRADE_DESCRIPTION":"给予 !M! 层燃烧，造成相当于目标拥有燃烧触发2次的效果。"
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发1次的效果。",
+		"UPGRADE_DESCRIPTION":"给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发2次的效果。"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",
-		"DESCRIPTION":"造成 !D! 点伤害，给予 !B! 点格挡。 NL 精通：将伤害和格挡的数值互换，可以无限次精通。"
+		"DESCRIPTION":"造成 !D! 点伤害，给予 !B! 点 格挡 。 NL yuzu:精通 ：将伤害和 格挡 的数值互换，可以无限次 yuzu:精通 。"
 	},
 	"YUZU:EmergencyEnergy":{
 		"NAME":"应急能源",
-		"DESCRIPTION":"获得 [E] 。 NL 在打出已精通的牌后，打出抽牌堆中的这张牌。",
-		"UPGRADE_DESCRIPTION":"获得 [E] 。 NL 在打出已精通或暴击后的牌后，打出抽牌堆中的这张牌。"
+		"DESCRIPTION":"获得 [E] 。 NL 在打出已 yuzu:精通 的牌后，打出抽牌堆中的这张牌。",
+		"UPGRADE_DESCRIPTION":"获得 [E] 。 NL 在打出已 yuzu:精通 或 yuzu:暴击 后的牌后，打出抽牌堆中的这张牌。"
 	},
 	"YUZU:DoubleJump":{
 		"NAME":"二段跳跃",
 		"DESCRIPTION":"若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。",
-		"UPGRADE_DESCRIPTION":"保留 ，若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。"
+		"UPGRADE_DESCRIPTION":" 保留 ，若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。"
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",
-		"DESCRIPTION":"交换当前的暴击次数和能量。 NL 消耗 ",
-		"UPGRADE_DESCRIPTION":"交换当前的暴击次数和能量。"
+		"DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。 NL 消耗 ",
+		"UPGRADE_DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。"
 	},
 	"YUZU:EnergyRelease":{
 		"NAME":"能量释放",
@@ -304,10 +304,10 @@
 	},
 	"YUZU:SlowBurn":{
 		"NAME":"野火燎原",
-		"DESCRIPTION":"给予所有单位1层燃烧，并将所有单位的燃烧层数翻 !M! 倍。 NL 消耗 "
+		"DESCRIPTION":"给予所有单位1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍。 NL 消耗 "
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
-		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1，消耗。 NL 精通：改为所有手牌。"
+		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1，消耗。 NL yuzu:精通 ：改为所有手牌。"
 	}
 }
