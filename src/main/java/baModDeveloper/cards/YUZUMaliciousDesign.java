@@ -17,7 +17,7 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.ALL;
+    private static final CardTarget TARGET=CardTarget.SELF_AND_ENEMY;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
 
     public YUZUMaliciousDesign() {
@@ -31,12 +31,12 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new YUZUMaliciousDesignAction(false));
+        addToBot(new YUZUMaliciousDesignAction(abstractMonster,false));
 
     }
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new YUZUMaliciousDesignAction(true));
+        addToBot(new YUZUMaliciousDesignAction(abstractMonster,true));
     }
 }

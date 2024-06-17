@@ -89,9 +89,9 @@ public class YUZUCriticalHitPower extends AbstractPower{
             if(p instanceof YUZUChangeCriticalMultiInterface){
                 multi=((YUZUChangeCriticalMultiInterface) p).getMulti(multi);
             }
-            if(card instanceof YUZUChangeCriticalMultiInterface){
-                multi=((YUZUChangeCriticalMultiInterface) card).getMulti(multi);
-            }
+        }
+        if(card instanceof YUZUChangeCriticalMultiInterface){
+            multi=((YUZUChangeCriticalMultiInterface) card).getMulti(multi);
         }
         return multi;
     }

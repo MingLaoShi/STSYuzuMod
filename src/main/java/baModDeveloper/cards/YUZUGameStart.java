@@ -55,8 +55,27 @@ public class YUZUGameStart extends YUZUCustomCard implements YUZUChangeCriticalM
         super.applyPowers();
 
         if(YUZUCustomCard.isMastered(this)>0){
-            this.damage= (int) ((float)this.damage* YUZUCriticalHitPower.getMulti(this));
-            this.isDamageModified=this.damage!=this.baseDamage;
+            for(int i=0;i<this.multiDamage.length;i++){
+                this.multiDamage[i]*= (int) YUZUCriticalHitPower.getMulti(this);
+                this.isDamageModified=this.multiDamage[i]!=this.baseDamage;
+            }
+            this.damage = this.multiDamage[0];
+        }
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        this.tags.remove(YUZUCardTag.NoNeedCriticalHit);
+        if(YUZUCustomCard.isMastered(this)>0){
+            this.tags.add(YUZUCardTag.NoNeedCriticalHit);
+        }
+        super.calculateCardDamage(mo);
+        if(YUZUCustomCard.isMastered(this)>0){
+            for(int i=0;i<this.multiDamage.length;i++){
+                this.multiDamage[i]*= (int) YUZUCriticalHitPower.getMulti(this);
+                this.isDamageModified=this.multiDamage[i]!=this.baseDamage;
+            }
+            this.damage = this.multiDamage[0];
         }
     }
 
