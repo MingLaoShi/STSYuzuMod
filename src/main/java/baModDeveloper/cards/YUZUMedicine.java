@@ -70,8 +70,8 @@ public class YUZUMedicine extends YUZUCustomCard{
         int baseBaseDamage=this.baseDamage;
         int baseBaseBlock=this.baseBlock;
         if(YUZUCustomCard.isMastered(this)%2==1){
-            this.block=baseBaseDamage;
-            this.damage=baseBaseBlock;
+            this.baseBlock=baseBaseDamage;
+            this.baseDamage=baseBaseBlock;
         }
         super.calculateCardDamage(mo);
         this.isDamageModified=this.damage!=baseBaseDamage;

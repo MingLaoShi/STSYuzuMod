@@ -48,7 +48,7 @@ public class YuzuCharacter extends CustomPlayer {
             -5.0F, 0.0F};
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack
             .getCharacterString(ModHelper.makePath("YUZU"));
-    private static final String CHAR_IMG=ModHelper.makeImgPath("character","default");
+    private static final String CHAR_IMG=ModHelper.makeImgPath("character","yuzu");
 
     public YUZUCriticalRatePanel getCriticalRatePanel() {
         return criticalRatePanel;

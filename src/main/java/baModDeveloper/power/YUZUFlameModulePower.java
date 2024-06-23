@@ -35,7 +35,7 @@ public class YUZUFlameModulePower extends AbstractPower {
     public void atStartOfTurn() {
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(m,this.owner,new BATwinsBurnPower(m,this.owner,this.amount)));
+                addToBot(new ApplyPowerAction(m,this.owner,new YUZUBurningPower(m,this.owner,this.amount)));
             }
         }
     }

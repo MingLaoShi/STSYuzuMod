@@ -50,18 +50,21 @@ public class YUZUJobResponsibilitiesPower extends AbstractPower {
             if(action.target!=null){
                 target= (AbstractMonster) action.target;
             }
-            AbstractCard temp=card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(temp);
-            temp.current_x=card.current_x;
-            temp.current_y=card.current_y;
-            temp.target_x= Settings.WIDTH/2.0F-300.0F*Settings.scale;
-            temp.target_y=Settings.HEIGHT/2.0F;
+            for(int i=0;i<this.amount;i++){
+                AbstractCard temp=card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(temp);
+                temp.current_x=card.current_x;
+                temp.current_y=card.current_y;
+                temp.target_x= Settings.WIDTH/2.0F-300.0F*Settings.scale;
+                temp.target_y=Settings.HEIGHT/2.0F;
 
-            if(target!=null){
-                temp.calculateCardDamage(target);
+                if(target!=null){
+                    temp.calculateCardDamage(target);
+                }
+                temp.purgeOnUse=true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(temp,target,card.energyOnUse,true,true),false);
             }
-            temp.purgeOnUse=true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(temp,target,card.energyOnUse,true,true),false);
+
         }
     }
 }

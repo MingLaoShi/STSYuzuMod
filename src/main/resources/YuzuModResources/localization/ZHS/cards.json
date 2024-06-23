@@ -96,7 +96,7 @@
 	},
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
-		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 yuzu: yuzu:燃烧  。"
+		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 yuzu:燃烧 。"
 	},
 	"YUZU:ForkedIntersection": {
 		"NAME": "分叉路口",
@@ -134,7 +134,7 @@
 	},
 	"YUZU:Grenade": {
 		"NAME": "小型榴弹",
-		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 yuzu:灼伤 。"
+		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 yuzu:燃烧 。"
 	},
 	"YUZU:HighPrecisionOperation": {
 		"NAME": "高精操作",
@@ -167,7 +167,7 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:灼伤 。yuzu:精通：立刻触发一次 yuzu:灼伤 。"
+		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。yuzu:精通 ：立刻触发一次 yuzu: 。"
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
@@ -220,7 +220,7 @@
 	},
 	"YUZU:ScorchingExplosive": {
 		"NAME": "灼热爆弹",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:灼伤 。 NL yuzu:精通 ：伤害和 yuzu:灼伤 增加 !B! 。这张牌可以无限 yuzu:精通 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:燃烧 。 NL yuzu:精通 ：伤害和 yuzu:燃烧 增加 !B! 。这张牌可以无限 yuzu:精通 。"
 	},
 	"YUZU:SelfRepair": {
 		"NAME": "自我休整",
@@ -276,8 +276,8 @@
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发1次的效果。",
-		"UPGRADE_DESCRIPTION":"给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发2次的效果。"
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发1次的效果。（ !D! ）",
+		"UPGRADE_DESCRIPTION":"给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发2次的效果。（ !D! ）"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",

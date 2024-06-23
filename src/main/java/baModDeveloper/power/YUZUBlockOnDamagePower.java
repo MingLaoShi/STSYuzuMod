@@ -33,10 +33,11 @@ public class YUZUBlockOnDamagePower extends AbstractPower {
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        addToTop(new GainBlockAction(this.owner,this.amount));
-        addToTop(new RemoveSpecificPowerAction(this.owner,this.owner,this));
-        return super.onAttacked(info, damageAmount);
+    public void wasHPLost(DamageInfo info, int damageAmount) {
+        if(damageAmount>0){
+            addToTop(new GainBlockAction(this.owner,this.amount));
+            addToTop(new RemoveSpecificPowerAction(this.owner,this.owner,this));
+        }
     }
 
     @Override

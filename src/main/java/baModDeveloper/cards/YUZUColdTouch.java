@@ -82,6 +82,8 @@ public class YUZUColdTouch extends YUZUCustomCard{
         super.calculateCardDamage(mo);
         this.baseDamage=BaseBaseDamage;
         this.baseMagicNumber=BaseBaseMagic;
+        this.isDamageModified=this.damage!=BaseBaseDamage;
+        this.isMagicNumberModified=this.magicNumber!=BaseBaseMagic;
 
     }
 }

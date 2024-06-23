@@ -17,6 +17,11 @@ public class YUZUSight extends CustomRelic {
     }
 
     @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+    @Override
     public void atBattleStart() {
         if(!this.grayscale){
             addToBot(new YUZUApplyCriticalRateAction(9));
@@ -25,7 +30,7 @@ public class YUZUSight extends CustomRelic {
     }
 
     @Override
-    public void onEnterRoom(AbstractRoom room) {
+    public void justEnteredRoom(AbstractRoom room) {
         this.grayscale=false;
     }
 }

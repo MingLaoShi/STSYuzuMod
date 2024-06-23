@@ -4,7 +4,6 @@ import baModDeveloper.action.YUZUBurningDamageAction;
 import baModDeveloper.helper.ModHelper;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,12 +23,12 @@ public class YUZUBurningPower extends AbstractPower {
     private int damage;
     private AbstractCreature source;
     public static int BASEDAMAGE=4;
-    public YUZUBurningPower(AbstractCreature owner, AbstractPlayer abstractPlayer, int amount) {
+    public YUZUBurningPower(AbstractCreature owner, AbstractCreature source, int amount) {
         this.name=NAME;
         this.ID=POWER_ID;
         this.type=TYPE;
         this.owner=owner;
-        this.source=abstractPlayer;
+        this.source=source;
         this.region128=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_84),0,0,84,84);
         this.region48=new TextureAtlas.AtlasRegion(ImageMaster.loadImage(IMG_32),0,0,32,32);
         this.amount=amount;

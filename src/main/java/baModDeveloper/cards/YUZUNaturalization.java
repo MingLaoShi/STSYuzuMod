@@ -28,6 +28,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
     public YUZUNaturalization() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=5;
+        this.exhaust=true;
     }
 
     @Override

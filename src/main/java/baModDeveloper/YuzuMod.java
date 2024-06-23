@@ -1,10 +1,10 @@
 package baModDeveloper;
 
 
-import baModDeveloper.helper.ModHelper;
-import baModDeveloper.cards.*;
+import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.helper.ModHelper;
 import baModDeveloper.relic.YUZUSight;
 import basemod.AutoAdd;
 import basemod.BaseMod;

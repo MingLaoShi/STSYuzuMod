@@ -18,6 +18,9 @@ import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class YUZUDoubleJump extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("DoubleJump");
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,6 +33,11 @@ public class YUZUDoubleJump extends YUZUCustomCard{
     private static final CardTarget TARGET=CardTarget.NONE;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
     private static boolean canDraw=false;
+    private static Set<String> cardsCanDraw=new HashSet<String>();
+    static {
+        cardsCanDraw.add(YUZUDoubleJump.ID);
+    }
+
     public YUZUDoubleJump() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
@@ -83,23 +91,29 @@ public class YUZUDoubleJump extends YUZUCustomCard{
     public void triggerOnGlowCheck() {
         if(!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty()){
             AbstractCard card=AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size()-1);
-            try {
-                boolean isDrawCard=false;
-                if(card instanceof YUZUCustomCard){
-                    isDrawCard=drawCheck(card,"commonUse")||drawCheck(card,"masterUse");
-                }else{
-                    isDrawCard=drawCheck(card,"use");
-                }
-                if(isDrawCard){
-                    canDraw=true;
-                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                }else{
+            boolean isDrawCard=false;
+            if(cardsCanDraw.contains(card.cardID)){
+                isDrawCard=true;
+            }else{
+                try {
+                    if(card instanceof YUZUCustomCard){
+                        isDrawCard=drawCheck(card,"commonUse")||drawCheck(card,"masterUse");
+                    }else{
+                        isDrawCard=drawCheck(card,"use");
+                    }
+
+                } catch (NotFoundException | CannotCompileException ignored) {
                     canDraw=false;
-                    this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+                    super.triggerOnGlowCheck();
                 }
-            } catch (NotFoundException | CannotCompileException ignored) {
+            }
+
+            if(isDrawCard){
+                canDraw=true;
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+            }else{
                 canDraw=false;
-                this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+                super.triggerOnGlowCheck();
             }
         }
     }

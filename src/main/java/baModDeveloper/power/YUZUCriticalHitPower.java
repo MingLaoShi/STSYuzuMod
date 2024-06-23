@@ -42,12 +42,16 @@ public class YUZUCriticalHitPower extends AbstractPower{
 
     @Override
     public void updateDescription() {
-        this.description=String.format(DESCRIPTIONS[0],this.amount,(int)getMulti(null)*100);
+        this.description=String.format(DESCRIPTIONS[0],this.amount,(int)(getMulti(null)*100));
     }
 
+    @Override
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        super.onApplyPower(power, target, source);
+        this.updateDescription();
+    }
 
-
-//    @Override
+    //    @Override
 //    public float atDamageGive(float damage, DamageInfo.DamageType type) {
 //        if(type== DamageInfo.DamageType.NORMAL){
 //            if(AbstractDungeon.player.hasPower(YUZUPreheatPower.POWER_ID)){

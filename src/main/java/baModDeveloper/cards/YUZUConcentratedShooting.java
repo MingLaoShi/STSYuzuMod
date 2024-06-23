@@ -1,18 +1,21 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.YUZUCriticalHitPower;
+import baModDeveloper.helper.ModHelper;
+import baModDeveloper.inter.YUZUAddCriticalMultiInterface;
+import baModDeveloper.power.YUZUExtraCriticalRatePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class YUZUConcentratedShooting extends YUZUCustomCard{
+public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddCriticalMultiInterface {
     public static final String ID= ModHelper.makePath("ConcentratedShooting");
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
@@ -23,6 +26,7 @@ public class YUZUConcentratedShooting extends YUZUCustomCard{
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ENEMY;
     private static final CardRarity RARITY=CardRarity.COMMON;
+    private static float ExtraCritical=0.5F;
 
     public YUZUConcentratedShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -42,21 +46,19 @@ public class YUZUConcentratedShooting extends YUZUCustomCard{
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
-
-
     @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if(AbstractDungeon.player.hasPower(YUZUCriticalHitPower.POWER_ID)){
-            this.damage= (int) (this.damage/2*(200+this.magicNumber)/100.0F);
-        }
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        commonUse(abstractPlayer,abstractMonster);
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,25)));
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        if(AbstractDungeon.player.hasPower(YUZUCriticalHitPower.POWER_ID)){
-            this.damage= (int) (this.damage/2*(200+this.magicNumber)/100.0F);
-        }
+    public void triggerOnCriticalHit(AbstractCreature target) {
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,25)));
+    }
+
+    @Override
+    public float addMulti(float multi) {
+        return multi+ExtraCritical;
     }
 }

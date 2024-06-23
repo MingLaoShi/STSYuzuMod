@@ -76,5 +76,11 @@
 		"DESCRIPTIONS": [
 			"在回合结束时受到%d点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
 		]
+	},
+	"YUZU:ExtraCriticalRatePower": {
+		"NAME": "额外暴击伤害",
+		"DESCRIPTIONS": [
+			"暴击伤害提高%d%%。"
+		]
 	}
 }
