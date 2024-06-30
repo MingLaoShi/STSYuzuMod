@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 public class MasterTopCardAction extends AbstractGameAction {
     boolean shuffled;
     AbstractPlayer player;
-    public MasterTopCardAction(int amount, boolean b) {
+    public MasterTopCardAction(int amount, boolean shuffled) {
         this.shuffled = shuffled;
         this.amount=amount;
         this.player= AbstractDungeon.player;

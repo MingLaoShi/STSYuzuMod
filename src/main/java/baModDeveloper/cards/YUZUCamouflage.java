@@ -1,7 +1,7 @@
 package baModDeveloper.cards;
 
 import baModDeveloper.helper.ModHelper;
-import baModDeveloper.action.BATwinsPlayHandCardAction;
+import baModDeveloper.action.YUZUPlayHandCardAction;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -42,7 +42,7 @@ public class YUZUCamouflage extends YUZUCustomCard{
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
         if(YUZUCustomCard.isMastered(this)>0){
-            addToBot(new BATwinsPlayHandCardAction(this,null));
+            addToBot(new YUZUPlayHandCardAction(this,null));
         }
     }
 }

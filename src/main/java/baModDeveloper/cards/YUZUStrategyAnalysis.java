@@ -32,7 +32,7 @@ public class YUZUStrategyAnalysis extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.updateCost(-1);
+        this.upgradeBaseCost(0);
     }
 
     @Override

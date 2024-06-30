@@ -167,7 +167,7 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。yuzu:精通 ：立刻触发一次 yuzu: 。"
+		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次 yuzu:燃烧 。"
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
@@ -251,7 +251,7 @@
 	},
 	"YUZU:SpreadShooting": {
 		"NAME": "扩散射击",
-		"DESCRIPTION": "造成 !D! 点伤害，每击中一名敌人，获得 !M! yuzu:暴击槽 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，每击中一名敌人，获得 !M! yuzu:暴击槽 。"
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
@@ -309,5 +309,9 @@
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
 		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1，消耗。 NL yuzu:精通 ：改为所有手牌。"
+	},
+	"YUZU:ImpactWarhead": {
+		"NAME": "冲击弹头",
+		"DESCRIPTION": "暴击后抽1张牌。"
 	}
 }

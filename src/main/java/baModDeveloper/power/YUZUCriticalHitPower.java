@@ -5,6 +5,7 @@ import baModDeveloper.cards.YUZUEmergencyEnergy;
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.inter.YUZUAddCriticalMultiInterface;
 import baModDeveloper.inter.YUZUMultiCriticalMultiInterface;
+import baModDeveloper.inter.YUZUTriggerOnCriticalHitInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -77,7 +78,11 @@ public class YUZUCriticalHitPower extends AbstractPower{
             if(card instanceof YUZUCustomCard){
                 ((YUZUCustomCard) card).triggerOnCriticalHit(action.target);
             }
-
+            for(AbstractPower p:this.owner.powers){
+                if(p instanceof YUZUTriggerOnCriticalHitInterface){
+                    ((YUZUTriggerOnCriticalHitInterface) p).triggerOnCriticalHit();
+                }
+            }
             for(AbstractCard c:AbstractDungeon.player.drawPile.group){
                 if(c instanceof YUZUEmergencyEnergy){
                     ((YUZUEmergencyEnergy) c).trigger();

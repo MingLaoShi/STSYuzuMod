@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,7 +51,11 @@ public class YUZUEnergyConversion extends YUZUCustomCard{
                 }else {
                     addToTop(new ApplyPowerAction(p,p,new YUZUCriticalHitPower(p,energyAmount-hitAmount)));
                 }
-                addToTop(new GainEnergyAction(hitAmount-energyAmount));
+                if(hitAmount-energyAmount>0){
+                    addToTop(new GainEnergyAction(hitAmount-energyAmount));
+                }else{
+                    addToTop(new LoseEnergyAction(energyAmount-hitAmount));
+                }
                 this.isDone=true;
             }
         });

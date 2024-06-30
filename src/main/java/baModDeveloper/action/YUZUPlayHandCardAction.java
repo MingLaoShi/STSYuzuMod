@@ -9,14 +9,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BATwinsPlayHandCardAction extends AbstractGameAction {
+public class YUZUPlayHandCardAction extends AbstractGameAction {
     public AbstractCard card;
     private AbstractPlayer p;
     private boolean ignoreDeath;
     private int numberOfConnections;
     private boolean blockTheOriginalEffect;
 
-    public BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean randomTarget, boolean ignoreDeath, int numberOfConnections, boolean blockTheOriginalEffect) {
+    public YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean randomTarget, boolean ignoreDeath, int numberOfConnections, boolean blockTheOriginalEffect) {
         this.card = card;
         this.p = AbstractDungeon.player;
         this.target = target;
@@ -26,23 +26,23 @@ public class BATwinsPlayHandCardAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
-    BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean randomTarget, boolean ignoreDeath) {
+    YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean randomTarget, boolean ignoreDeath) {
         this(card, target, randomTarget, ignoreDeath, 0, false);
     }
 
-    public BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target) {
+    public YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target) {
         this(card, target, false, true);
     }
 
-    public BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean ignoreDeath) {
+    public YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target, boolean ignoreDeath) {
         this(card, target, false, ignoreDeath);
     }
 
-    public BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target, int numberOfConnections) {
+    public YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target, int numberOfConnections) {
         this(card, target, false, true, numberOfConnections, false);
     }
 
-    public BATwinsPlayHandCardAction(AbstractCard card, AbstractCreature target, int numberOfConnections, boolean blockTheOriginalEffect) {
+    public YUZUPlayHandCardAction(AbstractCard card, AbstractCreature target, int numberOfConnections, boolean blockTheOriginalEffect) {
         this(card, target, false, true, numberOfConnections, blockTheOriginalEffect);
     }
 
@@ -54,27 +54,13 @@ public class BATwinsPlayHandCardAction extends AbstractGameAction {
         if (!card.isInAutoplay) {
             this.card.applyPowers();
             this.card.calculateCardDamage((AbstractMonster) this.target);
-//            this.p.hand.removeCard(this.card);
             AbstractDungeon.getCurrRoom().souls.remove(this.card);
-//            card.current_x = Settings.WIDTH / 2.0F + 200.0F * Settings.xScale;
-//            card.current_y = 0.0F * Settings.scale;
-//            card.target_x = (float) Settings.WIDTH / 2.0F - 200.0F * Settings.xScale;
-//            card.target_y = (float) Settings.HEIGHT / 2.0F;
-//            AbstractDungeon.player.limbo.group.add(this.card);
 
-//            this.card.isInAutoplay=true;
-//            addToTop(new ShowCardAction(this.card));
-//            this.p.limbo.ad
-//            if(card instanceof BATwinsModCustomCard){
-//                ((BATwinsModCustomCard) card).playedByOtherCard=true;
-//            }
-//            addToTop(new UnlimboAction(this.card));
             if (this.target == null || this.target.isDeadOrEscaped()) {
                 addToTop((AbstractGameAction) new NewQueueCardAction(card, true, false, true));
             } else {
                 addToTop((AbstractGameAction) new NewQueueCardAction(card, this.target, false, true));
             }
-//            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this.card, (AbstractMonster) this.target,card.energyOnUse,true,true),true);
         }
         this.isDone = true;
     }
