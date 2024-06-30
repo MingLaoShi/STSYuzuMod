@@ -103,4 +103,9 @@ public abstract class YUZUCustomCard extends CustomCard {
         public static CardTags NoNeedCriticalHit;
 
     }
+
+    public static class YUZUTarget{
+        @SpireEnum
+        public static CardTarget POTIONS;
+    }
 }

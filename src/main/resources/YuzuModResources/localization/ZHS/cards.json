@@ -313,5 +313,30 @@
 	"YUZU:ImpactWarhead": {
 		"NAME": "冲击弹头",
 		"DESCRIPTION": "暴击后抽1张牌。"
+	},
+	"YUZU:FireWarning": {
+		"NAME": "开火预告",
+		"DESCRIPTION": "填充暴击序列条，直到获得1次暴击为止。精通：改为填充 !M! 格。",
+		"UPGRADE_DESCRIPTION": "填充暴击序列条，直到获得2次暴击为止。精通：改为填充 !M! 格。"
+	},
+	"YUZU:Barter": {
+		"NAME": "以物易物",
+		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。消耗。"
+	},
+	"YUZU:AdvanceShooting": {
+		"NAME": "预支射击",
+		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。若打出这张牌时 [E] 为0则 消耗 。"
+	},
+	"YUZU:LinearSegmentation": {
+		"NAME": "线性分割",
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，如果有两名或以上同名敌人，伤害增加 !M! 。"
+	},
+	"YUZU:Blast": {
+		"NAME": "燃焰爆破",
+		"DESCRIPTION": "每打出一次暴击后给予所有敌人 !M! 层燃烧，并使燃烧的基础数值提高 !M! 。"
+	},
+	"YUZU:Fortress": {
+		"NAME": "末日堡垒",
+		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 消耗 。"
 	}
 }

@@ -88,5 +88,17 @@
 		"DESCRIPTIONS": [
 			"暴击后抽%d张牌。"
 		]
+	},
+	"YUZU:BlastPower": {
+		"NAME": "燃焰爆破",
+		"DESCRIPTIONS": [
+			"每打出一次暴击后给予所有敌人%d层燃烧，并使燃烧的基础数值提高%d。"
+		]
+	},
+	"YUZU:FortressPower": {
+		"NAME": "末日堡垒",
+		"DESCRIPTIONS": [
+			"在本场战斗中，你无法再打出暴击"
+		]
 	}
 }

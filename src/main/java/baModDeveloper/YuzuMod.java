@@ -5,12 +5,14 @@ import baModDeveloper.cards.YUZUCustomCard;
 import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.helper.ModHelper;
+import baModDeveloper.helper.YUZUPotionTarget;
 import baModDeveloper.relic.YUZUSight;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,7 +24,7 @@ import java.nio.charset.StandardCharsets;
 import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
-public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber {
+public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber ,PostInitializeSubscriber{
     public static final Color YUZUColor = new Color(252.0F / 255.0F, 168.0F / 255.0F, 198.0F / 255.0F, 1.0F);
 
     private static final String YUZU_CHARACTER_BUTTON = ModHelper.makeImgPath("character", "Character_Button");
@@ -116,5 +118,10 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
                 BaseMod.addKeyword("yuzu", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
             }
         }
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        CustomTargeting.registerCustomTargeting(YUZUPotionTarget.POTION,new YUZUPotionTarget());
     }
 }
