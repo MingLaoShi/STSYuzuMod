@@ -30,15 +30,15 @@ public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddC
 
     public YUZUConcentratedShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=10;
+        this.baseDamage=this.damage=7;
         this.baseMagicNumber=this.magicNumber=50;
         this.selfRetain=true;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(5);
-        this.upgradeMagicNumber(50);
+        this.upgradeDamage(3);
+        this.upgradeMagicNumber(25);
     }
 
     @Override
@@ -49,16 +49,16 @@ public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddC
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,25)));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,20)));
     }
 
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,25)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,20)));
     }
 
     @Override
     public float addMulti(float multi) {
-        return multi+ExtraCritical;
+        return multi+this.magicNumber/100.0F;
     }
 }

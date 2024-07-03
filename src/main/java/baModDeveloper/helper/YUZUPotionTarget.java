@@ -18,7 +18,7 @@ public class YUZUPotionTarget extends TargetingHandler<AbstractPotion> {
         hovered=null;
 
         for(AbstractPotion p: AbstractDungeon.player.potions){
-            if(!(p instanceof PotionSlot)&&p.hb.hovered){
+            if(!(p instanceof PotionSlot)&&p.rarity!= AbstractPotion.PotionRarity.RARE&&p.hb.hovered){
                 hovered=p;
             }
         }
@@ -44,4 +44,13 @@ public class YUZUPotionTarget extends TargetingHandler<AbstractPotion> {
     }
 
 
+    @Override
+    public void setDefaultTarget() {
+        for(AbstractPotion p: AbstractDungeon.player.potions){
+            if(!(p instanceof PotionSlot)&&p.rarity!= AbstractPotion.PotionRarity.RARE){
+                hovered=p;
+                return;
+            }
+        }
+    }
 }

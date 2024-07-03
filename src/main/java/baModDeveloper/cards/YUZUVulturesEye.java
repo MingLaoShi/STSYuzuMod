@@ -38,9 +38,9 @@ public class YUZUVulturesEye extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if(this.upgraded){
-            addToBot(new YUZUSetCriticalRateMaxAction(1));
-        }else{
             addToBot(new YUZUSetCriticalRateMaxAction(2));
+        }else{
+            addToBot(new YUZUSetCriticalRateMaxAction(3));
         }
     }
 

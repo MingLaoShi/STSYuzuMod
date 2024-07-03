@@ -115,7 +115,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public Color getCardTrailColor() {
-        return YuzuMod.YUZUColor;
+        return YuzuMod.YUZUColor.cpy();
     }
 
     @Override
@@ -155,7 +155,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public Color getSlashAttackColor() {
-        return YuzuMod.YUZUColor;
+        return YuzuMod.YUZUColor.cpy();
     }
 
     @Override

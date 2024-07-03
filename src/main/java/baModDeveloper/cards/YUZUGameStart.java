@@ -26,13 +26,13 @@ public class YUZUGameStart extends YUZUCustomCard implements YUZUMultiCriticalMu
 
     public YUZUGameStart() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=24;
+        this.baseDamage=this.damage=16;
         this.isMultiDamage=true;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(12);
+        this.upgradeDamage(8);
     }
 
     @Override

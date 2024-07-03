@@ -22,6 +22,7 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
 
     public YUZUMaliciousDesign() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust=true;
     }
 
     @Override

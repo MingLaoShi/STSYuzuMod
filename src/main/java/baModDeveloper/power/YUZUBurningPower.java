@@ -43,7 +43,7 @@ public class YUZUBurningPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             addToBot(new YUZUBurningDamageAction(this.owner, this.owner, this.damage, AbstractGameAction.AttackEffect.FIRE));
         }

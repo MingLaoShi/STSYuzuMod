@@ -2,7 +2,8 @@ package baModDeveloper;
 
 
 import baModDeveloper.cards.YUZUCustomCard;
-import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
+import baModDeveloper.cards.colorless.YUZUIronBox;
+import baModDeveloper.cards.options.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.helper.YUZUPotionTarget;
@@ -66,6 +67,7 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
 //        BaseMod.addCard(new YUZUDesignShooting());
 //        BaseMod.addCard(new YUZUSpreadShooting());
         new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class).notPackageFilter(YUZUForkedIntersectionOption.class).notPackageFilter("baModDeveloper.cards.deprecatedCard").setDefaultSeen(true).cards();
+        BaseMod.addCard(new YUZUIronBox());
     }
 
     public static void initialize(){

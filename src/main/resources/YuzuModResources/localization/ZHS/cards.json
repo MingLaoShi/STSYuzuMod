@@ -14,7 +14,7 @@
 	},
 	"YUZU:AonengShooting": {
 		"NAME": "奥能射击",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 和 敏捷 。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
 	},
 	"YUZU:BeMercifulToOthers": {
 		"NAME": "手下留情",
@@ -55,7 +55,7 @@
 	},
 	"YUZU:ConcentratedShooting": {
 		"NAME": "凝神射击",
-		"DESCRIPTION": " 保留 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：本场战斗，增加25%的暴击伤害。"
+		"DESCRIPTION": " 保留 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：本场战斗，增加20%的暴击伤害。"
 	},
 	"YUZU:Condensation": {
 		"NAME": "聚精会神",
@@ -72,7 +72,7 @@
 	"YUZU:CurlUp": {
 		"NAME": "蜷缩构造",
 		"DESCRIPTION": "每回合开始时，获得1张铁箱子",
-		"UPGRADE_DESCRIPTION": "每回合开始时，获得1张铁箱子（保留）"
+		"UPGRADE_DESCRIPTION": " 固有 NL 每回合开始时，获得1张铁箱子。"
 	},
 	"YUZU:Defend": {
 		"NAME": "防御",
@@ -167,7 +167,7 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次 yuzu:燃烧 。"
+		"DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次 yuzu:燃烧 。 NL 消耗 "
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
@@ -191,7 +191,8 @@
 	},
 	"YUZU:Paintings": {
 		"NAME": "青空彩绘",
-		"DESCRIPTION": "每回合抽牌结束后，获得等同于手牌类型数的 [E] 。"
+		"DESCRIPTION": " 虚无 NL 每回合抽牌结束后，获得等同于手牌类型数的 [E] 。",
+		"UPGRADE_DESCRIPTION": "每回合抽牌结束后，获得等同于手牌类型数的 [E] 。"
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
@@ -271,13 +272,12 @@
 	},
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
-		"DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为2格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。",
-		"UPGRADE_DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为1格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。"
+		"DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为3格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为2格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。"
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发1次的效果。（ !D! ）",
-		"UPGRADE_DESCRIPTION":"给予 !M! 层 yuzu:燃烧 ，造成相当于目标拥有 yuzu:燃烧 触发2次的效果。（ !D! ）"
+		"DESCRIPTION": "给予所有敌人 !M! 层 yuzu:燃烧 。"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",
@@ -290,8 +290,8 @@
 	},
 	"YUZU:DoubleJump":{
 		"NAME":"二段跳跃",
-		"DESCRIPTION":"若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。",
-		"UPGRADE_DESCRIPTION":" 保留 ，若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。"
+		"DESCRIPTION":"抽2张牌。若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。",
+		"UPGRADE_DESCRIPTION":" 保留 ，抽2张牌。若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。"
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",

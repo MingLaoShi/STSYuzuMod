@@ -1,4 +1,4 @@
-package baModDeveloper.cards.colorless;
+package baModDeveloper.cards.options;
 
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.cards.YUZUCustomCard;

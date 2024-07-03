@@ -24,11 +24,14 @@ public class YUZUPaintings extends YUZUCustomCard{
     public YUZUPaintings() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=1;
+        this.isEthereal=true;
     }
 
     @Override
     protected void upgradeMethod() {
-        upgradeBaseCost(1);
+        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
+        this.isEthereal=false;
     }
 
     @Override

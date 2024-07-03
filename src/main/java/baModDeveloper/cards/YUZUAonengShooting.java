@@ -29,7 +29,7 @@ public class YUZUAonengShooting extends YUZUCustomCard{
 
     public YUZUAonengShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=9;
+        this.baseDamage=this.damage=7;
         this.baseMagicNumber=this.magicNumber=1;
     }
 
@@ -56,8 +56,11 @@ public class YUZUAonengShooting extends YUZUCustomCard{
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {
         super.triggerOnCriticalHit(target);
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new StrengthPower(AbstractDungeon.player,this.magicNumber)));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new DexterityPower(AbstractDungeon.player,this.magicNumber)));
-
+        AbstractCreature abstractPlayer=AbstractDungeon.player;
+        if(AbstractDungeon.cardRandomRng.randomBoolean()){
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new StrengthPower(abstractPlayer,this.magicNumber)));
+        }else{
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new DexterityPower(abstractPlayer,this.magicNumber)));
+        }
     }
 }

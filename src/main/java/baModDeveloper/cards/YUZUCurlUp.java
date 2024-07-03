@@ -30,6 +30,7 @@ public class YUZUCurlUp extends YUZUCustomCard{
     protected void upgradeMethod() {
         this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
         initializeDescription();
+        this.isInnate=true;
     }
 
     @Override

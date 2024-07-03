@@ -17,7 +17,7 @@ public class YUZUEnergyCycle extends YUZUCustomCard{
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
     private static final String IMG_PATH=ModHelper.makeCardImagePath(ID);
-    private static final int COST=2;
+    private static final int COST=3;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
@@ -26,12 +26,12 @@ public class YUZUEnergyCycle extends YUZUCustomCard{
 
     public YUZUEnergyCycle() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=13;
+        this.baseDamage=this.damage=16;
     }
 
     @Override
     protected void upgradeMethod() {
-        upgradeDamage(3);
+        upgradeDamage(5);
     }
 
     @Override

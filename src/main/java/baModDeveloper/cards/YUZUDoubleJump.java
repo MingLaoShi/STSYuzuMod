@@ -52,6 +52,7 @@ public class YUZUDoubleJump extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new DrawCardAction(2));
        if(canDraw){
            addToBot(new ExpertiseAction(abstractPlayer, 10));
        }

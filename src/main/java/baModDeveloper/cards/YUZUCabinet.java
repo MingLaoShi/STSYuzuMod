@@ -23,7 +23,7 @@ public class YUZUCabinet extends YUZUCustomCard{
 
     public YUZUCabinet() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock=this.block=24;
+        this.baseBlock=this.block=22;
     }
 
     @Override

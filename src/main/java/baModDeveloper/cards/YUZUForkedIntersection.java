@@ -1,7 +1,7 @@
 package baModDeveloper.cards;
 
 import baModDeveloper.helper.ModHelper;
-import baModDeveloper.cards.colorless.YUZUForkedIntersectionOption;
+import baModDeveloper.cards.options.YUZUForkedIntersectionOption;
 import baModDeveloper.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
