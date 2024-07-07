@@ -46,8 +46,8 @@ public class YUZUExtremeMeasures extends YUZUCustomCard{
             public void update() {
                 int handAmount= AbstractDungeon.player.hand.size();
                 int drawAmount=BaseMod.MAX_HAND_SIZE-handAmount;
-                if(this.amount>handAmount){
-                    addToTop(new ExhaustTopCardAction(this.amount,false));
+                if(this.amount>drawAmount){
+                    addToTop(new ExhaustTopCardAction(this.amount-drawAmount,false));
                 }
                 addToTop(new DrawCardAction(drawAmount));
                 this.isDone=true;
@@ -65,8 +65,8 @@ public class YUZUExtremeMeasures extends YUZUCustomCard{
             public void update() {
                 int handAmount= AbstractDungeon.player.hand.size();
                 int drawAmount=BaseMod.MAX_HAND_SIZE-handAmount;
-                if(this.amount>handAmount){
-                    addToTop(new MasterTopCardAction(this.amount,false));
+                if(this.amount>drawAmount){
+                    addToTop(new MasterTopCardAction(this.amount-drawAmount,false));
                 }
                 addToTop(new DrawCardAction(drawAmount));
                 this.isDone=true;

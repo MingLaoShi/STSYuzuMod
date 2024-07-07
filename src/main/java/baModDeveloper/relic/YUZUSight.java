@@ -24,7 +24,7 @@ public class YUZUSight extends CustomRelic {
     @Override
     public void atBattleStart() {
         if(!this.grayscale){
-            addToBot(new YUZUApplyCriticalRateAction(9));
+            addToBot(new YUZUApplyCriticalRateAction(6));
             this.grayscale=true;
         }
     }

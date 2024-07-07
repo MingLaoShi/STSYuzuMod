@@ -26,7 +26,7 @@ import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
 public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber ,PostInitializeSubscriber{
-    public static final Color YUZUColor = new Color(252.0F / 255.0F, 168.0F / 255.0F, 198.0F / 255.0F, 1.0F);
+    public static final Color YUZUColor = new Color(255.0F/255.0F,130.0F/255.0F,135.0F/255.0F,1.0F);
 
     private static final String YUZU_CHARACTER_BUTTON = ModHelper.makeImgPath("character", "Character_Button");
     private static final String YUZU_CHARACTER_PORTRAIT = ModHelper.makeImgPath("character", "Character_Portrait");

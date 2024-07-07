@@ -31,7 +31,8 @@ public class YUZUAccumulation extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-
+        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
+        this.initializeDescription();
     }
 
     @Override

@@ -100,5 +100,23 @@
 		"DESCRIPTIONS": [
 			"在本场战斗中，你无法再打出暴击"
 		]
+	},
+	"YUZU:ReduceDrawPower": {
+		"NAME": "抽牌减少",
+		"DESCRIPTIONS": [
+			"下回合少抽%d张牌。"
+		]
+	},
+	"YUZU:LoseEnergyNextTurnPower": {
+		"NAME": "下回合失去能量",
+		"DESCRIPTIONS": [
+			"下回合失去%d能量。"
+		]
+	},
+	"YUZU:MagazineFillingPower": {
+		"NAME": "弹仓填充",
+		"DESCRIPTIONS": [
+			"回合结束时，每有一张牌保留填充%d暴击槽。"
+		]
 	}
 }

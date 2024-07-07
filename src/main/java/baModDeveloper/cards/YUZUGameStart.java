@@ -32,7 +32,9 @@ public class YUZUGameStart extends YUZUCustomCard implements YUZUMultiCriticalMu
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(8);
+        this.upgradeDamage(4);
+        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
     @Override
@@ -82,6 +84,10 @@ public class YUZUGameStart extends YUZUCustomCard implements YUZUMultiCriticalMu
 
     @Override
     public float multiMulti(float multi) {
-        return multi*1.5F;
+        if(this.upgraded){
+            return multi*1.75F;
+        }else{
+            return multi*1.5F;
+        }
     }
 }

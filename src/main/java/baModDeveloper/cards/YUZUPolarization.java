@@ -48,9 +48,12 @@ public class YUZUPolarization extends YUZUCustomCard{
     private void callback(List<AbstractCard> cards){
         for(AbstractCard card:cards){
             AbstractCard temp= CardLibrary.getCard(card.cardID);
-            addToBot(new MakeTempCardInHandAction(temp,1));
-            if(YUZUCustomCard.isMastered(this)>0)
-                YUZUCustomCard.removeMaster(temp);
+            if(temp!=null){
+                addToBot(new MakeTempCardInHandAction(temp,1));
+                if(YUZUCustomCard.isMastered(this)>0)
+                    YUZUCustomCard.removeMaster(temp);
+            }
+
         }
     }
 }

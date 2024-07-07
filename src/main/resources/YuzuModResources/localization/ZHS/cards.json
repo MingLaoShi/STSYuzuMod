@@ -6,7 +6,7 @@
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，获得1 yuzu:暴击槽 。"
+		"DESCRIPTION": "打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。"
 	},
 	"YUZU:Analysis": {
 		"NAME": "完备解析",
@@ -14,7 +14,7 @@
 	},
 	"YUZU:AonengShooting": {
 		"NAME": "奥能射击",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
+		"DESCRIPTION": "造成 !D! 点伤害 NL yuzu:精通 ：获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
 	},
 	"YUZU:BeMercifulToOthers": {
 		"NAME": "手下留情",
@@ -118,7 +118,8 @@
 	},
 	"YUZU:GameStart": {
 		"NAME": "游戏开始",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.5倍暴击伤害。 NL yuzu:精通 ：必定 yuzu:暴击 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.5倍暴击伤害。 NL yuzu:精通 ：必定 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.75倍暴击伤害。 NL yuzu:精通 ：必定 yuzu:暴击 。"
 	},
 	"YUZU:Gifts": {
 		"NAME": "恒心赠礼",
@@ -154,7 +155,7 @@
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": "获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
+		"DESCRIPTION": "填充 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
@@ -234,8 +235,8 @@
 	},
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
-		"DESCRIPTION": "抽1张牌，获得 !M! 层 yuzu:暴击 。",
-		"UPGRADE_DESCRIPTION": "抽1张攻击牌，获得2层 yuzu:暴击 "
+		"DESCRIPTION": "抽1张牌，填充 !M! 层 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 "
 	},
 	"YUZU:Silence": {
 		"NAME": "频段静默",
@@ -252,7 +253,7 @@
 	},
 	"YUZU:SpreadShooting": {
 		"NAME": "扩散射击",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，每击中一名敌人，获得 !M! yuzu:暴击槽 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，每击中一名敌人，填充 !M! yuzu:暴击槽 。"
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
@@ -277,7 +278,7 @@
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予所有敌人 !M! 层 yuzu:燃烧 。"
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 。"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",
@@ -338,5 +339,36 @@
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
 		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 消耗 。"
+	},
+	"YUZU:Climax": {
+		"NAME": "渐进高潮",
+		"DESCRIPTION": " 虚无 NL 选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。",
+		"UPGRADE_DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。"
+	},
+	"YUZU:ClimaxOption": {
+		"NAME": "渐进高潮",
+		"DESCRIPTION": "",
+		"EXTENDED_DESCRIPTION": [
+			"抽 !M! 张牌。",
+			"获得 !M! [E] 。"
+		]
+	},
+	"YUZU:Span": {
+		"NAME": "跨越彼端",
+		"DESCRIPTION": "清空你的 yuzu:暴击槽 ，每清除1点就获得 [E] 或抽1张牌。 NL 消耗 。"
+	},
+	"YUZU:KillingInstructions": {
+		"NAME": "杀戮指令",
+		"DESCRIPTION": "造成18点伤害，获得这张牌造成伤害数值的活力。"
+	},
+	"YUZU:FinallyIHope": {
+		"NAME": "最后希望",
+		"DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] [E] ，少抽3张牌。 NL 消耗",
+		"UPGRADE_DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] ，少抽2张牌。 NL 消耗"
+	},
+	"YUZU:MagazineFilling": {
+		"NAME": "弹仓填充",
+		"DESCRIPTION": "暴击伤害增加25%。在回合结束时手牌中每有1张保留牌，则填充 !M! 格 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": "暴击伤害增加50%。在回合结束时手牌中每有1张保留牌，则填充 !M! 格 yuzu:暴击槽 。"
 	}
 }

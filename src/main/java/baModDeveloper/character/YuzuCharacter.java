@@ -3,6 +3,7 @@ package baModDeveloper.character;
 import baModDeveloper.YuzuMod;
 import baModDeveloper.cards.YUZUCamouflage;
 import baModDeveloper.cards.YUZUDefend;
+import baModDeveloper.cards.YUZUDesignShooting;
 import baModDeveloper.cards.YUZUStrike;
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.panel.YUZUCriticalRatePanel;
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 public class YuzuCharacter extends CustomPlayer {
     private static final String YUZU_CHARACTER_SHOULDER_1= ModHelper.makeImgPath("character","shoulder2");
     private static final String YUZU_CHARACTER_SHOULDER_2=ModHelper.makeImgPath("character","shoulder2");
-    private static final String YUZU_CHARACTER_CORPSE=ModHelper.makeImgPath("character","default");
+    private static final String YUZU_CHARACTER_CORPSE=ModHelper.makeImgPath("character","corpse");
     private static final String[] ORB_TEXTURES = new String[]{
             ModHelper.makeImgPath("UI/orb", "layer1"),
             ModHelper.makeImgPath("UI/orb", "layer2"),
@@ -75,8 +76,8 @@ public class YuzuCharacter extends CustomPlayer {
         deck.add(YUZUDefend.ID);
         deck.add(YUZUDefend.ID);
         deck.add(YUZUCamouflage.ID);
-        deck.add(ModHelper.makePath(ModHelper.getRandomShootingCardId()));
-
+//        deck.add(ModHelper.makePath(ModHelper.getRandomShootingCardId()));
+        deck.add(YUZUDesignShooting.ID);
         return deck;
     }
 
@@ -110,7 +111,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new YUZUStrike();
+        return new YUZUDesignShooting();
     }
 
     @Override
@@ -120,7 +121,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 7;
     }
 
     @Override
@@ -140,7 +141,7 @@ public class YuzuCharacter extends CustomPlayer {
 
     @Override
     public String getLocalizedCharacterName() {
-        return "YUZU";
+        return characterStrings.NAMES[0];
     }
 
     @Override

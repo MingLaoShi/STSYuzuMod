@@ -6,7 +6,6 @@ import baModDeveloper.power.YUZUBurningPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -17,7 +16,7 @@ public class YUZUSpark extends YUZUCustomCard{
     private static final String IMG_PATH=ModHelper.makeCardImagePath(ID);
     private static final int COST=0;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
-    private static final CardType TYPE=CardType.ATTACK;
+    private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ENEMY;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
@@ -34,11 +33,6 @@ public class YUZUSpark extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
-            if(!m.isDeadOrEscaped()){
-                addToBot(new ApplyPowerAction(m,abstractPlayer,new YUZUBurningPower(m, abstractPlayer, this.magicNumber)));
-
-            }
-        }
+        addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new YUZUBurningPower(abstractMonster, abstractPlayer, this.magicNumber)));
     }
 }
