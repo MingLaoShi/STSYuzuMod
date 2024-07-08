@@ -3,10 +3,12 @@ package baModDeveloper.helper;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 
@@ -92,5 +94,15 @@ public class ModHelper {
     };
     public static String getRandomShootingCardId(){
         return SHOOTINGCARDS[MathUtils.random(0,SHOOTINGCARDS.length-1)];
+    }
+
+    public static void FetchActionCallback(List<AbstractCard> cards) {
+        for(AbstractCard card:cards){
+            AbstractDungeon.player.onCardDrawOrDiscard();
+            AbstractDungeon.player.powers.forEach(p->p.onCardDraw(card));
+            AbstractDungeon.player.relics.forEach(r->r.onCardDraw(card));
+            card.triggerWhenDrawn();
+        }
+        AbstractDungeon.player.hand.refreshHandLayout();
     }
 }

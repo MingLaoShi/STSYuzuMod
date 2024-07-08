@@ -19,10 +19,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -187,13 +189,15 @@ public class YuzuCharacter extends CustomPlayer {
     @Override
     public void update() {
         super.update();
-        this.criticalRatePanel.update();
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+            this.criticalRatePanel.update();
     }
 
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        this.criticalRatePanel.render(sb);
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+            this.criticalRatePanel.render(sb);
     }
 
     @Override

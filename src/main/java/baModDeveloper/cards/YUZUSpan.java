@@ -26,6 +26,7 @@ public class YUZUSpan extends YUZUCustomCard{
 
     public YUZUSpan() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust=true;
     }
 
     @Override

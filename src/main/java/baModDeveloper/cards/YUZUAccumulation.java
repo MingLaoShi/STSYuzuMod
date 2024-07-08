@@ -47,7 +47,8 @@ public class YUZUAccumulation extends YUZUCustomCard{
         this.baseDamage= AbstractDungeon.player.masterDeck.size();
         super.applyPowers();
         if(this.upgraded){
-            this.damage*=1.5F;
+            this.damage= (int) (this.damage*1.5F);
+            this.isDamageModified=this.damage!=this.baseDamage;
         }
     }
 }

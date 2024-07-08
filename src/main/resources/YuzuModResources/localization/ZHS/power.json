@@ -118,5 +118,11 @@
 		"DESCRIPTIONS": [
 			"回合结束时，每有一张牌保留填充%d暴击槽。"
 		]
+	},
+	"YUZU:GamingFieldPower": {
+		"NAME": "游戏领域",
+		"DESCRIPTIONS": [
+			"打出未精通的牌时，获得%d点格挡。"
+		]
 	}
 }

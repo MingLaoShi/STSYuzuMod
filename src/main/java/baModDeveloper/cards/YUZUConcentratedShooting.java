@@ -31,7 +31,7 @@ public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddC
     public YUZUConcentratedShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=7;
-        this.baseMagicNumber=this.magicNumber=50;
+        this.baseMagicNumber=this.magicNumber=25;
         this.selfRetain=true;
     }
 
@@ -49,12 +49,12 @@ public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddC
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,20)));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,25)));
     }
 
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,20)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,25)));
     }
 
     @Override

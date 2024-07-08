@@ -65,7 +65,6 @@ public abstract class YUZUCustomCard extends CustomCard {
         }else{
             this.masterUse(abstractPlayer,abstractMonster);
         }
-        addToBot(new YUZUApplyCriticalRateAction(1));
 //        YUZUCustomCard.masterCard(this);
     }
 
@@ -107,5 +106,10 @@ public abstract class YUZUCustomCard extends CustomCard {
     public static class YUZUTarget{
         @SpireEnum
         public static CardTarget POTIONS;
+    }
+
+    public void upgradeDescription(String des){
+        this.rawDescription=des;
+        this.initializeDescription();
     }
 }

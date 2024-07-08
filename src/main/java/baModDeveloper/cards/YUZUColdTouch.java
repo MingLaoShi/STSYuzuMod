@@ -7,9 +7,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class YUZUColdTouch extends YUZUCustomCard{
@@ -34,6 +37,7 @@ public class YUZUColdTouch extends YUZUCustomCard{
     @Override
     protected void upgradeMethod() {
         upgradeDamage(3);
+        this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
     }
 
     @Override
@@ -42,7 +46,14 @@ public class YUZUColdTouch extends YUZUCustomCard{
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
+    @Override
+    public void triggerOnCriticalHit(AbstractCreature target) {
+        if(this.upgraded)
+            addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new StrengthPower(target,-2)));
+        else
+            addToBot(new ApplyPowerAction(target,AbstractDungeon.player,new StrengthPower(target,-1)));
 
+    }
 
     @Override
     public void triggerOnMaster() {

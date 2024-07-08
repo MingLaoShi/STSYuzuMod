@@ -22,12 +22,13 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
 
     public YUZUMaliciousDesign() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust=true;
+        this.isEthereal=true;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeBaseCost(0);
+        this.isEthereal=false;
+        this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
     }
 
     @Override

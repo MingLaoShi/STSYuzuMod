@@ -27,7 +27,7 @@ public class YUZUPreheat extends YUZUCustomCard{
 
     public YUZUPreheat() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=50;
+        this.baseMagicNumber=this.magicNumber=25;
     }
 
     @Override

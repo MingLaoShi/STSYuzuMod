@@ -23,12 +23,12 @@ public class YUZUSpark extends YUZUCustomCard{
 
     public YUZUSpark() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=2;
+        this.baseMagicNumber=this.magicNumber=3;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(1);
+        this.upgradeMagicNumber(2);
     }
 
     @Override

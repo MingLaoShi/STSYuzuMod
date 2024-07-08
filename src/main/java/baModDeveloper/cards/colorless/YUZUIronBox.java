@@ -25,6 +25,7 @@ public class YUZUIronBox extends CustomCard {
         super(ID,NAME,IMG_PATH,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);
         this.baseBlock=this.block=14;
         this.exhaust=true;
+        this.selfRetain=true;
     }
 
     @Override

@@ -28,9 +28,7 @@ public class YUZUJobResponsibilities extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.isInnate=true;
-        this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
-        initializeDescription();
+        this.upgradeBaseCost(1);
     }
 
     @Override
