@@ -5,7 +5,6 @@ import baModDeveloper.helper.ModHelper;
 import baModDeveloper.power.YUZULoseEnergyNextTurnPower;
 import baModDeveloper.power.YUZUReduceDrawPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,6 +25,7 @@ public class YUZUFinallyIHope extends YUZUCustomCard{
 
     public YUZUFinallyIHope() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust=true;
 
     }
 
@@ -45,6 +45,6 @@ public class YUZUFinallyIHope extends YUZUCustomCard{
             addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,1)));
         }
         addToBot(new SkipEnemiesTurnAction());
-        addToBot(new PressEndTurnButtonAction());
+//        addToBot(new PressEndTurnButtonAction());
     }
 }

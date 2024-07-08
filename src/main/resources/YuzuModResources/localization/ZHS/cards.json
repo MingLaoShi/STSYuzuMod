@@ -359,7 +359,7 @@
 	},
 	"YUZU:KillingInstructions": {
 		"NAME": "杀戮指令",
-		"DESCRIPTION": "造成18点伤害，获得这张牌造成伤害数值的活力。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得这张牌造成伤害数值的活力。"
 	},
 	"YUZU:FinallyIHope": {
 		"NAME": "最后希望",
