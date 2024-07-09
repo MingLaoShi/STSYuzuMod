@@ -311,7 +311,7 @@
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
-		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1，消耗。 NL yuzu:精通 ：改为所有手牌。"
+		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1。 NL 消耗 。 NL yuzu:精通 ：改为所有手牌。"
 	},
 	"YUZU:ImpactWarhead": {
 		"NAME": "冲击弹头",
@@ -324,7 +324,7 @@
 	},
 	"YUZU:Barter": {
 		"NAME": "以物易物",
-		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。消耗。"
+		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。 NL 消耗 。"
 	},
 	"YUZU:AdvanceShooting": {
 		"NAME": "预支射击",

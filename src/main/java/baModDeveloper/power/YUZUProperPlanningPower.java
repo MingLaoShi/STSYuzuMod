@@ -1,6 +1,8 @@
 package baModDeveloper.power;
 
 import baModDeveloper.helper.ModHelper;
+import basemod.cardmods.RetainMod;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,7 +43,7 @@ public class YUZUProperPlanningPower extends AbstractPower {
 
     private void callback(List<AbstractCard> cards) {
         for(AbstractCard c:cards){
-            c.selfRetain=true;
+            CardModifierManager.addModifier(c,new RetainMod());
         }
     }
 

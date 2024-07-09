@@ -25,11 +25,11 @@
 	},
 	"YUZU:AimingPreparationMasterPower": {
 		"NAME": "瞄准准备精通",
-		"DESCRIPTIONS": ["打出精通牌后，获得%d暴击槽。"]
+		"DESCRIPTIONS": ["打出精通牌后，填充%d暴击槽。"]
 	},
 	"YUZU:PreparationPower": {
 		"NAME": "瞄准准备",
-		"DESCRIPTIONS": ["打出牌后，获得%d暴击槽。"]
+		"DESCRIPTIONS": ["打出牌后，填充%d暴击槽。"]
 	},
 	"YUZU:AnalysisPower": {
 		"NAME": "完备解析",
