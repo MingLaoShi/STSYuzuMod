@@ -19,7 +19,7 @@ public class YUZUSpark extends YUZUCustomCard{
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ENEMY;
-    private static final CardRarity RARITY=CardRarity.UNCOMMON;
+    private static final CardRarity RARITY=CardRarity.COMMON;
 
     public YUZUSpark() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

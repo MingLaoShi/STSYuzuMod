@@ -7,6 +7,14 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.CompileDriver;
+import com.megacrit.cardcrawl.cards.blue.Fission;
+import com.megacrit.cardcrawl.cards.blue.Heatsinks;
+import com.megacrit.cardcrawl.cards.green.*;
+import com.megacrit.cardcrawl.cards.purple.Rushdown;
+import com.megacrit.cardcrawl.cards.purple.Scrawl;
+import com.megacrit.cardcrawl.cards.red.DarkEmbrace;
+import com.megacrit.cardcrawl.cards.red.Evolve;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,9 +41,33 @@ public class YUZUDoubleJump extends YUZUCustomCard{
     private static final CardTarget TARGET=CardTarget.NONE;
     private static final CardRarity RARITY=CardRarity.UNCOMMON;
     private static boolean canDraw=false;
-    private static Set<String> cardsCanDraw=new HashSet<String>();
+    private static final Set<String> cardsCanDraw=new HashSet<String>();
     static {
         cardsCanDraw.add(YUZUDoubleJump.ID);
+        cardsCanDraw.add(YUZUClumsyRolling.ID);
+        cardsCanDraw.add(YUZUImpactWarhead.ID);
+        cardsCanDraw.add(YUZUForkedIntersection.ID);
+        cardsCanDraw.add(YUZUAmmunitionFilling.ID);
+        cardsCanDraw.add(YUZUInversion.ID);
+        cardsCanDraw.add(YUZUClimax.ID);
+        cardsCanDraw.add(YUZUAimingPreparation.ID);
+        cardsCanDraw.add(YUZUExtremeMeasures.ID);
+        cardsCanDraw.add(YUZUSkilled.ID);
+        cardsCanDraw.add(YUZUNaturalization.ID);
+        cardsCanDraw.add(Evolve.ID);
+        cardsCanDraw.add(DarkEmbrace.ID);
+        cardsCanDraw.add(Expertise.ID);
+        cardsCanDraw.add(Predator.ID);
+        cardsCanDraw.add(CalculatedGamble.ID);
+        cardsCanDraw.add(Doppelganger.ID);
+        cardsCanDraw.add(ToolsOfTheTrade.ID);
+        cardsCanDraw.add(CompileDriver.ID);
+        cardsCanDraw.add(Heatsinks.ID);
+        cardsCanDraw.add(Fission.ID);
+        cardsCanDraw.add(Rushdown.ID);
+//        cardsCanDraw.add(Study.ID);
+        cardsCanDraw.add(Scrawl.ID);
+
     }
 
     public YUZUDoubleJump() {

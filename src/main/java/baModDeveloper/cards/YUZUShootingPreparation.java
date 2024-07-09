@@ -1,10 +1,10 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
+import baModDeveloper.action.YUZUFilteredDrawCardAction;
 import baModDeveloper.character.YuzuCharacter;
-import baModDeveloper.power.YUZUCriticalHitPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import baModDeveloper.helper.ModHelper;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -24,7 +24,7 @@ public class YUZUShootingPreparation extends YUZUCustomCard{
 
     public YUZUShootingPreparation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=1;
+        this.baseMagicNumber=this.magicNumber=2;
     }
 
     @Override
@@ -34,8 +34,26 @@ public class YUZUShootingPreparation extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DrawCardAction(1));
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUCriticalHitPower(abstractPlayer,this.magicNumber)));
+        addToBot(new YUZUFilteredDrawCardAction(this.magicNumber, this::filter, true, new AbstractGameAction() {
+            @Override
+            public void update() {
+                if(!YUZUFilteredDrawCardAction.drawnCards.isEmpty()){
+                    AbstractCard card=YUZUFilteredDrawCardAction.drawnCards.get(0);
+                    for(int i=1;i<YUZUFilteredDrawCardAction.drawnCards.size();i++){
+                        if(YUZUFilteredDrawCardAction.drawnCards.get(i).costForTurn>card.costForTurn){
+                            card=YUZUFilteredDrawCardAction.drawnCards.get(i);
+                        }
+                    }
+                    card.setCostForTurn(0);
+                }
+                this.isDone=true;
+            }
+        }));
+
+    }
+
+    private boolean filter(AbstractCard card) {
+        return card.type==CardType.ATTACK;
     }
 
 

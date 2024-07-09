@@ -38,11 +38,11 @@ public class YUZUFinallyIHope extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if(this.upgraded){
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUReduceDrawPower(abstractPlayer,3)));
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,2)));
-        }else{
             addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUReduceDrawPower(abstractPlayer,2)));
             addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,1)));
+        }else{
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUReduceDrawPower(abstractPlayer,3)));
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,2)));
         }
         addToBot(new SkipEnemiesTurnAction());
 //        addToBot(new PressEndTurnButtonAction());

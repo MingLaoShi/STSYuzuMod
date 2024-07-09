@@ -18,7 +18,7 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.SELF_AND_ENEMY;
-    private static final CardRarity RARITY=CardRarity.UNCOMMON;
+    private static final CardRarity RARITY=CardRarity.RARE;
 
     public YUZUMaliciousDesign() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

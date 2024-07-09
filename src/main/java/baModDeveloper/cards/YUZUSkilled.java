@@ -1,8 +1,9 @@
 package baModDeveloper.cards;
 
+import baModDeveloper.action.YUZUFilteredDrawCardAction;
 import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.helper.ModHelper;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,11 +42,11 @@ public class YUZUSkilled extends YUZUCustomCard{
                 @Override
                 public void update() {
                     int count= (int) AbstractDungeon.player.drawPile.group.stream().filter(c->YUZUCustomCard.isMastered(c)>0).count();
-                    addToTop(new FetchAction(abstractPlayer.drawPile,YUZUSkilled.this::filter,count,ModHelper::FetchActionCallback));
+                    addToTop(new YUZUFilteredDrawCardAction(count,YUZUSkilled.this::filter,true,null));
                 }
             });
         else
-            addToBot(new FetchAction(abstractPlayer.discardPile,this::filter,10,ModHelper::FetchActionCallback));
+            addToBot(new YUZUFilteredDrawCardAction(BaseMod.MAX_HAND_SIZE,this::filter,true,null));
     }
 
     @Override

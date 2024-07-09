@@ -23,7 +23,7 @@ public class YUZULoopback extends YUZUCustomCard{
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ENEMY;
-    private static final CardRarity RARITY=CardRarity.UNCOMMON;
+    private static final CardRarity RARITY=CardRarity.COMMON;
 
     public YUZULoopback() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

@@ -18,7 +18,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
     private static final String IMG_PATH=ModHelper.makeCardImagePath(ID);
-    private static final int COST=3;
+    private static final int COST=2;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;

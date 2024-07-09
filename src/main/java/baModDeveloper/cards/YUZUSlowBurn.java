@@ -5,6 +5,8 @@ import baModDeveloper.character.YuzuCharacter;
 import baModDeveloper.helper.ModHelper;
 import baModDeveloper.power.YUZUBurningPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,6 +29,7 @@ public class YUZUSlowBurn extends YUZUCustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.exhaust=true;
         this.baseMagicNumber=this.magicNumber=2;
+        this.cardsToPreview=new Burn();
     }
 
     @Override
@@ -36,13 +39,12 @@ public class YUZUSlowBurn extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUBurningPower(abstractPlayer,abstractPlayer,1)));
         for(AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
             addToBot(new ApplyPowerAction(m,abstractPlayer,new YUZUBurningPower(m,abstractPlayer,1)));
         }
-        addToBot(new YUZUDoubleBurningAction(abstractPlayer,this.magicNumber-1));
         for(AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
             addToBot(new YUZUDoubleBurningAction(m,this.magicNumber-1));
         }
+        addToBot(new MakeTempCardInHandAction(new Burn()));
     }
 }

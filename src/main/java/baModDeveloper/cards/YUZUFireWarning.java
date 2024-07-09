@@ -29,7 +29,7 @@ public class YUZUFireWarning extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(10);
     }
 
     @Override

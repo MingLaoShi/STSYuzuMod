@@ -22,7 +22,7 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET=CardTarget.ALL_ENEMY;
-    private static final CardRarity RARITY=CardRarity.UNCOMMON;
+    private static final CardRarity RARITY=CardRarity.COMMON;
 
     public YUZUSpreadShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -33,8 +33,8 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-//        this.upgradeDamage(2);
-        this.upgradeMagicNumber(1);
+        this.upgradeDamage(3);
+//        this.upgradeMagicNumber(1);
     }
 
     @Override

@@ -32,8 +32,8 @@ public class YUZUCoverShooting extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(2);
-        this.upgradeBlock(2);
+        this.upgradeDamage(3);
+        this.upgradeBlock(3);
     }
 
     @Override

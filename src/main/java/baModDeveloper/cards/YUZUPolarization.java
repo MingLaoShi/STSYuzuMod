@@ -1,13 +1,12 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
 import baModDeveloper.character.YuzuCharacter;
+import baModDeveloper.helper.ModHelper;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -47,11 +46,10 @@ public class YUZUPolarization extends YUZUCustomCard{
 
     private void callback(List<AbstractCard> cards){
         for(AbstractCard card:cards){
-            AbstractCard temp= CardLibrary.getCard(card.cardID);
-            if(temp!=null){
-                addToBot(new MakeTempCardInHandAction(temp,1));
-                if(YUZUCustomCard.isMastered(this)>0)
-                    YUZUCustomCard.removeMaster(temp);
+            if(card!=null){
+                addToBot(new MakeTempCardInHandAction(card,1));
+                if(YUZUCustomCard.isMastered(this)==0)
+                    YUZUCustomCard.removeMaster(card);
             }
 
         }

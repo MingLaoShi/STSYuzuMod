@@ -6,7 +6,8 @@
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。"
+		"DESCRIPTION": "打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": " 固有 NL 打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。"
 	},
 	"YUZU:Analysis": {
 		"NAME": "完备解析",
@@ -88,7 +89,7 @@
 	},
 	"YUZU:Estimate": {
 		"NAME": "状况预估",
-		"DESCRIPTION": "查看抽牌堆顶5张牌，选择抽取其中的 !M! 类。"
+		"DESCRIPTION": "查看抽牌堆顶5张牌，选择其中的 !M! 类加入手牌。"
 	},
 	"YUZU:ExtremeMeasures": {
 		"NAME": "极端手段",
@@ -130,7 +131,7 @@
 		"DESCRIPTION": "造成 !D! 点伤害， 消耗 手牌中的其他牌。 NL yuzu:精通 ：改为 消耗 手牌中的其他攻击牌。"
 	},
 	"YUZU:GlowBlessing": {
-		"NAME": "辉光保佑",
+		"NAME": "辉光护佑",
 		"DESCRIPTION": "获得1 无实体 。 NL 消耗 "
 	},
 	"YUZU:Grenade": {
@@ -198,7 +199,7 @@
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，复制失去 升级 和 yuzu:精通 效果。 yuzu:精通 ：不再失去"
+		"DESCRIPTION": "选择1张手牌，获取1张复制，复制失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。"
 	},
 	"YUZU:PotentialExplosion": {
 		"NAME": "潜能爆发",
@@ -236,7 +237,7 @@
 	},
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
-		"DESCRIPTION": "抽1张牌，填充 !M! 层 yuzu:暴击 。",
+		"DESCRIPTION": "抽 !M! 张攻击牌，其中耗能最高的牌在打出前耗能为0。 NL 消耗 ",
 		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 "
 	},
 	"YUZU:Silence": {
@@ -292,8 +293,8 @@
 	},
 	"YUZU:DoubleJump":{
 		"NAME":"二段跳跃",
-		"DESCRIPTION":"抽2张牌。若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。",
-		"UPGRADE_DESCRIPTION":" 保留 ，抽2张牌。若打出的上一张牌因自身效果抽了牌，则抽牌直到手牌抽满。"
+		"DESCRIPTION":"抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到手牌抽满。",
+		"UPGRADE_DESCRIPTION":" 保留 ，抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到手牌抽满。"
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",
@@ -306,7 +307,7 @@
 	},
 	"YUZU:SlowBurn":{
 		"NAME":"野火燎原",
-		"DESCRIPTION":"给予所有单位1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍。 NL 消耗 "
+		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍，在手牌添加1张 *灼伤 。 NL 消耗 "
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
@@ -339,7 +340,7 @@
 	},
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
-		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 消耗 。"
+		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去2 力量 和 敏捷 。 NL 消耗 。"
 	},
 	"YUZU:Climax": {
 		"NAME": "渐进高潮",

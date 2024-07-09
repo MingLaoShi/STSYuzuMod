@@ -1,9 +1,8 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.action.YUZUApplyCriticalRateAction;
+import baModDeveloper.YuzuMod;
 import baModDeveloper.power.YUZUAnalysisPower;
 import basemod.abstracts.CustomCard;
-import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -91,7 +90,7 @@ public abstract class YUZUCustomCard extends CustomCard {
     @Override
     public void triggerOnGlowCheck() {
         if(YUZUCustomCard.isMastered(this)>0){
-            this.glowColor= Color.RED.cpy();
+            this.glowColor= YuzuMod.YUZUColor.cpy();
         }else {
             this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR;
         }

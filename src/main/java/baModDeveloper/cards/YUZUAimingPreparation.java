@@ -30,7 +30,8 @@ public class YUZUAimingPreparation extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        upgradeMagicNumber(1);
+//        upgradeMagicNumber(1);
+        this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
     }
 
     @Override

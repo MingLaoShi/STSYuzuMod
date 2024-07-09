@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -98,6 +99,12 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
                 AbstractCard card=this.p.drawPile.group.get(i);
                 if(this.filter.test(card)){
                     drawnCards.add(card);
+                    card.current_x= CardGroup.DRAW_PILE_X;
+                    card.current_y=CardGroup.DRAW_PILE_Y;
+                    card.setAngle(0.0F,true);
+                    card.lighten(false);
+                    card.drawScale=0.12F;
+                    card.targetDrawScale=0.75F;
                     if(this.p.hand.size()==BaseMod.MAX_HAND_SIZE){
                         this.p.createHandIsFullDialog();
                         break;
