@@ -43,6 +43,7 @@ public class YUZUSkilled extends YUZUCustomCard{
                 public void update() {
                     int count= (int) AbstractDungeon.player.drawPile.group.stream().filter(c->YUZUCustomCard.isMastered(c)>0).count();
                     addToTop(new YUZUFilteredDrawCardAction(count,YUZUSkilled.this::filter,true,null));
+                    this.isDone=true;
                 }
             });
         else

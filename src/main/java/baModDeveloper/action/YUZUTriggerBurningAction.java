@@ -18,7 +18,7 @@ public class YUZUTriggerBurningAction extends AbstractGameAction {
         if(this.target.hasPower(YUZUBurningPower.POWER_ID)){
             AbstractPower p=this.target.getPower(YUZUBurningPower.POWER_ID);
             for(int i=0;i<this.times;i++){
-                p.atEndOfTurn(false);
+                p.atStartOfTurn();
             }
         }
         this.isDone=true;

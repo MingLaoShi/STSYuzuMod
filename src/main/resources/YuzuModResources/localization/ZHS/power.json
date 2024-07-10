@@ -74,7 +74,7 @@
 	"YUZU:BurningPower": {
 		"NAME": "燃烧",
 		"DESCRIPTIONS": [
-			"在回合结束时受到%d点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
+			"在回合开始时受到%d点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
 		]
 	},
 	"YUZU:ExtraCriticalRatePower": {

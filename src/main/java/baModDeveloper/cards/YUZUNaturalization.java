@@ -41,8 +41,7 @@ public class YUZUNaturalization extends YUZUCustomCard{
         for(int i=0;i<this.magicNumber;i++){
             AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
             card.freeToPlayOnce=true;
-            if(card instanceof YUZUCustomCard)
-                YUZUCustomCard.masterCard((YUZUCustomCard) card);
+            YUZUCustomCard.masterCard(card);
             CardModifierManager.addModifier(card,new ExhaustMod());
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }
