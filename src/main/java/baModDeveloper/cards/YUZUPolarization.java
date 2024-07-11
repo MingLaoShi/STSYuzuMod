@@ -31,7 +31,8 @@ public class YUZUPolarization extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeBaseCost(0);
+        this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
+        this.selfRetain=true;
     }
 
     @Override

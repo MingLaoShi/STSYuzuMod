@@ -13,7 +13,7 @@ public class YUZUChangeCriticalHitRateMaxAction extends AbstractGameAction {
     @Override
     public void update() {
         if(AbstractDungeon.player instanceof YuzuCharacter){
-            ((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel().changeMAX(-this.amount);
+            ((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel().changeMAX(this.amount);
         }
         this.isDone=true;
     }

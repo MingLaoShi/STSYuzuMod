@@ -28,6 +28,7 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
     public static ArrayList<AbstractCard> drawnCards=new ArrayList<>();
     private AbstractGameAction followUpAction=null;
     private AbstractPlayer p;
+    private CardGroup filteredDrawPile,filteredDiscardPile;
     public YUZUFilteredDrawCardAction(int amount, Predicate<AbstractCard> filter,boolean clearDrawHistory,AbstractGameAction followUpAction){
         this.amount=amount;
         this.filter=filter;
@@ -40,6 +41,10 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
         }else {
             this.duration=Settings.ACTION_DUR_FASTER;
         }
+        filteredDrawPile=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        filteredDiscardPile=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        this.p.drawPile.group.stream().filter(this.filter).forEach(filteredDrawPile::addToTop);
+        this.p.discardPile.group.stream().filter(this.filter).forEach(filteredDiscardPile::addToTop);
     }
     @Override
     public void update() {
@@ -54,8 +59,8 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
             endActionWithFollowUp();
             return;
         }
-        int deckSize= (int) this.p.drawPile.group.stream().filter(this.filter).count();
-        int discardSize= (int) this.p.discardPile.group.stream().filter(this.filter).count();
+        int deckSize= this.filteredDrawPile.size();
+        int discardSize= this.filteredDiscardPile.size();
         if(deckSize+discardSize==0){
             endActionWithFollowUp();
             return;
@@ -95,9 +100,13 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
             }
 
             this.amount--;
-            for(int i=this.p.drawPile.size()-1;i>=0;i--){
-                AbstractCard card=this.p.drawPile.group.get(i);
-                if(this.filter.test(card)){
+            if(!this.filteredDrawPile.isEmpty()){
+                if(this.p.hand.size()==BaseMod.MAX_HAND_SIZE){
+                    this.p.createHandIsFullDialog();
+                }else{
+
+                    AbstractCard card=this.filteredDrawPile.getTopCard();
+
                     drawnCards.add(card);
                     card.current_x= CardGroup.DRAW_PILE_X;
                     card.current_y=CardGroup.DRAW_PILE_Y;
@@ -105,13 +114,10 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
                     card.lighten(false);
                     card.drawScale=0.12F;
                     card.targetDrawScale=0.75F;
-                    if(this.p.hand.size()==BaseMod.MAX_HAND_SIZE){
-                        this.p.createHandIsFullDialog();
-                        break;
-                    }
                     CardCrawlGame.sound.playAV("CARD_DRAW_8", -0.12F, 0.25F);
                     this.p.hand.addToHand(card);
                     this.p.drawPile.removeCard(card);
+                    this.filteredDrawPile.removeCard(card);
                     card.triggerWhenDrawn();
                     for(AbstractPower p:this.p.powers){
                         p.onCardDraw(card);
@@ -121,10 +127,8 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
                     }
                     this.p.onCardDrawOrDiscard();
                     this.p.hand.refreshHandLayout();
-                    break;
                 }
             }
-
             if(this.amount==0){
                 endActionWithFollowUp();
             }

@@ -25,6 +25,7 @@ public class YUZUImage extends YUZUCustomCard{
     public YUZUImage() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=22;
+        this.selfRetain=true;
     }
 
     @Override

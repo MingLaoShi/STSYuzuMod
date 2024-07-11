@@ -15,7 +15,7 @@
 	},
 	"YUZU:AonengShooting": {
 		"NAME": "奥能射击",
-		"DESCRIPTION": "造成 !D! 点伤害 NL yuzu:精通 ：获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
 	},
 	"YUZU:BeMercifulToOthers": {
 		"NAME": "手下留情",
@@ -165,7 +165,7 @@
 	},
 	"YUZU:Loopback": {
 		"NAME": "回环连击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL yuzu:精通 ：从抽牌堆中将1张同名牌加入手牌。"
+		"DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL yuzu:精通 ：从抽牌堆中将1张同名牌加入手牌。"
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
@@ -186,7 +186,7 @@
 	},
 	"YUZU:NovicePickUp": {
 		"NAME": "信手拈来",
-		"DESCRIPTION": "随机获得 !M! 张耗能为0的牌。 NL yuzu:精通 ：改为获取随机牌，再本回合耗能为0."
+		"DESCRIPTION": "随机获得 !M! 张耗能为0的牌。 NL yuzu:精通 ：改为获取随机牌，再本回合耗能为0。"
 	},
 	"YUZU:OpenTheDoor": {
 		"NAME": "开门见山",
@@ -199,7 +199,8 @@
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，复制失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。"
+		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。",
+		"UPGRADE_DESCRIPTION": " 保留 NL 选择1张手牌，获取1张复制，那张牌失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。"
 	},
 	"YUZU:PotentialExplosion": {
 		"NAME": "潜能爆发",
@@ -207,7 +208,7 @@
 	},
 	"YUZU:Preheat": {
 		"NAME": "预热瞄准",
-		"DESCRIPTION": "立即填满 yuzu:暴击槽 ，增加 !M! %的暴击伤害，这个效果在受伤后清除。 NL yuzu:精通 ：减少2格 yuzu:暴击槽 需求。"
+		"DESCRIPTION": "立即填满 yuzu:暴击槽 ，增加 !M! %的暴击伤害。 NL yuzu:精通 ：减少2格 yuzu:暴击槽 需求。"
 	},
 	"YUZU:PressureArmor": {
 		"NAME": "压感装甲",
@@ -378,7 +379,7 @@
 		"DESCRIPTION": "打出未精通的牌时，获得 !M! 点 格挡 。"
 	},
 	"YUZU:AmmunitionFilling": {
-		"NAME": "弹药填充",
+		"NAME": "一时修整",
 		"DESCRIPTION": "填充 !M! 格 yuzu:暴击槽 ，抽2张牌。"
 	},
 	"YUZU:FoldUpClothes": {

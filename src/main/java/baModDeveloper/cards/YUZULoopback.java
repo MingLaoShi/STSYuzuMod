@@ -27,17 +27,20 @@ public class YUZULoopback extends YUZUCustomCard{
 
     public YUZULoopback() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=5;
+        this.baseDamage=this.damage=2;
+        this.baseMagicNumber=this.magicNumber=3;
     }
 
     @Override
     protected void upgradeMethod() {
-        upgradeDamage(3);
+        this.upgradeMagicNumber(1);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
+        for(int i=0;i<this.magicNumber;i++){
+            addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
+        }
     }
 
     @Override

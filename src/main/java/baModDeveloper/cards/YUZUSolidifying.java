@@ -31,7 +31,7 @@ public class YUZUSolidifying extends YUZUCustomCard{
     @Override
     protected void upgradeMethod() {
         this.upgradeBlock(3);
-        this.upgradeMagicNumber(1);
+//        this.upgradeMagicNumber(1);
     }
 
     @Override

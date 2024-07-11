@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.CompileDriver;
 import com.megacrit.cardcrawl.cards.blue.Fission;
 import com.megacrit.cardcrawl.cards.blue.Heatsinks;
+import com.megacrit.cardcrawl.cards.colorless.Impatience;
 import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.Rushdown;
 import com.megacrit.cardcrawl.cards.purple.Scrawl;
@@ -50,7 +51,7 @@ public class YUZUDoubleJump extends YUZUCustomCard{
         cardsCanDraw.add(YUZUAmmunitionFilling.ID);
         cardsCanDraw.add(YUZUInversion.ID);
         cardsCanDraw.add(YUZUClimax.ID);
-        cardsCanDraw.add(YUZUAimingPreparation.ID);
+//        cardsCanDraw.add(YUZUAimingPreparation.ID);
         cardsCanDraw.add(YUZUExtremeMeasures.ID);
         cardsCanDraw.add(YUZUSkilled.ID);
         cardsCanDraw.add(YUZUNaturalization.ID);
@@ -67,6 +68,7 @@ public class YUZUDoubleJump extends YUZUCustomCard{
         cardsCanDraw.add(Rushdown.ID);
 //        cardsCanDraw.add(Study.ID);
         cardsCanDraw.add(Scrawl.ID);
+        cardsCanDraw.add(Impatience.ID);
 
     }
 

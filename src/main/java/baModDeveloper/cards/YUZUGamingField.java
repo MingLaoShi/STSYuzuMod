@@ -23,12 +23,12 @@ public class YUZUGamingField extends YUZUCustomCard{
 
     public YUZUGamingField() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=4;
+        this.baseMagicNumber=this.magicNumber=2;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(2);
+        this.upgradeMagicNumber(1);
     }
 
     @Override

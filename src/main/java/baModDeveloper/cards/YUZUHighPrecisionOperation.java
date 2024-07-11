@@ -1,19 +1,13 @@
 package baModDeveloper.cards;
 
-import baModDeveloper.helper.ModHelper;
-import baModDeveloper.action.YUZUPlayTempCardAction;
+import baModDeveloper.action.YUZUHighPrecisionOperationAction;
 import baModDeveloper.character.YuzuCharacter;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import baModDeveloper.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.List;
 
 public class YUZUHighPrecisionOperation extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("HighPrecisionOperation");
@@ -44,17 +38,6 @@ public class YUZUHighPrecisionOperation extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new SelectCardsInHandAction(this.magicNumber,"//",card ->true,this::callback));
-    }
-
-    private void callback(List<AbstractCard> cards){
-        for(AbstractCard card:cards){
-            addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-        }
-        for(AbstractCard card:cards){
-            if(card.type==CardType.SKILL){
-                addToBot(new YUZUPlayTempCardAction(card.makeSameInstanceOf(),null));
-            }
-        }
+        addToBot(new YUZUHighPrecisionOperationAction(this.magicNumber));
     }
 }
