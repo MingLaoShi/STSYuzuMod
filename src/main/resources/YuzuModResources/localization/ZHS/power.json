@@ -92,7 +92,7 @@
 	"YUZU:BlastPower": {
 		"NAME": "燃焰爆破",
 		"DESCRIPTIONS": [
-			"每打出一次暴击后给予所有敌人%d层燃烧，并使燃烧的基础数值提高%d。"
+			"每打出一次暴击后使燃烧的基础数值提高%d。"
 		]
 	},
 	"YUZU:FortressPower": {

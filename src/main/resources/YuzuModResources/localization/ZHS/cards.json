@@ -316,7 +316,7 @@
 	},
 	"YUZU:ImpactWarhead": {
 		"NAME": "冲击弹头",
-		"DESCRIPTION": "暴击后抽1张牌。"
+		"DESCRIPTION": "暴击后，抽1张牌。"
 	},
 	"YUZU:FireWarning": {
 		"NAME": "开火预告",
@@ -337,7 +337,7 @@
 	},
 	"YUZU:Blast": {
 		"NAME": "燃焰爆破",
-		"DESCRIPTION": "每打出一次暴击后给予所有敌人 !M! 层燃烧，并使燃烧的基础数值提高 !M! 。"
+		"DESCRIPTION": "每打出一次暴击后使燃烧的基础数值提高 !M! 。"
 	},
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
@@ -385,5 +385,17 @@
 	"YUZU:FoldUpClothes": {
 		"NAME": "卷衣为盾",
 		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !M! 张耗能为1的牌。 NL yuzu:精通 ：打出手牌1张防御。"
+	},
+	"YUZU:Leveraging": {
+		"NAME": "借力打力",
+		"DESCRIPTION": "获得 !M! 点临时 力量 ，获得等同于自身 力量 的 活力 。"
+	},
+	"YUZU:ManaPotion": {
+		"NAME": "法力药剂",
+		"DESCRIPTION": "手牌每有一张耗能大于等于2的牌，获得1 [E] 。"
+	},
+	"YUZU:KillAbsolutely": {
+		"NAME": "赶尽杀绝",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 ：消灭一个随机敌人。"
 	}
 }
