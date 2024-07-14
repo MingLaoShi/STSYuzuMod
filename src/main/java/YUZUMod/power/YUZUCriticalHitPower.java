@@ -6,6 +6,7 @@ import YUZUMod.helper.ModHelper;
 import YUZUMod.inter.YUZUAddCriticalMultiInterface;
 import YUZUMod.inter.YUZUMultiCriticalMultiInterface;
 import YUZUMod.inter.YUZUTriggerOnCriticalHitInterface;
+import YUZUMod.patch.YUZUBlockWordEffectPatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -92,6 +93,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
                 }
             }
             addToBot(new ReducePowerAction(this.owner,this.owner,this,1));
+            YUZUBlockWordEffectPatch.isCriticalHit=true;
         }
     }
 
