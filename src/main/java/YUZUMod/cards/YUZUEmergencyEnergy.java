@@ -49,7 +49,7 @@ public class YUZUEmergencyEnergy extends YUZUCustomCard{
     }
 
     public void trigger(){
-        if(this.upgraded&&AbstractDungeon.player.drawPile.contains(this)){
+        if(AbstractDungeon.player.drawPile.contains(this)){
             addToBot(new YUZUPlayDrawPailCardAction(this,null));
         }
     }

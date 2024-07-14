@@ -33,6 +33,7 @@ public class YUZUClimax extends YUZUCustomCard{
     @Override
     protected void upgradeMethod() {
 //        this.upgradeBaseCost(0);
+        this.isEthereal=false;
         this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
         this.initializeDescription();
     }

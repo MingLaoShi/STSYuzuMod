@@ -87,7 +87,7 @@ public class YUZUCriticalHitPower extends AbstractPower{
                 }
             }
             for(AbstractCard c:AbstractDungeon.player.drawPile.group){
-                if(c instanceof YUZUEmergencyEnergy){
+                if(c instanceof YUZUEmergencyEnergy&&c.upgraded){
                     ((YUZUEmergencyEnergy) c).trigger();
                 }
             }

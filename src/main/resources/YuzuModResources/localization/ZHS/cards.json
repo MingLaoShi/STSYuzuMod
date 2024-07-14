@@ -27,7 +27,7 @@
 	},
 	"YUZU:Cabinet": {
 		"NAME": "铁柜保护",
-		"DESCRIPTION": "获得 !B! 点 格挡 ，还原手牌中其他牌的 yuzu:精通 效果。"
+		"DESCRIPTION": "获得 !B! 点 格挡 ，手牌中其他牌回到未 yuzu:精通 状态。"
 	},
 	"YUZU:Camouflage": {
 		"NAME": "纸箱伪装",
@@ -93,7 +93,7 @@
 	},
 	"YUZU:ExtremeMeasures": {
 		"NAME": "极端手段",
-		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌 消耗 。 NL 消耗 NL yuzu:精通 ：改为 yuzu:精通 "
+		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌 消耗 。 NL 消耗 NL yuzu:精通 ：将溢出的牌改为 yuzu:精通 。"
 	},
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
@@ -156,7 +156,7 @@
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": " 保留 NL 填充 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
+		"DESCRIPTION": " 保留 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
@@ -199,8 +199,8 @@
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。",
-		"UPGRADE_DESCRIPTION": " 保留 NL 选择1张手牌，获取1张复制，那张牌失去 yuzu:精通 效果。 yuzu:精通 ：不再失去。"
+		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再失去。",
+		"UPGRADE_DESCRIPTION": " 保留 NL 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。"
 	},
 	"YUZU:PotentialExplosion": {
 		"NAME": "潜能爆发",
@@ -395,7 +395,7 @@
 		"DESCRIPTION": "手牌每有一张耗能大于等于2的牌，获得1 [E] 。"
 	},
 	"YUZU:KillAbsolutely": {
-		"NAME": "赶尽杀绝",
+		"NAME": "斩尽杀绝",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 ：消灭一个随机敌人。"
 	}
 }
