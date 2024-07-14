@@ -36,13 +36,18 @@ public class YUZUDesignShooting extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractMonster target=AbstractDungeon.getCurrRoom().monsters.monsters.get(0);
+        AbstractMonster target=null;
         for(AbstractMonster monster: AbstractDungeon.getCurrRoom().monsters.monsters){
-            if(!monster.isDeadOrEscaped()&&(monster.hb.x<=target.hb.x||target.isDeadOrEscaped())){
-                target=monster;
+            if(!monster.isDeadOrEscaped()){
+                if(target==null||(monster.hb.x<=target.hb.x)){
+                    target=monster;
+                }
             }
         }
-        addToBot(new DamageAction(target,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
+        if(target!=null){
+            this.calculateCardDamage(target);
+            addToBot(new DamageAction(target,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
+        }
     }
 
 

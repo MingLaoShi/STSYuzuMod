@@ -45,7 +45,7 @@ public class YUZUShootingPreparation extends YUZUCustomCard{
                             card=YUZUFilteredDrawCardAction.drawnCards.get(i);
                         }
                     }
-                    card.setCostForTurn(0);
+                    card.freeToPlayOnce=true;
                 }
                 this.isDone=true;
             }
