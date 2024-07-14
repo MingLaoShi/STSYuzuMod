@@ -23,7 +23,7 @@ public class YUZUAlternativeOptions extends YUZUCustomCard{
 
     public YUZUAlternativeOptions() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust=true;
+//        this.exhaust=true;
 
     }
 
@@ -34,6 +34,7 @@ public class YUZUAlternativeOptions extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        this.exhaust=false;
         addToBot(new AbstractGameAction() {
 
             @Override
@@ -47,6 +48,7 @@ public class YUZUAlternativeOptions extends YUZUCustomCard{
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        this.exhaust=true;
         addToBot(new AbstractGameAction() {
 
             @Override

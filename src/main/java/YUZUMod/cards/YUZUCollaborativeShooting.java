@@ -30,7 +30,8 @@ public class YUZUCollaborativeShooting extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(1);
+//        this.upgradeMagicNumber(1);
+        this.upgradeDamage(3);
     }
 
     @Override

@@ -23,12 +23,12 @@ public class YUZUKillingInstructions extends YUZUCustomCard{
 
     public YUZUKillingInstructions() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=18;
+        this.baseDamage=this.damage=22;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(3);
+        this.upgradeDamage(4);
     }
 
     @Override

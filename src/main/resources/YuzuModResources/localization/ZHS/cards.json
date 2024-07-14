@@ -312,7 +312,7 @@
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
-		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1。 NL 消耗 。 NL yuzu:精通 ：改为所有手牌。"
+		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1。 NL yuzu:精通 ：改为所有手牌并 消耗 。"
 	},
 	"YUZU:ImpactWarhead": {
 		"NAME": "冲击弹头",
@@ -362,7 +362,7 @@
 	},
 	"YUZU:KillingInstructions": {
 		"NAME": "杀戮指令",
-		"DESCRIPTION": "造成 !D! 点伤害，获得这张牌造成伤害数值的活力。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得这张牌造成伤害数值50%的活力。"
 	},
 	"YUZU:FinallyIHope": {
 		"NAME": "最后希望",

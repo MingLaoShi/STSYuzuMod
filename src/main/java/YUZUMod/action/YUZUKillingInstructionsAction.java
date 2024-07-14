@@ -34,7 +34,7 @@ public class YUZUKillingInstructionsAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_HEAVY, false));
             this.target.damage(this.info);
             if (this.target.lastDamageTaken > 0) {
-                addToTop(new ApplyPowerAction(this.source,this.source,new VigorPower(this.source,this.target.lastDamageTaken)));
+                addToTop(new ApplyPowerAction(this.source,this.source,new VigorPower(this.source,this.target.lastDamageTaken/2)));
                 if (this.target.hb != null) {
                     addToTop(new VFXAction(new WallopEffect(this.target.lastDamageTaken, this.target.hb.cX, this.target.hb.cY)));
                 }
