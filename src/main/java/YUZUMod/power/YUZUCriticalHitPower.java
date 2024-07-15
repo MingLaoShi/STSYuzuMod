@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class YUZUCriticalHitPower extends AbstractPower{
     public static final String POWER_ID= ModHelper.makePath("CriticalHit");
@@ -85,6 +86,11 @@ public class YUZUCriticalHitPower extends AbstractPower{
             for(AbstractPower p:this.owner.powers){
                 if(p instanceof YUZUTriggerOnCriticalHitInterface){
                     ((YUZUTriggerOnCriticalHitInterface) p).triggerOnCriticalHit();
+                }
+            }
+            for(AbstractRelic r:AbstractDungeon.player.relics){
+                if(r instanceof YUZUTriggerOnCriticalHitInterface){
+                    ((YUZUTriggerOnCriticalHitInterface) r).triggerOnCriticalHit();
                 }
             }
             for(AbstractCard c:AbstractDungeon.player.drawPile.group){

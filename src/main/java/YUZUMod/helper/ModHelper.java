@@ -89,6 +89,19 @@ public class ModHelper {
         }
     }
 
+    public static String makeRelicImagePath(String ID){
+        String filename=ID.replace("YUZU:","");
+        String filePath=ModHelper.makeImgPath("relic",filename);
+        if(Gdx.files.internal(filePath).exists()){
+            return filePath;
+        }else{
+            return ModHelper.makeImgPath("relic","default");
+        }
+    }
+    public static String makeRelicOutLinePath(String ID){
+        return makeRelicImagePath(ID+"_p");
+    }
+
     private static String[] SHOOTINGCARDS={
         "ConcentratedShooting","AonengShooting","DesignShooting","CoverShooting"
     };

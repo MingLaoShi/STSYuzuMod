@@ -7,9 +7,10 @@ import YUZUMod.cards.options.YUZUForkedIntersectionOption;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.helper.YUZUPotionTarget;
-import YUZUMod.relic.YUZUSight;
+import YUZUMod.relic.*;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -100,6 +101,14 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new YUZUSight(),YuzuCharacter.PlayerClass.YUZU_CARD);
+        BaseMod.addRelicToCustomPool(new YUZUSightModifiedVersion(),YuzuCharacter.PlayerClass.YUZU_CARD);
+        BaseMod.addRelicToCustomPool(new YUZUEnergyGatheringBomb(),YuzuCharacter.PlayerClass.YUZU_CARD);
+        BaseMod.addRelicToCustomPool(new YUZUPortableBattery(),YuzuCharacter.PlayerClass.YUZU_CARD);
+        BaseMod.addRelic(new YUZURainbowCat(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new YUZUAiSight(),YuzuCharacter.PlayerClass.YUZU_CARD);
+        BaseMod.addRelic(new YUZUTorch(), RelicType.SHARED);
+
+
     }
 
     @Override
