@@ -23,12 +23,12 @@ public class YUZUAmmunitionFilling extends YUZUCustomCard{
 
     public YUZUAmmunitionFilling() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=3;
+        this.baseMagicNumber=this.magicNumber=2;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(3);
+        this.upgradeMagicNumber(1);
     }
 
     @Override

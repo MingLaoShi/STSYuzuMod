@@ -124,5 +124,11 @@
 		"DESCRIPTIONS": [
 			"打出未精通的牌时，获得%d点格挡。"
 		]
+	},
+	"YUZU:FinallyHope": {
+		"NAME": "最后希望",
+		"DESCRIPTIONS": [
+			"回合结束后获得1个新回合，但少获得%d点能量，少抽%d张牌。"
+		]
 	}
 }

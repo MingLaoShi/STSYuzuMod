@@ -255,8 +255,9 @@
 		"DESCRIPTION": " 保留 NL 获得 !B! 点 格挡 。这张牌左边和右边的 !M! 张牌也获得 保留 。"
 	},
 	"YUZU:SpreadShooting": {
-		"NAME": "扩散射击",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，每击中一名敌人，填充 !M! yuzu:暴击槽 。"
+		"NAME": "炽焰华斩",
+		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得1点力量并 消耗 。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得2点力量并 消耗 。"
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
@@ -281,7 +282,7 @@
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 。"
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 X次。"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",
@@ -329,7 +330,7 @@
 	},
 	"YUZU:AdvanceShooting": {
 		"NAME": "预支射击",
-		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。若打出这张牌时 [E] 为0则 消耗 。"
+		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。抽1张牌。若打出这张牌时 [E] 为0则 消耗 。"
 	},
 	"YUZU:LinearSegmentation": {
 		"NAME": "线性分割",
@@ -380,7 +381,7 @@
 	},
 	"YUZU:AmmunitionFilling": {
 		"NAME": "一时修整",
-		"DESCRIPTION": "填充 !M! 格 yuzu:暴击槽 ，抽2张牌。"
+		"DESCRIPTION": "填充3格 yuzu:暴击槽 ，抽 !M! 张牌。"
 	},
 	"YUZU:FoldUpClothes": {
 		"NAME": "卷衣为盾",

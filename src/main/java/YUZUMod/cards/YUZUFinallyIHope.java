@@ -2,8 +2,7 @@ package YUZUMod.cards;
 
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
-import YUZUMod.power.YUZULoseEnergyNextTurnPower;
-import YUZUMod.power.YUZUReduceDrawPower;
+import YUZUMod.power.YUZUFinallyHopePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +15,7 @@ public class YUZUFinallyIHope extends YUZUCustomCard{
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
     private static final String IMG_PATH=ModHelper.makeCardImagePath(ID);
-    private static final int COST=2;
+    private static final int COST=1;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
@@ -38,11 +37,9 @@ public class YUZUFinallyIHope extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if(this.upgraded){
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUReduceDrawPower(abstractPlayer,2)));
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,1)));
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUFinallyHopePower(1,2)));
         }else{
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUReduceDrawPower(abstractPlayer,3)));
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZULoseEnergyNextTurnPower(abstractPlayer,2)));
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUFinallyHopePower(2,3)));
         }
         addToBot(new SkipEnemiesTurnAction());
 //        addToBot(new PressEndTurnButtonAction());
