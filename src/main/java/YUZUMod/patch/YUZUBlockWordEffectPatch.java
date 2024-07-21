@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.combat.DamageNumberEffect;
 
@@ -29,8 +30,8 @@ public class YUZUBlockWordEffectPatch {
     @SpirePatch(clz = DamageNumberEffect.class,method = "render")
     public static class renderPatch{
         @SpirePrefixPatch
-        public static void preFixPatch(DamageNumberEffect __instance, SpriteBatch sb, float ___x, float ___y, Color ___color){
-            if(FieldPatch.isCriticalHit.get(__instance)){
+        public static void preFixPatch(DamageNumberEffect __instance, SpriteBatch sb, float ___x, float ___y, Color ___color,AbstractCreature ___target){
+            if(FieldPatch.isCriticalHit.get(__instance)&&___target!= AbstractDungeon.player){
                 sb.setColor(___color);
                 sb.draw(texture,___x-texture.getWidth()/2.0F,___y-texture.getHeight()/2.0F);
             }

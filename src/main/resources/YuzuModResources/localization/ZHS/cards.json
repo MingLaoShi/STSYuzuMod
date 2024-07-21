@@ -23,7 +23,7 @@
 	},
 	"YUZU:BriefSilence": {
 		"NAME": "频段静默",
-		"DESCRIPTION": "若敌人本回合为非攻击行动，眩晕敌人，清空 yuzu:暴击槽 。 NL 消耗 NL yuzu:精通 ：清空已有的 yuzu:暴击 。"
+		"DESCRIPTION": "若敌人本回合为非攻击行动，眩晕敌人，清空 yuzu:暴击槽 。 NL 消耗 。NL yuzu:精通 ：清空已有的 yuzu:暴击 。"
 	},
 	"YUZU:Cabinet": {
 		"NAME": "铁柜保护",
@@ -64,7 +64,7 @@
 	},
 	"YUZU:CoverShooting": {
 		"NAME": "掩护射击",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !B! 点 格挡 。 NL yuzu:精通 ：获得 消耗 "
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !B! 点 格挡 。 NL yuzu:精通 ：获得 消耗 。"
 	},
 	"YUZU:CoverTheSmokeScreen": {
 		"NAME": "掩护烟幕",
@@ -93,7 +93,7 @@
 	},
 	"YUZU:ExtremeMeasures": {
 		"NAME": "极端手段",
-		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌 消耗 。 NL 消耗 NL yuzu:精通 ：将溢出的牌改为 yuzu:精通 。"
+		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌 消耗 。 NL 消耗 。NL yuzu:精通 ：将溢出的牌改为 yuzu:精通 。"
 	},
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
@@ -132,7 +132,7 @@
 	},
 	"YUZU:GlowBlessing": {
 		"NAME": "辉光护佑",
-		"DESCRIPTION": "获得1 无实体 。 NL 消耗 "
+		"DESCRIPTION": "获得1 无实体 。 NL 消耗 。"
 	},
 	"YUZU:Grenade": {
 		"NAME": "小型榴弹",
@@ -152,11 +152,11 @@
 	},
 	"YUZU:Inversion": {
 		"NAME": "本末倒置",
-		"DESCRIPTION": "抽 !M! 张牌，使其他手牌获得 yuzu:精通 ：消耗 "
+		"DESCRIPTION": "抽 !M! 张牌，使其他手牌获得 yuzu:精通 ：消耗 。"
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": " 保留 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 "
+		"DESCRIPTION": " 保留 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
@@ -182,7 +182,7 @@
 	},
 	"YUZU:Naturalization": {
 		"NAME": "出神入化",
-		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 牌放入抽牌堆，耗能为0，且 消耗 。 NL 消耗 NL yuzu:精通 ：附加抽1张牌。"
+		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 牌放入抽牌堆，耗能为0，且 消耗 。 NL 消耗 。NL yuzu:精通 ：附加抽1张牌。"
 	},
 	"YUZU:NovicePickUp": {
 		"NAME": "信手拈来",
@@ -238,7 +238,7 @@
 	},
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
-		"DESCRIPTION": "抽 !M! 张攻击牌，其中耗能最高的牌在打出前耗能为0。 NL 消耗 ",
+		"DESCRIPTION": "抽 !M! 张攻击牌，其中耗能最高的牌在打出前耗能为0。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 "
 	},
 	"YUZU:Silence": {
@@ -300,7 +300,7 @@
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",
-		"DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。 NL 消耗 ",
+		"DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。"
 	},
 	"YUZU:EnergyRelease":{
@@ -309,7 +309,7 @@
 	},
 	"YUZU:SlowBurn":{
 		"NAME":"野火燎原",
-		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍，在手牌添加1张 *灼伤 。 NL 消耗 "
+		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍，在手牌添加1张 *灼伤 。 NL 消耗 。"
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
