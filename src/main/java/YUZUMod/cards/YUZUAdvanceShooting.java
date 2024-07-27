@@ -28,17 +28,18 @@ public class YUZUAdvanceShooting extends YUZUCustomCard{
     public YUZUAdvanceShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=8;
+        this.baseMagicNumber=this.magicNumber=1;
     }
 
     @Override
     protected void upgradeMethod() {
-        upgradeDamage(3);
+        this.upgradeMagicNumber(1);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        addToBot(new DrawCardAction(1));
+        addToBot(new DrawCardAction(this.magicNumber));
         if(EnergyPanel.totalCount==0){
             this.exhaust=true;
         }else {

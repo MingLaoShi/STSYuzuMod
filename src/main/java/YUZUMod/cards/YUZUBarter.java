@@ -18,7 +18,7 @@ public class YUZUBarter extends YUZUCustomCard {
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final String IMG_PATH = ModHelper.makeCardImagePath(ID);
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = YuzuCharacter.PlayerClass.YUZU_CARD;
     private static final CardTarget TARGET = YUZUPotionTarget.POTION;
@@ -31,7 +31,7 @@ public class YUZUBarter extends YUZUCustomCard {
 
     @Override
     protected void upgradeMethod() {
-        upgradeBaseCost(0);
+        this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
     }
 
     @Override
@@ -39,11 +39,14 @@ public class YUZUBarter extends YUZUCustomCard {
         AbstractPotion p = YUZUPotionTarget.getTarget(this);
         if (p != null) {
             addToBot(new AbstractGameAction() {
-
+                boolean upgraded=YUZUBarter.this.upgraded;
                 @Override
                 public void update() {
                     AbstractDungeon.player.removePotion(p);
                     AbstractPotion.PotionRarity rarity1 = p.rarity;
+                    if(upgraded){
+                        rarity1= AbstractPotion.PotionRarity.UNCOMMON;
+                    }
                     switch (rarity1) {
                         case COMMON:
                             addToTop(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(AbstractPotion.PotionRarity.UNCOMMON, true)));

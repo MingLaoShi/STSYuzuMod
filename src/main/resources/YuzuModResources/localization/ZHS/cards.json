@@ -2,7 +2,8 @@
 	"YUZU:Accumulation": {
 		"NAME": "有效积累",
 		"DESCRIPTION": " 保留 NL 造成牌组卡牌数量的伤害。（ !D! ）",
-		"UPGRADE_DESCRIPTION":" 保留 NL 造成牌组卡牌数量1.5倍的伤害。（ !D! ）"
+		"UPGRADE_DESCRIPTION":" 保留 NL 造成牌组卡牌数量1.5倍的伤害。（ !D! ）",
+		"FLAVOR": "“我能不能把卡堆往别人那里砸？”"
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
@@ -35,7 +36,7 @@
 	},
 	"YUZU:Claustrophobia": {
 		"NAME": "幽闭苦痛",
-		"DESCRIPTION": "造成 !D! 点伤害，有 格挡 时无法打出，对有 格挡 的敌人无效"
+		"DESCRIPTION": "造成 !D! 点伤害，若自身没有格挡则再造成一次；若目标没有格挡则再造成一次。"
 	},
 	"YUZU:ClumsyRolling": {
 		"NAME": "空翻杂技",
@@ -132,7 +133,7 @@
 	},
 	"YUZU:GlowBlessing": {
 		"NAME": "辉光护佑",
-		"DESCRIPTION": "获得1 无实体 。 NL 消耗 。"
+		"DESCRIPTION": "你不会失去任何生命，不接受任何负面效果，直到下回合开始。 NL 消耗 。"
 	},
 	"YUZU:Grenade": {
 		"NAME": "小型榴弹",
@@ -326,11 +327,12 @@
 	},
 	"YUZU:Barter": {
 		"NAME": "以物易物",
-		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。 NL 消耗 。"
+		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "丢弃一瓶药水，随机获得一瓶稀有药水。 NL 消耗 。"
 	},
 	"YUZU:AdvanceShooting": {
 		"NAME": "预支射击",
-		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。抽1张牌。若打出这张牌时 [E] 为0则 消耗 。"
+		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。抽 !M! 张牌。若打出这张牌时 [E] 为0则 消耗 。"
 	},
 	"YUZU:LinearSegmentation": {
 		"NAME": "线性分割",

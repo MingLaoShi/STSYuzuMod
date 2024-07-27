@@ -41,7 +41,7 @@ public class YUZUSpan extends YUZUCustomCard{
             public void update() {
                 if(AbstractDungeon.player instanceof YuzuCharacter){
                     this.amount=((YuzuCharacter) AbstractDungeon.player).getCriticalRatePanel().getAmount();
-                    int drawAmount=AbstractDungeon.cardRandomRng.random(this.amount);
+                    int drawAmount=this.amount/2;
                     if(drawAmount>0){
                         addToTop(new DrawCardAction(drawAmount));
                     }

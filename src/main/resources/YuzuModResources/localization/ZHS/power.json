@@ -130,5 +130,11 @@
 		"DESCRIPTIONS": [
 			"回合结束后获得1个新回合，但少获得%d点能量，少抽%d张牌。"
 		]
+	},
+	"YUZU:GlowBlessingPower": {
+		"NAME": "辉光护佑",
+		"DESCRIPTIONS": [
+			"%d个回合不会失去任何生命，不接受任何负面效果，直到下回合开始。消耗。"
+		]
 	}
 }

@@ -2,7 +2,7 @@ package YUZUMod.cards;
 
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
-import YUZUMod.inter.YUZUMultiCriticalMultiInterface;
+import YUZUMod.hooks.YUZUMultiCriticalMultiInterface;
 import YUZUMod.power.YUZUCriticalHitPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;

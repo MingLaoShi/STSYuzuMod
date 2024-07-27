@@ -23,12 +23,12 @@ public class YUZUClumsyRolling extends YUZUCustomCard{
 
     public YUZUClumsyRolling() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=4;
+        this.baseMagicNumber=this.magicNumber=5;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(1);
+        this.upgradeMagicNumber(2);
     }
 
     @Override

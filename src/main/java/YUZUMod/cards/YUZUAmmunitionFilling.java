@@ -33,7 +33,7 @@ public class YUZUAmmunitionFilling extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new YUZUApplyCriticalRateAction(this.magicNumber));
-        addToBot(new DrawCardAction(2));
+        addToBot(new YUZUApplyCriticalRateAction(3));
+        addToBot(new DrawCardAction(this.magicNumber));
     }
 }

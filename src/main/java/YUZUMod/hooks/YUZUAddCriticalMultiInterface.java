@@ -1,4 +1,4 @@
-package YUZUMod.inter;
+package YUZUMod.hooks;
 
 public interface YUZUAddCriticalMultiInterface {
 

@@ -2,7 +2,7 @@ package YUZUMod.relic;
 
 import YUZUMod.helper.ModHelper;
 import YUZUMod.helper.TextureLoader;
-import YUZUMod.inter.YUZUTriggerOnCriticalHitInterface;
+import YUZUMod.hooks.YUZUTriggerOnCriticalHitInterface;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;

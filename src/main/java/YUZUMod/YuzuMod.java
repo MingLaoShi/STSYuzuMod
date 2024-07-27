@@ -1,12 +1,15 @@
 package YUZUMod;
 
 
+import YUZUMod.action.YUZUApplyCriticalRateAction;
+import YUZUMod.action.YUZUMasterCardAction;
 import YUZUMod.cards.YUZUCustomCard;
 import YUZUMod.cards.colorless.YUZUIronBox;
 import YUZUMod.cards.options.YUZUForkedIntersectionOption;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.helper.YUZUPotionTarget;
+import YUZUMod.patch.YUZUBlockWordEffectPatch;
 import YUZUMod.relic.*;
 import basemod.AutoAdd;
 import basemod.BaseMod;
@@ -17,8 +20,10 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
 
 import java.nio.charset.StandardCharsets;
@@ -26,7 +31,7 @@ import java.nio.charset.StandardCharsets;
 import static com.megacrit.cardcrawl.core.Settings.language;
 
 @SpireInitializer
-public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber ,PostInitializeSubscriber{
+public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber , EditStringsSubscriber , EditRelicsSubscriber , EditKeywordsSubscriber ,PostInitializeSubscriber,OnCardUseSubscriber{
     public static final Color YUZUColor = new Color(255.0F/255.0F,130.0F/255.0F,135.0F/255.0F,1.0F);
 
     private static final String YUZU_CHARACTER_BUTTON = ModHelper.makeImgPath("character", "Character_Button");
@@ -137,5 +142,12 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
     @Override
     public void receivePostInitialize() {
         CustomTargeting.registerCustomTargeting(YUZUPotionTarget.POTION,new YUZUPotionTarget());
+    }
+
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        AbstractDungeon.actionManager.addToBottom(new YUZUMasterCardAction(abstractCard));
+        AbstractDungeon.actionManager.addToBottom(new YUZUApplyCriticalRateAction(1));
+        YUZUBlockWordEffectPatch.isCriticalHit=false;
     }
 }

@@ -4,6 +4,7 @@ import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,7 +25,7 @@ public class YUZUOpenTheDoor extends YUZUCustomCard{
 
     public YUZUOpenTheDoor() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=22;
+        this.baseDamage=this.damage=18;
         this.isInnate=true;
     }
 
@@ -36,6 +37,7 @@ public class YUZUOpenTheDoor extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        addToBot(new ArmamentsAction(true));
     }
 
 

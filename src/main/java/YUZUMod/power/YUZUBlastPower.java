@@ -1,7 +1,7 @@
 package YUZUMod.power;
 
 import YUZUMod.helper.ModHelper;
-import YUZUMod.inter.YUZUTriggerOnCriticalHitInterface;
+import YUZUMod.hooks.YUZUTriggerOnCriticalHitInterface;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

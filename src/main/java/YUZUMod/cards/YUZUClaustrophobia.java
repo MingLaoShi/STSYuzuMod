@@ -1,10 +1,9 @@
 package YUZUMod.cards;
 
-import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
+import YUZUMod.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,28 +25,30 @@ public class YUZUClaustrophobia extends YUZUCustomCard{
 
     public YUZUClaustrophobia() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=15;
+        this.baseDamage=this.damage=5;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(5);
+        this.upgradeDamage(7);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if(abstractMonster.currentBlock<=0)
-            addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-    }
-
-
-
-    @Override
-    public boolean canPlay(AbstractCard card) {
-        if(card==this){
-            return AbstractDungeon.player.currentBlock==0;
-        }
-        return true;
+        addToBot(new AbstractGameAction() {
+            int damage=YUZUClaustrophobia.this.damage;
+            @Override
+            public void update() {
+                addToTop(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage),AttackEffect.SLASH_DIAGONAL));
+                if(AbstractDungeon.player.currentBlock==0){
+                    addToTop(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage),AttackEffect.SLASH_DIAGONAL));
+                }
+                if(abstractMonster.currentBlock==0){
+                    addToTop(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,damage),AttackEffect.SLASH_DIAGONAL));
+                }
+                this.isDone=true;
+            }
+        });
     }
 
 
