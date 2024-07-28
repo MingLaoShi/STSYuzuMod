@@ -3,6 +3,7 @@ package YUZUMod.cards;
 import YUZUMod.YuzuMod;
 import YUZUMod.power.YUZUAnalysisPower;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,10 +16,10 @@ import java.util.Map;
 
 public abstract class YUZUCustomCard extends CustomCard {
     protected static Map<String,Integer> MasterCards=new HashMap<>();
-    private int extraCirHitMulter;
 
     public YUZUCustomCard(String ID, String NAME, String IMG_PATH, int COST, String DESCRIPTION, CardType TYPE, CardColor COLOR, CardRarity RARITY, CardTarget TARGET) {
         super(ID,NAME,IMG_PATH,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);
+        FlavorText.AbstractCardFlavorFields.boxColor.set(this,YuzuMod.YUZUColor.cpy());
     }
 
     @Override

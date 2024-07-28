@@ -182,7 +182,7 @@
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": " 保留 NL 。获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
+		"DESCRIPTION": " 保留 。 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",

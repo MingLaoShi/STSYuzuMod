@@ -20,6 +20,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -146,8 +147,15 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
-        AbstractDungeon.actionManager.addToBottom(new YUZUMasterCardAction(abstractCard));
-        AbstractDungeon.actionManager.addToBottom(new YUZUApplyCriticalRateAction(1));
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractDungeon.actionManager.addToBottom(new YUZUMasterCardAction(abstractCard));
+                AbstractDungeon.actionManager.addToBottom(new YUZUApplyCriticalRateAction(1));
+                this.isDone=true;
+            }
+        });
         YUZUBlockWordEffectPatch.isCriticalHit=false;
+
     }
 }
