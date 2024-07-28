@@ -1,46 +1,53 @@
 {
 	"YUZU:Accumulation": {
 		"NAME": "有效积累",
-		"DESCRIPTION": " 保留 NL 造成牌组卡牌数量的伤害。（ !D! ）",
-		"UPGRADE_DESCRIPTION":" 保留 NL 造成牌组卡牌数量1.5倍的伤害。（ !D! ）",
+		"DESCRIPTION": " 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）",
+		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量1.5倍的伤害。（ !D! ）",
 		"FLAVOR": "“我能不能把卡堆往别人那里砸？”"
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：打出 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。"
+		"DESCRIPTION": "在打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
+		"FLAVOR": "“如果能搬出二三十米，这应该是个合格的战斗地点。”"
 	},
 	"YUZU:Analysis": {
 		"NAME": "完备解析",
-		"DESCRIPTION": "本场战斗， yuzu:精通 的条件改为同类型牌，所有已 yuzu:精通 的牌在打出后 消耗 。"
+		"DESCRIPTION": "在本场战斗中， yuzu:精通 的条件改为同类型牌，所有已 yuzu:精通 的牌在打出后 消耗 。"
 	},
 	"YUZU:AonengShooting": {
 		"NAME": "奥能射击",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 点 力量 或 敏捷 。 NL yuzu:暴击 ：再获得 1点 力量 或 敏捷 。",
+		"FLAVOR": "“子弹命中对方回馈回来奇特的感觉，真能通过这种简单的射击变强？”"
 	},
 	"YUZU:BeMercifulToOthers": {
 		"NAME": "手下留情",
-		"DESCRIPTION": "造成 !D! 点伤害，不会杀死怪物。"
+		"DESCRIPTION": "造成 !D! 点伤害，不会杀死怪物。",
+		"FLAVOR": "“抱歉，你得等下一下了。”"
 	},
 	"YUZU:BriefSilence": {
 		"NAME": "频段静默",
-		"DESCRIPTION": "若敌人本回合为非攻击行动，眩晕敌人，清空 yuzu:暴击槽 。 NL 消耗 。NL yuzu:精通 ：清空已有的 yuzu:暴击 。"
+		"DESCRIPTION": "若敌人本回合为非攻击行动，眩晕敌人，清空 yuzu:暴击槽 。NL yuzu:精通 ：清空已有的 yuzu:暴击 。 NL 消耗 。"
 	},
 	"YUZU:Cabinet": {
 		"NAME": "铁柜保护",
-		"DESCRIPTION": "获得 !B! 点 格挡 ，手牌中其他牌回到未 yuzu:精通 状态。"
+		"DESCRIPTION": "获得 !B! 点 格挡 ，使手牌中其他牌回到未 yuzu:精通 状态。",
+		"FLAVOR": "“死也不出来。”"
 	},
 	"YUZU:Camouflage": {
 		"NAME": "纸箱伪装",
-		"DESCRIPTION": "获得 !B! 点格挡。 yuzu:精通 ：抽到时打出"
+		"DESCRIPTION": "获得 !B! 点格挡。 yuzu:精通 ：在本场战斗中，获得在抽到时打出",
+		"FLAVOR": "“实际上只要打开盖子看一眼，这个拙劣的伪装就会被戳破。”"
 	},
 	"YUZU:Claustrophobia": {
 		"NAME": "幽闭苦痛",
-		"DESCRIPTION": "造成 !D! 点伤害，若自身没有格挡则再造成一次；若目标没有格挡则再造成一次。"
+		"DESCRIPTION": "造成 !D! 点伤害，若自身没有 格挡 则再造成一次；若目标没有 格挡 则再造成一次。",
+		"FLAVOR": "“快让——我进去，求你，快点……快……快……”"
 	},
 	"YUZU:ClumsyRolling": {
 		"NAME": "空翻杂技",
-		"DESCRIPTION": "抽 !M! 张牌，弃置 !M! 张牌。 NL yuzu:精通 ：改为先弃牌。"
+		"DESCRIPTION": "抽 !M! 张牌，弃置 !M! 张牌。 NL yuzu:精通 ：改为先弃牌。",
+		"FLAVOR": "“可能在耍杂的时候摔了个背着地。”"
 	},
 	"YUZU:ColdStorage": {
 		"NAME": "冰冷储藏",
@@ -53,11 +60,13 @@
 	},
 	"YUZU:CollaborativeShooting": {
 		"NAME": "协力射击",
-		"DESCRIPTION": "造成 !D! 点伤害，每有1种 yuzu:精通 的牌，伤害增加 !M! 。"
+		"DESCRIPTION": "造成 !D! 点伤害，每有1种 yuzu:精通 的牌，伤害增加 !M! 。",
+		"FLAVOR": "“伙伴总能帮助你，包括并非一般意义上的。”"
 	},
 	"YUZU:ConcentratedShooting": {
 		"NAME": "凝神射击",
-		"DESCRIPTION": " 保留 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：本场战斗，增加25%的暴击伤害。"
+		"DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：在本场战斗中，增加25%的暴击伤害。",
+		"FLAVOR": "“别紧张。”"
 	},
 	"YUZU:Condensation": {
 		"NAME": "聚精会神",
@@ -65,16 +74,19 @@
 	},
 	"YUZU:CoverShooting": {
 		"NAME": "掩护射击",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !B! 点 格挡 。 NL yuzu:精通 ：获得 消耗 。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得 !B! 点 格挡 。 NL yuzu:精通 ：在本场战斗中 消耗 。",
+		"FLAVOR": "“便携掩体只有两块，用不了多久。”"
 	},
 	"YUZU:CoverTheSmokeScreen": {
 		"NAME": "掩护烟幕",
-		"DESCRIPTION": "给予所有单位 !M! 层 虚弱 ，获得 !B! 点 格挡 。"
+		"DESCRIPTION": "给予所有单位 !M! 层 虚弱 ，获得 !B! 点 格挡 。",
+		"FLAVOR": "“烟雾弹的范围太大，自己也难免受波及。”"
 	},
 	"YUZU:CurlUp": {
 		"NAME": "蜷缩构造",
-		"DESCRIPTION": "每回合开始时，获得1张铁箱子",
-		"UPGRADE_DESCRIPTION": " 固有 NL 每回合开始时，获得1张铁箱子。"
+		"DESCRIPTION": "在每回合开始时，获得1张铁箱子",
+		"UPGRADE_DESCRIPTION": " 固有 NL 。在每回合开始时，获得1张铁箱子。",
+		"FLAVOR": "“啊，真安心。”"
 	},
 	"YUZU:Defend": {
 		"NAME": "防御",
@@ -82,27 +94,33 @@
 	},
 	"YUZU:DesignShooting": {
 		"NAME": "指定射击",
-		"DESCRIPTION": "对正前方的第一名敌人造成 !D! 点伤害。"
+		"DESCRIPTION": "对正前方的第一名敌人造成 !D! 点伤害。",
+		"FLAVOR": "“白马？定叫他有来无回！”"
 	},
 	"YUZU:EnergyCycle": {
 		"NAME": "能量循环",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 [E] 。 NL yuzu:暴击 / yuzu:精通 ：获得 [E] "
+		"DESCRIPTION": "造成 !D! 点伤害，获得 [E] 。 NL yuzu:暴击 / yuzu:精通 ：获得 [E] ",
+		"FLAVOR": "“这种攻击几乎属于直接把能量块发射出去，大家对子弹和电池这两者相糅合的感触还太远。”"
 	},
 	"YUZU:Estimate": {
 		"NAME": "状况预估",
-		"DESCRIPTION": "查看抽牌堆顶5张牌，选择其中的 !M! 类加入手牌。"
+		"DESCRIPTION": "查看抽牌堆顶5张牌，选择其中的 !M! 类加入手牌。",
+		"FLAVOR": "“冷静点，下一步已经想好了。”"
 	},
 	"YUZU:ExtremeMeasures": {
 		"NAME": "极端手段",
-		"DESCRIPTION": "抽 !M! 张牌，将溢出的牌 消耗 。 NL 消耗 。NL yuzu:精通 ：将溢出的牌改为 yuzu:精通 。"
+		"DESCRIPTION": "抽 !M! 张牌，将溢出的抽牌 消耗 。 NL yuzu:精通 ：改为将溢出的抽牌 yuzu:精通 。 NL 消耗 。",
+		"FLAVOR": "“只能这样，大家都知道要偿还代价的道理。”"
 	},
 	"YUZU:FlameModule": {
 		"NAME": "火焰模块",
-		"DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 yuzu:燃烧 。"
+		"DESCRIPTION": "在回合开始时，给予所有敌人 !M! 层 yuzu:燃烧 。",
+		"FLAVOR": "“与火焰喷射器配布的头套，不知道为什么很安全，可以给个十分。”"
 	},
 	"YUZU:ForkedIntersection": {
 		"NAME": "分叉路口",
-		"DESCRIPTION": "选择 !M! 次：获得1点 力量 ，获得1点 敏捷 ，获得7点 格挡 ，抽1张牌。"
+		"DESCRIPTION": "选择 !M! 次：获得1点 力量 ，获得1点 敏捷 ，获得7点 格挡 ，抽1张牌。",
+		"FLAVOR": "“是走哪边？还是哪边都去？”"
 	},
 	"YUZU:ForkedIntersectionOption": {
 		"NAME": "分叉路口",
@@ -120,12 +138,14 @@
 	},
 	"YUZU:GameStart": {
 		"NAME": "游戏开始",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.5倍暴击伤害。 NL yuzu:精通 ：必定 yuzu:暴击 。",
-		"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.75倍暴击伤害。 NL yuzu:精通 ：必定 yuzu:暴击 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.5倍的暴击伤害。 NL yuzu:精通 ：在本场战斗中必定 yuzu:暴击 。",
+		"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。这张卡获得额外1.75倍的暴击伤害。 NL yuzu:精通 ：在本场战斗中必定 yuzu:暴击 。",
+		"FLAVOR": "“uzqueen最常用的连招起手式，也是她的标志性操作。”"
 	},
 	"YUZU:Gifts": {
 		"NAME": "恒心赠礼",
-		"DESCRIPTION": "随机将 !M! 张带有 保留 的牌加入手牌。"
+		"DESCRIPTION": "随机将 !M! 张带有 保留 的牌加入手牌。",
+		"FLAVOR": "“再等6回合……”"
 	},
 	"YUZU:GiveBestShot": {
 		"NAME": "尽力一击",
@@ -133,7 +153,8 @@
 	},
 	"YUZU:GlowBlessing": {
 		"NAME": "辉光护佑",
-		"DESCRIPTION": "你不会失去任何生命，不接受任何负面效果，直到下回合开始。 NL 消耗 。"
+		"DESCRIPTION": "你不会失去任何生命，不接受任何负面效果，直到下回合开始。 NL 消耗 。",
+		"FLAVOR": "““这是勇者的力量。””"
 	},
 	"YUZU:Grenade": {
 		"NAME": "小型榴弹",
@@ -141,37 +162,44 @@
 	},
 	"YUZU:HighPrecisionOperation": {
 		"NAME": "高精操作",
-		"DESCRIPTION": " 消耗 !M! 张手牌。 NL yuzu:精通 ：如果 消耗 的是技能牌，则在 消耗 后打出复制品。"
+		"DESCRIPTION": " 消耗 !M! 张手牌。 NL yuzu:精通 ：如果 消耗 的是技能牌，则在 消耗 后打出其复制品。",
+		"FLAVOR": "“看好，这是基沃托斯学不到的手法。”"
 	},
 	"YUZU:HighSpeedCycle": {
 		"NAME": "高速循环",
-		"DESCRIPTION": "从弃牌堆将 !M! 张牌加入手牌，并失去 yuzu:精通 。 NL yuzu:精通 ：改为选择 "
+		"DESCRIPTION": "从弃牌堆将 !M! 张牌加入手牌，并使它们回到未 yuzu:精通 状态。 NL yuzu:精通 ：改为选择牌。 ",
+		"FLAVOR": "“快点快点，马上就拿不到了。”"
 	},
 	"YUZU:Image": {
 		"NAME": "稻草人偶",
-		"DESCRIPTION": "获得 !M! 点临时生命，当临时生命被击破后，从非boss战中逃跑。 NL 保留 "
+		"DESCRIPTION": " 保留 。 NL 获得 !M! 点临时生命，当临时生命被击破后，从非boss战中逃跑。",
+		"FLAVOR": "“似乎活人总是怪物们的最末级攻击对象。”"
 	},
 	"YUZU:Inversion": {
 		"NAME": "本末倒置",
-		"DESCRIPTION": "抽 !M! 张牌，使其他手牌获得 yuzu:精通 ：消耗 。"
+		"DESCRIPTION": "抽 !M! 张牌，使其他手牌获得 yuzu:精通 ：消耗 。",
+		"FLAVOR": "“我们应该先撕毁画，还是先清空程序？”"
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": " 保留 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
+		"DESCRIPTION": " 保留 NL 。获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
 		"DESCRIPTION": "所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。"
+		"UPGRADE_DESCRIPTION": " 固有 NL 。所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。",
+		"FLAVOR": "“今天的bug还没修呢。”"
 	},
 	"YUZU:Loopback": {
 		"NAME": "回环连击",
-		"DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL yuzu:精通 ：从抽牌堆中将1张同名牌加入手牌。"
+		"DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL yuzu:精通 ：从抽牌堆中将1张同名牌加入手牌。",
+		"FLAVOR": "“咿，呀—哈～”"
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": " 虚无 NL 清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次 yuzu:燃烧 。",
-		"UPGRADE_DESCRIPTION": "清空所有人的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次 yuzu:燃烧 。"
+		"DESCRIPTION": " 虚无 NL 清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
+		"UPGRADE_DESCRIPTION": "清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
+		"FLAVOR": "““小桃，这样是不是太坏了点啊？””"
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
@@ -179,29 +207,35 @@
 	},
 	"YUZU:MicroBlasting": {
 		"NAME": "微型爆破",
-		"DESCRIPTION": "造成 !D! 点伤害，给予伤害层数的 易伤 。 NL yuzu:精通 ：给予伤害层数 虚弱 。"
+		"DESCRIPTION": "造成 !D! 点伤害，给予造成伤害层数的 易伤 。 NL yuzu:精通 ：给予造成伤害层数的 虚弱 。",
+		"FLAVOR": "“即使用这个词去形容爆破，这种行为也会伤到人。”"
 	},
 	"YUZU:Naturalization": {
 		"NAME": "出神入化",
-		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 牌放入抽牌堆，耗能为0，且 消耗 。 NL 消耗 。NL yuzu:精通 ：附加抽1张牌。"
+		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 的牌放入抽牌堆，在本场战斗中它们的耗能为0，且获得 消耗 。NL yuzu:精通 ：在打出它们时抽1张牌。 NL 消耗 。",
+		"FLAVOR": "“我玩过的游戏太多太多。”"
 	},
 	"YUZU:NovicePickUp": {
 		"NAME": "信手拈来",
-		"DESCRIPTION": "随机获得 !M! 张耗能为0的牌。 NL yuzu:精通 ：改为获取随机牌，再本回合耗能为0。"
+		"DESCRIPTION": "随机获得 !M! 张耗能为0的牌。 NL yuzu:精通 ：改为获取随机牌，它们在本回合的耗能为0。",
+		"FLAVOR": "““柚子应该只是玩游戏厉害吧，没听说过她有使用武器的才能。”——才羽 桃井”"
 	},
 	"YUZU:OpenTheDoor": {
 		"NAME": "开门见山",
-		"DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。"
+		"DESCRIPTION": "造成 !D! 点伤害,在本场战斗中升级手牌中的所有牌。 NL 固有 。",
+		"FLAVOR": "“哈！”"
 	},
 	"YUZU:Paintings": {
 		"NAME": "青空彩绘",
-		"DESCRIPTION": " 虚无 NL 每回合抽牌结束后，获得等同于手牌类型数的 [E] 。",
-		"UPGRADE_DESCRIPTION": "每回合抽牌结束后，获得等同于手牌类型数的 [E] 。"
+		"DESCRIPTION": " 在每回合的抽牌结束后，获得等同于手牌类型数的 [E] 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "在每回合的抽牌结束后，获得等同于手牌类型数的 [E] 。",
+		"FLAVOR": "“绿似乎只用了一笔来画，可彩虹不是有七种颜色吗？”"
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再失去。",
-		"UPGRADE_DESCRIPTION": " 保留 NL 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。"
+		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
+		"UPGRADE_DESCRIPTION": " 保留 NL 。 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
+		"FLAVOR": "“似乎能召唤出恶魔，天使或者龙之类的奇妙法阵。”"
 	},
 	"YUZU:PotentialExplosion": {
 		"NAME": "潜能爆发",
@@ -209,15 +243,18 @@
 	},
 	"YUZU:Preheat": {
 		"NAME": "预热瞄准",
-		"DESCRIPTION": "立即填满 yuzu:暴击槽 ，增加 !M! %的暴击伤害。 NL yuzu:精通 ：减少2格 yuzu:暴击槽 需求。"
+		"DESCRIPTION": "立即填满 yuzu:暴击槽 ，在本场战斗中，增加 !M! %的暴击伤害。 NL yuzu:精通 ：减少2格 yuzu:暴击槽 需求。",
+		"FLAVOR": "“预热的意思不是预热的意思，所以瞄准镜是不会发热的。”"
 	},
 	"YUZU:PressureArmor": {
 		"NAME": "压感装甲",
-		"DESCRIPTION": "当受到伤害时，立即获得 !B! 点 格挡 和 !M! 层残影。"
+		"DESCRIPTION": "当自身损失生命时，立即获得 !B! 点 格挡 和 !M! 层残影。",
+		"FLAVOR": "“如果没有受击限制，那这片装甲护盾就可能随时随地展开。”"
 	},
 	"YUZU:ProperPlanning": {
 		"NAME": "计划妥当",
-		"DESCRIPTION": "回合结束时选 !M! 张手牌，给予 保留 。"
+		"DESCRIPTION": "回合结束时选择 !M! 张手牌，给予它 保留 。",
+		"FLAVOR": "“下次应该去火堆休息，这样更好……”"
 	},
 	"YUZU:Refraction": {
 		"NAME": "偏光折射",
@@ -226,12 +263,14 @@
 	},
 	"YUZU:ScorchingExplosive": {
 		"NAME": "灼热爆弹",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:燃烧 。 NL yuzu:精通 ：伤害和 yuzu:燃烧 增加 !B! 。这张牌可以无限 yuzu:精通 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:燃烧 。 NL yuzu:精通 ：在本场战斗中，同名牌造成的伤害和给予的 yuzu:燃烧 增加 !B! 。这张牌可以无限次的被 yuzu:精通 。",
+		"FLAVOR": "“烟尘似乎正是下颗榴弹爆炸的催化物。”"
 	},
 	"YUZU:SelfRepair": {
 		"NAME": "自我休整",
-		"DESCRIPTION": " yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：回复2X生命",
-		"UPGRADE_DESCRIPTION": " yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：回复2(X+1)生命"
+		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：回复2X点生命",
+		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：回复2(X+1)点生命",
+		"FLAVOR": "“丝带就放那吧，破的太狠——幸亏这衣服外面还挺厚实。”"
 	},
 	"YUZU:Shadow": {
 		"NAME": "幽寂之影",
@@ -240,7 +279,8 @@
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
 		"DESCRIPTION": "抽 !M! 张攻击牌，其中耗能最高的牌在打出前耗能为0。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 "
+		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 ",
+		"FLAVOR": "“会自动装好的子弹，令人愉悦。”"
 	},
 	"YUZU:Silence": {
 		"NAME": "频段静默",
@@ -249,24 +289,29 @@
 	"YUZU:Skilled": {
 		"NAME": "熟能生巧",
 		"DESCRIPTION": "从抽牌堆尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
-		"UPGRADE_DESCRIPTION": "尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。"
+		"UPGRADE_DESCRIPTION": "尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"FLAVOR": "一回生，二回熟。”"
 	},
 	"YUZU:Solidifying": {
 		"NAME": "固化衣装",
-		"DESCRIPTION": " 保留 NL 获得 !B! 点 格挡 。这张牌左边和右边的 !M! 张牌也获得 保留 。"
+		"DESCRIPTION": " 保留 。 NL 获得 !B! 点 格挡 。这张牌左边和右边的 !M! 张牌也获得 保留 。",
+		"FLAVOR": "““柚子，该洗衣服了，换一件。”“没什么可换的吧……””"
 	},
 	"YUZU:SpreadShooting": {
 		"NAME": "炽焰华斩",
 		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得1点力量并 消耗 。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得2点力量并 消耗 。"
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得2点力量并 消耗 。",
+		"FLAVOR": "“你看见刀刃上附着些艳丽的火焰，转过头去，悬着红发的少女似乎点了点头。”"
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
-		"DESCRIPTION": "保留 NL 获得 !B! 点 格挡 。 NL yuzu:精通 ：获得的 格挡 减少 25%。"
+		"DESCRIPTION": "保留 NL 获得 !B! 点 格挡 。 NL yuzu:精通 ：这张牌获得的 格挡 减少 25%。",
+		"FLAVOR": "“「需要时启用」——爱丽丝”"
 	},
 	"YUZU:StrategyAnalysis": {
 		"NAME": "攻略分析",
-		"DESCRIPTION": "清除敌人的 格挡 ，清除自身的负面状态， 消耗 。 NL yuzu:精通 ：再清除敌人的 力量 ，消耗所有的 [E] "
+		"DESCRIPTION": "清除敌人的 格挡 ，清除自身的负面状态， 消耗 。 NL yuzu:精通 ：再清除敌人的 力量 ，消耗所有的 [E] ",
+		"FLAVOR": "““要在这写攻略，可是我连它是什么都不知道？”“冷静点，先观察……””"
 	},
 	"YUZU:Strike": {
 		"NAME": "打击",
@@ -274,35 +319,42 @@
 	},
 	"YUZU:TemporarySupply": {
 		"NAME": "临时补给",
-		"DESCRIPTION": "获得 !M! 点 临时生命 。 NL yuzu:精通 ：改为回复等量生命值。"
+		"DESCRIPTION": "获得 !M! 点 临时生命 。 NL yuzu:精通 ：改为回复等量生命值。",
+		"FLAVOR": "“有巧克力，还有面包和水，这是什么时候在便利店买的？”"
 	},
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
-		"DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为3格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。",
-		"UPGRADE_DESCRIPTION": "本回合， yuzu:暴击槽 的需求改为2格。 NL yuzu:精通 ：改为获得 !M! 层 yuzu:暴击 。"
+		"DESCRIPTION": "在本回合， yuzu:暴击槽 的需求改为3格。 NL yuzu:精通 ：改为获得 !M! 次 yuzu:暴击 次数。",
+		"UPGRADE_DESCRIPTION": "在本回合， yuzu:暴击槽 的需求改为2格。 NL yuzu:精通 ：改为获得 !M! 次 yuzu:暴击 次数。",
+		"FLAVOR": "“鹰眼的视力是人类的八倍，它的眼睛具有特殊构造，且独特的视觉系统可将物体放大数倍，其原理如同望远镜。”"
 	},
 	"YUZU:Spark": {
 		"NAME": "流星火花",
-		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 X次。"
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 X次。",
+		"FLAVOR": "“一闪而过的火花绽放成雨，或是凝结成束，散发光彩。”"
 	},
 	"YUZU:Medicine":{
 		"NAME":"危险药物",
-		"DESCRIPTION":"造成 !D! 点伤害，给予 !B! 点 格挡 。 NL yuzu:精通 ：将伤害和 格挡 的数值互换，可以无限次 yuzu:精通 。"
+		"DESCRIPTION":"造成 !D! 点伤害，给予 !B! 点 格挡 。 NL yuzu:精通 ：将造成伤害和给予 格挡 的数值互换，这张牌可以无限次的被 yuzu:精通 。",
+		"FLAVOR": "“在这座尖塔里也是严禁品，真的要对自己来吗？”"
 	},
 	"YUZU:EmergencyEnergy":{
 		"NAME":"应急能源",
 		"DESCRIPTION":"获得 [E] 。 NL 在打出已 yuzu:精通 的牌后，打出抽牌堆中的这张牌。",
-		"UPGRADE_DESCRIPTION":"获得 [E] 。 NL 在打出已 yuzu:精通 或 yuzu:暴击 后的牌后，打出抽牌堆中的这张牌。"
+		"UPGRADE_DESCRIPTION":"获得 [E] 。 NL 在打出已 yuzu:精通 或 yuzu:暴击 后的牌后，打出抽牌堆中的这张牌。",
+		"FLAVOR": "不太确定这个残破的电池会有什么效果，总之小心点用，再弄坏就真坏了。"
 	},
 	"YUZU:DoubleJump":{
 		"NAME":"二段跳跃",
-		"DESCRIPTION":"抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到手牌抽满。",
-		"UPGRADE_DESCRIPTION":" 保留 ，抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到手牌抽满。"
+		"DESCRIPTION":"抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到将手牌抽满。",
+		"UPGRADE_DESCRIPTION":" 保留 。 NL 抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到将手牌抽满。",
+		"FLAVOR": "“上次二段跳是桃绿与爱丽丝帮忙撑着跳的.”"
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",
 		"DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。"
+		"UPGRADE_DESCRIPTION":"交换当前的 yuzu:暴击 次数和 [E] 。",
+		"FLAVOR": "“能量是世界上最复杂的东西。”"
 	},
 	"YUZU:EnergyRelease":{
 		"NAME":"能量释放",
@@ -310,46 +362,56 @@
 	},
 	"YUZU:SlowBurn":{
 		"NAME":"野火燎原",
-		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有单位的 yuzu:燃烧 层数翻 !M! 倍，在手牌添加1张 *灼伤 。 NL 消耗 。"
+		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有敌人的 yuzu:燃烧 层数翻 !M! 倍，在手牌中添加1张 *灼伤 。 NL 消耗 。",
+		"FLAVOR": "“会烧到自己，不过敌人已经快被烧化了，你觉得受这点烫伤也挺值。”"
 	},
 	"YUZU:AlternativeOptions":{
 		"NAME":"备用选项",
-		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减1。 NL yuzu:精通 ：改为所有手牌并 消耗 。"
+		"DESCRIPTION":"使所有手牌中的保留牌在打出前耗能减少1。 NL yuzu:精通 ：改为所有手牌并在本场战斗中 消耗 。",
+		"FLAVOR": "“plan b。”"
 	},
 	"YUZU:ImpactWarhead": {
 		"NAME": "冲击弹头",
-		"DESCRIPTION": "暴击后，抽1张牌。"
+		"DESCRIPTION": "在打出 yuzu:暴击 后，抽1张牌。",
+		"FLAVOR": "“这种弹头会把对面打出好远，够你慢慢的再装填。”"
 	},
 	"YUZU:FireWarning": {
 		"NAME": "开火预告",
-		"DESCRIPTION": "填充暴击序列条，直到获得1次暴击为止。精通：改为填充 !M! 格。",
-		"UPGRADE_DESCRIPTION": "填充暴击序列条，直到获得2次暴击为止。精通：改为填充 !M! 格。"
+		"DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得1次暴击次数为止。精通：改为填充 !M! 格。",
+		"UPGRADE_DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得2次暴击次数为止。精通：改为填充 !M! 格。",
+		"FLAVOR": "“只是个粗劣的形容词，看到你装填炮弹别人早在跑了。”"
 	},
 	"YUZU:Barter": {
 		"NAME": "以物易物",
 		"DESCRIPTION": "丢弃一瓶药水，随机获得一瓶更稀有的药水。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "丢弃一瓶药水，随机获得一瓶稀有药水。 NL 消耗 。"
+		"UPGRADE_DESCRIPTION": "丢弃一瓶药水，随机获得一瓶稀有药水。 NL 消耗 。",
+		"FLAVOR": "“能与死亡放上天平对等的东西，也只有死亡——有点跑题。”"
 	},
 	"YUZU:AdvanceShooting": {
 		"NAME": "预支射击",
-		"DESCRIPTION": "造成 !D! 点伤害，失去 [E] 。抽 !M! 张牌。若打出这张牌时 [E] 为0则 消耗 。"
+		"DESCRIPTION": "造成 !D! 点伤害，抽 !M! 张牌，失去 [E] 。若打出这张牌时 [E] 为0则 消耗 。",
+		"FLAVOR": "“一般认为这种设计很蠢，一次性伤害的造价不菲，只用这个功能真的有必要吗？”"
 	},
 	"YUZU:LinearSegmentation": {
 		"NAME": "线性分割",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，如果有两名或以上同名敌人，伤害增加 !M! 。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，如果有两名或以上同名敌人，造成的伤害增加 !M! 。",
+		"FLAVOR": "“目前的内向切割技术并不完善，不过也可以实验用。”"
 	},
 	"YUZU:Blast": {
 		"NAME": "燃焰爆破",
-		"DESCRIPTION": "每打出一次暴击后使燃烧的基础数值提高 !M! 。"
+		"DESCRIPTION": "每打出一次暴击就使 yuzu:燃烧 的基础数值提高 !M! 。",
+		"FLAVOR": "“我觉得这像魔术。”"
 	},
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
-		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去2 力量 和 敏捷 。 NL 消耗 。"
+		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去2点 力量 和 敏捷 。 NL 消耗 。",
+		"FLAVOR": "“所有人——集合——集合！”"
 	},
 	"YUZU:Climax": {
 		"NAME": "渐进高潮",
-		"DESCRIPTION": " 虚无 NL 选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。",
-		"UPGRADE_DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。"
+		"DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。",
+		"FLAVOR": "“该嗨起来了，不过现在暂且还在热场。”"
 	},
 	"YUZU:ClimaxOption": {
 		"NAME": "渐进高潮",
@@ -361,44 +423,54 @@
 	},
 	"YUZU:Span": {
 		"NAME": "跨越彼端",
-		"DESCRIPTION": "清空你的 yuzu:暴击槽 ，每清除1点就获得 [E] 或抽1张牌。 NL 消耗 。"
+		"DESCRIPTION": "清空你的 yuzu:暴击槽 ，每清除1格就轮流获得 [E] 、抽1张牌。 NL 消耗 。",
+		"FLAVOR": "“这东西能当桥用？”"
 	},
 	"YUZU:KillingInstructions": {
 		"NAME": "杀戮指令",
-		"DESCRIPTION": "造成 !D! 点伤害，获得这张牌造成伤害数值50%的活力。"
+		"DESCRIPTION": "造成 !D! 点伤害，获得这张牌造成伤害数值50%的 活力 。",
+		"FLAVOR": "““爱丽丝，你确定是他？”“要相信高机械精密相机的定位。””"
 	},
 	"YUZU:FinallyIHope": {
 		"NAME": "最后希望",
-		"DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] [E] ，少抽3张牌。 NL 消耗",
-		"UPGRADE_DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] ，少抽2张牌。 NL 消耗"
+		"DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] [E] ，少抽3张牌。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "获得一个额外回合，但在这个额外回合开始时失去 [E] ，少抽2张牌。 NL 消耗 。",
+		"FLAVOR": "“还有机会……”"
 	},
 	"YUZU:MagazineFilling": {
 		"NAME": "弹仓填充",
 		"DESCRIPTION": "暴击伤害增加25%。在回合结束时手牌中每有1张保留牌，则填充 !M! 格 yuzu:暴击槽 。",
-		"UPGRADE_DESCRIPTION": "暴击伤害增加50%。在回合结束时手牌中每有1张保留牌，则填充 !M! 格 yuzu:暴击槽 。"
+		"UPGRADE_DESCRIPTION": "暴击伤害增加50%。在回合结束时手牌中每有1张保留牌，则填充 !M! 格 yuzu:暴击槽 。",
+		"FLAVOR": "“填炮弹一点也不好玩，因为他们必定会在这之后动手……”"
 	},
 	"YUZU:GamingField": {
 		"NAME": "游戏领域",
-		"DESCRIPTION": "打出未精通的牌时，获得 !M! 点 格挡 。"
+		"DESCRIPTION": "在打出未 yuzu:精通 的牌时，获得 !M! 点 格挡 。",
+		"FLAVOR": "“敢这么跟我说话，你的马是批发的？”"
 	},
 	"YUZU:AmmunitionFilling": {
 		"NAME": "一时修整",
-		"DESCRIPTION": "填充3格 yuzu:暴击槽 ，抽 !M! 张牌。"
+		"DESCRIPTION": "填充3格 yuzu:暴击槽 ，抽 !M! 张牌。",
+		"FLAVOR": "“可能该睡个觉。”"
 	},
 	"YUZU:FoldUpClothes": {
 		"NAME": "卷衣为盾",
-		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !M! 张耗能为1的牌。 NL yuzu:精通 ：打出手牌1张防御。"
+		"DESCRIPTION": "获得 !B! 点 格挡 ，抽 !M! 张耗能为1的牌。 NL yuzu:精通 ：打出手牌中的1张防御。",
+		"FLAVOR": "“幸亏穿了硬衣服。有时候折一折也够挡。”"
 	},
 	"YUZU:Leveraging": {
 		"NAME": "借力打力",
-		"DESCRIPTION": "获得 !M! 点临时 力量 ，获得等同于自身 力量 的 活力 。"
+		"DESCRIPTION": "获得 !M! 点临时 力量 ，获得等同于自身 力量 的 活力 。",
+		"FLAVOR": "“这是……格斗游戏里学的吗？”————才羽 绿”"
 	},
 	"YUZU:ManaPotion": {
 		"NAME": "法力药剂",
-		"DESCRIPTION": "手牌每有一张耗能大于等于2的牌，获得1 [E] 。"
+		"DESCRIPTION": "手牌中每有一张耗能大于等于2的牌，获得 [E] 。",
+		"FLAVOR": "“众所周知，没蓝是放不出技能的。”"
 	},
 	"YUZU:KillAbsolutely": {
 		"NAME": "斩尽杀绝",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 ：消灭一个随机敌人。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 ：消灭一个随机敌人。",
+		"FLAVOR": "“不能对敌人的有生力量有所同情。”"
 	}
 }
