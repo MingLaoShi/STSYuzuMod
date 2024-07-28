@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
@@ -81,7 +82,13 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
             }else{
                 this.progress+=step;
             }
+        }else{
+            if(this.progress==1.0F){
+                this.duration=0.5F;
+                this.nextProgress=0.0F;
+            }
         }
+
     }
 
     public void render(SpriteBatch sb){
@@ -100,18 +107,26 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         sb.draw(background,
                 current_x-70.0f, current_y-68.0f ,
                 70.0f, 70.0f,
-                140.0F, 140.0F,
+                196.0F, 140.0F,
                 ORB_IMG_SCALE, ORB_IMG_SCALE,
                 0.0F,
                 0, 0,
-                ORB_W, ORB_W,
+                196, 140,
                 false, false);
+        this.renderNumbers(sb);
+    }
+
+    private void renderNumbers(SpriteBatch sb) {
+        FontHelper.renderFontCentered(sb,FontHelper.healthInfoFont,Integer.toString(this.amount),this.current_x+100*Settings.scale,this.current_y+30.0F*Settings.scale,Color.WHITE.cpy());
+        int max=getMAX();
+        FontHelper.renderFontCentered(sb,FontHelper.healthInfoFont,Integer.toString(max),this.current_x+100.0F*Settings.scale,this.current_y-10.0F*Settings.scale,Color.WHITE.cpy());
     }
 
     public int increase(int amount){
         this.amount+=amount;
-        this.generatePower();
         calaProgress();
+
+        this.generatePower();
         return this.amount;
     }
 
@@ -135,20 +150,22 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     public void setMAX(int max){
         this.modifiedMax=max;
         this.modifiedMax=Math.max(1,this.modifiedMax);
-        generatePower();
         calaProgress();
+        generatePower();
     }
     public void changeMAX(int amount){
         this.MAX+=amount;
         this.MAX=Math.max(1,this.MAX);
-        generatePower();
         calaProgress();
+
+        generatePower();
     }
 
     public void resetModifierMax(){
         this.modifiedMax=-1;
-        generatePower();
         calaProgress();
+
+        generatePower();
     }
 
     public int getMAX(){

@@ -194,10 +194,10 @@ public class YuzuCharacter extends CustomPlayer {
     }
 
     @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
+    public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
             this.criticalRatePanel.render(sb);
+        super.renderOrb(sb, enabled, current_x, current_y);
     }
 
     @Override
