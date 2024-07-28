@@ -33,8 +33,8 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     private static final Color FONT_COLOR = new Color(1.0F, 1.0F, 0.86F, 1.0F);
 
     private static BitmapFont expPanelFont = prepFont(FontSize, true);
-
-
+    private Mesh mesh;
+    Pixmap pixmap = new Pixmap(200, 200, Pixmap.Format.RGBA8888);
     public YUZUCriticalRatePanel(float show_x, float show_y, float hide_x, float hide_y, Texture img, boolean startHidden) {
         super(show_x, show_y, hide_x, hide_y, img, startHidden);
         this.MAX=OriginMax;
@@ -46,7 +46,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
             throw new RuntimeException(program.getLog());
         }
 
-        Mesh mesh = new Mesh(true, 4, 6,
+        mesh = new Mesh(true, 4, 6,
                 new VertexAttribute(VertexAttributes.Usage.Position, 2, "a_position"),
                 new VertexAttribute(VertexAttributes.Usage.TextureCoordinates, 2, "a_texCoord0")
         );
@@ -72,7 +72,21 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     public void render(SpriteBatch sb){
         FontHelper.renderFontCentered(sb, expPanelFont, this.amount+"/"+(this.modifiedMax>0?this.modifiedMax:this.MAX), this.current_x + 20.0F * Settings.scale, this.current_y , FONT_COLOR);
 
-        
+//        sb.setShader(program);
+//        sb.getShader().setUniformf("u_radius", 20.0F);
+//        sb.getShader().setUniformf("u_halfThick", 180.0F);
+//        sb.getShader().setUniformf("u_degreeStart", 0.0F);
+//        sb.getShader().setUniformf("u_degreeLength", 20.0F);
+//        sb.setColor(Color.WHITE.cpy());
+//        sb.draw(test,Settings.WIDTH/2.0F,Settings.HEIGHT/2.0F);
+//        sb.setShader(null);
+        pixmap.setColor(0, 0, 0, 0);
+        pixmap.fill();
+        pixmap.setColor(Color.WHITE.cpy());
+        pixmap.drawCircle(10, 10,30);
+        Texture texture=new Texture(pixmap);
+        sb.draw(texture,Settings.WIDTH/2.0F,Settings.HEIGHT/2.0F);
+
     }
 
     public int increase(int amount){
