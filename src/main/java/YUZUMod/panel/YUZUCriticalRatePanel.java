@@ -1,14 +1,17 @@
 package YUZUMod.panel;
 
+import YUZUMod.helper.ModHelper;
 import YUZUMod.power.YUZUCriticalHitPower;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
 import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
@@ -16,6 +19,9 @@ import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 public class YUZUCriticalRatePanel extends AbstractPanel {
     public static int OriginMax=10;
     private int MAX;
+
+    private ShaderProgram program;
+    private Texture test= ImageMaster.loadImage(ModHelper.makeImgPath("UI","Playground"));
 
     public int getAmount() {
         return amount;
@@ -34,6 +40,24 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         this.MAX=OriginMax;
         this.amount=0;
         this.modifiedMax=-1;
+
+        program = new ShaderProgram(Gdx.files.internal("YuzuModResources/shader/panel/vertex.glsl"), Gdx.files.internal("YuzuModResources/shader/panel/frag.glsl"));
+        if(!program.isCompiled()){
+            throw new RuntimeException(program.getLog());
+        }
+
+        Mesh mesh = new Mesh(true, 4, 6,
+                new VertexAttribute(VertexAttributes.Usage.Position, 2, "a_position"),
+                new VertexAttribute(VertexAttributes.Usage.TextureCoordinates, 2, "a_texCoord0")
+        );
+        mesh.setVertices(new float[] {
+                -1, -1, 0, 0,
+                1, -1, 1, 0,
+                -1, 1, 0, 1,
+                1, 1, 1, 1
+        });
+
+        mesh.setIndices(new short[] {0, 1, 2, 1, 2, 3});
     }
 
     public void update(){
@@ -47,6 +71,8 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
 
     public void render(SpriteBatch sb){
         FontHelper.renderFontCentered(sb, expPanelFont, this.amount+"/"+(this.modifiedMax>0?this.modifiedMax:this.MAX), this.current_x + 20.0F * Settings.scale, this.current_y , FONT_COLOR);
+
+        
     }
 
     public int increase(int amount){
