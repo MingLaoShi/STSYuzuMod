@@ -1,5 +1,6 @@
 package YUZUMod.panel;
 
+import YUZUMod.YuzuMod;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.power.YUZUCriticalHitPower;
 import com.badlogic.gdx.Gdx;
@@ -7,10 +8,10 @@ import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
@@ -21,7 +22,9 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     private int MAX;
 
     private ShaderProgram program;
-    private Texture test= ImageMaster.loadImage(ModHelper.makeImgPath("UI","Playground"));
+    private Texture background= ImageMaster.loadImage(ModHelper.makeImgPath("UI/criticalPanel","background"));
+    private static float ORB_IMG_SCALE = 1.2f * Settings.scale;
+    private static final int ORB_W = 140;
 
     public int getAmount() {
         return amount;
@@ -35,6 +38,10 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     private static BitmapFont expPanelFont = prepFont(FontSize, true);
     private Mesh mesh;
     Pixmap pixmap = new Pixmap(200, 200, Pixmap.Format.RGBA8888);
+    private static ShapeRenderer shapeRenderer;
+    private float progress=0.0F;
+    private float nextProgress=0.0F;
+    private float duration=0.0F;
     public YUZUCriticalRatePanel(float show_x, float show_y, float hide_x, float hide_y, Texture img, boolean startHidden) {
         super(show_x, show_y, hide_x, hide_y, img, startHidden);
         this.MAX=OriginMax;
@@ -58,40 +65,53 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         });
 
         mesh.setIndices(new short[] {0, 1, 2, 1, 2, 3});
+
+        shapeRenderer=new ShapeRenderer();
     }
 
     public void update(){
-        if (this.target_x != this.current_x) {
-            this.current_x = this.target_x;
-        }
-        if (this.target_y != this.current_y) {
-            this.current_y = this.target_y;
+        this.current_x=AbstractDungeon.overlayMenu.energyPanel.current_x;
+        this.current_y=AbstractDungeon.overlayMenu.energyPanel.current_y;
+        if(this.duration>0.0F){
+            this.duration-=Gdx.graphics.getDeltaTime();
+            float step=(this.nextProgress-this.progress)/this.duration*Gdx.graphics.getDeltaTime();
+            if(step>0.0F&&this.progress+step>=this.nextProgress||
+                step<0.0F&&this.progress+step<=this.nextProgress){
+                this.progress=nextProgress;
+            }else{
+                this.progress+=step;
+            }
         }
     }
 
     public void render(SpriteBatch sb){
-        FontHelper.renderFontCentered(sb, expPanelFont, this.amount+"/"+(this.modifiedMax>0?this.modifiedMax:this.MAX), this.current_x + 20.0F * Settings.scale, this.current_y , FONT_COLOR);
 
-//        sb.setShader(program);
-//        sb.getShader().setUniformf("u_radius", 20.0F);
-//        sb.getShader().setUniformf("u_halfThick", 180.0F);
-//        sb.getShader().setUniformf("u_degreeStart", 0.0F);
-//        sb.getShader().setUniformf("u_degreeLength", 20.0F);
-//        sb.setColor(Color.WHITE.cpy());
-//        sb.draw(test,Settings.WIDTH/2.0F,Settings.HEIGHT/2.0F);
-//        sb.setShader(null);
-        pixmap.setColor(0, 0, 0, 0);
-        pixmap.fill();
-        pixmap.setColor(Color.WHITE.cpy());
-        pixmap.drawCircle(10, 10,30);
-        Texture texture=new Texture(pixmap);
-        sb.draw(texture,Settings.WIDTH/2.0F,Settings.HEIGHT/2.0F);
+        sb.end();
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+        shapeRenderer.setColor(YuzuMod.YUZUColor.cpy());
 
+        // 绘制弧形进度条
+        drawArcProgressBar(shapeRenderer, current_x, current_y, 50* Settings.scale, 75*Settings.scale, 270, 360 * progress);
+
+        shapeRenderer.end();
+        sb.begin();
+        sb.setColor(Color.WHITE.cpy());
+//        sb.draw(background,current_x-background.getWidth()/2.0F,current_y-background.getHeight()/2.0F);
+        sb.draw(background,
+                current_x-70.0f, current_y-68.0f ,
+                70.0f, 70.0f,
+                140.0F, 140.0F,
+                ORB_IMG_SCALE, ORB_IMG_SCALE,
+                0.0F,
+                0, 0,
+                ORB_W, ORB_W,
+                false, false);
     }
 
     public int increase(int amount){
         this.amount+=amount;
         this.generatePower();
+        calaProgress();
         return this.amount;
     }
 
@@ -116,20 +136,55 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         this.modifiedMax=max;
         this.modifiedMax=Math.max(1,this.modifiedMax);
         generatePower();
+        calaProgress();
     }
     public void changeMAX(int amount){
         this.MAX+=amount;
         this.MAX=Math.max(1,this.MAX);
         generatePower();
+        calaProgress();
     }
 
     public void resetModifierMax(){
         this.modifiedMax=-1;
         generatePower();
+        calaProgress();
     }
 
     public int getMAX(){
         return modifiedMax>0?modifiedMax:MAX;
     }
 
+    private void drawArcProgressBar(ShapeRenderer renderer, float x, float y, float innerRadius, float outerRadius, float startAngle, float degrees) {
+        int segments = 100;  // 细分数量越高，弧形越平滑
+        float theta = (float) Math.toRadians(degrees) / segments;
+        float cos = (float) Math.cos(theta);
+        float sin = (float) Math.sin(theta);
+
+        float outerX = outerRadius * (float) Math.cos(Math.toRadians(startAngle));
+        float outerY = outerRadius * (float) Math.sin(Math.toRadians(startAngle));
+        float innerX = innerRadius * (float) Math.cos(Math.toRadians(startAngle));
+        float innerY = innerRadius * (float) Math.sin(Math.toRadians(startAngle));
+
+        for (int i = 0; i < segments; i++) {
+            float newOuterX = cos * outerX - sin * outerY;
+            float newOuterY = sin * outerX + cos * outerY;
+            float newInnerX = cos * innerX - sin * innerY;
+            float newInnerY = sin * innerX + cos * innerY;
+
+            renderer.triangle(x + innerX, y + innerY, x + outerX, y + outerY, x + newOuterX, y + newOuterY);
+            renderer.triangle(x + innerX, y + innerY, x + newOuterX, y + newOuterY, x + newInnerX, y + newInnerY);
+
+            outerX = newOuterX;
+            outerY = newOuterY;
+            innerX = newInnerX;
+            innerY = newInnerY;
+        }
+    }
+
+    private void calaProgress(){
+        int tempMax=getMAX();
+        this.nextProgress= (float) this.amount /tempMax;
+        this.duration=0.5F;
+    }
 }
