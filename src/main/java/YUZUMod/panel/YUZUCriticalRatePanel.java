@@ -60,8 +60,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
             }
         }else{
             if(this.progress==1.0F){
-                this.duration=0.5F;
-                this.nextProgress=0.0F;
+                calaProgress();
             }
         }
     }
@@ -177,6 +176,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     private void calaProgress(){
         int tempMax=getMAX();
         this.nextProgress= (float) this.amount /tempMax;
+        this.nextProgress=Math.min(nextProgress,1.0F);
         this.duration=0.5F;
     }
 }

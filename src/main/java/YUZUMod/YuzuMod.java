@@ -10,9 +10,11 @@ import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.helper.YUZUPotionTarget;
 import YUZUMod.patch.YUZUBlockWordEffectPatch;
+import YUZUMod.power.YUZUCriticalHitPower;
 import YUZUMod.relic.*;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.helpers.CardBorderGlowManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -143,6 +145,39 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
     @Override
     public void receivePostInitialize() {
         CustomTargeting.registerCustomTargeting(YUZUPotionTarget.POTION,new YUZUPotionTarget());
+
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return YUZUCustomCard.isMastered(abstractCard)>0;
+            }
+
+            @Override
+            public Color getColor(AbstractCard abstractCard) {
+                return YUZUColor.cpy();
+            }
+
+            @Override
+            public String glowID() {
+                return "YUZU:masterColor";
+            }
+        });
+        CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
+            @Override
+            public boolean test(AbstractCard abstractCard) {
+                return AbstractDungeon.player.hasPower(YUZUCriticalHitPower.POWER_ID)&&abstractCard.type== AbstractCard.CardType.ATTACK;
+            }
+
+            @Override
+            public Color getColor(AbstractCard abstractCard) {
+                return Color.YELLOW.cpy();
+            }
+
+            @Override
+            public String glowID() {
+                return "YUZU:criticalColor";
+            }
+        });
     }
 
     @Override

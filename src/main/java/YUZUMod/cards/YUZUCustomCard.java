@@ -88,14 +88,14 @@ public abstract class YUZUCustomCard extends CustomCard {
 
 
 
-    @Override
-    public void triggerOnGlowCheck() {
-        if(YUZUCustomCard.isMastered(this)>0){
-            this.glowColor= YuzuMod.YUZUColor.cpy();
-        }else {
-            this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR;
-        }
-    }
+//    @Override
+//    public void triggerOnGlowCheck() {
+//        if(YUZUCustomCard.isMastered(this)>0){
+//            this.glowColor= YuzuMod.YUZUColor.cpy();
+//        }else {
+//            this.glowColor=AbstractCard.BLUE_BORDER_GLOW_COLOR;
+//        }
+//    }
 
     public static class YUZUCardTag{
         @SpireEnum
