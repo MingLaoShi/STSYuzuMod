@@ -119,6 +119,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         this.MAX=OriginMax;
         this.amount=0;
         this.modifiedMax=-1;
+        this.progress=this.nextProgress=0.0F;
     }
 
     public void setMAX(int max){

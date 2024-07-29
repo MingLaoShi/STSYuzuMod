@@ -39,7 +39,7 @@ public class YUZUDesignShooting extends YUZUCustomCard{
         AbstractMonster target=null;
         for(AbstractMonster monster: AbstractDungeon.getCurrRoom().monsters.monsters){
             if(!monster.isDeadOrEscaped()){
-                if(target==null||(monster.hb.x<=target.hb.x)){
+                if(target==null||(abstractPlayer.flipHorizontal^(Math.abs(monster.hb.x-abstractPlayer.hb.x)<=Math.abs(target.hb.x-abstractPlayer.hb.x)))){
                     target=monster;
                 }
             }
