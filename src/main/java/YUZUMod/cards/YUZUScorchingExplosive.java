@@ -39,6 +39,7 @@ public class YUZUScorchingExplosive extends YUZUCustomCard{
         this.upgradeDamage(1);
         this.upgradeMagicNumber(1);
         this.upgradeBaseCost(1);
+        this.upgradeBlock(1);
     }
 
     @Override

@@ -1,8 +1,8 @@
 {
 	"YUZU:Accumulation": {
 		"NAME": "有效积累",
-		"DESCRIPTION": " 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）",
-		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量1.5倍的伤害。（ !D! ）",
+		"DESCRIPTION": " 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）。",
+		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量1.3倍的伤害。（ !D! ）。",
 		"FLAVOR": "我能不能把卡堆往别人那里砸？"
 	},
 	"YUZU:AimingPreparation": {
@@ -36,7 +36,7 @@
 	},
 	"YUZU:Camouflage": {
 		"NAME": "纸箱伪装",
-		"DESCRIPTION": "获得 !B! 点格挡。 yuzu:精通 ：在本场战斗中，获得在抽到时打出",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 yuzu:精通 ：在本场战斗中，获得在抽到时打出。",
 		"FLAVOR": "实际上只要打开盖子看一眼，这个拙劣的伪装就会被戳破。"
 	},
 	"YUZU:Claustrophobia": {
@@ -84,13 +84,13 @@
 	},
 	"YUZU:CurlUp": {
 		"NAME": "蜷缩构造",
-		"DESCRIPTION": "在每回合开始时，获得1张铁箱子",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。在每回合开始时，获得1张铁箱子。",
+		"DESCRIPTION": "在每回合开始时，获得1张 *铁箱子 。",
+		"UPGRADE_DESCRIPTION": " 固有 NL 。在每回合开始时，获得1张 *铁箱子 。",
 		"FLAVOR": "啊，真安心。"
 	},
 	"YUZU:Defend": {
 		"NAME": "防御",
-		"DESCRIPTION": "获得 !B! 点格挡"
+		"DESCRIPTION": "获得 !B! 点 格挡 "
 	},
 	"YUZU:DesignShooting": {
 		"NAME": "指定射击",
@@ -99,7 +99,7 @@
 	},
 	"YUZU:EnergyCycle": {
 		"NAME": "能量循环",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 [E] 。 NL yuzu:暴击 / yuzu:精通 ：获得 [E] ",
+		"DESCRIPTION": "造成 !D! 点伤害，获得 [E] 。 NL yuzu:暴击 / yuzu:精通 ：获得 [E] 。",
 		"FLAVOR": "这种攻击几乎属于直接把能量块发射出去，大家对子弹和电池这两者相糅合的感触还太远。"
 	},
 	"YUZU:Estimate": {
@@ -126,8 +126,8 @@
 		"NAME": "分叉路口",
 		"DESCRIPTION": "",
 		"EXTENDED_DESCRIPTION": [
-			"获得1点 力量 ",
-			"获得1点 敏捷 ",
+			"获得1点 力量 。",
+			"获得1点 敏捷 。",
 			"获得 !B! 点 格挡 。",
 			"抽1张牌"
 		]
@@ -167,7 +167,7 @@
 	},
 	"YUZU:HighSpeedCycle": {
 		"NAME": "高速循环",
-		"DESCRIPTION": "从弃牌堆将 !M! 张牌加入手牌，并使它们回到未 yuzu:精通 状态。 NL yuzu:精通 ：改为选择牌。 ",
+		"DESCRIPTION": "从弃牌堆将 !M! 张牌加入手牌，并使它们回到未 yuzu:精通 状态。 NL yuzu:精通 ：改为选择牌。",
 		"FLAVOR": "快点快点，马上就拿不到了。"
 	},
 	"YUZU:Image": {
@@ -182,7 +182,7 @@
 	},
 	"YUZU:IronBox": {
 		"NAME": "铁箱子",
-		"DESCRIPTION": " 保留 。 NL 获得 !B! 点格挡，清空 yuzu:暴击槽 。 NL 消耗 。"
+		"DESCRIPTION": " 保留 。 NL 获得 !B! 点 格挡 ，清空 yuzu:暴击槽 。 NL 消耗 。"
 	},
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
@@ -258,7 +258,7 @@
 	},
 	"YUZU:Refraction": {
 		"NAME": "偏光折射",
-		"DESCRIPTION": "选择1张手牌，获取X张 保留 的复制品。 yuzu:精通 ：X为2",
+		"DESCRIPTION": "选择1张手牌，获取X张 保留 的复制品。 yuzu:精通 ：X为2。",
 		"UPGRADE_DESCRIPTION": "选择1张手牌，获取X+1张 保留 的复制品。 yuzu:精通 ：X为2"
 	},
 	"YUZU:ScorchingExplosive": {
@@ -268,8 +268,8 @@
 	},
 	"YUZU:SelfRepair": {
 		"NAME": "自我休整",
-		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：回复2X点生命",
-		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：回复2(X+1)点生命",
+		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：回复2X点生命。",
+		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：回复2(X+1)点生命。",
 		"FLAVOR": "丝带就放那吧，破的太狠——幸亏这衣服外面还挺厚实。"
 	},
 	"YUZU:Shadow": {
@@ -279,7 +279,7 @@
 	"YUZU:ShootingPreparation": {
 		"NAME": "射击准备",
 		"DESCRIPTION": "抽 !M! 张攻击牌，其中耗能最高的牌在打出前耗能为0。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 ",
+		"UPGRADE_DESCRIPTION": "抽1张攻击牌，填充2层 yuzu:暴击 。",
 		"FLAVOR": "会自动装好的子弹，令人愉悦。"
 	},
 	"YUZU:Silence": {
@@ -310,7 +310,7 @@
 	},
 	"YUZU:StrategyAnalysis": {
 		"NAME": "攻略分析",
-		"DESCRIPTION": "清除敌人的 格挡 ，清除自身的负面状态， 消耗 。 NL yuzu:精通 ：再清除敌人的 力量 ，消耗所有的 [E] ",
+		"DESCRIPTION": "清除敌人的 格挡 ，清除自身的负面状态， 消耗 。 NL yuzu:精通 ：再清除敌人的 力量 ，消耗所有的 [E] 。",
 		"FLAVOR": "“要在这写攻略，可是我连它是什么都不知道？”“冷静点，先观察……”"
 	},
 	"YUZU:Strike": {
