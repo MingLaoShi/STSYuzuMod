@@ -199,7 +199,7 @@
 		"NAME": "恶意设计",
 		"DESCRIPTION": " 虚无 NL 清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
 		"UPGRADE_DESCRIPTION": "清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
-		"FLAVOR": "小桃，这样是不是太坏了点啊？”"
+		"FLAVOR": "“小桃，这样是不是太坏了点啊？”"
 	},
 	"YUZU:MemoryRetention": {
 		"NAME": "记忆留存",
@@ -233,8 +233,8 @@
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
-		"UPGRADE_DESCRIPTION": " 保留 NL 。 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
+		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
+		"UPGRADE_DESCRIPTION": " 保留 。 NL 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
 		"FLAVOR": "似乎能召唤出恶魔，天使或者龙之类的奇妙法阵。"
 	},
 	"YUZU:PotentialExplosion": {
@@ -259,10 +259,10 @@
 	"YUZU:Refraction": {
 		"NAME": "偏光折射",
 		"DESCRIPTION": "选择1张手牌，获取X张 保留 的复制品。 yuzu:精通 ：X为2。",
-		"UPGRADE_DESCRIPTION": "选择1张手牌，获取X+1张 保留 的复制品。 yuzu:精通 ：X为2"
+		"UPGRADE_DESCRIPTION": "选择1张手牌，获取X+1张 保留 的复制品。 yuzu:精通 ：X为2。"
 	},
 	"YUZU:ScorchingExplosive": {
-		"NAME": "灼热爆弹",
+		"NAME": "灼燃爆弹",
 		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:燃烧 。 NL yuzu:精通 ：在本场战斗中，同名牌造成的伤害和给予的 yuzu:燃烧 增加 !B! 。这张牌可以无限次的被 yuzu:精通 。",
 		"FLAVOR": "烟尘似乎正是下颗榴弹爆炸的催化物。"
 	},
@@ -288,8 +288,8 @@
 	},
 	"YUZU:Skilled": {
 		"NAME": "熟能生巧",
-		"DESCRIPTION": "从抽牌堆尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
-		"UPGRADE_DESCRIPTION": "尽可能抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"DESCRIPTION": "从抽牌堆中尽可能的抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"UPGRADE_DESCRIPTION": "尽可能的抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
 		"FLAVOR": "一回生，二回熟。"
 	},
 	"YUZU:Solidifying": {
@@ -301,7 +301,7 @@
 		"NAME": "炽焰华斩",
 		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得1点力量并 消耗 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得2点力量并 消耗 。",
-		"FLAVOR": "你看见刀刃上附着些艳丽的火焰，转过头去，悬着红发的少女似乎点了点头。"
+		"FLAVOR": "你看见刀刃上附着艳丽的火焰，转过头去，悬着红发的少女似乎点了点头。"
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
@@ -320,7 +320,7 @@
 	"YUZU:TemporarySupply": {
 		"NAME": "临时补给",
 		"DESCRIPTION": "获得 !M! 点 临时生命 。 NL yuzu:精通 ：改为回复等量生命值。",
-		"FLAVOR": "有巧克力，还有面包和水，这是什么时候在便利店买的？"
+		"FLAVOR": "有巧克力，还有面包和水，这是什么时候买的？"
 	},
 	"YUZU:VulturesEye": {
 		"NAME": "苍鹰之眼",
@@ -348,7 +348,7 @@
 		"NAME":"二段跳跃",
 		"DESCRIPTION":"抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到将手牌抽满。",
 		"UPGRADE_DESCRIPTION":" 保留 。 NL 抽2张牌。若打出的上一张牌的效果能够抽牌，则抽牌直到将手牌抽满。",
-		"FLAVOR": "上次二段跳是桃绿与爱丽丝帮忙撑着跳的."
+		"FLAVOR": "上次二段跳是桃绿与爱丽丝帮忙撑着跳的。"
 	},
 	"YUZU:EnergyConversion":{
 		"NAME":"能量转换",
@@ -395,7 +395,7 @@
 	"YUZU:LinearSegmentation": {
 		"NAME": "线性分割",
 		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，如果有两名或以上同名敌人，造成的伤害增加 !M! 。",
-		"FLAVOR": "目前的内向切割技术并不完善，不过也可以实验用。"
+		"FLAVOR": "目前的切割技术并不完善，不过也可以实验用。"
 	},
 	"YUZU:Blast": {
 		"NAME": "燃焰爆破",
@@ -405,7 +405,7 @@
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
 		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去2点 力量 和 敏捷 。 NL 消耗 。",
-		"FLAVOR": "所有人——集合——集合！"
+		"FLAVOR": "“所有人——集合——集合！”"
 	},
 	"YUZU:Climax": {
 		"NAME": "渐进高潮",
@@ -424,7 +424,7 @@
 	"YUZU:Span": {
 		"NAME": "跨越彼端",
 		"DESCRIPTION": "清空你的 yuzu:暴击槽 ，每清除1格就轮流获得 [E] 、抽1张牌。 NL 消耗 。",
-		"FLAVOR": "这东西能当桥用？"
+		"FLAVOR": "“这东西能当桥用？”"
 	},
 	"YUZU:KillingInstructions": {
 		"NAME": "杀戮指令",
