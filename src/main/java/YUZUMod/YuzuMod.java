@@ -12,6 +12,7 @@ import YUZUMod.helper.YUZUPotionTarget;
 import YUZUMod.patch.YUZUBlockWordEffectPatch;
 import YUZUMod.power.YUZUCriticalHitPower;
 import YUZUMod.relic.*;
+import YUZUMod.ui.YUZUCriticalIcon;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.CardBorderGlowManager;
@@ -19,6 +20,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.mod.stslib.patches.CustomTargeting;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -75,6 +77,9 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
 //        BaseMod.addCard(new YUZUColdStorage());
 //        BaseMod.addCard(new YUZUDesignShooting());
 //        BaseMod.addCard(new YUZUSpreadShooting());
+        CustomIconHelper.addCustomIcon(new YUZUCriticalIcon());
+
+
         new AutoAdd("BlueArchive_yuzu_Mod").packageFilter(YUZUCustomCard.class)
                 .notPackageFilter(YUZUForkedIntersectionOption.class)
                 .notPackageFilter("baModDeveloper.cards.deprecatedCard")

@@ -28,5 +28,12 @@
 			"燃烧"
 		],
 		"DESCRIPTION": "在回合结束时受到4点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
-	}
+	},
+	{
+	"PROPER_NAME":"[yuzumod:criticalicon]",
+	"NAMES":[
+		"criticalicon"
+	],
+	"DESCRIPTION":"[yuzumod:criticalicon] 填满暴击槽时获得1层暴击。"
+}
 ]
