@@ -30,8 +30,7 @@ public class YUZUDrawCardModifier extends AbstractCardModifier {
     }
 
     @Override
-    public List<String> extraDescriptors(AbstractCard card) {
-
-        return strings;
+    public String modifyDescription(String rawDescription, AbstractCard card) {
+        return rawDescription+strings.get(0);
     }
 }

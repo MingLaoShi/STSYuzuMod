@@ -10,7 +10,7 @@ public class YUZUCanNotPlayModifier extends AbstractCardModifier {
     public static final String ID = "YUZUCanNotPlayModifier";
     private static List<String> strings=new ArrayList<>();
     static {
-        strings.add("不能被打出。");
+        strings.add("不能被打出。 NL ");
     }
     @Override
     public AbstractCardModifier makeCopy() {
@@ -30,5 +30,10 @@ public class YUZUCanNotPlayModifier extends AbstractCardModifier {
     @Override
     public List<String> extraDescriptors(AbstractCard card) {
         return strings;
+    }
+
+    @Override
+    public String modifyDescription(String rawDescription, AbstractCard card) {
+        return strings.get(0)+rawDescription;
     }
 }

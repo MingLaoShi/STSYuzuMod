@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class YUZUMasterExhaustModifier extends AbstractCardModifier {
     private static ArrayList<String> des=new ArrayList<>();
@@ -30,7 +29,7 @@ public class YUZUMasterExhaustModifier extends AbstractCardModifier {
     }
 
     @Override
-    public List<String> extraDescriptors(AbstractCard card) {
-        return des;
+    public String modifyDescription(String rawDescription, AbstractCard card) {
+        return rawDescription+des.get(0);
     }
 }
