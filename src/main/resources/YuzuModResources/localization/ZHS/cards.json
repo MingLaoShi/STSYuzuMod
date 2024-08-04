@@ -7,8 +7,8 @@
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "在打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，获得 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
+		"DESCRIPTION": "在打出牌后，填充1格 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，填充1格 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
 		"FLAVOR": "如果能搬出二三十米，这应该是个合格的战斗地点。"
 	},
 	"YUZU:Analysis": {
@@ -36,7 +36,7 @@
 	},
 	"YUZU:Camouflage": {
 		"NAME": "纸箱伪装",
-		"DESCRIPTION": "获得 !B! 点 格挡 。 yuzu:精通 ：在本场战斗中，获得在抽到时打出。",
+		"DESCRIPTION": "获得 !B! 点格挡。 NL yuzu:精通 ：在本场战斗中，获得在抽到时打出",
 		"FLAVOR": "实际上只要打开盖子看一眼，这个拙劣的伪装就会被戳破。"
 	},
 	"YUZU:Claustrophobia": {
@@ -154,7 +154,7 @@
 	"YUZU:GlowBlessing": {
 		"NAME": "辉光护佑",
 		"DESCRIPTION": "你不会失去任何生命，不接受任何负面效果，直到下回合开始。 NL 消耗 。",
-		"FLAVOR": "这是勇者的力量。"
+		"FLAVOR": "“这是勇者的力量。”"
 	},
 	"YUZU:Grenade": {
 		"NAME": "小型榴弹",
@@ -197,8 +197,8 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": " 虚无 NL 清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
-		"UPGRADE_DESCRIPTION": "清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
+		"DESCRIPTION": " 虚无 。 NL 清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 NL yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
+		"UPGRADE_DESCRIPTION": "清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 NL yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
 		"FLAVOR": "“小桃，这样是不是太坏了点啊？”"
 	},
 	"YUZU:MemoryRetention": {

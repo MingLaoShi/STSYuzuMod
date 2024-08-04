@@ -1,6 +1,7 @@
 package YUZUMod.cards;
 
 import YUZUMod.YuzuMod;
+import YUZUMod.hooks.YUZUTriggerOnCriticalHitInterface;
 import YUZUMod.power.YUZUAnalysisPower;
 import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +81,21 @@ public abstract class YUZUCustomCard extends CustomCard {
     public void triggerOnMaster(){}
 
     public void triggerOnCriticalHit(AbstractCreature target){
-//        this.damage*=2;
+        for(AbstractPower p:AbstractDungeon.player.powers){
+            if(p instanceof YUZUTriggerOnCriticalHitInterface){
+                ((YUZUTriggerOnCriticalHitInterface) p).triggerOnCriticalHit();
+            }
+        }
+        for(AbstractRelic r:AbstractDungeon.player.relics){
+            if(r instanceof YUZUTriggerOnCriticalHitInterface){
+                ((YUZUTriggerOnCriticalHitInterface) r).triggerOnCriticalHit();
+            }
+        }
+        for(AbstractCard c:AbstractDungeon.player.drawPile.group){
+            if(c instanceof YUZUEmergencyEnergy&&c.upgraded){
+                ((YUZUEmergencyEnergy) c).trigger();
+            }
+        }
     }
 
     @Override
