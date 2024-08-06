@@ -48,4 +48,12 @@ public class YUZUBurningPower extends AbstractPower {
             addToBot(new YUZUBurningDamageAction(this.owner, this.owner, this.damage, AbstractGameAction.AttackEffect.FIRE));
         }
     }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        if(this.amount>300){
+            this.amount=300;
+        }
+    }
 }
