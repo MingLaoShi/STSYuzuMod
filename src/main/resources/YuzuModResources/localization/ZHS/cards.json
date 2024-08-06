@@ -187,7 +187,7 @@
 	"YUZU:JobResponsibilities": {
 		"NAME": "本职工作",
 		"DESCRIPTION": "所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 所有 *打击 和 *防御 获得 yuzu:精通 ：再打出一次。",
 		"FLAVOR": "今天的bug还没修呢。"
 	},
 	"YUZU:Loopback": {
@@ -212,7 +212,7 @@
 	},
 	"YUZU:Naturalization": {
 		"NAME": "出神入化",
-		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 的牌放入抽牌堆，在本场战斗中它们的耗能为0，且获得 消耗 。NL yuzu:精通 ：在打出它们时抽1张牌。 NL 消耗 。",
+		"DESCRIPTION": "将 !M! 张随机已 yuzu:精通 的牌放入抽牌堆，在本场战斗中它们的耗能为0，且获得 消耗 。 NL yuzu:精通 ：在打出它们时抽1张牌。 NL 消耗 。",
 		"FLAVOR": "我玩过的游戏太多太多。"
 	},
 	"YUZU:NovicePickUp": {
@@ -305,7 +305,7 @@
 	},
 	"YUZU:StandShield": {
 		"NAME": "立场护盾",
-		"DESCRIPTION": "保留 NL 获得 !B! 点 格挡 。 NL yuzu:精通 ：这张牌获得的 格挡 减少 25%。",
+		"DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL yuzu:精通 ：这张牌获得的 格挡 减少 25%。",
 		"FLAVOR": "「需要时启用」——爱丽丝"
 	},
 	"YUZU:StrategyAnalysis": {
