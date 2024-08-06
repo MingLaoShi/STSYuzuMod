@@ -7,8 +7,8 @@
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
-		"DESCRIPTION": "在打出牌后，填充1格 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，填充1格 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1格 yuzu:暴击槽 。",
+		"DESCRIPTION": "在打出牌后，填充1 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，填充1 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
 		"FLAVOR": "如果能搬出二三十米，这应该是个合格的战斗地点。"
 	},
 	"YUZU:Analysis": {
