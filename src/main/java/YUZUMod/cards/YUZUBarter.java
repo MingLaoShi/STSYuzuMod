@@ -55,6 +55,8 @@ public class YUZUBarter extends YUZUCustomCard {
                             addToTop(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(AbstractPotion.PotionRarity.RARE, true)));
                             break;
                         case RARE:
+                            addToTop(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(AbstractPotion.PotionRarity.RARE, true)));
+                            break;
                         default:
                             break;
                     }

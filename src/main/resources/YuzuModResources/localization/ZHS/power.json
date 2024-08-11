@@ -136,5 +136,17 @@
 		"DESCRIPTIONS": [
 			"%d个回合不会失去任何生命，不接受任何负面效果，直到下回合开始。"
 		]
+	},
+	"YUZU:VigorMonster": {
+		"NAME": "活力",
+		"DESCRIPTIONS": [
+			"下次攻击伤害提升%d。"
+		]
+	},
+	"YUZU:ShanhaiPower": {
+		"NAME": "排山倒海",
+		"DESCRIPTIONS": [
+			"力量额外对牌发挥其耗能%d倍的效果。"
+		]
 	}
 }

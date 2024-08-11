@@ -1,8 +1,8 @@
 {
 	"YUZU:Accumulation": {
 		"NAME": "有效积累",
-		"DESCRIPTION": " 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）。",
-		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量1.3倍的伤害。（ !D! ）。",
+		"DESCRIPTION": "造成牌组卡牌数量的伤害。（ !D! ）。",
+		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）。",
 		"FLAVOR": "我能不能把卡堆往别人那里砸？"
 	},
 	"YUZU:AimingPreparation": {
@@ -65,7 +65,7 @@
 	},
 	"YUZU:ConcentratedShooting": {
 		"NAME": "凝神射击",
-		"DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：在本场战斗中，增加25%的暴击伤害。",
+		"DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：在本场战斗中，增加 !M! %的暴击伤害。",
 		"FLAVOR": "别紧张。"
 	},
 	"YUZU:Condensation": {
@@ -167,7 +167,7 @@
 	},
 	"YUZU:HighSpeedCycle": {
 		"NAME": "高速循环",
-		"DESCRIPTION": "从弃牌堆将 !M! 张牌加入手牌，并使它们回到未 yuzu:精通 状态。 NL yuzu:精通 ：改为选择牌。",
+		"DESCRIPTION": "从弃牌堆随机将 !M! 张牌加入手牌，并使它们回到未 yuzu:精通 状态。 NL yuzu:精通 ：改为选择牌。",
 		"FLAVOR": "快点快点，马上就拿不到了。"
 	},
 	"YUZU:Image": {
@@ -197,8 +197,8 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": " 虚无 。 NL 清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 NL yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
-		"UPGRADE_DESCRIPTION": "清空所有单位的 格挡 ，给予对应数量的 yuzu:燃烧 。 NL yuzu:精通 ：立刻触发一次目标的 yuzu:燃烧 。",
+		"DESCRIPTION": "造成 !D! 点伤害，将目标的 力量 转换为等量活力。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "",
 		"FLAVOR": "“小桃，这样是不是太坏了点啊？”"
 	},
 	"YUZU:MemoryRetention": {
@@ -233,8 +233,8 @@
 	},
 	"YUZU:Polarization": {
 		"NAME": "偏分分光",
-		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
-		"UPGRADE_DESCRIPTION": " 保留 。 NL 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。",
+		"DESCRIPTION": "选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": " 保留 。 NL 选择1张手牌，获取1张复制，那张牌回到未 yuzu:精通 状态。 NL yuzu:精通 ：不再令其回到未 yuzu:精通 状态。 NL 消耗 。",
 		"FLAVOR": "似乎能召唤出恶魔，天使或者龙之类的奇妙法阵。"
 	},
 	"YUZU:PotentialExplosion": {
@@ -268,8 +268,8 @@
 	},
 	"YUZU:SelfRepair": {
 		"NAME": "自我休整",
-		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：回复2X点生命。",
-		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：回复2(X+1)点生命。",
+		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0",
+		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0",
 		"FLAVOR": "丝带就放那吧，破的太狠——幸亏这衣服外面还挺厚实。"
 	},
 	"YUZU:Shadow": {
@@ -288,8 +288,8 @@
 	},
 	"YUZU:Skilled": {
 		"NAME": "熟能生巧",
-		"DESCRIPTION": "从抽牌堆中尽可能的抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
-		"UPGRADE_DESCRIPTION": "尽可能的抽取已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"DESCRIPTION": "从抽牌堆中抽取抽牌堆中所有已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"UPGRADE_DESCRIPTION": "抽取所有已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
 		"FLAVOR": "一回生，二回熟。"
 	},
 	"YUZU:Solidifying": {
@@ -299,8 +299,8 @@
 	},
 	"YUZU:SpreadShooting": {
 		"NAME": "炽焰华斩",
-		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得1点力量并 消耗 。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层燃烧。若你没有力量，则获得2点力量并 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 易伤 。若你没有力量，则获得1点力量并 消耗 。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 易伤 。若你没有力量，则获得2点力量并 消耗 。",
 		"FLAVOR": "你看见刀刃上附着艳丽的火焰，转过头去，悬着红发的少女似乎点了点头。"
 	},
 	"YUZU:StandShield": {
@@ -472,5 +472,26 @@
 		"NAME": "斩尽杀绝",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 ：消灭一个随机敌人。",
 		"FLAVOR": "不能对敌人的有生力量有所同情。"
+	},
+	"YUZU:Shanhai": {
+		"NAME": "排山倒海",
+		"DESCRIPTION": "获得 !M! 点 力量 ， 力量 额外对牌发挥其耗能倍的效果。"
+	},
+	"YUZU:EmergencyProtection": {
+		"NAME": "紧急防护",
+		"DESCRIPTION": "丢弃所有手牌并 消耗 其中的 保留 牌，获得 !B! 点 格挡 。"
+	},
+	"YUZU:TestCode": {
+		"NAME": "测试代码",
+		"DESCRIPTION": "选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。"
+	},
+	"YUZU:SimplifiedCombo": {
+		"NAME": "简化连招",
+		"DESCRIPTION": "选择：选择至多 !M! 张手牌转化为耗能为0的打击+X；耗能为0的防御+X。 NL 消耗 。"
+	},
+	"YUZU:ConcealingToPeople": {
+		"NAME": "隐没于人",
+		"DESCRIPTION": "造成 !D! 点伤害，在下个怪物回合只有目标敌人的意图会生效。 NL 消耗 。"
 	}
 }

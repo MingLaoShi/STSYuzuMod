@@ -26,7 +26,7 @@ public class YUZUDesignShooting extends YUZUCustomCard{
 
     public YUZUDesignShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=13;
+        this.baseDamage=this.damage=11;
     }
 
     @Override

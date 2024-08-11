@@ -22,7 +22,7 @@ import java.util.function.Predicate;
 public class YUZUFilteredDrawCardAction extends AbstractGameAction {
 
     private final Predicate<AbstractCard> filter;
-    private final boolean clearDrawHistory;
+    private boolean clearDrawHistory;
     private boolean shuffleCheck=false;
     private static final Logger logger= LogManager.getLogger(YUZUFilteredDrawCardAction.class.getName());
     public static ArrayList<AbstractCard> drawnCards=new ArrayList<>();
@@ -44,8 +44,10 @@ public class YUZUFilteredDrawCardAction extends AbstractGameAction {
     }
     @Override
     public void update() {
-        if(this.clearDrawHistory)
+        if(this.clearDrawHistory){
             drawnCards.clear();
+            this.clearDrawHistory=false;
+        }
         if(this.filteredDrawPile==null){
             filteredDrawPile=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             this.p.drawPile.group.stream().filter(this.filter).forEach(filteredDrawPile::addToTop);

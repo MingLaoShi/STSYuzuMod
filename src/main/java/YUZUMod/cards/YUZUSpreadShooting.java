@@ -2,7 +2,6 @@ package YUZUMod.cards;
 
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
-import YUZUMod.power.YUZUBurningPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class YUZUSpreadShooting extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("SpreadShooting");
@@ -43,7 +43,7 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer,new YUZUBurningPower(abstractMonster, abstractPlayer,this.magicNumber)));
+        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer,new VulnerablePower(abstractMonster,this.magicNumber,false)));
         if(!AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)){
             int amount=1;
             if(this.upgraded){

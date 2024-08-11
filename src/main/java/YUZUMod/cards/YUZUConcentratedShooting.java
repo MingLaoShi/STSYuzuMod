@@ -31,7 +31,7 @@ public class YUZUConcentratedShooting extends YUZUCustomCard implements YUZUAddC
     public YUZUConcentratedShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=7;
-        this.baseMagicNumber=this.magicNumber=25;
+        this.baseMagicNumber=this.magicNumber=15;
         this.selfRetain=true;
     }
 

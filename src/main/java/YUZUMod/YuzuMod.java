@@ -8,6 +8,7 @@ import YUZUMod.cards.colorless.YUZUIronBox;
 import YUZUMod.cards.options.YUZUForkedIntersectionOption;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
+import YUZUMod.helper.YUZUConcealingToPeopleHelper;
 import YUZUMod.helper.YUZUPotionTarget;
 import YUZUMod.patch.YUZUBlockWordEffectPatch;
 import YUZUMod.power.YUZUCriticalHitPower;
@@ -49,6 +50,8 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
     private static final String YUZU_ENERGY_ORB = ModHelper.makeImgPath("1024", "cost_orb");
     private static final String YUZU_SMALL_ORB = ModHelper.makeImgPath("512", "small_orb");
 
+
+    public static YUZUConcealingToPeopleHelper concealingToPeopleHelper;
     public YuzuMod() {
         BaseMod.subscribe(this);
         BaseMod.addColor(YuzuCharacter.PlayerClass.YUZU_CARD, YUZUColor, YUZUColor, YUZUColor, YUZUColor, YUZUColor, YUZUColor, YUZUColor, YUZU_ATTACK_512, YUZU_SKILL_512, YUZU_POWER_512, YUZU_BIG_ORB, YUZU_ATTACK_1024, YUZU_SKILL_1024, YUZU_POWER_1024, YUZU_ENERGY_ORB, YUZU_SMALL_ORB);
@@ -178,6 +181,8 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
                 return "YUZU:criticalColor";
             }
         });
+
+        concealingToPeopleHelper=new YUZUConcealingToPeopleHelper();
     }
 
     @Override

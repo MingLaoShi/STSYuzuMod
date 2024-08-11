@@ -25,7 +25,6 @@ public class YUZUAccumulation extends YUZUCustomCard{
 
     public YUZUAccumulation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.selfRetain=true;
         this.baseDamage=this.damage=0;
     }
 
@@ -33,6 +32,7 @@ public class YUZUAccumulation extends YUZUCustomCard{
     protected void upgradeMethod() {
         this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
         this.initializeDescription();
+        this.selfRetain=true;
     }
 
     @Override
