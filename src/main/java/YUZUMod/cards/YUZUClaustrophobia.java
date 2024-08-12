@@ -30,7 +30,7 @@ public class YUZUClaustrophobia extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeDamage(7);
+        this.upgradeDamage(2);
     }
 
     @Override

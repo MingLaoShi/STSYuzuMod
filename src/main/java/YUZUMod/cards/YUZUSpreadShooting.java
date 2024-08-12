@@ -29,14 +29,14 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
     public YUZUSpreadShooting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=14;
-        this.baseMagicNumber=this.magicNumber=6;
+        this.baseMagicNumber=this.magicNumber=2;
         this.isMultiDamage=true;
     }
 
     @Override
     protected void upgradeMethod() {
         this.upgradeDamage(4);
-        this.upgradeMagicNumber(2);
+        this.upgradeMagicNumber(1);
         this.upgradeDescription(CARD_STRINGS.UPGRADE_DESCRIPTION);
     }
 
