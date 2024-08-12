@@ -37,9 +37,9 @@ public class YUZUMagazineFilling extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if(this.upgraded){
-            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,25)));
-        }else{
             addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,50)));
+        }else{
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,25)));
         }
 
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUMagazineFillingPower(abstractPlayer,this.magicNumber)));

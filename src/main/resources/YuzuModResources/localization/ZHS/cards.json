@@ -248,7 +248,7 @@
 	},
 	"YUZU:PressureArmor": {
 		"NAME": "压感装甲",
-		"DESCRIPTION": "当自身损失生命时，立即获得 !B! 点 格挡 和 !M! 层残影。",
+		"DESCRIPTION": "当下一次自身损失生命时，立即获得 !B! 点 格挡 和 !M! 层残影。",
 		"FLAVOR": "如果没有受击限制，那这片装甲护盾就可能随时随地展开。"
 	},
 	"YUZU:ProperPlanning": {
