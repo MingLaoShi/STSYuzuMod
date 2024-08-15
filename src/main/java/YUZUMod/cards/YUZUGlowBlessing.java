@@ -2,13 +2,12 @@ package YUZUMod.cards;
 
 import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
-import baModDeveloper.power.YUZUGlowBlessingPower;
+import YUZUMod.power.YUZUGlowBlessingPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 public class YUZUGlowBlessing extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("GlowBlessing");

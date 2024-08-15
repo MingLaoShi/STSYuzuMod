@@ -8,7 +8,7 @@
 	"YUZU:CriticalHit":{
 		"NAME":"暴击",
 		"DESCRIPTIONS":[
-			"下%d张攻击牌伤害提升%d%%。"
+			"下%d张攻击牌伤害提升至%d%%。"
 		]
 	},
 	"YUZU:JobResponsibilitiesPower":{

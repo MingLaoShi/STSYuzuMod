@@ -65,7 +65,7 @@
 	},
 	"YUZU:ConcentratedShooting": {
 		"NAME": "凝神射击",
-		"DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害，这张牌拥有额外 !M! %的 yuzu:暴击 伤害。 NL yuzu:暴击 / yuzu:精通 ：在本场战斗中，增加 !M! %的暴击伤害。",
+		"DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL yuzu:暴击 / yuzu:精通 ：在本场战斗中，增加 !M! %的暴击伤害。",
 		"FLAVOR": "别紧张。"
 	},
 	"YUZU:Condensation": {
@@ -90,7 +90,7 @@
 	},
 	"YUZU:Defend": {
 		"NAME": "防御",
-		"DESCRIPTION": "获得 !B! 点 格挡 "
+		"DESCRIPTION": "获得 !B! 点 格挡 。"
 	},
 	"YUZU:DesignShooting": {
 		"NAME": "指定射击",
@@ -119,7 +119,7 @@
 	},
 	"YUZU:ForkedIntersection": {
 		"NAME": "分叉路口",
-		"DESCRIPTION": "选择 !M! 次：获得1点 力量 ，获得1点 敏捷 ，获得7点 格挡 ，抽1张牌。",
+		"DESCRIPTION": "选择 !M! 次：获得1点 力量 ；获得1点 敏捷 ；获得7点 格挡 ；抽1张牌。",
 		"FLAVOR": "是走哪边？还是哪边都去？"
 	},
 	"YUZU:ForkedIntersectionOption": {
@@ -248,7 +248,7 @@
 	},
 	"YUZU:PressureArmor": {
 		"NAME": "压感装甲",
-		"DESCRIPTION": "当下一次自身损失生命时，立即获得 !B! 点 格挡 和 !M! 层残影。",
+		"DESCRIPTION": "当自身下一次损失生命时，立即获得 !B! 点 格挡 和 !M! 层残影。",
 		"FLAVOR": "如果没有受击限制，那这片装甲护盾就可能随时随地展开。"
 	},
 	"YUZU:ProperPlanning": {
@@ -288,7 +288,7 @@
 	},
 	"YUZU:Skilled": {
 		"NAME": "熟能生巧",
-		"DESCRIPTION": "从抽牌堆中抽取抽牌堆中所有已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
+		"DESCRIPTION": "抽取抽牌堆中所有已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
 		"UPGRADE_DESCRIPTION": "抽取所有已 yuzu:精通 牌。 NL yuzu:精通 ：获得 [E] 。",
 		"FLAVOR": "一回生，二回熟。"
 	},
@@ -315,7 +315,7 @@
 	},
 	"YUZU:Strike": {
 		"NAME": "打击",
-		"DESCRIPTION": "造成 !D! 点伤害"
+		"DESCRIPTION": "造成 !D! 点伤害。"
 	},
 	"YUZU:TemporarySupply": {
 		"NAME": "临时补给",
@@ -409,8 +409,8 @@
 	},
 	"YUZU:Climax": {
 		"NAME": "渐进高潮",
-		"DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": "选择：抽你抽到了这张牌次数的牌、获得你抽到了这张牌次数的 [E] 。",
+		"DESCRIPTION": "选择：抽你抽到了这张牌次数的牌；获得你抽到了这张牌次数的 [E] 。 NL yuzu:精通 ：将计数归0。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 选择：抽你抽到了这张牌次数的牌；获得你抽到了这张牌次数的 [E] 。 NL yuzu:精通 ：将计数归0。",
 		"FLAVOR": "该嗨起来了，不过现在暂且还在热场。"
 	},
 	"YUZU:ClimaxOption": {
@@ -493,5 +493,9 @@
 	"YUZU:ConcealingToPeople": {
 		"NAME": "隐没于人",
 		"DESCRIPTION": "造成 !D! 点伤害，在下个怪物回合只有目标敌人的意图会生效。 NL 消耗 。"
+	},
+	"YUZU:SimplifiedLoading": {
+		"NAME": "简略装填",
+		"DESCRIPTION": "增加2格 yuzu:暴击槽 需求，本场战斗增加 !M! % yuzu:暴击 伤害。"
 	}
 }

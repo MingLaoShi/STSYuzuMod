@@ -1,4 +1,4 @@
-package baModDeveloper.power;
+package YUZUMod.power;
 
 import YUZUMod.helper.ModHelper;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;

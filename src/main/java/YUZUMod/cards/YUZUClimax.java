@@ -17,7 +17,7 @@ public class YUZUClimax extends YUZUCustomCard{
     private static final CardStrings CARD_STRINGS= CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME=CARD_STRINGS.NAME;
     private static final String IMG_PATH= ModHelper.makeCardImagePath(ID);
-    private static final int COST=1;
+    private static final int COST=0;
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.SKILL;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
@@ -27,15 +27,14 @@ public class YUZUClimax extends YUZUCustomCard{
     public YUZUClimax() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=0;
-        this.isEthereal=true;
     }
 
     @Override
     protected void upgradeMethod() {
 //        this.upgradeBaseCost(0);
-        this.isEthereal=false;
         this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION;
         this.initializeDescription();
+        this.isInnate=true;
     }
 
     @Override
@@ -45,6 +44,12 @@ public class YUZUClimax extends YUZUCustomCard{
             options.add(new YUZUClimaxOption(j,this.magicNumber));
         }
         addToBot(new ChooseOneAction(options));
+    }
+
+    @Override
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        commonUse(abstractPlayer,abstractMonster);
+        this.baseMagicNumber=this.magicNumber=0;
     }
 
     @Override

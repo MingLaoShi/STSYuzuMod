@@ -42,12 +42,7 @@ public abstract class YUZUCustomCard extends CustomCard {
     }
 
     public static void masterCard(AbstractCard card){
-        if(AbstractDungeon.player.hasPower(YUZUAnalysisPower.POWER_ID)){
-            ((YUZUAnalysisPower)AbstractDungeon.player.getPower(YUZUAnalysisPower.POWER_ID)).masterCard(card);
-//            MasterAllCards(card);
-        } else{
-            MasterCards.merge(card.cardID, 1, Integer::sum);
-        }
+        MasterCards.merge(card.cardID, 1, Integer::sum);
     }
 
     public static void removeMaster(AbstractCard card){
