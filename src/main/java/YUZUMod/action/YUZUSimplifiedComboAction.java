@@ -28,7 +28,7 @@ public class YUZUSimplifiedComboAction extends AbstractGameAction {
         if(!this.retrieveCard){
             if(AbstractDungeon.cardRewardScreen.discoveryCard!=null){
                 AbstractCard card=AbstractDungeon.cardRewardScreen.discoveryCard;
-                addToTop(new SelectCardsInHandAction(this.amount,"",false,false,card1 -> true,(cards -> {
+                addToTop(new SelectCardsInHandAction(this.amount,"//",true,true,card1 -> true,(cards -> {
                     for(int i=0;i<cards.size();i++){
                         AbstractCard originCard=cards.get(i);
                         AbstractCard newCard=card.makeStatEquivalentCopy();
