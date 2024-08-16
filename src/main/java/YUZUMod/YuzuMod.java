@@ -192,10 +192,16 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
             public void update() {
                 AbstractDungeon.actionManager.addToBottom(new YUZUMasterCardAction(abstractCard));
                 AbstractDungeon.actionManager.addToBottom(new YUZUApplyCriticalRateAction(1));
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        YUZUBlockWordEffectPatch.isCriticalHit=false;
+                        this.isDone=true;
+                    }
+                });
                 this.isDone=true;
             }
         });
-        YUZUBlockWordEffectPatch.isCriticalHit=false;
 
     }
 }
