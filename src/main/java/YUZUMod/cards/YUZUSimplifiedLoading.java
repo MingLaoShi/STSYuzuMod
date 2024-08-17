@@ -24,17 +24,17 @@ public class YUZUSimplifiedLoading extends YUZUCustomCard{
 
     public YUZUSimplifiedLoading() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=35;
+        this.baseMagicNumber=this.magicNumber=50;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(15);
+        this.upgradeMagicNumber(25);
     }
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new YUZUChangeCriticalHitRateMaxAction(2));
+        addToBot(new YUZUChangeCriticalHitRateMaxAction(3));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,this.magicNumber)));
     }
 }

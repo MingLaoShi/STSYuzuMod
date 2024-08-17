@@ -42,7 +42,8 @@ public class YUZUNaturalization extends YUZUCustomCard{
             AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
             card.freeToPlayOnce=true;
             YUZUCustomCard.masterCard(card);
-            CardModifierManager.addModifier(card,new ExhaustMod());
+            if(card.type!=CardType.POWER)
+                CardModifierManager.addModifier(card,new ExhaustMod());
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }
 
@@ -54,8 +55,9 @@ public class YUZUNaturalization extends YUZUCustomCard{
             AbstractCard card= AbstractDungeon.returnTrulyRandomCard().makeCopy();
             card.freeToPlayOnce=true;
             if(card instanceof YUZUCustomCard)
-                YUZUCustomCard.masterCard((YUZUCustomCard) card);
-            CardModifierManager.addModifier(card,new ExhaustMod());
+                YUZUCustomCard.masterCard(card);
+            if(card.type!=CardType.POWER)
+                CardModifierManager.addModifier(card,new ExhaustMod());
             CardModifierManager.addModifier(card,new YUZUDrawCardModifier(1));
             this.addToBot(new MakeTempCardInDrawPileAction(card,1,true,true));
         }
