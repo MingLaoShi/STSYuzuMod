@@ -25,6 +25,6 @@ public class YUZUEnergyGatheringBomb extends CustomRelic implements YUZUTriggerO
 
     @Override
     public void triggerOnCriticalHit() {
-        addToBot(new GainBlockAction(AbstractDungeon.player,2));
+        addToBot(new GainBlockAction(AbstractDungeon.player,3));
     }
 }

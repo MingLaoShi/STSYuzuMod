@@ -1,6 +1,7 @@
 package YUZUMod.cards;
 
 import YUZUMod.YuzuMod;
+import YUZUMod.hooks.YUZUTriggerOnMasteredInterface;
 import YUZUMod.power.YUZUAnalysisPower;
 import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.mod.stslib.patches.FlavorText;
@@ -43,6 +44,28 @@ public abstract class YUZUCustomCard extends CustomCard {
 
     public static void masterCard(AbstractCard card){
         MasterCards.merge(card.cardID, 1, Integer::sum);
+        int masterNum=MasterCards.get(card.cardID);
+        if(masterNum==1){
+            if(card instanceof YUZUTriggerOnMasteredInterface){
+                ((YUZUTriggerOnMasteredInterface) card).triggerOnMastered(masterNum);
+            }
+            for(AbstractCard c:AbstractDungeon.player.drawPile.group){
+                if(c.cardID.equals(card.cardID)&&c instanceof YUZUTriggerOnMasteredInterface&&c!=card){
+                    ((YUZUTriggerOnMasteredInterface) c).triggerOnMastered(masterNum);
+                }
+            }
+            for(AbstractCard c:AbstractDungeon.player.hand.group){
+                if(c.cardID.equals(card.cardID)&&c instanceof YUZUTriggerOnMasteredInterface&&c!=card){
+                    ((YUZUTriggerOnMasteredInterface) c).triggerOnMastered(masterNum);
+                }
+            }
+            for(AbstractCard c:AbstractDungeon.player.discardPile.group){
+                if(c.cardID.equals(card.cardID)&&c instanceof YUZUTriggerOnMasteredInterface&&c!=card){
+                    ((YUZUTriggerOnMasteredInterface) c).triggerOnMastered(masterNum);
+                }
+            }
+        }
+
     }
 
     public static void removeMaster(AbstractCard card){

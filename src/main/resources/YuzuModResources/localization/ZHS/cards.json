@@ -497,5 +497,9 @@
 	"YUZU:SimplifiedLoading": {
 		"NAME": "简略装填",
 		"DESCRIPTION": "增加2格 yuzu:暴击槽 需求，本场战斗增加 !M! % yuzu:暴击 伤害。"
+	},
+	"YUZU:ChainReaction": {
+		"NAME": "连锁反应",
+		"DESCRIPTION": "抽 !M! 张牌，当这张牌被 yuzu:精通 时，抽2张牌。"
 	}
 }
