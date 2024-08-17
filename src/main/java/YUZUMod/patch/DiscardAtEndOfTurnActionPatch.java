@@ -14,10 +14,10 @@ public class DiscardAtEndOfTurnActionPatch {
         public static void updatePatch(DiscardAtEndOfTurnAction __instance) {
             for (int i = 0; i < AbstractDungeon.player.hand.size(); i++) {
                 if (AbstractDungeon.player.hand.group.get(i) instanceof YUZUSolidifying) {
-                    if (i - 1 >= 0) {
+                    if (i - 1 >= 0&&!AbstractDungeon.player.hand.group.get(i - 1).isEthereal) {
                         AbstractDungeon.player.hand.group.get(i - 1).retain = true;
                     }
-                    if (i + 1 < AbstractDungeon.player.hand.group.size()) {
+                    if (i + 1 < AbstractDungeon.player.hand.group.size()&&!AbstractDungeon.player.hand.group.get(i + 1).isEthereal) {
                         AbstractDungeon.player.hand.group.get(i + 1).retain = true;
                     }
                 }

@@ -43,7 +43,8 @@ public class YUZUProperPlanningPower extends AbstractPower {
 
     private void callback(List<AbstractCard> cards) {
         for(AbstractCard c:cards){
-            CardModifierManager.addModifier(c,new RetainMod());
+            if(!c.isEthereal)
+                CardModifierManager.addModifier(c,new RetainMod());
         }
     }
 

@@ -81,11 +81,11 @@ public class ModHelper {
 
     public static String makeCardImagePath(String ID){
         String filename=ID.replace("YUZU:","");
-        String filePath=ModHelper.makeImgPath("card",filename);
+        String filePath=ModHelper.makeImgPath("cards",filename);
         if(Gdx.files.internal(filePath).exists()){
             return filePath;
         }else{
-            return ModHelper.makeImgPath("card","default");
+            return ModHelper.makeImgPath("cards","default");
         }
     }
 

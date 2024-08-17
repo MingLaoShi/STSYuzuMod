@@ -51,7 +51,7 @@ public class YUZUConcentratedShooting extends YUZUCustomCard {
 
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,25)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUExtraCriticalRatePower(AbstractDungeon.player,this.magicNumber)));
     }
 
 }
