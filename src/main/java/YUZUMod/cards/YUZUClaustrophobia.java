@@ -25,7 +25,7 @@ public class YUZUClaustrophobia extends YUZUCustomCard{
 
     public YUZUClaustrophobia() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=5;
+        this.baseDamage=this.damage=4;
     }
 
     @Override

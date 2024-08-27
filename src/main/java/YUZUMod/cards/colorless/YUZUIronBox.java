@@ -30,7 +30,11 @@ public class YUZUIronBox extends CustomCard {
 
     @Override
     public void upgrade() {
-        this.upgradeBlock(4);
+        if(!upgraded){
+            this.upgradeName();
+            this.upgradeBlock(4);
+        }
+
     }
 
     @Override

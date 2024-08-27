@@ -1,14 +1,17 @@
 {
 	"YUZU:Accumulation": {
 		"NAME": "有效积累",
-		"DESCRIPTION": "造成牌组卡牌数量的伤害。（ !D! ）。",
-		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量的伤害。（ !D! ）。",
-		"FLAVOR": "我能不能把卡堆往别人那里砸？"
+		"DESCRIPTION": "造成牌组卡牌数量的伤害。",
+		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量的伤害。",
+		"FLAVOR": "我能不能把卡堆往别人那里砸？",
+		"EXTENDED_DESCRIPTION": [
+			"（ !D! ）"
+		]
 	},
 	"YUZU:AimingPreparation": {
 		"NAME": "瞄准准备",
 		"DESCRIPTION": "在打出牌后，填充 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。在打出牌后，填充 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 在打出牌后，填充 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
 		"FLAVOR": "如果能搬出二三十米，这应该是个合格的战斗地点。"
 	},
 	"YUZU:Analysis": {
@@ -85,7 +88,7 @@
 	"YUZU:CurlUp": {
 		"NAME": "蜷缩构造",
 		"DESCRIPTION": "在每回合开始时，获得1张 *铁箱子 。",
-		"UPGRADE_DESCRIPTION": " 固有 NL 。在每回合开始时，获得1张 *铁箱子 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 在每回合开始时，获得1张 *铁箱子 。",
 		"FLAVOR": "啊，真安心。"
 	},
 	"YUZU:Defend": {
@@ -501,5 +504,14 @@
 	"YUZU:ChainReaction": {
 		"NAME": "连锁反应",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 当这张牌被 yuzu:精通 时，抽2张牌。"
+	},
+	"YUZU:ExperienceStripping": {
+		"NAME": "经验剥离",
+		"DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经验 。",
+		"UPGRADE_DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经验+ 。"
+	},
+	"YUZU:Experience": {
+		"NAME": "经验",
+		"DESCRIPTION": " 保留 。 NL 选择 !M! 张手牌 yuzu:精通 。 NL 消耗 。"
 	}
 }

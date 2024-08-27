@@ -152,7 +152,7 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
         CardBorderGlowManager.addGlowInfo(new CardBorderGlowManager.GlowInfo() {
             @Override
             public boolean test(AbstractCard abstractCard) {
-                return YUZUCustomCard.isMastered(abstractCard)>0;
+                return AbstractDungeon.player instanceof YuzuCharacter && YUZUCustomCard.isMastered(abstractCard) > 0;
             }
 
             @Override

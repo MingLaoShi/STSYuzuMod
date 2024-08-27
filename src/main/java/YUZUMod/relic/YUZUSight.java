@@ -1,7 +1,7 @@
 package YUZUMod.relic;
 
-import YUZUMod.helper.ModHelper;
 import YUZUMod.action.YUZUApplyCriticalRateAction;
+import YUZUMod.helper.ModHelper;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.ImageMaster;

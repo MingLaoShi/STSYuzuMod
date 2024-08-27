@@ -49,7 +49,7 @@ public class YUZUDoubleJump extends YUZUCustomCard{
         cardsCanDraw.add(YUZUImpactWarhead.ID);
         cardsCanDraw.add(YUZUForkedIntersection.ID);
         cardsCanDraw.add(YUZUAmmunitionFilling.ID);
-        cardsCanDraw.add(YUZUInversion.ID);
+//        cardsCanDraw.add(YUZUInversion.ID);
         cardsCanDraw.add(YUZUClimax.ID);
 //        cardsCanDraw.add(YUZUAimingPreparation.ID);
         cardsCanDraw.add(YUZUExtremeMeasures.ID);

@@ -46,13 +46,21 @@ public class YUZUAccumulation extends YUZUCustomCard{
     public void applyPowers() {
         this.baseDamage= AbstractDungeon.player.masterDeck.size();
         super.applyPowers();
-
+        this.rawDescription=CARD_STRINGS.DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         this.baseDamage= AbstractDungeon.player.masterDeck.size();
         super.calculateCardDamage(mo);
+        this.rawDescription=CARD_STRINGS.DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
+    }
 
+    @Override
+    public void onMoveToDiscard() {
+        this.rawDescription=CARD_STRINGS.DESCRIPTION;
+        this.initializeDescription();
     }
 }
