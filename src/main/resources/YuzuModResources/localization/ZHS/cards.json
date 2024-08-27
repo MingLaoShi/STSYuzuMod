@@ -9,7 +9,7 @@
 		]
 	},
 	"YUZU:AimingPreparation": {
-		"NAME": "瞄准准备",
+		"NAME": "等级提升",
 		"DESCRIPTION": "在打出牌后，填充 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 在打出牌后，填充 !M! yuzu:暴击槽 。 NL yuzu:精通 ：在打出已 yuzu:精通 的牌后，填充1 yuzu:暴击槽 。",
 		"FLAVOR": "如果能搬出二三十米，这应该是个合格的战斗地点。"
@@ -499,19 +499,19 @@
 	},
 	"YUZU:SimplifiedLoading": {
 		"NAME": "简略装填",
-		"DESCRIPTION": "增加3格 yuzu:暴击槽 需求，本场战斗增加 !M! % yuzu:暴击 伤害。"
+		"DESCRIPTION": "增加2格 yuzu:暴击槽 需求，本场战斗增加 !M! % yuzu:暴击 伤害。"
 	},
 	"YUZU:ChainReaction": {
 		"NAME": "连锁反应",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 当这张牌被 yuzu:精通 时，抽2张牌。"
 	},
 	"YUZU:ExperienceStripping": {
-		"NAME": "经验剥离",
-		"DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经验 。",
-		"UPGRADE_DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经验+ 。"
+		"NAME": "精通剥离",
+		"DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经历 。",
+		"UPGRADE_DESCRIPTION": "选择 !M! 张已 yuzu:精通 的手牌，将其变为未 yuzu:精通 状态。 NL 在手牌增加等量 *经历+ 。"
 	},
 	"YUZU:Experience": {
-		"NAME": "经验",
+		"NAME": "经历",
 		"DESCRIPTION": " 保留 。 NL 选择 !M! 张手牌 yuzu:精通 。 NL 消耗 。"
 	}
 }

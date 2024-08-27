@@ -1,6 +1,7 @@
 package YUZUMod.panel;
 
 import YUZUMod.YuzuMod;
+import YUZUMod.effect.YUZUGainCriticalEffect;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.power.YUZUCriticalHitPower;
 import com.badlogic.gdx.Gdx;
@@ -9,6 +10,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,6 +22,7 @@ import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 
 public class YUZUCriticalRatePanel extends AbstractPanel {
     public static int OriginMax=10;
+    private final Color color;
     private int MAX;
     private Texture background= ImageMaster.loadImage(ModHelper.makeImgPath("UI/criticalPanel","background"));
     private static float ORB_IMG_SCALE = 1.2f * Settings.scale;
@@ -44,11 +47,11 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
         this.amount=0;
         this.modifiedMax=-1;
         shapeRenderer=new ShapeRenderer();
+        this.color=YuzuMod.YUZUColor.cpy();
     }
 
     public void update(){
-        this.current_x=AbstractDungeon.overlayMenu.energyPanel.current_x;
-        this.current_y=AbstractDungeon.overlayMenu.energyPanel.current_y;
+
         if(this.duration>0.0F){
             this.duration-=Gdx.graphics.getDeltaTime();
             float step=(this.nextProgress-this.progress)/this.duration*Gdx.graphics.getDeltaTime();
@@ -66,10 +69,14 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
     }
 
     public void render(SpriteBatch sb){
+        //我不得已而为之啊
+        this.current_x=AbstractDungeon.overlayMenu.energyPanel.current_x;
+        this.current_y=AbstractDungeon.overlayMenu.energyPanel.current_y;
+
 
         sb.end();
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        shapeRenderer.setColor(YuzuMod.YUZUColor.cpy());
+        shapeRenderer.setColor(this.color);
 
         // 绘制弧形进度条
         drawArcProgressBar(shapeRenderer, current_x, current_y, 50* Settings.scale, 75*Settings.scale, 270, 360 * progress);
@@ -110,6 +117,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
             max=this.modifiedMax;
         }
         while(amount>=max){
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new YUZUGainCriticalEffect(this.current_x,this.current_y,AbstractDungeon.player.drawX,AbstractDungeon.player.drawY)));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUCriticalHitPower(AbstractDungeon.player,1)));
             this.amount-=max;
         }

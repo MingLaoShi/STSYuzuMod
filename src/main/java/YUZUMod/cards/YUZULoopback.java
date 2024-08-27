@@ -28,7 +28,7 @@ public class YUZULoopback extends YUZUCustomCard{
     public YUZULoopback() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage=this.damage=2;
-        this.baseMagicNumber=this.magicNumber=3;
+        this.baseMagicNumber=this.magicNumber=2;
     }
 
     @Override

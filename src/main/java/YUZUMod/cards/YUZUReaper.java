@@ -26,7 +26,7 @@ public class YUZUReaper extends YUZUCustomCard {
 
     public YUZUReaper() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = this.damage = 4;
+        this.baseDamage = this.damage = 3;
         this.isMultiDamage = true;
         this.exhaust = true;
         this.tags.add(AbstractCard.CardTags.HEALING);

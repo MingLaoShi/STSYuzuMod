@@ -24,12 +24,12 @@ public class YUZUSimplifiedLoading extends YUZUCustomCard{
 
     public YUZUSimplifiedLoading() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber=this.magicNumber=50;
+        this.baseMagicNumber=this.magicNumber=35;
     }
 
     @Override
     protected void upgradeMethod() {
-        this.upgradeMagicNumber(25);
+        this.upgradeMagicNumber(15);
     }
 
     @Override
