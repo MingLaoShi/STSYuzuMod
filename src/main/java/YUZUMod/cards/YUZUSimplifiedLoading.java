@@ -34,7 +34,7 @@ public class YUZUSimplifiedLoading extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new YUZUChangeCriticalHitRateMaxAction(3));
+        addToBot(new YUZUChangeCriticalHitRateMaxAction(2));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUExtraCriticalRatePower(abstractPlayer,this.magicNumber)));
     }
 }

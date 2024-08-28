@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleLEffect;
 
@@ -45,17 +43,17 @@ public class YUZUGainCriticalEffect extends AbstractGameEffect {
         this.currentY=this.y;
 
         this.distance= (float) Math.sqrt(Math.pow(targetX - x, 2) + Math.pow(targetY - y, 2));
-        this.angle= (float) Math.toDegrees(30.0F);
+        this.angle= 179.8F;
 
-        this.speed=5.0F;
+        this.speed=0.0F;
     }
 
     @Override
     public void update() {
         if(!flashed){
             CardCrawlGame.sound.play("ATTACK_FLAME_BARRIER",0.05F);
-            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(new Color(1.0F, 1.0F, 0.1F, 1.0F)));
-            AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(1.0F, 0.4F, 0.1F, 1.0F)));
+//            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(new Color(1.0F, 1.0F, 0.1F, 1.0F)));
+//            AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(1.0F, 0.4F, 0.1F, 1.0F)));
             this.flashed=true;
         }
         for(int i=0;i<12;i++){

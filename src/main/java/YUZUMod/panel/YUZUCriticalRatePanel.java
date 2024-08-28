@@ -1,7 +1,6 @@
 package YUZUMod.panel;
 
 import YUZUMod.YuzuMod;
-import YUZUMod.effect.YUZUGainCriticalEffect;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.power.YUZUCriticalHitPower;
 import com.badlogic.gdx.Gdx;
@@ -17,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
 import static com.megacrit.cardcrawl.helpers.FontHelper.prepFont;
 
@@ -117,7 +117,7 @@ public class YUZUCriticalRatePanel extends AbstractPanel {
             max=this.modifiedMax;
         }
         while(amount>=max){
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new YUZUGainCriticalEffect(this.current_x,this.current_y,AbstractDungeon.player.drawX,AbstractDungeon.player.drawY)));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new InflameEffect(AbstractDungeon.player)));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new YUZUCriticalHitPower(AbstractDungeon.player,1)));
             this.amount-=max;
         }
