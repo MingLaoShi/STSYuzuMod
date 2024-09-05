@@ -18,8 +18,8 @@ public class YUZUAimingPreparationMasterPower extends AbstractPower {
     private static final PowerStrings powerStrings= CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME=powerStrings.NAME;
     private static final String[] DESCRIPTIONS=powerStrings.DESCRIPTIONS;
-    private static final String IMG_84=ModHelper.makeImgPath("power","default84");
-    private static final String IMG_32=ModHelper.makeImgPath("power","default32");
+    private static final String IMG_84=ModHelper.makeImgPath("power","AimingPreparationMasterPower84");
+    private static final String IMG_32=ModHelper.makeImgPath("power","AimingPreparationMasterPower32");
 
     public YUZUAimingPreparationMasterPower(AbstractCreature owner,int amount){
         this.name=NAME;

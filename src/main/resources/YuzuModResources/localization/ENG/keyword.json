@@ -1,0 +1,30 @@
+[
+    {
+		"PROPER_NAME": "Master",
+		"NAMES": [
+		  "Master",
+		  "master",
+		  "mastered",
+		  "Mastered"
+		],
+		"DESCRIPTION": "After using a card, all cards with the same name are #yMastered."
+	  },
+	  {
+		"PROPER_NAME": "CritSlot",
+		"NAMES": [
+		  "Crit Slot",
+		  "CritSlot",
+		  "crit slot",
+		  "critslot"
+		],
+		"DESCRIPTION": "Whenever you play a card, fill #b1 #yCrit #ySlot. When the #yCrit #ySlot is filled to the full, gain #b1 #rCrit."
+	  },
+	  {
+		"PROPER_NAME": "Crit",
+		"NAMES": [
+		  "Crit",
+		  "crit"
+		],
+		"DESCRIPTION": "Damage of next #yAttack increase."
+	  }
+]

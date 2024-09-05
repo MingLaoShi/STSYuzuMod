@@ -1,0 +1,152 @@
+{
+	"YUZU:CriticalHitRate":{
+		"NAME":"Critical Hit Rate",
+		"DESCRIPTIONS":[
+			"Crit Rate %d."
+		]
+	},
+	"YUZU:CriticalHit":{
+		"NAME":"Crit",
+		"DESCRIPTIONS":[
+			"Your next #b%d #yAttack deals #b%d%% damage."
+		]
+	},
+	"YUZU:JobResponsibilitiesPower":{
+		"NAME":"Job Responsibilities",
+		"DESCRIPTIONS":[
+			"Whenever you play a #yMastered Strike and Defend, play #b%d more times."
+		]
+	},
+	"BATwinsMod:BurnPower": {
+		"NAME": "灼伤",
+		"DESCRIPTIONS": [
+			"回合结束时，造成","点伤害，然后层数减1。死亡时对其他敌人造成等同于层数2倍的伤害。"
+		]
+	},
+	"YUZU:AimingPreparationMasterPower": {
+		"NAME": "Aiming Preparation: Master",
+		"DESCRIPTIONS": ["Whenever you play a #yMastered card, fill #b%d #yCrit #ySlot."]
+	},
+	"YUZU:PreparationPower": {
+		"NAME": "Aiming Preparation",
+		"DESCRIPTIONS": ["Whenever you play a card, fill #b%d #yCrit #ySlot."]
+	},
+	"YUZU:AnalysisPower": {
+		"NAME": "Analysis",
+		"DESCRIPTIONS": ["Whenever you play a card, #yMaster all cards of the same type. Whenever you play a #yMastered card, #rExhaust it."]
+	},
+	"YUZU:BlockOnDamage": {
+		"NAME": "Block On Damage",
+		"DESCRIPTIONS": ["When you lose HP, gain #b%d Block."]
+	},
+	"YUZU:BlurOnDamage": {
+		"NAME": "Block On Damage",
+		"DESCRIPTIONS": ["When you lose HP, gain #b%d Blur."]
+	},
+	"YUZU:CurlUpPower": {
+		"NAME": "Curl",
+		"DESCRIPTIONS": ["At the start of your turn, add #b%d #yIronBox into your hand."]
+	},
+	"YUZU:FlameModulePower": {
+		"NAME": "火焰模块",
+		"DESCRIPTIONS": ["回合开始时，给予所有敌人%d层燃烧。"]
+	},
+	"YUZU:ImagePower": {
+		"NAME": "Straw Doll",
+		"DESCRIPTIONS": ["When Temp_HP is broken, escape from non-Boss combats."]
+	},
+	"YUZU:PaintingsPower": {
+		"NAME": "Sky Painting",
+		"DESCRIPTIONS": ["At the start of your turn, after drawing, gain [E] equals to #b%d times the number of card types in your hand."]
+	},
+	"YUZU:PreheatPower": {
+		"NAME": "Preheat",
+		"DESCRIPTIONS": ["Increase #b%d%% #rCrit damage, removed after losing HP."]
+	},
+	"YUZU:ProperPlanningPower": {
+		"NAME": "Plan",
+		"DESCRIPTIONS": ["At the end of your turn, choose #b%d cards to get #yRetain."]
+	},
+	"YUZU:VulturesEye": {
+		"NAME": "Vultures Eye",
+		"DESCRIPTIONS": ["The #yCrit #ySlot requirement is changed to #b%d."]
+	},
+	"YUZU:BurningPower": {
+		"NAME": "燃烧",
+		"DESCRIPTIONS": [
+			"在回合开始时受到%d点伤害，并降低1层。每有10层燃烧，伤害翻倍。"
+		]
+	},
+	"YUZU:ExtraCriticalRatePower": {
+		"NAME": "Extra Crit",
+		"DESCRIPTIONS": [
+			"#Increase #b%d%% #rCrit damage."
+		]
+	},
+	"YUZU:ImpactWarheadPower": {
+		"NAME": "Impact Warhead",
+		"DESCRIPTIONS": [
+			"Whenever #rCrit, draw #b%d cards."
+		]
+	},
+	"YUZU:BlastPower": {
+		"NAME": "燃焰爆破",
+		"DESCRIPTIONS": [
+			"每打出一次暴击后使燃烧的基础数值提高%d。"
+		]
+	},
+	"YUZU:FortressPower": {
+		"NAME": "Fortress",
+		"DESCRIPTIONS": [
+			"You can't Crit at this combat."
+		]
+	},
+	"YUZU:ReduceDrawPower": {
+		"NAME": "Draw Reduce",
+		"DESCRIPTIONS": [
+			"Draw #b%d less cards next turn."
+		]
+	},
+	"YUZU:LoseEnergyNextTurnPower": {
+		"NAME": "Energy Reduce",
+		"DESCRIPTIONS": [
+			"Gain #b%d less energys next turn."
+		]
+	},
+	"YUZU:MagazineFillingPower": {
+		"NAME": "Magazine Fill",
+		"DESCRIPTIONS": [
+			"At the end of your turn, each #yRetained card fills #b%d #yCrit #ySlot."
+		]
+	},
+	"YUZU:GamingFieldPower": {
+		"NAME": "Gaming Field",
+		"DESCRIPTIONS": [
+			"Whenever you play a not #yMasterd card, gain #b%d Block."
+		]
+	},
+	"YUZU:FinallyHope": {
+		"NAME": "Final Hope",
+		"DESCRIPTIONS": [
+			"At the end of this turn, start a new turn. At the start of that turn, gain less #b%d energy, draw less #b%d."
+		]
+	},
+	"YUZU:GlowBlessingPower": {
+		"NAME": "Glow Blessing",
+		"DESCRIPTIONS": [
+			"You will not lose HP and negates any debuff, last for #b%d turns."
+		]
+	},
+	"YUZU:VigorMonster": {
+		"NAME": "Monster Vigor",
+		"DESCRIPTIONS": [
+			"Next Attack deals #b%d additional damage."
+		]
+	},
+	"YUZU:ShanhaiPower": {
+		"NAME": "PaiShanDaoHai",
+		"DESCRIPTIONS": [
+			"Strength affects extra times equals to the cost of #yAttack."
+		]
+	}
+}

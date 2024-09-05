@@ -1,0 +1,517 @@
+{
+	"YUZU:Accumulation": {
+		"NAME": "Accumulation",
+		"DESCRIPTION": "Deal damage equal to the number of cards in your deck.",
+		"UPGRADE_DESCRIPTION":"Retain. NL Deal damage equal to the number of cards in your deck.",
+		"FLAVOR": "Can I smash the card deck to someone else?",
+		"EXTENDED_DESCRIPTION": [
+			"( !D! )"
+		]
+	},
+	"YUZU:AimingPreparation": {
+		"NAME": "Aiming Preparation",
+		"DESCRIPTION": "Whenever you play a card, fill !M! yuzu:CritSlot. NL yuzu:Master: Whenever you play a yuzu:Mastered card, fill 1 yuzu:CritSlot.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, fill !M! yuzu:CritSlot. NL yuzu:Master: Whenever you play a yuzu:Mastered card, fill 1 yuzu:CritSlot.",
+		"FLAVOR": "If we can move out 30 meters, this should be a qualified combat location."
+	},
+	"YUZU:Analysis": {
+		"NAME": "Analysis",
+		"DESCRIPTION": "At this combat, whenever you play a card, yuzu:Master all cards of the same type. Whenever you play a yuzu:Mastered card, Exhaust it. "
+	},
+	"YUZU:AonengShooting": {
+		"NAME": "Aoneng Shooting",
+		"DESCRIPTION": "Deal !D! damage. Gain !M! Strength or Dexterity. NL yuzu:Crit: Gain 1 Strength or Dexterity.",
+		"FLAVOR": "The bullet hits the monster and gives back a strange feeling, can this simple shooting really make me stronger?"
+	},
+	"YUZU:BeMercifulToOthers": {
+		"NAME": "Show Mercy",
+		"DESCRIPTION": "Deal !D! damage. NL Cannot kill monster.",
+		"FLAVOR": "Sorry, you have to wait."
+	},
+	"YUZU:BriefSilence": {
+		"NAME": "Brief Silence",
+		"DESCRIPTION": "If the enemy intends to not attack, Stun the target and clear yuzu:CritSlot. NL yuzu:Master: Clear yuzu:Crit. NL Exhaust."
+	},
+	"YUZU:Cabinet": {
+		"NAME": "Cabinet",
+		"DESCRIPTION": "Gain !B! Block. NL Other cards in your hand are changed to not yuzu:Mastered.",
+		"FLAVOR": "Never come out."
+	},
+	"YUZU:Camouflage": {
+		"NAME": "Camouflage",
+		"DESCRIPTION": "Gain !B! Block. NL yuzu:Master: At this combat, autoplay it when you draw this card.",
+		"FLAVOR": "In fact, as long as you open it and take a glance, this clumsy disguise will be exposed."
+	},
+	"YUZU:Claustrophobia": {
+		"NAME": "Claustrophobia",
+		"DESCRIPTION": "Deal !D! damage. NL If you have no Block, deal again. NL If the target has no Block, deal again.",
+		"FLAVOR": "Please let me in! P-Please!"
+	},
+	"YUZU:ClumsyRolling": {
+		"NAME": "Clumsy Rolling",
+		"DESCRIPTION": "Draw !M! cards, Discard !M! card. NL yuzu:Master: Discard first.",
+		"FLAVOR": "Maybe fell on back while playing around."
+	},
+	"YUZU:ColdStorage": {
+		"NAME": "Cold Storage",
+		"DESCRIPTION": "Put !M! card from your draw pile into your hand. NL These cards are Retain and Unplayable."
+	},
+	"YUZU:ColdTouch": {
+		"NAME": "Cold Touch",
+		"DESCRIPTION": "Apply !M! Weak, Deal !D! damage. NL yuzu:Master: Swap the values of Weak and damage. NL yuzu:Crit: The target lose 1 Strength.",
+		"UPGRADE_DESCRIPTION": "Apply !M! Weak, Deal !D! damage. NL yuzu:Master: Swap the values of Weak and damage. NL yuzu:Crit: The target lose 2 Strength."
+	},
+	"YUZU:CollaborativeShooting": {
+		"NAME": "Collaborative Shooting",
+		"DESCRIPTION": "Deal !D! DAMAGE. NL Deal !M! additional damage for all yuzu:mastered cards.",
+		"FLAVOR": "Friends can always help you, including in a non conventional sense."
+	},
+	"YUZU:ConcentratedShooting": {
+		"NAME": "Concentrated Shooting",
+		"DESCRIPTION": "Retain. NL Deal !D! damage. NL yuzu:Crit/ yuzu:Master: Increase !M! % Crit damage.",
+		"FLAVOR": "Take it easy."
+	},
+	"YUZU:Condensation": {
+		"NAME": "Condensation",
+		"DESCRIPTION": "Choose 1 card in you hand. NL Its cost increase 1 and get \"Play it again\". NL yuzu:Master: It get \" yuzu:Master: play it again\"."
+	},
+	"YUZU:CoverShooting": {
+		"NAME": "Cover Shooting",
+		"DESCRIPTION": "Deal !D! damage, Gain !B! Block. NL yuzu:Master: Exhaust.",
+		"FLAVOR": "There are only two portable shelters, it won't take long."
+	},
+	"YUZU:CoverTheSmokeScreen": {
+		"NAME": "Smoke Screen Cover",
+		"DESCRIPTION": "Apply !M! Weak to ALL. NL Gain !B! Block.",
+		"FLAVOR": "The range of smoke bombs is too large, it is inevitable that user will also be affected."
+	},
+	"YUZU:CurlUp": {
+		"NAME": "Curl Up",
+		"DESCRIPTION": "At the start of your turn, add a *IronBox into your hand.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *IronBox into your hand.",
+		"FLAVOR": "Ah, well..."
+	},
+	"YUZU:Defend": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+	"YUZU:DesignShooting": {
+		"NAME": "Design Shooting",
+		"DESCRIPTION": "Deal !D! damage to the first enemy directly ahead.",
+		"FLAVOR": "白马？定叫他有来无回！"
+	},
+	"YUZU:EnergyCycle": {
+		"NAME": "Energy Cycle",
+		"DESCRIPTION": "Deal !D! damage, gain [E] . NL yuzu:Crit/ yuzu:Master: Gain [E] .",
+		"FLAVOR": "This type of attack almost fires energy blocks directly...The perception of the combination of bullets and batteries is still too far away."
+	},
+	"YUZU:Estimate": {
+		"NAME": "Estimate",
+		"DESCRIPTION": "View top 5 cards of your draw pile, choose !M! types to add to your hand.",
+		"FLAVOR": "Calm down, everything is under control."
+	},
+	"YUZU:ExtremeMeasures": {
+		"NAME": "Extreme Measures",
+		"DESCRIPTION": "Draw !M! cards, Exhaust overflow drawing cards. NL yuzu:Master: yuzu:Master overflow drawing cards instead of Exhaust. NL Exhaust.",
+		"FLAVOR": "Everyone must know the principle of repaying the price."
+	},
+	"YUZU:FlameModule": {
+		"NAME": "火焰模块",
+		"DESCRIPTION": "在回合开始时，给予所有敌人 !M! 层 yuzu:燃烧 。",
+		"FLAVOR": "与火焰喷射器配布的头套，不知道为什么很安全，可以给个十分。"
+	},
+	"YUZU:ForkedIntersection": {
+		"NAME": "Forked Intersection",
+		"DESCRIPTION": "Choose !M! times: Gain 1 Strength; Gain 1 Dexterity; Gain 7 Block; Draw 1 card.",
+		"FLAVOR": "This way? Or this way?"
+	},
+	"YUZU:ForkedIntersectionOption": {
+		"NAME": "ForkedIntersectionOption",
+		"DESCRIPTION": "",
+		"EXTENDED_DESCRIPTION": [
+			"Gain 1 Strength.",
+			"Gain 1 Dexterity.",
+			"Gain !B! Block.",
+			"Draw 1 card."
+		]
+	},
+	"YUZU:FragmentedBomb": {
+		"NAME": "Fragmented Bomb",
+		"DESCRIPTION": "将 !D! 点伤害随机分配给所有敌人。 NL yuzu:暴击 ：再打出一次。"
+	},
+	"YUZU:GameStart": {
+		"NAME": "Game Start!",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. This card gain additional 1.5 times Crit damage. NL yuzu:Master: This card will definitely yuzu:Crit.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. This card gain additional 1.75 times Crit damage. NL yuzu:Master: This card will definitely yuzu:Crit.",
+		"FLAVOR": "The most commonly startup move, and the signature move of uzqueen."
+	},
+	"YUZU:Gifts": {
+		"NAME": "Heatr Gifts",
+		"DESCRIPTION": "Randomly add 3 cards with Retain into your hand.",
+		"FLAVOR": "Wait 6 round..."
+	},
+	"YUZU:GiveBestShot": {
+		"NAME": "尽力一击",
+		"DESCRIPTION": "造成 !D! 点伤害， 消耗 手牌中的其他牌。 NL yuzu:精通 ：改为 消耗 手牌中的其他攻击牌。"
+	},
+	"YUZU:GlowBlessing": {
+		"NAME": "Glow Blessing",
+		"DESCRIPTION": "You will not lose HP and negates any debuff, until the start of the next round. NL Exhaust.",
+		"FLAVOR": "\"The power of the Brave.\""
+	},
+	"YUZU:Grenade": {
+		"NAME": "小型榴弹",
+		"DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 yuzu:燃烧 。"
+	},
+	"YUZU:HighPrecisionOperation": {
+		"NAME": "High precision operation",
+		"DESCRIPTION": "Exhaust !M! cards in your hand. NL yuzu:Master: If you Exhaust Skill, play their copies.",
+		"FLAVOR": "Keep your eye, this is a technique that your cannot learn in Kivotos."
+	},
+	"YUZU:HighSpeedCycle": {
+		"NAME": "HighSpeed Cycle",
+		"DESCRIPTION": "Randomly add !M! cards from your discard pile, return them to not yuzu:Mastered. NL yuzu:Master: Choose cards yourselt, not randomly.",
+		"FLAVOR": "Hurry up!"
+	},
+	"YUZU:Image": {
+		"NAME": "Straw Doll",
+		"DESCRIPTION": "Retain. NL Gain !m! Temp_HP. When the Temp_HP is broken, escape from non Boss combat.",
+		"FLAVOR": "It seems that living people are always the ultimate targets of monsters' attacks."
+	},
+	"YUZU:Inversion": {
+		"NAME": "Inversion",
+		"DESCRIPTION": "Draw !M! cards. NL Other cards in your hand get \"yuzu:Master: Exhaust.\"",
+		"FLAVOR": "Should we tear up paintings first, or clear the program first?"
+	},
+	"YUZU:IronBox": {
+		"NAME": "Iron Box",
+		"DESCRIPTION": "Retain. NL Gain !B! Block. Clear yuzu:CritSlot. NL Exhaust."
+	},
+	"YUZU:JobResponsibilities": {
+		"NAME": "Job Responsibilities",
+		"DESCRIPTION": "All *Strike and *Defend get \"yuzu:Master: Play again.\"",
+		"UPGRADE_DESCRIPTION": "Innate. NL All *Strike and *Defend get \"yuzu:Master: Play again.\"",
+		"FLAVOR": "Today's bug hasn't been fixed yet."
+	},
+	"YUZU:Loopback": {
+		"NAME": "Loopback",
+		"DESCRIPTION": "Deal !D! damage !M! times. NL yuzu:Master: Add 1 same name card from your draw pile.",
+		"FLAVOR": "*Onomatopoeic words.*"
+	},
+	"YUZU:MaliciousDesign": {
+		"NAME": "Malicious Design",
+		"DESCRIPTION": "Deal !D! damage, Transform Strength to equal Vigor. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "",
+		"FLAVOR": "\"Momoi, isn't this a bit too bad...?\""
+	},
+	"YUZU:MemoryRetention": {
+		"NAME": "记忆留存",
+		"DESCRIPTION": "将消耗堆的牌返回抽牌堆。 NL 消耗 。 NL yuzu:精通 ：改为交换你的手牌和消耗牌堆。（有bug别用，问就是麻烦懒得改，之后再弄）"
+	},
+	"YUZU:MicroBlasting": {
+		"NAME": "Micro Blasting",
+		"DESCRIPTION": "Deal !D! damage. Apply Vulnerable equals to unblocked damage dealt. NL yuzu:Master: Then apply Weak equals to unblocked damage dealt.",
+		"FLAVOR": "Even if this word is used to describe blasting, this behavior can still harm people."
+	},
+	"YUZU:Naturalization": {
+		"NAME": "Naturalization",
+		"DESCRIPTION": "Randomly add !M! yuzu:Mastered cards into your draw pile. Their costs are 0, and get Exhaust. NL yuzu:Master: Draw 1 card when you play one of them. NL Exhaust.",
+		"FLAVOR": "I have played too many games."
+	},
+	"YUZU:NovicePickUp": {
+		"NAME": "Memory Master",
+		"DESCRIPTION": "Add !M! cards of 0 cost into your hand. NL yuzu:Master: Change to add random cards, which cost 0 in this turn.",
+		"FLAVOR": "\"Yuzu is probably just good at playing games, I haven't heard of her talent for using weapons.\" - Momoi."
+	},
+	"YUZU:OpenTheDoor": {
+		"NAME": "Open The Door",
+		"DESCRIPTION": "Innate. Deal !D! damage, Upgrade all cards in your hand.",
+		"FLAVOR": "HA!"
+	},
+	"YUZU:Paintings": {
+		"NAME": "Sky Painting",
+		"DESCRIPTION": "At the start of your turn, after drawing, gain [E] equals to #b%d times the number of card types in your hand. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "At the start of your turn, after drawing, gain [E] equals to #b%d times the number of card types in your hand.",
+		"FLAVOR": "Midori seems to have used only one stroke to draw... But isn't rainbow has seven colors?"
+	},
+	"YUZU:Polarization": {
+		"NAME": "Polarization",
+		"DESCRIPTION": "Choose 1 card to add a copy into your hand. The card is returned to not yuzu:Mastered. NL yuzu:Master: No longer return it to not yuzu:Mastered state. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Choose 1 card to add a copy into your hand. The card is returned to not yuzu:Mastered. NL yuzu:Master: No longer return it to not yuzu:Mastered state. NL Exhaust.",
+		"FLAVOR": "It seems to be able to summon demons, angels, dragons, and the like."
+	},
+	"YUZU:PotentialExplosion": {
+		"NAME": "潜能爆发",
+		"DESCRIPTION": " yuzu:暴击 也会应用到技能牌上，表现为多打出1次。yuzu:精通："
+	},
+	"YUZU:Preheat": {
+		"NAME": "Preheat",
+		"DESCRIPTION": "Fill yuzu:CritSlot to the full immediately. The yuzu:Crit damage increase !M! %. NL yuzu:Master: Reduce 2 upper limit of yuzu:CritSlot.",
+		"FLAVOR": "Preheating does not refer to heat previously, so the sight will not heat up."
+	},
+	"YUZU:PressureArmor": {
+		"NAME": "Pressure Armor",
+		"DESCRIPTION": "When you lose HP next time，gain !B! Block and !M! Blur immediately.",
+		"FLAVOR": "If there were no attack restrictions, this shield could be deployed anytime and anywhere."
+	},
+	"YUZU:ProperPlanning": {
+		"NAME": "Proper Planning",
+		"DESCRIPTION": "At the end of your turn, choose !M! cards to get Retain.",
+		"FLAVOR": "Next time should go to campfire to rest... it's better."
+	},
+	"YUZU:Refraction": {
+		"NAME": "Refraction",
+		"DESCRIPTION": "Choose 1 card to add X copies with Retain into your hand. yuzu:Master: X is 2.",
+		"UPGRADE_DESCRIPTION": "Choose 1 card to add X+1 copies with Retain into your hand. yuzu:Master: X is 2."
+	},
+	"YUZU:ScorchingExplosive": {
+		"NAME": "灼燃爆弹",
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，给予所有敌人 !M! 层 yuzu:燃烧 。 NL yuzu:精通 ：在本场战斗中，同名牌造成的伤害和给予的 yuzu:燃烧 增加 !B! 。这张牌可以无限次的被 yuzu:精通 。",
+		"FLAVOR": "烟尘似乎正是下颗榴弹爆炸的催化物。"
+	},
+	"YUZU:SelfRepair": {
+		"NAME": "Self Repair",
+		"DESCRIPTION": "At this combat, reduce X upper limit of yuzu:CritSlot. NL yuzu:Master: a random Power in your hand cost 0 before being played.",
+		"UPGRADE_DESCRIPTION": "At this combat, reduce X+1 upper limit of yuzu:CritSlot. NL yuzu:Master: a random Power in your hand cost 0 before being played.",
+		"FLAVOR": "Leave the ribbon there, it's too torn - luckily the outside of this garment is quite thick."
+	},
+	"YUZU:Shadow": {
+		"NAME": "幽寂之影",
+		"DESCRIPTION": "给予所有单位 !M! 层 易伤 ， 虚弱 。 NL yuzu:精通 ：改为清除自身的所有状态。"
+	},
+	"YUZU:ShootingPreparation": {
+		"NAME": "Shooting Preparation",
+		"DESCRIPTION": "Draw !M! Attack cards. The card cost highest cost 0 before being played. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Draw 1 Attack card. Gain 2 yuzu:Crit.",
+		"FLAVOR": "Bullets that automatically load are pleasing."
+	},
+	"YUZU:Silence": {
+		"NAME": "频段静默",
+		"DESCRIPTION": ""
+	},
+	"YUZU:Skilled": {
+		"NAME": "Skilled",
+		"DESCRIPTION": "Add all yuzu:mastered cards into your hand from your draw pile. NL yuzu:Master: Gain [E] .",
+		"UPGRADE_DESCRIPTION": "Add all yuzu:mastered cards into your hand from any pile. NL yuzu:Master: Gain [E] .",
+		"FLAVOR": "First time strangers, second time friends."
+	},
+	"YUZU:Solidifying": {
+		"NAME": "Solidifying",
+		"DESCRIPTION": "Retain. NL Gain !B! Block. The left and right cards of this card are also Retain.",
+		"FLAVOR": "\"Yuzu, it's time to do laundry, change it.\"\"Th-There is no need...\""
+	},
+	"YUZU:SpreadShooting": {
+		"NAME": "Spread Shooting",
+		"DESCRIPTION": "Deal !D! damage, apply !M! Vulnerable. If you have no Strength, gain 1 Strength and Exhaust this card.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage, apply !M! Vulnerable. If you have no Strength, gain 2 Strength and Exhaust this card.",
+		"FLAVOR": "You saw the bright flames attached to the blade, and the red haired girl seemed to nod."
+	},
+	"YUZU:StandShield": {
+		"NAME": "Stand Shield",
+		"DESCRIPTION": "Retain. NL Gain !B! Block. NL yuzu:Master: The Block of this card is reduced by 25%.",
+		"FLAVOR": "\"Activate when needed\"-Aris."
+	},
+	"YUZU:StrategyAnalysis": {
+		"NAME": "Strategy Analysis",
+		"DESCRIPTION": "Remove all Block from the enemy. Remove all of your debuffs. NL Exhaust. NL yuzu:Master: Then use all your [E] to remove the Strength from the enemy.",
+		"FLAVOR": "\"Strategy? But I don't even know what it is! \"\"Calm down, observe first...\""
+	},
+	"YUZU:Strike": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"YUZU:TemporarySupply": {
+		"NAME": "Temporary Supply",
+		"DESCRIPTION": "Gain !M! Temp_HP. NL yuzu:Master: changed to Heal HP.",
+		"FLAVOR": "Chocolate, bread, and water...When did you buy them?"
+	},
+	"YUZU:VulturesEye": {
+		"NAME": "Vultures Eye",
+		"DESCRIPTION": "This turn, the requirement of yuzu:CritSlot is reduced to 3. NL yuzu:Master: changed to gain !M! Crit.",
+		"UPGRADE_DESCRIPTION": "This turn, the requirement of yuzu:CritSlot is reduced to 2. NL yuzu:Master: changed to gain !M! Crit.",
+		"FLAVOR": "The eagle eye has eight times the visual acuity of humans. Its eyes have a special structure and a unique visual system that can magnify objects several times, similar to the principle of a telescope."
+	},
+	"YUZU:Spark": {
+		"NAME": "流星火花",
+		"DESCRIPTION": "给予 !M! 层 yuzu:燃烧 X次。",
+		"FLAVOR": "一闪而过的火花绽放成雨，或是凝结成束，散发光彩。"
+	},
+	"YUZU:Medicine":{
+		"NAME":"Dangerous Medicine",
+		"DESCRIPTION":"Deal !D! damage, apply !B! Block. NL yuzu:Master: Swap the value of damage and Block. This card can be yuzu:mastered any number of times.",
+		"FLAVOR": "It's also strictly forbidden in the spire. Is it really necessary to use it to myself?"
+	},
+	"YUZU:EmergencyEnergy":{
+		"NAME":"Emergency Energy",
+		"DESCRIPTION":"Gain [E]. NL Whenever you play a yuzu:mastered card, play this card in your draw pile.",
+		"UPGRADE_DESCRIPTION":"Gain [E]. NL Whenever you play a yuzu:mastered card or a card triggered a yuzu:Crit, play this card in your draw pile.",
+		"FLAVOR": "I'm not sure what effect this broken battery will have, be careful."
+	},
+	"YUZU:DoubleJump":{
+		"NAME":"Double Jump",
+		"DESCRIPTION":"Draw 2 cards. If the effect of the last card played includes drawing cards, draw cards until the hand is full.",
+		"UPGRADE_DESCRIPTION":"Retain. NL Draw 2 cards. If the effect of the last card played includes drawing cards, draw cards until the hand is full.",
+		"FLAVOR": "Last second jump was supported by Momoi, Midori and Aris."
+	},
+	"YUZU:EnergyConversion":{
+		"NAME":"Energy Conversion",
+		"DESCRIPTION":"Swap yuzu:Crit times and [E] now. NL Exhaust.",
+		"UPGRADE_DESCRIPTION":"Swap yuzu:Crit times and [E] now.",
+		"FLAVOR": "Energy is the most complex thing in the world."
+	},
+	"YUZU:EnergyRelease":{
+		"NAME":"能量释放",
+		"DESCRIPTION":"造成 !D! 点伤害"
+	},
+	"YUZU:SlowBurn":{
+		"NAME":"野火燎原",
+		"DESCRIPTION":"给予所有敌人1层 yuzu:燃烧 ，并将所有敌人的 yuzu:燃烧 层数翻 !M! 倍，在手牌中添加1张 *灼伤 。 NL 消耗 。",
+		"FLAVOR": "会烧到自己，不过敌人已经快被烧化了，你觉得受这点烫伤也挺值。"
+	},
+	"YUZU:AlternativeOptions":{
+		"NAME":"Alternative Options",
+		"DESCRIPTION":"The cost of all cards with Retain in your hand is reduced by 1. NL yuzu:Master: Exhaust this card, changed to reduce cost by 1 for all cards in your hand.",
+		"FLAVOR": "plan b。"
+	},
+	"YUZU:ImpactWarhead": {
+		"NAME": "Impact Warhead",
+		"DESCRIPTION": "Whenever yuzu:Crit, draw !M! cards.",
+		"FLAVOR": "This type of warhead will shoot the monster far away, you have enough time to load it slowly."
+	},
+	"YUZU:FireWarning": {
+		"NAME": "Fire Warning",
+		"DESCRIPTION": "Fill yuzu:CritSlot until you get 1 yuzu:Cirt. NL yuzu:Master: changed to fill !M! yuzu:CritSlot.",
+		"UPGRADE_DESCRIPTION": "Fill yuzu:CritSlot until you get 2 yuzu:Cirt. NL yuzu:Master: changed to fill !M! yuzu:CritSlot.",
+		"FLAVOR": "Just a crude adjective, seeing you load shells, others have already run away."
+	},
+	"YUZU:Barter": {
+		"NAME": "Barter",
+		"DESCRIPTION": "Discard one potion and randomly obtain a rarer one. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Discard one potion and randomly obtain a rare potion. NL Exhaust.",
+		"FLAVOR": "The only thing that can be put on the balance with death, is onlt death -- It's a bit off topic."
+	},
+	"YUZU:AdvanceShooting": {
+		"NAME": "Advance Shooting",
+		"DESCRIPTION": "Deal !D! damage, draw !M! cards, lose [E] . NL If the energy is 0 when playing this card, Exhaust it.",
+		"FLAVOR": "It's generally believed that this design is foolish: high cost, and disposable. Is it really necessary to use it?"
+	},
+	"YUZU:LinearSegmentation": {
+		"NAME": "Linear Segmentation",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. If there are two or more enemies with the same name, the damage dealt increases !M! .",
+		"FLAVOR": "The current segmentation technology is not perfect, but it can still be used for experimentation."
+	},
+	"YUZU:Blast": {
+		"NAME": "燃焰爆破",
+		"DESCRIPTION": "每打出一次暴击就使 yuzu:燃烧 的基础数值提高 !M! 。",
+		"FLAVOR": "我觉得这像魔术。"
+	},
+	"YUZU:Fortress": {
+		"NAME": "Doomsday Fortress",
+		"DESCRIPTION": "Gain [E] [E] [E] and !B! Block. NL You cannot yuzu:Crit in the rest of this combat. NL Master: Lose 1 Strength and Dexterity. NL Exhaust.",
+		"FLAVOR": "All! Gather together!"
+	},
+	"YUZU:Climax": {
+		"NAME": "Climax",
+		"DESCRIPTION": "Choose one: Draw cards or Gain [E], equals to the count you draw this card. NL yuzu:Master: Reset the count to 0.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Choose one: Draw cards or Gain [E], equals to the count you draw this card. NL yuzu:Master: Reset the count to 0.",
+		"FLAVOR": "It's time to get hyped, but we're still in the warm-up phase."
+	},
+	"YUZU:ClimaxOption": {
+		"NAME": "ClimaxOption",
+		"DESCRIPTION": "",
+		"EXTENDED_DESCRIPTION": [
+			"Draw !M! cards.",
+			"Gain !M! [E] ."
+		]
+	},
+	"YUZU:Span": {
+		"NAME": "Span",
+		"DESCRIPTION": "Clear yuzu:CritSlot, each yuzu:CritSlot makes you gain [E]/ Draw 1 card alternately. NL Exhaust.",
+		"FLAVOR": "\"Can this thing be used as a bridge?\""
+	},
+	"YUZU:KillingInstructions": {
+		"NAME": "Killing Instructions",
+		"DESCRIPTION": "Deal !D! damage. NL Gain Vigor equals to 50% of the unblocked damage dealt.",
+		"FLAVOR": "\"Aris, are you sure?\"\"Just trust in the precision of high-mechanical-accuracy cameras.\""
+	},
+	"YUZU:FinallyIHope": {
+		"NAME": "Final Hope",
+		"DESCRIPTION": "Gain an additional turn. At the start of this turn, lose [E] [E] and draw less 3 cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain an additional turn. At the start of this turn, lose [E] and draw less 2 cards. NL Exhaust.",
+		"FLAVOR": "There is still a chance..."
+	},
+	"YUZU:MagazineFilling": {
+		"NAME": "Magazine Filling",
+		"DESCRIPTION": "The yuzu:Crit dagame increase 25%. NL At the end of your turn, each Retain card will fill !M! yuzu:CritSlot.",
+		"UPGRADE_DESCRIPTION": "The yuzu:Crit dagame increase 50%. NL At the end of your turn, each Retain card will fill !M! yuzu:CritSlot.",
+		"FLAVOR": "Shell loading is not fun at all, as it means they are about to take action..."
+	},
+	"YUZU:GamingField": {
+		"NAME": "Gaming Field",
+		"DESCRIPTION": "Whenever you play a not #yMasterd card, gain !M! Block.",
+		"FLAVOR": "*Warning: Contains insulting words*"
+	},
+	"YUZU:AmmunitionFilling": {
+		"NAME": "Ammunition Filling",
+		"DESCRIPTION": "Fill 3 yuzu:CritSlot. NL Draw !M! cards.",
+		"FLAVOR": "Maybe I should take a nap."
+	},
+	"YUZU:FoldUpClothes": {
+		"NAME": "Clothes Shields",
+		"DESCRIPTION": "Gain !B! Block. Draw !M! card cost 1. NL yuzu:Master: Play 1 *Defend in your hand.",
+		"FLAVOR": "Good thing I wore the hard armor. Sometimes, just folding it a bit is enough to block."
+	},
+	"YUZU:Leveraging": {
+		"NAME": "Leveraging",
+		"DESCRIPTION": "Gain !M! Strength. NL Gain Vigor equals to your Strength. NL At the end of this turn, lose !M! Strength.",
+		"FLAVOR": "\"Did you learn this from a fighting game?\"--Midori"
+	},
+	"YUZU:ManaPotion": {
+		"NAME": "Mana Potion",
+		"DESCRIPTION": "Gain [E] for each card that cost 2 or higher in your hand.",
+		"FLAVOR": "As everyone knows, you can't use abilities without mana."
+	},
+	"YUZU:KillAbsolutely": {
+		"NAME": "Kill Absolutely",
+		"DESCRIPTION": "Deal !D! damage. NL If Fatal, eliminate a random enemy.",
+		"FLAVOR": "No sympathy should be shown to the enemy's living forces."
+	},
+	"YUZU:Shanhai": {
+		"NAME": "Pai Shan Dao Hai",
+		"DESCRIPTION": "Gain !M! Strength. NL Strength affects extra times equals to the cost of Attack."
+	},
+	"YUZU:EmergencyProtection": {
+		"NAME": "Emergency Protection",
+		"DESCRIPTION": "Exhaust all Retain cards in your hand. NL Discard your hand. NL Gain !B! Block."
+	},
+	"YUZU:TestCode": {
+		"NAME": "Test Code",
+		"DESCRIPTION": "Put !M! card from your draw pile into your hand. NL This card back to draw pile.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Put !M! card from your draw pile into your hand. NL This card back to draw pile."
+	},
+	"YUZU:SimplifiedCombo": {
+		"NAME": "Simplified Combo",
+		"DESCRIPTION": "Choose up to !M! cards. Then choose one: Convert into *Strike+X; Convert into *Defend+X. NL These converted cards cost 0. NL Exhaust."
+	},
+	"YUZU:ConcealingToPeople": {
+		"NAME": "Concealing To People",
+		"DESCRIPTION": "Deal !D! damage. NL Only the intent of the target will take effect in next monster turn. NL Exhaust."
+	},
+	"YUZU:SimplifiedLoading": {
+		"NAME": "Simplified Loading",
+		"DESCRIPTION": "Increase 2 upper limit of yuzu:CritSlot. NL Increase !M! % Crit damage."
+	},
+	"YUZU:ChainReaction": {
+		"NAME": "Chain Reaction",
+		"DESCRIPTION": "Draw !M! cards. NL When this card is yuzu:Mastered, draw 2 cards."
+	},
+	"YUZU:ExperienceStripping": {
+		"NAME": "Experience Stripping",
+		"DESCRIPTION": "Choose !M! yuzu:Mastered cards, turn them to not yuzu:Mastered. NL Add !M! *Experience to your hand.",
+		"UPGRADE_DESCRIPTION": "Choose !M! yuzu:Mastered cards, turn them to not yuzu:Mastered. NL Add !M! *Experience+ to your hand."
+	},
+	"YUZU:Experience": {
+		"NAME": "Experience",
+		"DESCRIPTION": "Retain. NL yuzu:Master !M! cards. NL Exhaust."
+	}
+}

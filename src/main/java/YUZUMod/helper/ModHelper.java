@@ -118,4 +118,8 @@ public class ModHelper {
         }
         AbstractDungeon.player.hand.refreshHandLayout();
     }
+
+    public static boolean isPlayerHasSacredBark(){
+        return player!=null&& player.hasRelic("SacredBark");
+    }
 }

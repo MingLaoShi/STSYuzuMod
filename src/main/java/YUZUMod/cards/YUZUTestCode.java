@@ -24,6 +24,7 @@ public class YUZUTestCode extends YUZUCustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=1;
         this.shuffleBackIntoDrawPile=true;
+        this.isEthereal=true;
     }
 
     @Override

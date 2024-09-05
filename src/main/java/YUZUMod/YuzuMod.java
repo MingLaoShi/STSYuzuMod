@@ -11,6 +11,9 @@ import YUZUMod.helper.ModHelper;
 import YUZUMod.helper.YUZUConcealingToPeopleHelper;
 import YUZUMod.helper.YUZUPotionTarget;
 import YUZUMod.patch.YUZUBlockWordEffectPatch;
+import YUZUMod.potion.YUZUCriticalHitPotion;
+import YUZUMod.potion.YUZUParallelPotion;
+import YUZUMod.potion.YUZUYuedongPotion;
 import YUZUMod.power.YUZUCriticalHitPower;
 import YUZUMod.relic.*;
 import basemod.AutoAdd;
@@ -96,8 +99,8 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
         String lang = "ENG";
         if (language == Settings.GameLanguage.ZHS) {
             lang = "ZHS";
-//        } else if(language==GameLanguage.ENG){
-//            lang = "ENG";
+        } else if(language==Settings.GameLanguage.ENG){
+            lang = "ENG";
         } else if (language == Settings.GameLanguage.ZHT) {
             lang = "ZHS";
         }
@@ -131,10 +134,10 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
         String lang = "ENG";
         if (language == Settings.GameLanguage.ZHS) {
             lang = "ZHS";
-        }else if(language== Settings.GameLanguage.ZHT){
-            lang="ZHS";
-        }else if(language== Settings.GameLanguage.JPN){
-            lang="JPN";
+        } else if(language==Settings.GameLanguage.ENG){
+            lang = "ENG";
+        } else if (language == Settings.GameLanguage.ZHT) {
+            lang = "ZHS";
         }
         String json = Gdx.files.internal("YuzuModResources/localization/" + lang + "/keyword.json").readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
@@ -183,6 +186,11 @@ public class YuzuMod implements EditCharactersSubscriber , EditCardsSubscriber ,
         });
 
         concealingToPeopleHelper=new YUZUConcealingToPeopleHelper();
+
+        //添加药水
+        BaseMod.addPotion(YUZUCriticalHitPotion.class,YUZUCriticalHitPotion.liquidColor,YUZUCriticalHitPotion.hybridColor,YUZUCriticalHitPotion.spotsColor,YUZUCriticalHitPotion.ID);
+        BaseMod.addPotion(YUZUYuedongPotion.class,YUZUYuedongPotion.liquidColor,YUZUYuedongPotion.hybridColor,YUZUYuedongPotion.spotsColor,YUZUYuedongPotion.ID);
+        BaseMod.addPotion(YUZUParallelPotion.class,YUZUParallelPotion.liquidColor,YUZUParallelPotion.hybridColor,YUZUParallelPotion.spotsColor,YUZUParallelPotion.ID);
     }
 
     @Override

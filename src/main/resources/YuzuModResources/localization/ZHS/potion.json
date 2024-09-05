@@ -1,32 +1,27 @@
 {
-	"BATwinsMod:AcceleratePotion":{
-		"NAME":"加速药水",
-		"DESCRIPTIONS":[
-			"将 #b1 张 #y加速 加入手牌。",
-			"将 #b1 张 #y加速+ 加入手牌。",
-			"加速",
-			"加速+"
+	"YUZU:MasterPotion": {
+		"NAME": "精通药水",
+		"DESCRIPTIONS": [
+			"选择任意张手牌，转换它们的精通状态。"
 		]
 	},
-	"BATwinsMod:ConnectPotion":{
-		"NAME":"连携药水",
-		"DESCRIPTIONS":[
-			"选择手牌 #b1 张牌打出。",
-			"选择手牌 #b2 张牌打出。"
+	"YUZU:CriticalHitPotion": {
+		"NAME": "暴击药水",
+		"DESCRIPTIONS": [
+			"获得%d层暴击。"
 		]
 	},
-	"BATwinsMod:BurnPotion":{
-		"NAME":"灼伤药水",
-		"DESCRIPTIONS":[
-			"给予8层灼伤。",
-			"给予16层灼伤。",
-			"灼伤"
+	"YUZU:YuedongPotion": {
+		"NAME": "悦动药水",
+		"DESCRIPTIONS": [
+			"获得等同于敌人意图伤害的活力。",
+			"获得等同于敌人意图伤害2倍的活力。"
 		]
 	},
-	"BATwinsMod:StaminaPotion":{
-		"NAME":"体力药剂",
-		"DESCRIPTIONS":[
-			"在火堆处使用此药水，能够在进行一次行动。"
+	"YUZU:ParallelPotion": {
+		"NAME": "平行药水",
+		"DESCRIPTIONS": [
+			"获得%d个药水栏。"
 		]
 	}
 }

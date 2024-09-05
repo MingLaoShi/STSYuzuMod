@@ -271,8 +271,8 @@
 	},
 	"YUZU:SelfRepair": {
 		"NAME": "自我休整",
-		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0",
-		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0",
+		"DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0。",
+		"UPGRADE_DESCRIPTION": "在本场战斗中 yuzu:暴击槽 需要减少X+1层。 NL yuzu:精通 ：手牌中一张随机能力牌在打出前耗能变为0。",
 		"FLAVOR": "丝带就放那吧，破的太狠——幸亏这衣服外面还挺厚实。"
 	},
 	"YUZU:Shadow": {
@@ -380,8 +380,8 @@
 	},
 	"YUZU:FireWarning": {
 		"NAME": "开火预告",
-		"DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得1次暴击次数为止。精通：改为填充 !M! 格。",
-		"UPGRADE_DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得2次暴击次数为止。精通：改为填充 !M! 格。",
+		"DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得1次暴击次数为止。 yuzu:精通 ：改为填充 !M! 格。",
+		"UPGRADE_DESCRIPTION": "填充 yuzu:暴击槽 ，直到获得2次暴击次数为止。 yuzu:精通 ：改为填充 !M! 格。",
 		"FLAVOR": "只是个粗劣的形容词，看到你装填炮弹别人早在跑了。"
 	},
 	"YUZU:Barter": {
@@ -482,12 +482,12 @@
 	},
 	"YUZU:EmergencyProtection": {
 		"NAME": "紧急防护",
-		"DESCRIPTION": "丢弃所有手牌并 消耗 其中的 保留 牌，获得 !B! 点 格挡 。"
+		"DESCRIPTION": "获得 !B! 点 格挡 ，每当获得新的负面效果时，从非消耗堆返回手牌。"
 	},
 	"YUZU:TestCode": {
 		"NAME": "测试代码",
-		"DESCRIPTION": "选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。"
+		"DESCRIPTION": " 虚无 。 NL 选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。",
+		"UPGRADE_DESCRIPTION": " 固有 ， 虚无 。 NL 选择抽牌堆 !M! 张牌加入手牌，返回抽牌堆。"
 	},
 	"YUZU:SimplifiedCombo": {
 		"NAME": "简化连招",
