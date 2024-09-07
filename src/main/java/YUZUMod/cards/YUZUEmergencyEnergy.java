@@ -3,6 +3,7 @@ package YUZUMod.cards;
 import YUZUMod.action.YUZUPlayDrawPailCardAction;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 public class YUZUEmergencyEnergy extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("EmergencyEnergy");
@@ -36,6 +38,7 @@ public class YUZUEmergencyEnergy extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new VFXAction(new MiracleEffect()));
         addToBot(new GainEnergyAction(this.magicNumber));
     }
 

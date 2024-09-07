@@ -2,6 +2,7 @@ package YUZUMod.cards;
 
 import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
+import YUZUMod.helper.YUZUFirstMonsterTarget;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -20,7 +21,7 @@ public class YUZUDesignShooting extends YUZUCustomCard{
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.NONE;
+    private static final CardTarget TARGET= YUZUFirstMonsterTarget.FIRSTMONSTER;
     private static final CardRarity RARITY=CardRarity.BASIC;
 
 
@@ -36,19 +37,24 @@ public class YUZUDesignShooting extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractMonster target=null;
-        for(AbstractMonster monster: AbstractDungeon.getCurrRoom().monsters.monsters){
-            if(!monster.isDeadOrEscaped()){
-                if(target==null||(abstractPlayer.flipHorizontal^(Math.abs(monster.hb.x-abstractPlayer.hb.x)<=Math.abs(target.hb.x-abstractPlayer.hb.x)))){
-                    target=monster;
-                }
-            }
-        }
+        AbstractMonster target=YUZUDesignShooting.targetFirstMonster();
         if(target!=null){
             this.calculateCardDamage(target);
             addToBot(new DamageAction(target,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
         }
     }
 
+
+    public static AbstractMonster targetFirstMonster(){
+        AbstractMonster target=null;
+        for(AbstractMonster monster: AbstractDungeon.getCurrRoom().monsters.monsters){
+            if(!monster.isDeadOrEscaped()){
+                if(target==null||(AbstractDungeon.player.flipHorizontal^(Math.abs(monster.hb.x-AbstractDungeon.player.hb.x)<=Math.abs(target.hb.x-AbstractDungeon.player.hb.x)))){
+                    target=monster;
+                }
+            }
+        }
+        return target;
+    }
 
 }
