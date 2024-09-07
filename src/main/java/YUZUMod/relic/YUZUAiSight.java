@@ -31,6 +31,11 @@ public class YUZUAiSight extends CustomRelic {
     }
 
     @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player.hasRelic(YUZUSight.ID);
+    }
+
+    @Override
     public void atTurnStart() {
         addToBot(new YUZUApplyCriticalRateAction(6));
     }
