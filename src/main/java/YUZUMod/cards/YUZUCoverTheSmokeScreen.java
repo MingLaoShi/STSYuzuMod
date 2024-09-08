@@ -33,8 +33,8 @@ public class YUZUCoverTheSmokeScreen extends YUZUCustomCard{
 
     @Override
     protected void upgradeMethod() {
-        upgradeBlock(4);
-        upgradeMagicNumber(1);
+        upgradeBlock(6);
+//        upgradeMagicNumber(1);
     }
 
     @Override

@@ -39,7 +39,7 @@ public class YUZUCollaborativeParticleEffect extends AbstractGameEffect {
 
         this.scale = 1.0F * Settings.scale;
         //        this.rotation= MathUtils.random(-90.0F,90.0F);
-        this.rotation = -90;
+        this.rotation = 180;
         this.rotationRate = MathUtils.random(600.0F, 650.0F) * Settings.scale;
         this.speed= MathUtils.random(1000.0F,1200.0F)*Settings.scale;
 
@@ -78,8 +78,8 @@ public class YUZUCollaborativeParticleEffect extends AbstractGameEffect {
         this.speed=Math.min(this.speed,MAX_VELOCITY);
 
         if(this.target.dst(this.pos)<DST_THRESHOLD){
-            AbstractDungeon.effectsQueue.add(new DamageImpactLineEffect(this.target.x - DST_THRESHOLD, this.target.y));
-            AbstractDungeon.effectsQueue.add(new FlashAtkImgEffect(this.target.x, this.target.y, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
+            AbstractDungeon.topLevelEffectsQueue.add(new DamageImpactLineEffect(this.target.x - DST_THRESHOLD, this.target.y));
+            AbstractDungeon.topLevelEffectsQueue.add(new FlashAtkImgEffect(this.target.x, this.target.y, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
             this.isDone=true;
         }
 
@@ -88,8 +88,8 @@ public class YUZUCollaborativeParticleEffect extends AbstractGameEffect {
         this.card.current_y=this.pos.y;
         this.card.target_x=this.card.current_x;
         this.card.target_y=this.card.current_y;
-        this.card.drawScale=MathUtils.lerp(0.1F,0.5F,this.target.dst(this.pos)/this.distance);
-        this.card.targetDrawScale=MathUtils.lerp(0.1F,0.5F,temp.dst(target)/this.distance);
+        this.card.drawScale=Math.min(MathUtils.lerp(0.1F,0.5F,this.target.dst(this.pos)/this.distance),0.5F);
+        this.card.targetDrawScale=Math.min(MathUtils.lerp(0.1F,0.5F,temp.dst(target)/this.distance),0.5F);
 
 
         this.duration-=Gdx.graphics.getDeltaTime();

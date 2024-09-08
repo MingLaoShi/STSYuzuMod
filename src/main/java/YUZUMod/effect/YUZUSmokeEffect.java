@@ -29,13 +29,14 @@ public class YUZUSmokeEffect extends AbstractGameEffect {
 
     @Override
     public void update() {
-        if (this.duration > 0.5F) {
-            // 透明度从 0.0 增加到 0.5
-            this.color.a = MathUtils.lerp(0.0F, 0.5F, (1.0F - this.duration) * 2.0F); // 从 duration = 1.0 到 0.5
+        if (this.duration > 0.7F) {
+            // 透明度从 0.0 增加到 0.5（当 duration 从 1.0 递减到 0.7 时）
+            this.color.a = MathUtils.lerp(0.0F, 0.5F, (1.0F - this.duration) / 0.3F); // 从 duration = 1.0 到 0.7
         } else {
-            // 透明度从 0.5 减少到 0.0
-            this.color.a = MathUtils.lerp(0.5F, 0.0F, 1.0F - (this.duration * 2.0F)); // 从 duration = 0.5 到 0.0
+            // 透明度从 0.5 减少到 0.0（当 duration 从 0.7 递减到 0.0 时）
+            this.color.a = MathUtils.lerp(0.5F, 0.0F, (0.7F - this.duration) / 0.7F); // 从 duration = 0.7 到 0.0
         }
+
 
 
         this.duration-= Gdx.graphics.getDeltaTime();
