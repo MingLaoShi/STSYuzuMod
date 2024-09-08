@@ -1,7 +1,9 @@
 package YUZUMod.cards;
 
+import YUZUMod.effect.YUZUSmokeEffect;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -37,6 +39,7 @@ public class YUZUCoverTheSmokeScreen extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new VFXAction(new YUZUSmokeEffect(),0.8F));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new WeakPower(abstractPlayer,this.magicNumber,false)));
         for(AbstractMonster m: AbstractDungeon.getMonsters().monsters){
             if(!m.isDeadOrEscaped()){
