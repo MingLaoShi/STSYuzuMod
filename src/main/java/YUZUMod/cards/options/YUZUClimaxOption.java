@@ -46,10 +46,10 @@ public class YUZUClimaxOption extends YUZUCustomCard {
     public void onChoseThisOption() {
         switch (this.position){
             case 0:
-                addToBot(new DrawCardAction(this.magicNumber));
+                addToTop(new DrawCardAction(this.magicNumber));
                 break;
             case 1:
-                addToBot(new GainEnergyAction(this.magicNumber));
+                addToTop(new GainEnergyAction(this.magicNumber));
                 break;
             default:
                 break;

@@ -5,7 +5,7 @@
 		"UPGRADE_DESCRIPTION":" 保留 。 NL 造成牌组卡牌数量的伤害。",
 		"FLAVOR": "我能不能把卡堆往别人那里砸？",
 		"EXTENDED_DESCRIPTION": [
-			"（ !D! ）"
+			"（ !M! ）"
 		]
 	},
 	"YUZU:AimingPreparation": {
@@ -414,7 +414,10 @@
 		"NAME": "渐进高潮",
 		"DESCRIPTION": "选择：抽你抽到了这张牌次数的牌；获得你抽到了这张牌次数的 [E] 。 NL yuzu:精通 ：将计数归0。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 选择：抽你抽到了这张牌次数的牌；获得你抽到了这张牌次数的 [E] 。 NL yuzu:精通 ：将计数归0。",
-		"FLAVOR": "该嗨起来了，不过现在暂且还在热场。"
+		"FLAVOR": "该嗨起来了，不过现在暂且还在热场。",
+		"EXTENDED_DESCRIPTION": [
+			" NL （ !M! ）"
+		]
 	},
 	"YUZU:ClimaxOption": {
 		"NAME": "渐进高潮",

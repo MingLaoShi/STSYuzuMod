@@ -57,4 +57,36 @@ public class YUZUClimax extends YUZUCustomCard{
         this.baseMagicNumber++;
         this.magicNumber=this.baseMagicNumber;
     }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if(this.upgraded){
+            this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }else{
+            this.rawDescription=CARD_STRINGS.DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        if(this.upgraded){
+            this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }else{
+            this.rawDescription=CARD_STRINGS.DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        if(this.upgraded){
+            this.rawDescription=CARD_STRINGS.UPGRADE_DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }else{
+            this.rawDescription=CARD_STRINGS.DESCRIPTION+CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+        }
+        this.initializeDescription();
+    }
 }
