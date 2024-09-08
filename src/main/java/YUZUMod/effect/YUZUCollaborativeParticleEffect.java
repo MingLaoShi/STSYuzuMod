@@ -39,7 +39,7 @@ public class YUZUCollaborativeParticleEffect extends AbstractGameEffect {
 
         this.scale = 1.0F * Settings.scale;
         //        this.rotation= MathUtils.random(-90.0F,90.0F);
-        this.rotation = 90;
+        this.rotation = -90;
         this.rotationRate = MathUtils.random(600.0F, 650.0F) * Settings.scale;
         this.speed= MathUtils.random(1000.0F,1200.0F)*Settings.scale;
 
@@ -88,8 +88,8 @@ public class YUZUCollaborativeParticleEffect extends AbstractGameEffect {
         this.card.current_y=this.pos.y;
         this.card.target_x=this.card.current_x;
         this.card.target_y=this.card.current_y;
-        this.card.drawScale=MathUtils.lerp(0.1F,0.8F,this.target.dst(this.pos)/this.distance);
-        this.card.targetDrawScale=MathUtils.lerp(0.1F,0.8F,temp.dst(target)/this.distance);
+        this.card.drawScale=MathUtils.lerp(0.1F,0.5F,this.target.dst(this.pos)/this.distance);
+        this.card.targetDrawScale=MathUtils.lerp(0.1F,0.5F,temp.dst(target)/this.distance);
 
 
         this.duration-=Gdx.graphics.getDeltaTime();
