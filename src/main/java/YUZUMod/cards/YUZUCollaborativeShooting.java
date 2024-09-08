@@ -1,8 +1,10 @@
 package YUZUMod.cards;
 
-import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
+import YUZUMod.effect.YUZUCollaborativeEffect;
+import YUZUMod.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,7 +38,8 @@ public class YUZUCollaborativeShooting extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
+        addToBot(new VFXAction(new YUZUCollaborativeEffect(abstractMonster.hb.cX,abstractMonster.hb.cY,new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.NONE))));
+
     }
 
 

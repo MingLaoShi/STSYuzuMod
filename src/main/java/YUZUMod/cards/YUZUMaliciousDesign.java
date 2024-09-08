@@ -2,16 +2,15 @@ package YUZUMod.cards;
 
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
-import YUZUMod.power.YUZUVigorMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class YUZUMaliciousDesign extends YUZUCustomCard{
@@ -23,13 +22,12 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
     private static final String DESCRIPTION=CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE=CardType.ATTACK;
     private static final CardColor COLOR= YuzuCharacter.PlayerClass.YUZU_CARD;
-    private static final CardTarget TARGET=CardTarget.ENEMY;
+    private static final CardTarget TARGET=CardTarget.SELF_AND_ENEMY;
     private static final CardRarity RARITY=CardRarity.RARE;
 
     public YUZUMaliciousDesign() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage=this.damage=8;
-        this.exhaust=true;
+        this.baseDamage=this.damage=6;
     }
 
     @Override
@@ -40,11 +38,27 @@ public class YUZUMaliciousDesign extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        if(abstractMonster.hasPower(StrengthPower.POWER_ID)){
-            int amount=abstractMonster.getPower(StrengthPower.POWER_ID).amount;
-            addToBot(new RemoveSpecificPowerAction(abstractMonster,abstractPlayer, StrengthPower.POWER_ID));
-            addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new YUZUVigorMonsterPower(abstractMonster,amount)));
-        }
+        addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer,new StrengthPower(abstractMonster,-6)));
+        addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new StrengthPower(abstractPlayer,-6)));
+
     }
 
+    @Override
+    public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        commonUse(abstractPlayer,abstractMonster);
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                AbstractPower p1=abstractMonster.getPower(StrengthPower.POWER_ID);
+                if(p1!=null){
+                    p1.amount=3;
+                }
+                AbstractPower p2=abstractPlayer.getPower(StrengthPower.POWER_ID);
+                if(p2!=null){
+                    p2.amount=3;
+                }
+                this.isDone=true;
+            }
+        });
+    }
 }

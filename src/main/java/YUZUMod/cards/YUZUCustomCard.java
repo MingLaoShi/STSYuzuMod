@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class YUZUCustomCard extends CustomCard {
-    protected static Map<String,Integer> MasterCards=new HashMap<>();
+    public static Map<String,Integer> MasterCards=new HashMap<>();
 
     public YUZUCustomCard(String ID, String NAME, String IMG_PATH, int COST, String DESCRIPTION, CardType TYPE, CardColor COLOR, CardRarity RARITY, CardTarget TARGET) {
         super(ID,NAME,IMG_PATH,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);

@@ -200,7 +200,7 @@
 	},
 	"YUZU:MaliciousDesign": {
 		"NAME": "恶意设计",
-		"DESCRIPTION": "造成 !D! 点伤害，将目标的 力量 转换为等量活力。 NL 消耗 。",
+		"DESCRIPTION": "造成 !D! 点伤害，目标和自身失去6点 力量 。 NL yuzu:精通 ：目标和自身的 力量 变为 3。",
 		"UPGRADE_DESCRIPTION": "",
 		"FLAVOR": "“小桃，这样是不是太坏了点啊？”"
 	},
@@ -407,7 +407,7 @@
 	},
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
-		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去2点 力量 和 敏捷 。 NL 消耗 。",
+		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去1点 力量 和 敏捷 。 NL 消耗 。",
 		"FLAVOR": "“所有人——集合——集合！”"
 	},
 	"YUZU:Climax": {
