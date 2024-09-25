@@ -48,6 +48,10 @@ public class YUZUPlayHandCardAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if(!AbstractDungeon.player.hand.contains(card)){
+            this.isDone=true;
+            return;
+        }
         if (this.target == null) {
             this.target = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
         }

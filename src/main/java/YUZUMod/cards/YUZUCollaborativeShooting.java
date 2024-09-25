@@ -38,7 +38,7 @@ public class YUZUCollaborativeShooting extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new VFXAction(new YUZUCollaborativeEffect(abstractMonster.hb.cX,abstractMonster.hb.cY,new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.NONE))));
+        addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.LIGHTNING));
 
     }
 

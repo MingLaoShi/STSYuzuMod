@@ -39,7 +39,7 @@
 	},
 	"YUZU:Camouflage": {
 		"NAME": "纸箱伪装",
-		"DESCRIPTION": "获得 !B! 点格挡。 NL yuzu:精通 ：在本场战斗中，获得在抽到时打出",
+		"DESCRIPTION": "获得 !B! 点格挡。 NL yuzu:精通 ：在本场战斗中，获得在抽到时打出。",
 		"FLAVOR": "实际上只要打开盖子看一眼，这个拙劣的伪装就会被戳破。"
 	},
 	"YUZU:Claustrophobia": {
@@ -456,7 +456,7 @@
 	},
 	"YUZU:AmmunitionFilling": {
 		"NAME": "一时修整",
-		"DESCRIPTION": "填充3格 yuzu:暴击槽 ，抽 !M! 张牌。",
+		"DESCRIPTION": "填充 !M! 格 yuzu:暴击槽 ，抽3张牌。",
 		"FLAVOR": "可能该睡个觉。"
 	},
 	"YUZU:FoldUpClothes": {
