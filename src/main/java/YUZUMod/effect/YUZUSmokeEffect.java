@@ -3,11 +3,10 @@ package YUZUMod.effect;
 import YUZUMod.helper.ModHelper;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -17,27 +16,33 @@ public class YUZUSmokeEffect extends AbstractGameEffect {
     private float x,y;
     private Color color;
     private static Texture img= ImageMaster.loadImage(ModHelper.makeImgPath("effect","smoke"));
-    private ShapeRenderer shapeRenderer;
+    private Vector2 pos;
+    private float speed;
     public YUZUSmokeEffect(){
         this.x= Settings.WIDTH/2.0F;
         this.y= AbstractDungeon.floorY;
-        this.duration=1.0F;
+        this.duration=2.0F;
         this.color=Color.WHITE.cpy();
         this.color.a=0.0F;
-        shapeRenderer=new ShapeRenderer();
+        this.pos=new Vector2(-img.getWidth(),0.0F);
+        this.speed=3000.0F*Settings.xScale;
     }
 
     @Override
     public void update() {
         if (this.duration > 0.7F) {
-            // 透明度从 0.0 增加到 0.5（当 duration 从 1.0 递减到 0.7 时）
-            this.color.a = MathUtils.lerp(0.0F, 0.5F, (1.0F - this.duration) / 0.3F); // 从 duration = 1.0 到 0.7
+            // 透明度从 0.0 增加到 0.5（当 duration 从 2.0 递减到 0.7 时）
+            this.color.a = MathUtils.lerp(0.0F, 0.5F, (2.0F - this.duration) / 1.3F); // 从 duration = 2.0 到 0.7
         } else {
             // 透明度从 0.5 减少到 0.0（当 duration 从 0.7 递减到 0.0 时）
-            this.color.a = MathUtils.lerp(0.5F, 0.0F, (0.7F - this.duration) / 0.7F); // 从 duration = 0.7 到 0.0
+            this.color.a = MathUtils.lerp(0.5F, 0.0F, (0.7F-this.duration) / 0.7F); // 从 duration = 0.7 到 0.0
         }
-
-
+//        System.out.println(this.color.a);
+//        this.color.a=1.0F;
+        this.pos.x+=(this.speed*Gdx.graphics.getDeltaTime());
+        if(this.duration<1.6F&&this.duration>0.3F){
+            this.speed=MathUtils.lerp(3000.0F*Settings.xScale,0.0F, (float) ((1.6-this.duration)/1.3F));
+        }
 
         this.duration-= Gdx.graphics.getDeltaTime();
         if(this.duration<0.0F){
@@ -47,18 +52,12 @@ public class YUZUSmokeEffect extends AbstractGameEffect {
 
     @Override
     public void render(SpriteBatch spriteBatch) {
-        spriteBatch.setColor(Color.WHITE.cpy());
-        spriteBatch.draw(img,this.x,this.y);
-        spriteBatch.end();
-        Gdx.gl.glEnable(GL20.GL_BLEND);
-        Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        shapeRenderer.setColor(this.color);
-        // 绘制全屏矩形
-        shapeRenderer.rect(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        if(this.isDone){
+            return;
+        }
+        spriteBatch.setColor(this.color);
+        spriteBatch.draw(img,this.pos.x,this.pos.y,img.getWidth()*Settings.xScale,img.getHeight()*Settings.yScale);
 
-        shapeRenderer.end();
-        spriteBatch.begin();
     }
 
     @Override
