@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 public class YUZUYuedongPotion extends CustomPotion {
     public static final String ID = ModHelper.makePath("YuedongPotion");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(ID);
-    private static final PotionRarity rarity = PotionRarity.UNCOMMON;
+    private static final PotionRarity rarity = PotionRarity.RARE;
     private static final PotionSize size = PotionSize.H;
     private static final PotionColor color = PotionColor.FIRE;
     public static Color liquidColor = new Color(159.0F / 255.0F, 165.0F / 255.0F, 290.0F / 255.0F, 1.0F);
