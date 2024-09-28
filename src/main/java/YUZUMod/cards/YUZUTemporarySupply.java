@@ -25,6 +25,7 @@ public class YUZUTemporarySupply extends YUZUCustomCard{
     public YUZUTemporarySupply() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber=this.magicNumber=14;
+        this.tags.add(CardTags.HEALING);
     }
 
     @Override

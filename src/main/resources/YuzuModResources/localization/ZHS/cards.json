@@ -407,7 +407,7 @@
 	},
 	"YUZU:Fortress": {
 		"NAME": "末日堡垒",
-		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出暴击。 NL 精通：失去1点 力量 和 敏捷 。 NL 消耗 。",
+		"DESCRIPTION": "获得 [E] [E] [E] 与 !B! 点 格挡 。在本场战斗中，你无法再打出 yuzu:暴击 。 NL yuzu:精通 ：失去1点 力量 和 敏捷 。 NL 消耗 。",
 		"FLAVOR": "“所有人——集合——集合！”"
 	},
 	"YUZU:Climax": {

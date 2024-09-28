@@ -2,13 +2,16 @@ package YUZUMod.cards;
 
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 public class YUZUManaPotion extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("ManaPotion");
@@ -35,11 +38,42 @@ public class YUZUManaPotion extends YUZUCustomCard{
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new AbstractGameAction() {
+            float duration=-1.0F;
+            ArrayList<AbstractCard> cards=new ArrayList<>();
+            boolean firstUpdate=true;
+            int amount=YUZUManaPotion.this.magicNumber;
+            int totalEnergy=0;
             @Override
             public void update() {
-                int count= (int) AbstractDungeon.player.hand.group.stream().filter(card -> card.costForTurn>=2).count();
-                addToTop(new GainEnergyAction(count));
-                this.isDone=true;
+                if(firstUpdate){
+                    for(AbstractCard card:AbstractDungeon.player.hand.group){
+                        if(card.costForTurn>=2){
+                            cards.add(card);
+                        }
+                    }
+                    this.firstUpdate=false;
+                    this.totalEnergy=this.cards.size();
+                }else{
+                    this.duration-= Gdx.graphics.getDeltaTime();
+                    if(this.cards.isEmpty()){
+                        if(this.totalEnergy>0){
+                            AbstractDungeon.player.hand.group.forEach(card -> {
+                                card.triggerOnGainEnergy(this.totalEnergy,true);
+                            });
+                        }
+                        this.isDone=true;
+                        return;
+                    }
+                    if(this.duration<0.0F){
+                        AbstractCard card=cards.get(0);
+                        card.flash();
+                        AbstractDungeon.player.gainEnergy(this.amount);
+                        AbstractDungeon.actionManager.updateEnergyGain(this.amount);
+                        this.duration=0.3F;
+                        cards.remove(card);
+                    }
+                }
+
             }
         });
     }
