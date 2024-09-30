@@ -52,7 +52,7 @@ public class YUZUGlowBlessingPower extends AbstractPower implements OnReceivePow
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        addEffect(10);
+        addEffect(20);
         return 0;
     }
     @Override

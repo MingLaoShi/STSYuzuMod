@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -16,11 +17,13 @@ public class YUZUDispersedStarEffect extends AbstractGameEffect {
     private float a;
     private static Texture star= TextureLoader.getTexture(ModHelper.makeImgPath("effect","star"));
     private static float SCALE=3.0F;
+    private float totalDur;
 
     public YUZUDispersedStarEffect(float x,float y,float centerX,float centerY){
         this.pos=new Vector2(x,y);
         this.center=new Vector2(centerX,centerY);
-        this.duration=2.0F;
+        this.totalDur=this.duration= MathUtils.random(1.0F)+2.0F;
+
         this.a=-1.0F;
         this.color= Color.WHITE.cpy();
     }
@@ -30,7 +33,7 @@ public class YUZUDispersedStarEffect extends AbstractGameEffect {
         Vector2 temp=this.pos.cpy().sub(this.center);
         temp.nor();
         this.pos.add(temp.scl(this.duration));
-        this.a+= Gdx.graphics.getDeltaTime();
+        this.a+= Gdx.graphics.getDeltaTime()*2.0F/totalDur;
         this.duration-=Gdx.graphics.getDeltaTime();
         if(this.duration<0.0F){
             this.isDone=true;
