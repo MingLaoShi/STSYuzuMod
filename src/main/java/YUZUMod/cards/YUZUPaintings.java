@@ -1,8 +1,10 @@
 package YUZUMod.cards;
 
+import YUZUMod.effect.YUZUPaintingEffect;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.power.YUZUPaintingsPower;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,6 +38,7 @@ public class YUZUPaintings extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new VFXAction(new YUZUPaintingEffect(1.5F,1.0F),1.0F));
         addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new YUZUPaintingsPower(abstractPlayer,this.magicNumber)));
     }
 
