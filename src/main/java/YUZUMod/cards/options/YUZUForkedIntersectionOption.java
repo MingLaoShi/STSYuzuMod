@@ -1,7 +1,7 @@
 package YUZUMod.cards.options;
 
-import YUZUMod.helper.ModHelper;
 import YUZUMod.cards.YUZUCustomCard;
+import YUZUMod.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -44,6 +44,10 @@ public class YUZUForkedIntersectionOption extends YUZUCustomCard {
                 this.baseMagicNumber=this.magicNumber=1;
                 break;
         }
+        this.textureImg=ModHelper.makeImgPath("cards","ForkedIntersectionOption"+position);
+//        this.setPortraitTextures(ModHelper.makeImgPath("cards","ForkedIntersectionOption"+position),
+//               ModHelper.makeImgPath("cards","ForkedIntersectionOption"+position+"_p"));
+        this.loadCardImage(this.textureImg);
     }
 
     @Override
