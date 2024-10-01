@@ -1,10 +1,12 @@
 package YUZUMod.cards;
 
+import YUZUMod.effect.YUZUStandShieldEffect;
 import YUZUMod.helper.ModHelper;
 import YUZUMod.character.YuzuCharacter;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -33,6 +35,7 @@ public class YUZUStandShield extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        AbstractDungeon.effectList.add(new YUZUStandShieldEffect());
         addToBot(new GainBlockAction(abstractPlayer,this.block));
     }
 

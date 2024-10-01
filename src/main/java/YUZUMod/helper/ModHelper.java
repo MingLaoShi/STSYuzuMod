@@ -21,6 +21,9 @@ public class ModHelper {
     public static String makeImgPath(String floder, String imgName) {
         return "YuzuModResources/img/" + floder + "/" + imgName + ".png";
     }
+    public static String makeFilePath(String floder,String fileName,String fileType){
+        return "YuzuModResources/img/" + floder + "/" + fileName + "."+fileType;
+    }
 
     public static String makeGifPath(String floder, String character, String imgName) {
         return String.format("YuzuModResources/img/%s/%s/%s.gif", floder, character, imgName);

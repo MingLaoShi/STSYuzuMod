@@ -1,0 +1,75 @@
+{
+"skeleton": { "hash": "HCAuYYOqDU4KGNhGsPYAWk1JBA0", "spine": "3.8.75", "x": 9.65, "y": -140.5, "width": 258.7, "height": 259.35 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "EF_shapeF39_1", "bone": "root", "attachment": "EF_shapeF39_01" },
+	{ "name": "EF_shapeF39_02", "bone": "root", "attachment": "EF_shapeF39_02" },
+	{ "name": "EF_shapeF39_03", "bone": "root", "attachment": "EF_shapeF39_03" },
+	{ "name": "EF_shapeF39_04", "bone": "root", "attachment": "EF_shapeF39_04" }
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"EF_shapeF39_03": {
+				"color": [
+					{ "time": 0.1667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.8333, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"EF_shapeF39_1": {
+				"color": [
+					{ "color": "ffffff00", "time": 0.0 },
+					{ "time": 0.3333, "color": "ffffff00" },
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			},
+			"EF_shapeF39_04": {
+				"color": [
+					{ "color": "ffffff00", "time": 0.0 },
+					{ "time": 0.1667, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffff00" },
+					{ "time": 0.8333, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"EF_shapeF39_02": {
+				"color": [
+					{ "color": "ffffff00", "time": 0.0 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 0.8333, "color": "ffffff00" }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"offsets": [
+					{ "slot": "EF_shapeF39_03", "offset": 1, "time": 0.0 }
+				],
+				"time": 0.0
+			}
+		]
+	}
+},
+"skins": {
+	"default": {
+		"EF_shapeF39_02": {
+			"EF_shapeF39_02": { "x": 139, "y": -11.5, "width": 257, "height": 258 }
+		},
+		"EF_shapeF39_03": {
+			"EF_shapeF39_03": { "x": 140, "y": -12.5, "width": 254, "height": 254 }
+		},
+		"EF_shapeF39_04": {
+			"EF_shapeF39_04": { "x": 139, "y": -12.5, "width": 256, "height": 256 }
+		},
+		"EF_shapeF39_1": {
+			"EF_shapeF39_01": { "x": 139, "y": -10.5, "rotation": -0.16, "width": 258, "height": 258 }
+		}
+	}
+}
+}
