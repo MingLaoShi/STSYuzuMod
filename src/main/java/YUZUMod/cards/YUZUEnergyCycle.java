@@ -1,7 +1,10 @@
 package YUZUMod.cards;
 
-import YUZUMod.helper.ModHelper;
+import YUZUMod.YuzuMod;
 import YUZUMod.character.YuzuCharacter;
+import YUZUMod.effect.YUZUEnergyCycleEffect;
+import YUZUMod.helper.ModHelper;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -9,6 +12,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -38,17 +43,21 @@ public class YUZUEnergyCycle extends YUZUCustomCard{
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new GainEnergyAction(1));
+        CardCrawlGame.sound.play("BUFF_1");
+        AbstractDungeon.topLevelEffectsQueue.add(new YUZUEnergyCycleEffect(YuzuMod.YUZUColor.cpy(),130.0F* Settings.scale));
     }
 
     @Override
     public void masterUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         commonUse(abstractPlayer,abstractMonster);
         addToBot(new GainEnergyAction(1));
+        AbstractDungeon.topLevelEffectsQueue.add(new YUZUEnergyCycleEffect(Color.FOREST.cpy(),-190.0F* Settings.scale));
     }
 
     @Override
     public void triggerOnCriticalHit(AbstractCreature target) {
         super.triggerOnCriticalHit(target);
         addToBot(new GainEnergyAction(1));
+        AbstractDungeon.topLevelEffectsQueue.add(new YUZUEnergyCycleEffect(Color.GOLDENROD.cpy(),250.0F* Settings.scale));
     }
 }
