@@ -3,6 +3,7 @@ package YUZUMod.cards;
 import YUZUMod.character.YuzuCharacter;
 import YUZUMod.helper.ModHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
 
 public class YUZUSpreadShooting extends YUZUCustomCard{
     public static final String ID= ModHelper.makePath("SpreadShooting");
@@ -42,6 +44,9 @@ public class YUZUSpreadShooting extends YUZUCustomCard{
 
     @Override
     public void commonUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        if(abstractMonster!=null){
+            addToBot(new VFXAction(new SearingBlowEffect(abstractMonster.hb.cX, abstractMonster.hb.cY, 0), 0.2F));
+        }
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer,new VulnerablePower(abstractMonster,this.magicNumber,false)));
         if(!AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)){
